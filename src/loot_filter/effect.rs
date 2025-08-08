@@ -20,6 +20,11 @@ impl Effect {
         AlertIcon::BIG_RED_STAR,
         AlertBeam::Red,
     );
+    pub const GOLD_PILE: Effect = Effect::new(
+        AlertSound::QUIET_GONG,
+        AlertIcon::YELLOW_STAR,
+        AlertBeam::None,
+    );
 
     const fn new(alert_sound: AlertSound, alert_icon: AlertIcon, alert_beam: AlertBeam) -> Self {
         Self {
@@ -42,7 +47,9 @@ impl Display for Effect {
                 .into_iter()
                 .filter(|line| !line.is_empty())
                 .map(|line| line + "\n")
-                .collect::<String>(),
+                .collect::<String>()
+                .strip_suffix("\n")
+                .unwrap_or_default(),
         )
     }
 }

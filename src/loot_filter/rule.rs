@@ -1,6 +1,7 @@
 use crate::loot_filter::{
     class::Class,
     color::{self, Color},
+    conditional::Conditional,
     effect::Effect,
     item::Item,
     rarity::Rarity,
@@ -20,6 +21,7 @@ pub struct Rule {
     pub influenced: bool,
     pub synthesized: bool,
     pub links: u8,
+    pub stack_size: u16,
     pub text_color: Color,
     pub bg_color: Color,
     pub outline_color: Color,
@@ -29,6 +31,8 @@ pub struct Rule {
 }
 
 impl Rule {
+    pub const INFLUENCED: &str = "HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord";
+
     pub fn ding(
         name: &'static str,
         classes: &'static [Class],
@@ -67,25 +71,54 @@ impl Rule {
     pub fn influenced(show_rule: bool) -> Self {
         Self::new("Influenced Bases", &[], Box::new([]), Rarity::All)
             .set_influenced(true)
-            .get_rule_if(show_rule)
+            .only_if(show_rule)
     }
 
     pub fn synthesized(show_rule: bool) -> Self {
         Self::new("Synthesized Bases", &[], Box::new([]), Rarity::All)
             .set_synthesized(true)
-            .get_rule_if(show_rule)
+            .only_if(show_rule)
     }
 
     pub fn fractured(show_rule: bool) -> Self {
         Self::new("Fractured Bases", &[], Box::new([]), Rarity::All)
             .set_fractured(true)
-            .get_rule_if(show_rule)
+            .only_if(show_rule)
     }
 
     pub fn six_links(show_rule: bool) -> Self {
         Self::new("Six Linked Bases", &[], Box::new([]), Rarity::All)
             .set_links(6)
-            .get_rule_if(show_rule)
+            .only_if(show_rule)
+    }
+
+    pub fn gold(show_rule: bool) -> Vec<Rule> {
+        if !show_rule {
+            return vec![];
+        }
+
+        let gold_item = Item::new("Gold");
+        vec![
+            Self::new("Gold (base style)", &[], Box::new([gold_item]), Rarity::All)
+                .set_color(color::BLACK, color::YELLOW, color::YELLOW)
+                .set_font_size(18)
+                .set_finalize(false),
+            Self::new("Gold (giant pile)", &[], Box::new([gold_item]), Rarity::All)
+                .set_stack_size(1000)
+                .set_font_size(32)
+                .set_effect(Effect::GOLD_PILE),
+            Self::new("Gold (huge pile)", &[], Box::new([gold_item]), Rarity::All)
+                .set_stack_size(500)
+                .set_font_size(28),
+            Self::new("Gold (large pile)", &[], Box::new([gold_item]), Rarity::All)
+                .set_stack_size(250)
+                .set_font_size(24),
+            Self::new("Gold (mid pile)", &[], Box::new([gold_item]), Rarity::All)
+                .set_stack_size(100)
+                .set_font_size(20),
+            Self::new("Gold (small pile)", &[], Box::new([gold_item]), Rarity::All)
+                .set_stack_size(1),
+        ]
     }
 
     fn new(
@@ -95,24 +128,20 @@ impl Rule {
         rarity: Rarity,
     ) -> Self {
         Self {
-            hide: false,
             name,
             classes,
             items,
             rarity,
-            map_tier: 0,
-            area_level: 1,
-            fractured: false,
-            influenced: false,
-            synthesized: false,
-            links: 0,
             text_color: color::WHITE,
             bg_color: color::BLACK,
-            outline_color: color::TRANSPARENT,
             font_size: 24,
-            effect: Effect::NONE,
             finalize: true,
+            ..Default::default()
         }
+    }
+
+    fn set_font_size(self, font_size: u8) -> Self {
+        Self { font_size, ..self }
     }
 
     fn set_color(self, text_color: Color, bg_color: Color, outline_color: Color) -> Self {
@@ -151,111 +180,84 @@ impl Rule {
         Self { links, ..self }
     }
 
-    fn get_rule_if(self, condition: bool) -> Rule {
-        condition.then_some(self).unwrap_or_default()
+    fn set_stack_size(self, stack_size: u16) -> Self {
+        Self { stack_size, ..self }
     }
+
+    fn set_finalize(self, finalize: bool) -> Self {
+        Self { finalize, ..self }
+    }
+}
+
+fn get_display<T: Default + Display + Conditional + PartialEq>(
+    prefix: &str,
+    property: &T,
+) -> String {
+    format!("{prefix} {property}").if_not_default(property)
+}
+
+fn get_name_display(name: &'static str, hide: bool) -> String {
+    format!(
+        "{} # {}",
+        match hide {
+            true => "Hide",
+            false => "Show",
+        },
+        name
+    )
+}
+
+fn get_item_display(items: &[Item]) -> String {
+    format!(
+        "BaseType {}",
+        items
+            .iter()
+            .map(|item| "\"".to_owned() + item.base_type + "\" ")
+            .collect::<String>()
+            .trim_end()
+    )
+    .only_if(!items.is_empty())
+}
+
+fn get_class_display(classes: &[Class]) -> String {
+    format!(
+        "Class {}",
+        classes
+            .iter()
+            .map(|class| "\"".to_owned() + class.name + "\" ")
+            .collect::<String>()
+            .trim_end()
+    )
+    .only_if(!classes.is_empty())
 }
 
 impl Display for Rule {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        let show_or_hide = if self.hide {
-            format!("Hide # {}", self.name)
-        } else {
-            format!("Show # {}", self.name)
-        };
-        let classes = if self.classes.is_empty() {
-            String::new()
-        } else {
-            format!(
-                "BaseType {}",
-                self.classes
-                    .iter()
-                    .map(|class| "\"".to_owned() + class.name + "\" ")
-                    .collect::<String>()
-                    .trim_end()
-            )
-        };
-        let base_types = if self.items.is_empty() {
-            String::new()
-        } else {
-            format!(
-                "BaseType {}",
-                self.items
-                    .iter()
-                    .map(|item| "\"".to_owned() + item.base_type + "\" ")
-                    .collect::<String>()
-                    .trim_end()
-            )
-        };
-        let rarity = if self.rarity == Rarity::All {
-            String::new()
-        } else {
-            format!("Rarity {}", self.rarity)
-        };
-        let map_tier = if self.map_tier == 0 {
-            String::new()
-        } else {
-            format!("MapTier >= {}", self.map_tier)
-        };
-        let area_level = if self.area_level == 1 {
-            String::new()
-        } else {
-            format!("AreaLevel {}", self.area_level)
-        };
-        let fractured = if self.fractured {
-            "FracturedItem True".to_string()
-        } else {
-            String::new()
-        };
-        let influenced = if self.influenced {
-            "HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord".to_string()
-        } else {
-            String::new()
-        };
-        let synthesized = if self.synthesized {
-            "SynthesizedItem True".to_string()
-        } else {
-            String::new()
-        };
-        let links = if self.links > 0 {
-            format!("LinkedSockets {}", self.links)
-        } else {
-            String::new()
-        };
-        let font_size = format!("SetFontSize {}", self.font_size);
-        let text_color = format!("SetTextColor {}", self.text_color);
-        let bg_color = format!("SetBackgroundColor {}", self.bg_color);
-        let border_color = format!("SetBorderColor {}", self.outline_color);
-        let effect = format!("{}", self.effect);
-        let finalize = if self.finalize {
-            String::new()
-        } else {
-            "Continue".to_string()
-        };
-
-        if self == &Rule::default() {
+        if self.is_default() {
+            // if it's a default rule, don't write anything
             Ok(())
         } else {
             writeln!(
                 f,
                 "{}",
                 [
-                    show_or_hide,
-                    classes,
-                    base_types,
-                    rarity,
-                    map_tier,
-                    area_level,
-                    fractured,
-                    influenced,
-                    synthesized,
-                    links,
-                    font_size,
-                    text_color,
-                    bg_color,
-                    border_color,
-                    effect,
-                    finalize,
+                    get_name_display(self.name, self.hide),
+                    get_class_display(self.classes),
+                    get_item_display(&self.items),
+                    get_display("Rarity", &self.rarity),
+                    get_display("MapTier >=", &self.map_tier),
+                    get_display("AreaLevel", &self.area_level),
+                    get_display("FracturedItem", &self.fractured),
+                    get_display(Rule::INFLUENCED, &self.influenced),
+                    get_display("SynthesizedItem", &self.synthesized),
+                    get_display("LinkedSockets", &self.links),
+                    get_display("StackSize >=", &self.stack_size),
+                    get_display("SetFontSize", &self.font_size),
+                    get_display("SetTextColor", &self.text_color),
+                    get_display("SetBackgroundColor", &self.bg_color),
+                    get_display("SetBorderColor", &self.outline_color),
+                    format!("{}", self.effect),
+                    "Continue".to_string().except_if(self.finalize),
                 ]
                 .into_iter()
                 .filter(|line| !line.is_empty())

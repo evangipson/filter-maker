@@ -13,6 +13,7 @@ pub mod environment {
 pub mod loot_filter {
     pub mod class;
     pub mod color;
+    pub mod conditional;
     pub mod effect;
     pub mod filter;
     pub mod item;

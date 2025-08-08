@@ -116,6 +116,8 @@ impl AlertIcon {
         AlertIcon::new(IconSize::Small, IconColor::Yellow, IconType::Circle);
     pub const BIG_RED_STAR: AlertIcon =
         AlertIcon::new(IconSize::Large, IconColor::Red, IconType::Star);
+    pub const YELLOW_STAR: AlertIcon =
+        AlertIcon::new(IconSize::Medium, IconColor::Yellow, IconType::Star);
 
     const fn new(size: IconSize, color: IconColor, icon: IconType) -> Self {
         Self { size, color, icon }

@@ -10,6 +10,7 @@ pub struct AlertSound {
 impl AlertSound {
     pub const LOW_WHOOSH: AlertSound = AlertSound::new(AlertName::LowWhoosh, AlertVolume::Normal);
     pub const LOUD_GLITTER: AlertSound = AlertSound::new(AlertName::Glitter, AlertVolume::Loud);
+    pub const QUIET_GONG: AlertSound = AlertSound::new(AlertName::Gong, AlertVolume::Quiet);
     pub const NONE: AlertSound = AlertSound::new(AlertName::Silent, AlertVolume::Silent);
 
     const fn new(name: AlertName, volume: AlertVolume) -> Self {
