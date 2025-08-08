@@ -1,9 +1,18 @@
-use filter_maker::loot_filter::{filter::Filter, rule::Rule};
+use filter_maker::{
+    environment::config::Config,
+    loot_filter::{filter::Filter, rarity::Rarity, rule::Rule},
+};
 
 fn main() {
-    let filter_rules = vec![Rule::SHOW_ALL_SUPER_VALUABLES, Rule::SHOW_ALL_MAGIC_SWORDS];
-
-    let item_filter = Filter::new(filter_rules);
-
-    print!("{item_filter}");
+    let config: Config = Config::new();
+    print!(
+        "{}",
+        Filter::new(vec![
+            Rule::schwing("Schwings (S-Tier)", &[], config.schwings, Rarity::All),
+            Rule::ding("Dings (A-Tier)", &[], config.dings, Rarity::All),
+            Rule::ping("Pings (B-Tier)", &[], config.pings, Rarity::All),
+            Rule::schwing("Uniques (Tier 0)", &[], config.uniques, Rarity::Unique),
+            Rule::maps("Maps", config.map_tier, Rarity::All),
+        ])
+    );
 }

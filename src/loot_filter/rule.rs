@@ -11,8 +11,9 @@ pub struct Rule {
     pub hide: bool,
     pub name: &'static str,
     pub classes: &'static [Class],
-    pub items: &'static [Item],
+    pub items: Box<[Item]>,
     pub rarity: Rarity,
+    pub map_tier: u8,
     pub area_level: u8,
     pub text_color: Color,
     pub bg_color: Color,
@@ -23,24 +24,10 @@ pub struct Rule {
 }
 
 impl Rule {
-    pub const SHOW_ALL_MAGIC_SWORDS: Rule = Rule::normal(
-        "Show all magic swords",
-        &[],
-        &[Item::ONE_HAND_SWORD, Item::TWO_HAND_SWORD],
-        Rarity::Magic,
-    );
-
-    pub const SHOW_ALL_SUPER_VALUABLES: Rule = Rule::schwing(
-        "Show all super valuable drops",
-        &[],
-        &Item::SUPER_VALUABLES,
-        Rarity::All,
-    );
-
-    const fn normal(
+    pub fn ding(
         name: &'static str,
         classes: &'static [Class],
-        items: &'static [Item],
+        items: Box<[Item]>,
         rarity: Rarity,
     ) -> Self {
         Self {
@@ -49,6 +36,53 @@ impl Rule {
             classes,
             items,
             rarity,
+            map_tier: 0,
+            area_level: 1,
+            text_color: color::BLACK,
+            bg_color: color::YELLOW,
+            outline_color: color::TRANSPARENT,
+            font_size: 32,
+            effect: Effect::NORMAL_DROP,
+            finalize: true,
+        }
+    }
+
+    pub fn schwing(
+        name: &'static str,
+        classes: &'static [Class],
+        items: Box<[Item]>,
+        rarity: Rarity,
+    ) -> Self {
+        Self {
+            hide: false,
+            name,
+            classes,
+            items,
+            rarity,
+            map_tier: 0,
+            area_level: 1,
+            text_color: color::RED,
+            bg_color: color::WHITE,
+            outline_color: color::RED,
+            font_size: 48,
+            effect: Effect::BIG_DROP,
+            finalize: true,
+        }
+    }
+
+    pub fn ping(
+        name: &'static str,
+        classes: &'static [Class],
+        items: Box<[Item]>,
+        rarity: Rarity,
+    ) -> Self {
+        Self {
+            hide: false,
+            name,
+            classes,
+            items,
+            rarity,
+            map_tier: 0,
             area_level: 1,
             text_color: color::WHITE,
             bg_color: color::BLACK,
@@ -59,24 +93,20 @@ impl Rule {
         }
     }
 
-    const fn schwing(
-        name: &'static str,
-        classes: &'static [Class],
-        items: &'static [Item],
-        rarity: Rarity,
-    ) -> Self {
+    pub fn maps(name: &'static str, map_tier: u8, rarity: Rarity) -> Self {
         Self {
             hide: false,
             name,
-            classes,
-            items,
+            classes: &[],
+            items: Box::new([]),
             rarity,
+            map_tier,
             area_level: 1,
-            text_color: color::RED,
-            bg_color: color::WHITE,
-            outline_color: color::RED,
-            font_size: 48,
-            effect: Effect::BIG_DROP,
+            text_color: color::WHITE,
+            bg_color: color::BLACK,
+            outline_color: color::TRANSPARENT,
+            font_size: 24,
+            effect: Effect::NONE,
             finalize: true,
         }
     }
@@ -115,6 +145,11 @@ impl Display for Rule {
         } else {
             format!("Rarity {}", self.rarity)
         };
+        let map_tier = if self.map_tier == 0 {
+            String::new()
+        } else {
+            format!("MapTier >= {}", self.map_tier)
+        };
         let area_level = if self.area_level == 1 {
             String::new()
         } else {
@@ -140,6 +175,7 @@ impl Display for Rule {
                 classes,
                 base_types,
                 rarity,
+                map_tier,
                 area_level,
                 font_size,
                 text_color,

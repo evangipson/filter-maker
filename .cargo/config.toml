@@ -1,0 +1,292 @@
+[env]
+schwings = """
+    Albino Rhoa Feather
+    Awakener's Orb
+    Blessing of Chayula
+    Blessing of Esh
+    Blessing of Tul
+    Blessing of Uul-Netol
+    Blessing of Xoph
+    Crusader's Exalted Orb
+    Divine Orb
+    Elder's Exalted Orb
+    Eternal Orb
+    Exceptional Eldritch Ember
+    Exceptional Eldritch Ichor
+    Fracturing Orb
+    Fracturing Shard
+    Hinekora's Lock
+    Hunter's Exalted Orb
+    Mirror of Kalandra
+    Mirror Shard
+    Orb of Conflict
+    Orb of Dominance
+    Orb of Intention
+    Orb of Remembrance
+    Orb of Unravelling
+    Redeemer's Exalted Orb
+    Reflecting Mist
+    Sacred Crystallised Lifeforce
+    Shaper's Exalted Orb
+    Tailoring Orb
+    Tainted Divine Teardrop
+    Tainted Exalted Orb
+    Tempering Orb
+    Valdo's Puzzle Box
+    Veiled Exalted Orb
+    Warlord's Exalted Orb
+    Faceted Fossil
+    Fractured Fossil
+    Glyphic Fossil
+    Hollow Fossil
+    Assassin's Gift
+    Auspicious Ambitions
+    Beauty Through Death
+    Broken Promises
+    Brother's Gift
+    Brother's Stash
+    Choking Guilt
+    Damnation
+    Darker Half
+    Desecrated Virtue
+    Divine Beauty
+    Divine Justice
+    Duality
+    Father's Love
+    Fire Of Unknown Origin
+    History
+    House of Mirrors
+    I See Brothers
+    Imperfect Memories
+    Last Stand
+    Lonely Warrior
+    Love Through Ice
+    Luminous Trove
+    Magnum Opus
+    Matryoshka
+    Misery in Darkness
+    Remembrance
+    Seven Years Bad Luck
+    Squandered Prosperity
+    Succor of the Sinless
+    Temperance
+    The Apothecary
+    The Artist
+    The Cheater
+    The Damned
+    The Demon
+    The Destination
+    The Doctor
+    The Dragon's Heart
+    The Endless Darkness
+    The Enlightened
+    The Fiend
+    The Greatest Intentions
+    The Gulf
+    The Immortal
+    The Insane Cat
+    The Last Supper
+    The Leviathan
+    The Long Con
+    The Mayor
+    The Price of Devotion
+    The Progeny of Lunaris
+    The Sacrifice
+    The Samurai's Eye
+    The Sephirot
+    The Shieldbearer
+    The Soul
+    The Vast
+    The World Eater
+    Tranquillity
+    Unrequited Love
+    Wealth and Power
+    Winter's Embrace
+    Runegraft of Gemcraft
+    Runegraft of the Angler
+"""
+dings = """
+    Deafening Essence of
+    Essence of Delirium
+    Essence of Horror
+    Essence of Hysteria
+    Essence of Insanity
+    Prime Chaotic Resonator
+    Sanctified Fossil
+    A Familiar Call
+    A Fate Worse Than Death
+    A Modest Request
+    Alluring Bounty
+    Ambitious Obsession
+    Anarchy's Price
+    Azyran's Reward
+    Burning Blood
+    Chasing Risk
+    Deadly Joy
+    Doryani's Epiphany
+    Dying Light
+    Fateful Meeting
+    Friendship
+    Further Invention
+    Gemcutter's Mercy
+    Home
+    Judging Voices
+    Monochrome
+    Pride of the First Ones
+    Silence and Frost
+    Terrible Secret of Space
+    The Academic
+    The Aspirant
+    The Astromancer
+    The Bargain
+    The Cartographer
+    The Chosen
+    The Deep Ones
+    The Emptiness
+    The Eternal War
+    The Eye of Terror
+    The Fishmonger
+    The Fortunate
+    The Garish Power
+    The Last One Standing
+    The Nurse
+    The One That Got Away
+    The Price of Loyalty
+    The Queen
+    The Rabbit's Foot
+    The Scout
+    The Wedding Gift
+    Who Asked
+    Crescent Splinter
+    Eldritch Chaos Orb
+    Eldritch Exalted Orb
+    Eldritch Orb of Annulment
+    Exalted Orb
+    Maven's Chisel of Avarice
+    Maven's Chisel of Divination
+    Maven's Chisel of Proliferation
+    Maven's Chisel of Scarabs
+    Prismatic Catalyst
+    Sacred Orb
+    Tempering Catalyst
+    Veiled Chaos Orb
+"""
+pings = """
+    Potent Chaotic Resonator
+    Powerful Chaotic Resonator
+    Primitive Chaotic Resonator
+    Aberrant Fossil
+    Aetheric Fossil
+    Bloodstained Fossil
+    Bound Fossil
+    Corroded Fossil
+    Deft Fossil
+    Dense Fossil
+    Frigid Fossil
+    Fundamental Fossil
+    Gilded Fossil
+    Jagged Fossil
+    Lucent Fossil
+    Metallic Fossil
+    Opulent Fossil
+    Prismatic Fossil
+    Pristine Fossil
+    Scorched Fossil
+    Serrated Fossil
+    Shuddering Fossil
+    Tangled Fossil
+    Remnant of Corruption
+    Shrieking Esssence of
+    Screaming Esssence of
+    Astragali
+    Burial Medallion
+    Chaos Orb
+    Exalted Shard
+    Gemcutter's Prism
+    Grand Eldritch Ichor
+    Grand Eldritch Ember
+    Greater Eldritch Ichor
+    Greater Eldritch Ember
+    Harbinger's Orb
+    Imbued Catalyst
+    Intrinsic Catalyst
+    Noxious Catalyst
+    Tainted Catalyst
+    Turbulent Catalyst
+    Unstable Catalyst
+    Fertile Catalyst
+    Abrasive Catalyst
+    Accelerating Catalyst
+    Orb of Annulment
+    Primal Crystallised Lifeforce
+    Ritual Splinter
+    Scrap Metal
+    Stacked Deck
+    Tainted Armourer's Scrap
+    Tainted Blacksmith's Whetstone
+    Tainted Chromatic Orb
+    Tainted Jeweller's Orb
+    Tainted Chaos Orb
+    Tainted Mythic Orb
+    Tainted Orb of Fusing
+    Veiled Scarab
+    Vivid Crystallised Lifeforce
+    Wild Crystallised Lifeforce
+    Ancient Orb
+    Exotic Coinage
+    Maven's Chisel
+    Scouting Report
+    Ritual Vessel
+    Ancient Shard
+    Annulment Shard
+    Bestiary Orb
+    Cartographer's Chisel
+    Enkindling Orb
+    Facetor's Lens
+    Glassblower's Bauble
+    Orb of Horizons
+    Orb of Regret
+    Orb of Scouring
+    Orb of Unmaking
+    Regal Orb
+    Vaal Orb
+"""
+uniques = """
+    Astrolabe Amulet
+    Cabalist Regalia
+    Candlestick Relic
+    Champion Kite Shield
+    Crusader Boots
+    Dusk Blade
+    Engraved Greatsword
+    Fluted Bascinet
+    Foul Staff
+    Ghastly Eye Jewel
+    Girded Tower Shield
+    Gold Flask
+    Golden Buckler
+    Greatwolf Talisman
+    Imperial Maul
+    Karui Maul
+    Lacewood Spirit Shield
+    Martyr Gloves
+    Papyrus Relic
+    Prismatic Jewel
+    Processional Relic
+    Raven Mask
+    Ring
+    Riveted Boots
+    Ruby Flask
+    Runic Crown
+    Runic Helm
+    Runic Sollerets
+    Savant's Robe
+    Siege Axe
+    Siege Helmet
+    Slaughter Knife
+    Unset Amulet
+    Vaal Rapier
+    Vermillion Ring
+    Void Axe
+"""
+map_tier = "16"

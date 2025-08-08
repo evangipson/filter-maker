@@ -1,3 +1,7 @@
+pub mod environment {
+    pub mod config;
+}
+
 pub mod loot_filter {
     pub mod class;
     pub mod color;

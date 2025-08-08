@@ -64,6 +64,7 @@ pub struct AlertSound {
 }
 
 impl AlertSound {
+    pub const LOW_WHOOSH: AlertSound = AlertSound::new(AlertName::LowWhoosh, AlertVolume::Normal);
     pub const LOUD_GLITTER: AlertSound = AlertSound::new(AlertName::Glitter, AlertVolume::Loud);
     pub const NONE: AlertSound = AlertSound::new(AlertName::Silent, AlertVolume::Silent);
 
@@ -88,6 +89,7 @@ pub struct Effect {
 
 impl Effect {
     pub const NONE: Effect = Effect::new(AlertSound::NONE);
+    pub const NORMAL_DROP: Effect = Effect::new(AlertSound::LOW_WHOOSH);
     pub const BIG_DROP: Effect = Effect::new(AlertSound::LOUD_GLITTER);
 
     const fn new(alert_sound: AlertSound) -> Self {
