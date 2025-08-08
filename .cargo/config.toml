@@ -290,3 +290,8 @@ uniques = """
     Void Axe
 """
 map_tier = "16"
+show_gold = "true"
+show_fractured_bases = "true"
+show_influenced_bases = "true"
+show_synthesized_bases = "true"
+show_six_link_bases = "false"

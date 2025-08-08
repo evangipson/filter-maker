@@ -1,3 +1,11 @@
+pub mod alerts {
+    pub mod beam;
+    pub mod icon;
+    pub mod name;
+    pub mod sound;
+    pub mod volume;
+}
+
 pub mod environment {
     pub mod config;
 }

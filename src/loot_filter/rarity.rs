@@ -1,7 +1,8 @@
 use std::fmt::Display;
 
-#[derive(PartialEq)]
+#[derive(Default, PartialEq)]
 pub enum Rarity {
+    #[default]
     All,
     Common,
     Magic,

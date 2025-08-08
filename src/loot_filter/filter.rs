@@ -1,6 +1,5 @@
-use std::fmt::Display;
-
 use crate::loot_filter::rule::Rule;
+use std::fmt::Display;
 
 #[derive(Default)]
 pub struct Filter {

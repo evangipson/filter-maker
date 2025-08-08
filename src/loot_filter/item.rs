@@ -1,3 +1,4 @@
+#[derive(PartialEq)]
 pub struct Item {
     pub base_type: &'static str,
 }

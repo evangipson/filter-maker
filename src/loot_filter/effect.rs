@@ -1,104 +1,58 @@
+use crate::alerts::{beam::AlertBeam, icon::AlertIcon, sound::AlertSound};
 use std::fmt::Display;
 
 #[derive(PartialEq)]
-pub enum AlertVolume {
-    Silent,
-    Quiet,
-    Normal,
-    Loud,
-}
-
-impl Display for AlertVolume {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(
-            f,
-            "{}",
-            match self {
-                Self::Silent => "",
-                Self::Quiet => "100",
-                Self::Normal => "200",
-                Self::Loud => "300",
-            }
-        )
-    }
-}
-
-#[derive(PartialEq)]
-pub enum AlertName {
-    Silent,
-    Gong,
-    HollowDrum,
-    VoiceDrum,
-    VoiceWhoosh,
-    LowWhoosh,
-    Glitter,
-    TonalPulse,
-    MechanicalPulse,
-    SlowPulse,
-}
-
-impl Display for AlertName {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(
-            f,
-            "{}",
-            match self {
-                Self::Silent => "",
-                Self::Gong => "1",
-                Self::HollowDrum => "2",
-                Self::VoiceDrum => "3",
-                Self::VoiceWhoosh => "4",
-                Self::LowWhoosh => "5",
-                Self::Glitter => "6",
-                Self::TonalPulse => "7",
-                Self::MechanicalPulse => "8",
-                Self::SlowPulse => "9",
-            }
-        )
-    }
-}
-
-pub struct AlertSound {
-    pub name: AlertName,
-    pub volume: AlertVolume,
-}
-
-impl AlertSound {
-    pub const LOW_WHOOSH: AlertSound = AlertSound::new(AlertName::LowWhoosh, AlertVolume::Normal);
-    pub const LOUD_GLITTER: AlertSound = AlertSound::new(AlertName::Glitter, AlertVolume::Loud);
-    pub const NONE: AlertSound = AlertSound::new(AlertName::Silent, AlertVolume::Silent);
-
-    const fn new(name: AlertName, volume: AlertVolume) -> Self {
-        Self { name, volume }
-    }
-}
-
-impl Display for AlertSound {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        if self.name == AlertName::Silent || self.volume == AlertVolume::Silent {
-            Ok(())
-        } else {
-            write!(f, "PlayAlertSound {} {}", self.name, self.volume)
-        }
-    }
-}
-
 pub struct Effect {
     pub alert_sound: AlertSound,
+    pub alert_icon: AlertIcon,
+    pub alert_beam: AlertBeam,
 }
 
 impl Effect {
-    pub const NONE: Effect = Effect::new(AlertSound::NONE);
-    pub const NORMAL_DROP: Effect = Effect::new(AlertSound::LOW_WHOOSH);
-    pub const BIG_DROP: Effect = Effect::new(AlertSound::LOUD_GLITTER);
+    pub const NONE: Effect = Effect::new(AlertSound::NONE, AlertIcon::NONE, AlertBeam::None);
+    pub const NORMAL_DROP: Effect = Effect::new(
+        AlertSound::LOW_WHOOSH,
+        AlertIcon::SMALL_YELLOW_CIRCLE,
+        AlertBeam::None,
+    );
+    pub const BIG_DROP: Effect = Effect::new(
+        AlertSound::LOUD_GLITTER,
+        AlertIcon::BIG_RED_STAR,
+        AlertBeam::Red,
+    );
 
-    const fn new(alert_sound: AlertSound) -> Self {
-        Self { alert_sound }
+    const fn new(alert_sound: AlertSound, alert_icon: AlertIcon, alert_beam: AlertBeam) -> Self {
+        Self {
+            alert_sound,
+            alert_icon,
+            alert_beam,
+        }
     }
 }
 
 impl Display for Effect {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", self.alert_sound)
+        let alert_sound = format!("{}", self.alert_sound);
+        let alert_icon = format!("{}", self.alert_icon);
+        let alert_beam = format!("{}", self.alert_beam);
+        write!(
+            f,
+            "{}",
+            [alert_sound, alert_icon, alert_beam]
+                .into_iter()
+                .filter(|line| !line.is_empty())
+                .map(|line| line + "\n")
+                .collect::<String>(),
+        )
+    }
+}
+
+impl Default for Effect {
+    fn default() -> Self {
+        Self {
+            alert_sound: AlertSound::NONE,
+            alert_icon: AlertIcon::NONE,
+            alert_beam: AlertBeam::None,
+        }
     }
 }

@@ -1,5 +1,6 @@
 use std::fmt::Display;
 
+#[derive(PartialEq)]
 pub struct Class {
     pub name: &'static str,
 }
