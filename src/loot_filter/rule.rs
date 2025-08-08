@@ -60,24 +60,32 @@ impl Rule {
         Self::new(name, classes, items, rarity)
     }
 
-    pub fn maps(name: &'static str, map_tier: u8, rarity: Rarity) -> Self {
-        Self::new(name, &[], Box::new([]), rarity).set_map_tier(map_tier)
+    pub fn maps(map_tier: u8) -> Self {
+        Self::new("Maps", &[], Box::new([]), Rarity::All).set_map_tier(map_tier)
     }
 
-    pub fn influenced() -> Self {
-        Self::new("Influenced Bases", &[], Box::new([]), Rarity::All).set_influenced(true)
+    pub fn influenced(show_rule: bool) -> Self {
+        Self::new("Influenced Bases", &[], Box::new([]), Rarity::All)
+            .set_influenced(true)
+            .get_rule_if(show_rule)
     }
 
-    pub fn synthesized() -> Self {
-        Self::new("Synthesized Bases", &[], Box::new([]), Rarity::All).set_synthesized(true)
+    pub fn synthesized(show_rule: bool) -> Self {
+        Self::new("Synthesized Bases", &[], Box::new([]), Rarity::All)
+            .set_synthesized(true)
+            .get_rule_if(show_rule)
     }
 
-    pub fn fractured() -> Self {
-        Self::new("Fractured Bases", &[], Box::new([]), Rarity::All).set_fractured(true)
+    pub fn fractured(show_rule: bool) -> Self {
+        Self::new("Fractured Bases", &[], Box::new([]), Rarity::All)
+            .set_fractured(true)
+            .get_rule_if(show_rule)
     }
 
-    pub fn six_links() -> Self {
-        Self::new("Six Linked Bases", &[], Box::new([]), Rarity::All).set_links(6)
+    pub fn six_links(show_rule: bool) -> Self {
+        Self::new("Six Linked Bases", &[], Box::new([]), Rarity::All)
+            .set_links(6)
+            .get_rule_if(show_rule)
     }
 
     fn new(
@@ -141,6 +149,10 @@ impl Rule {
 
     fn set_links(self, links: u8) -> Self {
         Self { links, ..self }
+    }
+
+    fn get_rule_if(self, condition: bool) -> Rule {
+        condition.then_some(self).unwrap_or_default()
     }
 }
 
