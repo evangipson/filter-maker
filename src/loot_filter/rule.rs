@@ -96,17 +96,17 @@ impl Rule {
 
     pub fn maps(map_tier: u8) -> Vec<Rule> {
         vec![
+            Self::new("Maps (tier 17)", &[Class::MAPS], Box::new([]), Rarity::None)
+                .set_font_size(38)
+                .set_color(color::PURPLE, color::NORMAL_WHITE, color::PURPLE)
+                .set_map_tier(17)
+                .set_effect(Effect::INTERESTING_DROP),
             Self::new("Maps", &[Class::MAPS], Box::new([]), Rarity::None)
                 .set_font_size(32)
                 .set_color(color::NORMAL_WHITE, color::BLACK, color::TRANSPARENT)
                 .set_map_tier(map_tier)
                 .set_effect(Effect::SMALL_DROP)
                 .only_if(map_tier < 17),
-            Self::new("Maps (tier 17)", &[Class::MAPS], Box::new([]), Rarity::None)
-                .set_font_size(38)
-                .set_color(color::PURPLE, color::NORMAL_WHITE, color::PURPLE)
-                .set_map_tier(17)
-                .set_effect(Effect::INTERESTING_DROP),
         ]
     }
 
