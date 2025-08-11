@@ -12,6 +12,7 @@ impl Class {
     pub const MANA_FLASKS: Class = Class::new("Mana Flasks");
     pub const HYBRID_FLASKS: Class = Class::new("Hybrid Flasks");
     pub const JEWELS: Class = Class::new("Jewels");
+    pub const ABYSS_JEWELS: Class = Class::new("Abyss Jewels");
     pub const SKILL_GEMS: Class = Class::new("Skill Gem");
     pub const SUPPORT_GEMS: Class = Class::new("Support Gem");
     pub const BREACHSTONES: Class = Class::new("Breachstones");
@@ -44,7 +45,7 @@ impl Class {
     pub const UTILITY_FLASKS: Class = Class::new("Utility Flasks");
     pub const WANDS: Class = Class::new("Wands");
     pub const WARSTAVES: Class = Class::new("Warstaves");
-    pub const ALL_CLASSES: [Class; 38] = [
+    pub const ALL_CLASSES: [Class; 39] = [
         Class::CURRENCY,
         Class::MAPS,
         Class::LIFE_FLASKS,
@@ -53,6 +54,7 @@ impl Class {
         Class::SKILL_GEMS,
         Class::SUPPORT_GEMS,
         Class::JEWELS,
+        Class::ABYSS_JEWELS,
         Class::BREACHSTONES,
         Class::MAP_FRAGMENTS,
         Class::DIVINATION_CARDS,
