@@ -1,4 +1,5 @@
 [env]
+destination = "./FilterMaker.filter"
 schwings = """
     Albino Rhoa Feather
     Awakener's Orb

@@ -2,6 +2,7 @@ use crate::loot_filter::item::Item;
 
 #[derive(Default)]
 pub struct Config {
+    pub destination: String,
     pub schwings: Box<[Item]>,
     pub dings: Box<[Item]>,
     pub pings: Box<[Item]>,
@@ -19,6 +20,7 @@ pub struct Config {
 impl Config {
     pub fn new() -> Self {
         Self {
+            destination: env!("destination").to_string(),
             schwings: Self::get_items(env!("schwings")).into(),
             dings: Self::get_items(env!("dings")).into(),
             pings: Self::get_items(env!("pings")).into(),

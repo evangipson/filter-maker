@@ -10,10 +10,10 @@ pub struct Filter {
 }
 
 impl Filter {
-    pub fn save(filter_name: &str) -> bool {
+    pub fn save() -> bool {
         let config = Config::new();
         fs::write(
-            filter_name,
+            config.destination,
             Filter::new(
                 vec![
                     Rule::schwing("Schwings (S-Tier)", &[], config.schwings, Rarity::None),
