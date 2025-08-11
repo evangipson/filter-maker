@@ -3,11 +3,12 @@ use std::fmt::Display;
 #[derive(Default, PartialEq)]
 pub enum Rarity {
     #[default]
-    All,
-    Common,
+    None,
+    Normal,
     Magic,
     Rare,
     Unique,
+    All,
 }
 
 impl Display for Rarity {
@@ -16,11 +17,12 @@ impl Display for Rarity {
             f,
             "{}",
             match self {
-                Self::All => "",
-                Self::Common => "Common",
+                Self::None => "",
+                Self::Normal => "Normal",
                 Self::Magic => "Magic",
                 Self::Rare => "Rare",
                 Self::Unique => "Unique",
+                Self::All => "Normal Magic Rare Unique",
             }
         )
     }

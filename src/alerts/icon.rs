@@ -118,6 +118,12 @@ impl AlertIcon {
         AlertIcon::new(IconSize::Large, IconColor::Red, IconType::Star);
     pub const YELLOW_STAR: AlertIcon =
         AlertIcon::new(IconSize::Medium, IconColor::Yellow, IconType::Star);
+    pub const PURPLE_KITE: AlertIcon =
+        AlertIcon::new(IconSize::Medium, IconColor::Purple, IconType::Kite);
+    pub const SMALL_RED_CIRCLE: AlertIcon =
+        AlertIcon::new(IconSize::Small, IconColor::Red, IconType::Circle);
+    pub const SMALL_WHITE_CIRCLE: AlertIcon =
+        AlertIcon::new(IconSize::Small, IconColor::White, IconType::Circle);
 
     const fn new(size: IconSize, color: IconColor, icon: IconType) -> Self {
         Self { size, color, icon }
@@ -135,6 +141,6 @@ impl Display for AlertIcon {
             format!("MinimapIcon {} {} {}", self.size, self.color, self.icon)
         };
 
-        write!(f, "{}", alert_icon)
+        write!(f, "{alert_icon}")
     }
 }

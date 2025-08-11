@@ -28,21 +28,14 @@ pub struct Rule {
     pub font_size: u8,
     pub effect: Effect,
     pub finalize: bool,
+    pub strict: bool,
 }
 
 impl Rule {
+    pub const FRACTURED: &str = "FracturedItem True";
     pub const INFLUENCED: &str = "HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord";
-
-    pub fn ding(
-        name: &'static str,
-        classes: &'static [Class],
-        items: Box<[Item]>,
-        rarity: Rarity,
-    ) -> Self {
-        Self::new(name, classes, items, rarity)
-            .set_color(color::BLACK, color::YELLOW, color::TRANSPARENT)
-            .set_effect(Effect::NORMAL_DROP)
-    }
+    pub const SYNTHESIZED: &str = "SynthesisedItem True";
+    pub const DEFAULT_FONT_SIZE: u8 = 28;
 
     pub fn schwing(
         name: &'static str,
@@ -51,8 +44,25 @@ impl Rule {
         rarity: Rarity,
     ) -> Self {
         Self::new(name, classes, items, rarity)
-            .set_color(color::RED, color::WHITE, color::RED)
+            .set_color(color::DIVINE_RED, color::NORMAL_WHITE, color::DIVINE_RED)
+            .set_font_size(48)
             .set_effect(Effect::BIG_DROP)
+    }
+
+    pub fn ding(
+        name: &'static str,
+        classes: &'static [Class],
+        items: Box<[Item]>,
+        rarity: Rarity,
+    ) -> Self {
+        Self::new(name, classes, items, rarity)
+            .set_color(
+                color::DARK_MAGIC_BLUE,
+                color::NORMAL_WHITE,
+                color::DARK_MAGIC_BLUE,
+            )
+            .set_font_size(45)
+            .set_effect(Effect::NORMAL_DROP)
     }
 
     pub fn ping(
@@ -62,33 +72,77 @@ impl Rule {
         rarity: Rarity,
     ) -> Self {
         Self::new(name, classes, items, rarity)
+            .set_font_size(42)
+            .set_color(color::NORMAL_WHITE, color::PURPLE, color::NORMAL_WHITE)
     }
 
-    pub fn maps(map_tier: u8) -> Self {
-        Self::new("Maps", &[], Box::new([]), Rarity::All).set_map_tier(map_tier)
+    pub fn dust_uniques(uniques: Box<[Item]>) -> Self {
+        Self::new("Uniques (dust)", &[], uniques, Rarity::Unique)
+            .set_font_size(38)
+            .set_color(color::NORMAL_WHITE, color::DARK_PINK, color::NORMAL_WHITE)
+            .set_effect(Effect::INTERESTING_DROP)
+    }
+
+    pub fn hide_uniques(uniques: Box<[Item]>) -> Self {
+        Self::new("Uniques (hide)", &[], uniques, Rarity::Unique)
+            .set_color(
+                color::NORMAL_WHITE,
+                color::UNIQUE_ORANGE,
+                color::TRANSPARENT,
+            )
+            .set_font_size(26)
+            .set_hide(true)
+    }
+
+    pub fn maps(map_tier: u8) -> Vec<Rule> {
+        vec![
+            Self::new("Maps", &[Class::MAPS], Box::new([]), Rarity::None)
+                .set_font_size(32)
+                .set_color(color::NORMAL_WHITE, color::BLACK, color::TRANSPARENT)
+                .set_map_tier(map_tier)
+                .set_effect(Effect::SMALL_DROP)
+                .only_if(map_tier < 17),
+            Self::new("Maps (tier 17)", &[Class::MAPS], Box::new([]), Rarity::None)
+                .set_font_size(38)
+                .set_color(color::PURPLE, color::NORMAL_WHITE, color::PURPLE)
+                .set_map_tier(17)
+                .set_effect(Effect::INTERESTING_DROP),
+        ]
     }
 
     pub fn influenced(show_rule: bool) -> Self {
-        Self::new("Influenced Bases", &[], Box::new([]), Rarity::All)
+        Self::new("Influenced Bases", &[], Box::new([]), Rarity::None)
+            .set_font_size(38)
+            .set_color(color::NORMAL_WHITE, color::QUEST_GREEN, color::NORMAL_WHITE)
             .set_influenced(true)
+            .set_effect(Effect::INTERESTING_DROP)
             .only_if(show_rule)
     }
 
     pub fn synthesized(show_rule: bool) -> Self {
-        Self::new("Synthesized Bases", &[], Box::new([]), Rarity::All)
+        Self::new("Synthesized Bases", &[], Box::new([]), Rarity::None)
+            .set_font_size(38)
+            .set_color(color::NORMAL_WHITE, color::PURPLE, color::NORMAL_WHITE)
             .set_synthesized(true)
+            .set_effect(Effect::INTERESTING_DROP)
             .only_if(show_rule)
     }
 
     pub fn fractured(show_rule: bool) -> Self {
-        Self::new("Fractured Bases", &[], Box::new([]), Rarity::All)
+        Self::new("Fractured Bases", &[], Box::new([]), Rarity::None)
+            .set_font_size(38)
+            .set_color(color::NORMAL_WHITE, color::GEM_TEAL, color::NORMAL_WHITE)
             .set_fractured(true)
+            .set_effect(Effect::INTERESTING_DROP)
             .only_if(show_rule)
     }
 
     pub fn six_links(show_rule: bool) -> Self {
-        Self::new("Six Linked Bases", &[], Box::new([]), Rarity::All)
+        Self::new("Six Linked Bases", &[], Box::new([]), Rarity::None)
+            .set_font_size(36)
             .set_links(6)
+            .set_effect(Effect::LINKED_DROP)
+            .set_color(color::NORMAL_WHITE, color::DIVINE_RED, color::NORMAL_WHITE)
             .only_if(show_rule)
     }
 
@@ -99,25 +153,106 @@ impl Rule {
 
         let gold_item = Item::new("Gold");
         vec![
-            Self::new("Gold (base style)", &[], Box::new([gold_item]), Rarity::All)
-                .set_color(color::BLACK, color::YELLOW, color::YELLOW)
-                .set_font_size(18)
-                .set_finalize(false),
-            Self::new("Gold (giant pile)", &[], Box::new([gold_item]), Rarity::All)
-                .set_stack_size(1000)
-                .set_font_size(32)
-                .set_effect(Effect::GOLD_PILE),
-            Self::new("Gold (huge pile)", &[], Box::new([gold_item]), Rarity::All)
-                .set_stack_size(500)
-                .set_font_size(28),
-            Self::new("Gold (large pile)", &[], Box::new([gold_item]), Rarity::All)
-                .set_stack_size(250)
-                .set_font_size(24),
-            Self::new("Gold (mid pile)", &[], Box::new([gold_item]), Rarity::All)
-                .set_stack_size(100)
-                .set_font_size(20),
-            Self::new("Gold (small pile)", &[], Box::new([gold_item]), Rarity::All)
-                .set_stack_size(1),
+            Self::new(
+                "Gold (giant pile with beam)",
+                &[Class::CURRENCY],
+                Box::new([gold_item]),
+                Rarity::None,
+            )
+            .set_stack_size(500)
+            .set_font_size(42)
+            .set_color(color::KALGUUR_GOLD, color::BLACK, color::KALGUUR_GOLD)
+            .set_effect(Effect::GOLD_PILE),
+            Self::new(
+                "Gold (large pile)",
+                &[Class::CURRENCY],
+                Box::new([gold_item]),
+                Rarity::None,
+            )
+            .set_stack_size(350)
+            .set_font_size(38)
+            .set_color(color::KALGUUR_GOLD, color::FADED_BLACK, color::KALGUUR_GOLD),
+            Self::new(
+                "Gold (medium pile)",
+                &[Class::CURRENCY],
+                Box::new([gold_item]),
+                Rarity::None,
+            )
+            .set_stack_size(200)
+            .set_font_size(32)
+            .set_color(color::KALGUUR_GOLD, color::FADED_BLACK, color::KALGUUR_GOLD),
+            Self::new(
+                "Gold (small pile)",
+                &[Class::CURRENCY],
+                Box::new([gold_item]),
+                Rarity::None,
+            )
+            .set_stack_size(100)
+            .set_font_size(28)
+            .set_color(color::KALGUUR_GOLD, color::FADED_BLACK, color::TRANSPARENT),
+            Self::new(
+                "Gold (tiny piles)",
+                &[Class::CURRENCY],
+                Box::new([gold_item]),
+                Rarity::None,
+            )
+            .set_stack_size(1)
+            .set_font_size(24)
+            .set_color(color::KALGUUR_GOLD, color::FADED_BLACK, color::TRANSPARENT),
+        ]
+    }
+
+    pub fn hide() -> Vec<Rule> {
+        vec![
+            Self::new(
+                "All other scarabs",
+                &[Class::BREACHSTONES, Class::MAP_FRAGMENTS],
+                Box::new([Item::new("Scarab")]),
+                Rarity::All,
+            )
+            .set_color(color::GEM_TEAL, color::NORMAL_WHITE, color::GEM_TEAL)
+            .set_font_size(32)
+            .set_strict(false),
+            Self::new(
+                "All normal items",
+                &Class::ALL_CLASSES,
+                Box::new([]),
+                Rarity::Normal,
+            )
+            .set_color(color::NORMAL_WHITE, color::FADED_BLACK, color::TRANSPARENT)
+            .set_font_size(16)
+            .set_hide(true),
+            Self::new(
+                "All magic items",
+                &Class::ALL_CLASSES,
+                Box::new([]),
+                Rarity::Magic,
+            )
+            .set_color(color::MAGIC_BLUE, color::FADED_BLACK, color::TRANSPARENT)
+            .set_font_size(18)
+            .set_hide(true),
+            Self::new(
+                "All rare items",
+                &Class::ALL_CLASSES,
+                Box::new([]),
+                Rarity::Rare,
+            )
+            .set_color(color::RARE_YELLOW, color::FADED_BLACK, color::TRANSPARENT)
+            .set_font_size(20)
+            .set_hide(true),
+            Self::new(
+                "All unique items",
+                &Class::ALL_CLASSES,
+                Box::new([]),
+                Rarity::Unique,
+            )
+            .set_color(
+                color::NORMAL_WHITE,
+                color::UNIQUE_ORANGE,
+                color::TRANSPARENT,
+            )
+            .set_font_size(24)
+            .set_hide(true),
         ]
     }
 
@@ -132,10 +267,8 @@ impl Rule {
             classes,
             items,
             rarity,
-            text_color: color::WHITE,
-            bg_color: color::BLACK,
-            font_size: 24,
             finalize: true,
+            strict: true,
             ..Default::default()
         }
     }
@@ -184,8 +317,12 @@ impl Rule {
         Self { stack_size, ..self }
     }
 
-    fn set_finalize(self, finalize: bool) -> Self {
-        Self { finalize, ..self }
+    fn set_hide(self, hide: bool) -> Self {
+        Self { hide, ..self }
+    }
+
+    fn set_strict(self, strict: bool) -> Self {
+        Self { strict, ..self }
     }
 }
 
@@ -207,9 +344,10 @@ fn get_name_display(name: &'static str, hide: bool) -> String {
     )
 }
 
-fn get_item_display(items: &[Item]) -> String {
+fn get_item_display(items: &[Item], strict: bool) -> String {
     format!(
-        "BaseType {}",
+        "BaseType {}{}",
+        if strict { "== " } else { "" },
         items
             .iter()
             .map(|item| "\"".to_owned() + item.base_type + "\" ")
@@ -221,7 +359,7 @@ fn get_item_display(items: &[Item]) -> String {
 
 fn get_class_display(classes: &[Class]) -> String {
     format!(
-        "Class {}",
+        "Class == {}",
         classes
             .iter()
             .map(|class| "\"".to_owned() + class.name + "\" ")
@@ -243,13 +381,13 @@ impl Display for Rule {
                 [
                     get_name_display(self.name, self.hide),
                     get_class_display(self.classes),
-                    get_item_display(&self.items),
+                    get_item_display(&self.items, self.strict),
                     get_display("Rarity", &self.rarity),
                     get_display("MapTier >=", &self.map_tier),
                     get_display("AreaLevel", &self.area_level),
-                    get_display("FracturedItem", &self.fractured),
-                    get_display(Rule::INFLUENCED, &self.influenced),
-                    get_display("SynthesizedItem", &self.synthesized),
+                    Rule::FRACTURED.to_string().only_if(self.fractured),
+                    Rule::INFLUENCED.to_string().only_if(self.influenced),
+                    Rule::SYNTHESIZED.to_string().only_if(self.synthesized),
                     get_display("LinkedSockets", &self.links),
                     get_display("StackSize >=", &self.stack_size),
                     get_display("SetFontSize", &self.font_size),

@@ -64,7 +64,6 @@ schwings = """
     Luminous Trove
     Magnum Opus
     Matryoshka
-    Misery in Darkness
     Remembrance
     Seven Years Bad Luck
     Squandered Prosperity
@@ -104,9 +103,45 @@ schwings = """
     Winter's Embrace
     Runegraft of Gemcraft
     Runegraft of the Angler
+    Allflame Ember of the Ethereal
+    Allflame Ember of the Gilded
+    Ambush Scarab of Containment
+    Horned Scarab of Awakening
+    Horned Scarab of Preservation
+    Ultimatum Scarab of Catalysing
+    Archive Reliquary Key
+    Cosmic Reliquary Key
+    Decaying Reliquary Key
+    Forgotten Reliquary Key
+    Oubliette Reliquary Key
+    Shiny Reliquary Key
+    Visceral Reliquary Key
+    Voidborn Reliquary Key
+    Golden Oil
+    Prismatic Oil
+    Corrupted Oil
 """
 dings = """
-    Deafening Essence of
+    Deafening Essence of Greed
+    Deafening Essence of Contempt
+    Deafening Essence of Hatred
+    Deafening Essence of Woe
+    Deafening Essence of Fear
+    Deafening Essence of Anger
+    Deafening Essence of Torment
+    Deafening Essence of Sorrow
+    Deafening Essence of Rage
+    Deafening Essence of Suffering
+    Deafening Essence of Wrath
+    Deafening Essence of Doubt
+    Deafening Essence of Loathing
+    Deafening Essence of Zeal
+    Deafening Essence of Anguish
+    Deafening Essence of Spite
+    Deafening Essence of Scorn
+    Deafening Essence of Envy
+    Deafening Essence of Misery
+    Deafening Essence of Dread
     Essence of Delirium
     Essence of Horror
     Essence of Hysteria
@@ -170,6 +205,27 @@ dings = """
     Sacred Orb
     Tempering Catalyst
     Veiled Chaos Orb
+    Allflame Ember of Kulemak
+    Allflame Ember of Propagation
+    Allflame Ember of Resplendence
+    Blight Scarab of Blooming
+    Blight Scarab of Invigoration
+    Cartography Scarab of Risk
+    Divination Scarab of Pilfering
+    Domination Scarab of Terrors
+    Essence Scarab of Calcification
+    Harvest Scarab of Cornucopia
+    Horned Scarab of Bloodlines
+    Horned Scarab of Pandemonium
+    Incursion Scarab of Timelines
+    Cosmic Fragment
+    Decaying Fragment
+    Awakening Fragment
+    Synthesising Fragment
+    Reality Fragment
+    Devouring Fragment
+    Blazing Fragment
+    Silver Oil
 """
 pings = """
     Potent Chaotic Resonator
@@ -196,8 +252,46 @@ pings = """
     Shuddering Fossil
     Tangled Fossil
     Remnant of Corruption
-    Shrieking Esssence of
-    Screaming Esssence of
+    Shrieking Essence of Greed
+    Shrieking Essence of Contempt
+    Shrieking Essence of Hatred
+    Shrieking Essence of Woe
+    Shrieking Essence of Fear
+    Shrieking Essence of Anger
+    Shrieking Essence of Torment
+    Shrieking Essence of Sorrow
+    Shrieking Essence of Rage
+    Shrieking Essence of Suffering
+    Shrieking Essence of Wrath
+    Shrieking Essence of Doubt
+    Shrieking Essence of Loathing
+    Shrieking Essence of Zeal
+    Shrieking Essence of Anguish
+    Shrieking Essence of Spite
+    Shrieking Essence of Scorn
+    Shrieking Essence of Envy
+    Shrieking Essence of Misery
+    Shrieking Essence of Dread
+    Screaming Essence of Greed
+    Screaming Essence of Contempt
+    Screaming Essence of Hatred
+    Screaming Essence of Woe
+    Screaming Essence of Fear
+    Screaming Essence of Anger
+    Screaming Essence of Torment
+    Screaming Essence of Sorrow
+    Screaming Essence of Rage
+    Screaming Essence of Suffering
+    Screaming Essence of Wrath
+    Screaming Essence of Doubt
+    Screaming Essence of Loathing
+    Screaming Essence of Zeal
+    Screaming Essence of Anguish
+    Screaming Essence of Spite
+    Screaming Essence of Scorn
+    Screaming Essence of Envy
+    Screaming Essence of Misery
+    Screaming Essence of Dread
     Astragali
     Burial Medallion
     Chaos Orb
@@ -234,8 +328,6 @@ pings = """
     Wild Crystallised Lifeforce
     Ancient Orb
     Exotic Coinage
-    Maven's Chisel
-    Scouting Report
     Ritual Vessel
     Ancient Shard
     Annulment Shard
@@ -248,8 +340,13 @@ pings = """
     Orb of Regret
     Orb of Scouring
     Orb of Unmaking
+    Orb of Alteration
+    Orb of Chance
+    Chromatic Orb
+    Orb of Fusing
     Regal Orb
     Vaal Orb
+    Misery in Darkness
 """
 uniques = """
     Astrolabe Amulet
@@ -288,6 +385,28 @@ uniques = """
     Vaal Rapier
     Vermillion Ring
     Void Axe
+"""
+dust_uniques = """
+    Opal Ring
+    Heavy Belt
+    Leather Belt
+    Midnight Blade
+    Triumphant Lamellar
+    Callous Mask
+    Bone Helmet
+"""
+hide_uniques = """
+    Iron Ring
+    Coral Ring
+    Paua Ring
+    Sapphire Ring
+    Topaz Ring
+    Ruby Ring
+    Gold Ring
+    Two-Stone Ring
+    Diamond Ring
+    Moonstone Ring
+    Prismatic Ring
 """
 map_tier = "16"
 show_gold = "true"

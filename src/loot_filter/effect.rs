@@ -15,6 +15,16 @@ impl Effect {
         AlertIcon::SMALL_YELLOW_CIRCLE,
         AlertBeam::None,
     );
+    pub const INTERESTING_DROP: Effect = Effect::new(
+        AlertSound::HOLLOW_DRUM,
+        AlertIcon::PURPLE_KITE,
+        AlertBeam::Purple,
+    );
+    pub const LINKED_DROP: Effect = Effect::new(
+        AlertSound::LOW_WHOOSH,
+        AlertIcon::SMALL_RED_CIRCLE,
+        AlertBeam::Red,
+    );
     pub const BIG_DROP: Effect = Effect::new(
         AlertSound::LOUD_GLITTER,
         AlertIcon::BIG_RED_STAR,
@@ -23,6 +33,11 @@ impl Effect {
     pub const GOLD_PILE: Effect = Effect::new(
         AlertSound::QUIET_GONG,
         AlertIcon::YELLOW_STAR,
+        AlertBeam::Yellow,
+    );
+    pub const SMALL_DROP: Effect = Effect::new(
+        AlertSound::QUIET_DRUM,
+        AlertIcon::SMALL_WHITE_CIRCLE,
         AlertBeam::None,
     );
 
