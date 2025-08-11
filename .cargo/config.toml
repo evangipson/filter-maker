@@ -119,7 +119,8 @@ schwings = """
     Voidborn Reliquary Key
     Golden Oil
     Prismatic Oil
-    Corrupted Oil
+    Tainted Oil
+    Reflective Oil
 """
 dings = """
     Deafening Essence of Greed
@@ -226,6 +227,9 @@ dings = """
     Devouring Fragment
     Blazing Fragment
     Silver Oil
+    Echo of Loneliness
+    Echo of Reverence
+    Echo of Trauma
 """
 pings = """
     Potent Chaotic Resonator
@@ -347,6 +351,7 @@ pings = """
     Regal Orb
     Vaal Orb
     Misery in Darkness
+    Rogue's Marker
 """
 uniques = """
     Astrolabe Amulet

@@ -202,10 +202,10 @@ impl Rule {
         ]
     }
 
-    pub fn hide() -> Vec<Rule> {
+    pub fn base_styles() -> Vec<Rule> {
         vec![
             Self::new(
-                "All other scarabs",
+                "Scarabs (base style)",
                 &[Class::BREACHSTONES, Class::MAP_FRAGMENTS],
                 Box::new([Item::new("Scarab")]),
                 Rarity::All,
@@ -213,6 +213,28 @@ impl Rule {
             .set_color(color::GEM_TEAL, color::NORMAL_WHITE, color::GEM_TEAL)
             .set_font_size(32)
             .set_strict(false),
+            Self::new(
+                "Gems (base style)",
+                &[Class::SKILL_GEMS, Class::SUPPORT_GEMS],
+                Box::new([Item::new("Gem")]),
+                Rarity::All,
+            )
+            .set_color(color::GEM_TEAL, color::FADED_BLACK, color::GEM_TEAL)
+            .set_font_size(32)
+            .set_strict(false),
+            Self::new(
+                "Maps (base style)",
+                &[Class::MAPS],
+                Box::new([]),
+                Rarity::All,
+            )
+            .set_color(color::NORMAL_WHITE, color::FADED_BLACK, color::NORMAL_WHITE)
+            .set_font_size(32),
+        ]
+    }
+
+    pub fn hide() -> Vec<Rule> {
+        vec![
             Self::new(
                 "All normal items",
                 &Class::ALL_CLASSES,
