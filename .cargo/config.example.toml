@@ -1,5 +1,12 @@
+#########################################
+# The main configuration for the filter #
+#########################################
+
 [env]
+# The folder destination and name of the filter, can be relative or absolute
 destination = "./FilterMaker.filter"
+
+# A list of items that get the highest visual importance (S-Tier)
 schwings = """
     Albino Rhoa Feather
     Awakener's Orb
@@ -123,6 +130,8 @@ schwings = """
     Tainted Oil
     Reflective Oil
 """
+
+# A list of items that get somewhat high visual importance (A-Tier)
 dings = """
     Deafening Essence of Greed
     Deafening Essence of Contempt
@@ -232,6 +241,8 @@ dings = """
     Echo of Reverence
     Echo of Trauma
 """
+
+# A list of items that get some visual importance (B-Tier)
 pings = """
     Potent Chaotic Resonator
     Powerful Chaotic Resonator
@@ -354,6 +365,8 @@ pings = """
     Misery in Darkness
     Rogue's Marker
 """
+
+# A list of unique items that recieve the highest visual importance (Tier 0)
 uniques = """
     Astrolabe Amulet
     Cabalist Regalia
@@ -392,6 +405,8 @@ uniques = """
     Vermillion Ring
     Void Axe
 """
+
+# A list of unique items that get some visual importance
 dust_uniques = """
     Opal Ring
     Heavy Belt
@@ -401,6 +416,8 @@ dust_uniques = """
     Callous Mask
     Bone Helmet
 """
+
+# A list of unique items that will be specifically hidden by the filter
 hide_uniques = """
     Iron Ring
     Coral Ring
@@ -414,9 +431,21 @@ hide_uniques = """
     Moonstone Ring
     Prismatic Ring
 """
+
+# All maps at or above this number will be shown by the filter
 map_tier = "16"
+
+# When set to "true", progressively larger gold piles based on amount will be shown by the filter
 show_gold = "true"
+
+# When set to "true", all fractured bases will be shown by the filter
 show_fractured_bases = "true"
+
+# When set to "true", all influenced bases will be shown by the filter
 show_influenced_bases = "true"
+
+# When set to "true", all synthesized bases will be shown by the filter
 show_synthesized_bases = "true"
+
+# When set to "true", all bases with six links will be shown by the filter
 show_six_link_bases = "false"
