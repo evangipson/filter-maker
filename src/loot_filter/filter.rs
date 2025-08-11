@@ -28,9 +28,9 @@ impl Filter {
                     Rule::six_links(config.show_six_links),
                 ]
                 .into_iter()
-                .chain(Rule::base_styles())
                 .chain(Rule::maps(config.map_tier))
                 .chain(Rule::gold(config.show_gold))
+                .chain(Rule::base_styles())
                 .chain(Rule::hide())
                 .collect::<Vec<Rule>>(),
             )

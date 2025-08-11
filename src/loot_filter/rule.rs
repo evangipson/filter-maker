@@ -223,12 +223,40 @@ impl Rule {
             .set_font_size(32)
             .set_strict(false),
             Self::new(
-                "Maps (base style)",
+                "Maps (base 'normal' style)",
                 &[Class::MAPS],
                 Box::new([]),
-                Rarity::All,
+                Rarity::Normal,
             )
             .set_color(color::NORMAL_WHITE, color::FADED_BLACK, color::NORMAL_WHITE)
+            .set_font_size(32),
+            Self::new(
+                "Maps (base 'magic' style)",
+                &[Class::MAPS],
+                Box::new([]),
+                Rarity::Magic,
+            )
+            .set_color(color::MAGIC_BLUE, color::FADED_BLACK, color::MAGIC_BLUE)
+            .set_font_size(32),
+            Self::new(
+                "Maps (base 'rare' style)",
+                &[Class::MAPS],
+                Box::new([]),
+                Rarity::Rare,
+            )
+            .set_color(color::RARE_YELLOW, color::FADED_BLACK, color::RARE_YELLOW)
+            .set_font_size(32),
+            Self::new(
+                "Maps (base 'unique' style)",
+                &[Class::MAPS],
+                Box::new([]),
+                Rarity::Unique,
+            )
+            .set_color(
+                color::UNIQUE_ORANGE,
+                color::FADED_BLACK,
+                color::UNIQUE_ORANGE,
+            )
             .set_font_size(32),
         ]
     }
