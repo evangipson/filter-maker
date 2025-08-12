@@ -1,9 +1,5 @@
 use crate::loot_filter::{
-    class::Class,
-    color::{self, Color},
-    conditional::Conditional,
-    effect::Effect,
-    item::Item,
+    class::Class, conditional::Conditional, custom_color::CustomColor, effect::Effect, item::Item,
     rarity::Rarity,
 };
 use std::fmt::Display;
@@ -22,9 +18,9 @@ pub struct Rule {
     pub synthesized: bool,
     pub links: u8,
     pub stack_size: u16,
-    pub text_color: Color,
-    pub bg_color: Color,
-    pub outline_color: Color,
+    pub text_color: CustomColor,
+    pub bg_color: CustomColor,
+    pub outline_color: CustomColor,
     pub font_size: u8,
     pub effect: Effect,
     pub finalize: bool,
@@ -35,7 +31,6 @@ impl Rule {
     pub const FRACTURED: &str = "FracturedItem True";
     pub const INFLUENCED: &str = "HasInfluence Crusader Elder Hunter Redeemer Shaper Warlord";
     pub const SYNTHESIZED: &str = "SynthesisedItem True";
-    pub const DEFAULT_FONT_SIZE: u8 = 28;
 
     pub fn schwing(
         name: &'static str,
@@ -44,7 +39,11 @@ impl Rule {
         rarity: Rarity,
     ) -> Self {
         Self::new(name, classes, items, rarity)
-            .set_color(color::DIVINE_RED, color::NORMAL_WHITE, color::DIVINE_RED)
+            .set_color(
+                CustomColor::DIVINE_RED,
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DIVINE_RED,
+            )
             .set_font_size(48)
             .set_effect(Effect::BIG_DROP)
     }
@@ -57,9 +56,9 @@ impl Rule {
     ) -> Self {
         Self::new(name, classes, items, rarity)
             .set_color(
-                color::DARK_MAGIC_BLUE,
-                color::NORMAL_WHITE,
-                color::DARK_MAGIC_BLUE,
+                CustomColor::DARK_MAGIC_BLUE,
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DARK_MAGIC_BLUE,
             )
             .set_font_size(45)
             .set_effect(Effect::NORMAL_DROP)
@@ -73,22 +72,30 @@ impl Rule {
     ) -> Self {
         Self::new(name, classes, items, rarity)
             .set_font_size(42)
-            .set_color(color::NORMAL_WHITE, color::PURPLE, color::NORMAL_WHITE)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::PURPLE,
+                CustomColor::NORMAL_WHITE,
+            )
     }
 
     pub fn dust_uniques(uniques: Box<[Item]>) -> Self {
         Self::new("Uniques (dust)", &[], uniques, Rarity::Unique)
             .set_font_size(38)
-            .set_color(color::NORMAL_WHITE, color::DARK_PINK, color::NORMAL_WHITE)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DARK_PINK,
+                CustomColor::NORMAL_WHITE,
+            )
             .set_effect(Effect::INTERESTING_DROP)
     }
 
     pub fn hide_uniques(uniques: Box<[Item]>) -> Self {
         Self::new("Uniques (hide)", &[], uniques, Rarity::Unique)
             .set_color(
-                color::NORMAL_WHITE,
-                color::UNIQUE_ORANGE,
-                color::TRANSPARENT,
+                CustomColor::NORMAL_WHITE,
+                CustomColor::UNIQUE_ORANGE,
+                CustomColor::TRANSPARENT,
             )
             .set_font_size(26)
             .set_hide(true)
@@ -98,7 +105,11 @@ impl Rule {
         vec![
             Self::new("Maps (tier 17)", &[Class::MAPS], Box::new([]), Rarity::None)
                 .set_font_size(38)
-                .set_color(color::PURPLE, color::NORMAL_WHITE, color::PURPLE)
+                .set_color(
+                    CustomColor::PURPLE,
+                    CustomColor::NORMAL_WHITE,
+                    CustomColor::PURPLE,
+                )
                 .set_map_tier(17)
                 .set_effect(Effect::INTERESTING_DROP),
             Self::new(
@@ -108,13 +119,21 @@ impl Rule {
                 Rarity::None,
             )
             .set_font_size(32)
-            .set_color(color::NORMAL_WHITE, color::PURPLE, color::NORMAL_WHITE)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::PURPLE,
+                CustomColor::NORMAL_WHITE,
+            )
             .set_map_tier(map_tier)
             .set_effect(Effect::INTERESTING_DROP)
             .only_if(map_tier < 17),
             Self::new("Maps", &[Class::MAPS], Box::new([]), Rarity::None)
                 .set_font_size(32)
-                .set_color(color::NORMAL_WHITE, color::BLACK, color::TRANSPARENT)
+                .set_color(
+                    CustomColor::NORMAL_WHITE,
+                    CustomColor::BLACK,
+                    CustomColor::TRANSPARENT,
+                )
                 .set_map_tier(map_tier)
                 .set_effect(Effect::SMALL_DROP)
                 .only_if(map_tier < 17),
@@ -124,7 +143,11 @@ impl Rule {
     pub fn influenced(show_rule: bool) -> Self {
         Self::new("Influenced Bases", &[], Box::new([]), Rarity::None)
             .set_font_size(38)
-            .set_color(color::NORMAL_WHITE, color::QUEST_GREEN, color::NORMAL_WHITE)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::QUEST_GREEN,
+                CustomColor::NORMAL_WHITE,
+            )
             .set_influenced(true)
             .set_effect(Effect::INTERESTING_DROP)
             .only_if(show_rule)
@@ -133,7 +156,11 @@ impl Rule {
     pub fn synthesized(show_rule: bool) -> Self {
         Self::new("Synthesized Bases", &[], Box::new([]), Rarity::None)
             .set_font_size(38)
-            .set_color(color::NORMAL_WHITE, color::PURPLE, color::NORMAL_WHITE)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::PURPLE,
+                CustomColor::NORMAL_WHITE,
+            )
             .set_synthesized(true)
             .set_effect(Effect::INTERESTING_DROP)
             .only_if(show_rule)
@@ -142,7 +169,11 @@ impl Rule {
     pub fn fractured(show_rule: bool) -> Self {
         Self::new("Fractured Bases", &[], Box::new([]), Rarity::None)
             .set_font_size(38)
-            .set_color(color::NORMAL_WHITE, color::GEM_TEAL, color::NORMAL_WHITE)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::GEM_TEAL,
+                CustomColor::NORMAL_WHITE,
+            )
             .set_fractured(true)
             .set_effect(Effect::INTERESTING_DROP)
             .only_if(show_rule)
@@ -153,7 +184,11 @@ impl Rule {
             .set_font_size(36)
             .set_links(6)
             .set_effect(Effect::LINKED_DROP)
-            .set_color(color::NORMAL_WHITE, color::DIVINE_RED, color::NORMAL_WHITE)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DIVINE_RED,
+                CustomColor::NORMAL_WHITE,
+            )
             .only_if(show_rule)
     }
 
@@ -172,7 +207,11 @@ impl Rule {
             )
             .set_stack_size(500)
             .set_font_size(42)
-            .set_color(color::KALGUUR_GOLD, color::BLACK, color::KALGUUR_GOLD)
+            .set_color(
+                CustomColor::KALGUUR_GOLD,
+                CustomColor::BLACK,
+                CustomColor::KALGUUR_GOLD,
+            )
             .set_effect(Effect::GOLD_PILE),
             Self::new(
                 "Gold (large pile)",
@@ -182,7 +221,11 @@ impl Rule {
             )
             .set_stack_size(350)
             .set_font_size(38)
-            .set_color(color::KALGUUR_GOLD, color::FADED_BLACK, color::KALGUUR_GOLD),
+            .set_color(
+                CustomColor::KALGUUR_GOLD,
+                CustomColor::FADED_BLACK,
+                CustomColor::KALGUUR_GOLD,
+            ),
             Self::new(
                 "Gold (medium pile)",
                 &[Class::CURRENCY],
@@ -191,7 +234,11 @@ impl Rule {
             )
             .set_stack_size(200)
             .set_font_size(32)
-            .set_color(color::KALGUUR_GOLD, color::FADED_BLACK, color::KALGUUR_GOLD),
+            .set_color(
+                CustomColor::KALGUUR_GOLD,
+                CustomColor::FADED_BLACK,
+                CustomColor::KALGUUR_GOLD,
+            ),
             Self::new(
                 "Gold (small pile)",
                 &[Class::CURRENCY],
@@ -199,8 +246,12 @@ impl Rule {
                 Rarity::None,
             )
             .set_stack_size(100)
-            .set_font_size(28)
-            .set_color(color::KALGUUR_GOLD, color::FADED_BLACK, color::TRANSPARENT),
+            .set_font_size(24)
+            .set_color(
+                CustomColor::KALGUUR_GOLD,
+                CustomColor::FADED_BLACK,
+                CustomColor::TRANSPARENT,
+            ),
             Self::new(
                 "Gold (tiny piles)",
                 &[Class::CURRENCY],
@@ -208,8 +259,12 @@ impl Rule {
                 Rarity::None,
             )
             .set_stack_size(1)
-            .set_font_size(24)
-            .set_color(color::KALGUUR_GOLD, color::FADED_BLACK, color::TRANSPARENT),
+            .set_font_size(22)
+            .set_color(
+                CustomColor::KALGUUR_GOLD,
+                CustomColor::FADED_BLACK,
+                CustomColor::TRANSPARENT,
+            ),
         ]
     }
 
@@ -221,7 +276,11 @@ impl Rule {
                 Box::new([Item::new("Scarab")]),
                 Rarity::All,
             )
-            .set_color(color::GEM_TEAL, color::NORMAL_WHITE, color::GEM_TEAL)
+            .set_color(
+                CustomColor::GEM_TEAL,
+                CustomColor::NORMAL_WHITE,
+                CustomColor::GEM_TEAL,
+            )
             .set_font_size(32)
             .set_strict(false),
             Self::new(
@@ -230,7 +289,11 @@ impl Rule {
                 Box::new([Item::new("Gem")]),
                 Rarity::All,
             )
-            .set_color(color::GEM_TEAL, color::FADED_BLACK, color::GEM_TEAL)
+            .set_color(
+                CustomColor::GEM_TEAL,
+                CustomColor::FADED_BLACK,
+                CustomColor::GEM_TEAL,
+            )
             .set_font_size(32)
             .set_strict(false),
             Self::new(
@@ -239,7 +302,11 @@ impl Rule {
                 Box::new([]),
                 Rarity::Normal,
             )
-            .set_color(color::NORMAL_WHITE, color::FADED_BLACK, color::NORMAL_WHITE)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::FADED_BLACK,
+                CustomColor::NORMAL_WHITE,
+            )
             .set_font_size(32),
             Self::new(
                 "Maps (base 'magic' style)",
@@ -247,7 +314,11 @@ impl Rule {
                 Box::new([]),
                 Rarity::Magic,
             )
-            .set_color(color::MAGIC_BLUE, color::FADED_BLACK, color::MAGIC_BLUE)
+            .set_color(
+                CustomColor::MAGIC_BLUE,
+                CustomColor::FADED_BLACK,
+                CustomColor::MAGIC_BLUE,
+            )
             .set_font_size(32),
             Self::new(
                 "Maps (base 'rare' style)",
@@ -255,7 +326,11 @@ impl Rule {
                 Box::new([]),
                 Rarity::Rare,
             )
-            .set_color(color::RARE_YELLOW, color::FADED_BLACK, color::RARE_YELLOW)
+            .set_color(
+                CustomColor::RARE_YELLOW,
+                CustomColor::FADED_BLACK,
+                CustomColor::RARE_YELLOW,
+            )
             .set_font_size(32),
             Self::new(
                 "Maps (base 'unique' style)",
@@ -264,9 +339,9 @@ impl Rule {
                 Rarity::Unique,
             )
             .set_color(
-                color::UNIQUE_ORANGE,
-                color::FADED_BLACK,
-                color::UNIQUE_ORANGE,
+                CustomColor::UNIQUE_ORANGE,
+                CustomColor::FADED_BLACK,
+                CustomColor::UNIQUE_ORANGE,
             )
             .set_font_size(32),
         ]
@@ -280,7 +355,11 @@ impl Rule {
                 Box::new([]),
                 Rarity::Normal,
             )
-            .set_color(color::NORMAL_WHITE, color::FADED_BLACK, color::TRANSPARENT)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::FADED_BLACK,
+                CustomColor::TRANSPARENT,
+            )
             .set_font_size(16)
             .set_hide(true),
             Self::new(
@@ -289,7 +368,11 @@ impl Rule {
                 Box::new([]),
                 Rarity::Magic,
             )
-            .set_color(color::MAGIC_BLUE, color::FADED_BLACK, color::TRANSPARENT)
+            .set_color(
+                CustomColor::MAGIC_BLUE,
+                CustomColor::FADED_BLACK,
+                CustomColor::TRANSPARENT,
+            )
             .set_font_size(18)
             .set_hide(true),
             Self::new(
@@ -298,7 +381,11 @@ impl Rule {
                 Box::new([]),
                 Rarity::Rare,
             )
-            .set_color(color::RARE_YELLOW, color::FADED_BLACK, color::TRANSPARENT)
+            .set_color(
+                CustomColor::RARE_YELLOW,
+                CustomColor::FADED_BLACK,
+                CustomColor::TRANSPARENT,
+            )
             .set_font_size(20)
             .set_hide(true),
             Self::new(
@@ -308,9 +395,9 @@ impl Rule {
                 Rarity::Unique,
             )
             .set_color(
-                color::NORMAL_WHITE,
-                color::UNIQUE_ORANGE,
-                color::TRANSPARENT,
+                CustomColor::NORMAL_WHITE,
+                CustomColor::UNIQUE_ORANGE,
+                CustomColor::TRANSPARENT,
             )
             .set_font_size(24)
             .set_hide(true),
@@ -338,7 +425,12 @@ impl Rule {
         Self { font_size, ..self }
     }
 
-    fn set_color(self, text_color: Color, bg_color: Color, outline_color: Color) -> Self {
+    fn set_color(
+        self,
+        text_color: CustomColor,
+        bg_color: CustomColor,
+        outline_color: CustomColor,
+    ) -> Self {
         Self {
             text_color,
             bg_color,

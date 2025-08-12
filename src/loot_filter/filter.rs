@@ -4,12 +4,17 @@ use crate::{
 };
 use std::{fmt::Display, fs};
 
+/// [`Filter`] represents the entire item filter.
 #[derive(Default)]
 pub struct Filter {
+    /// [`Filter::rules`] is a collection of [`Rules`](Rule) that makes up a filter.
     pub rules: Vec<Rule>,
 }
 
+/// Implement [`Filter`].
 impl Filter {
+    /// [`Filter::save`] will create and write a new [`Filter`] based on configuration
+    /// values defined in the `.cargo/config.toml` configuration file.
     pub fn save() -> bool {
         let config = Config::new();
         fs::write(
@@ -40,11 +45,13 @@ impl Filter {
         .is_ok()
     }
 
+    /// [`Filter::new`] will create a new [`Filter`].
     fn new(rules: Vec<Rule>) -> Self {
         Self { rules }
     }
 }
 
+/// Implement [`Display`] for [`Filter`].
 impl Display for Filter {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         writeln!(
