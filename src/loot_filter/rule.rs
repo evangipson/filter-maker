@@ -101,6 +101,17 @@ impl Rule {
                 .set_color(color::PURPLE, color::NORMAL_WHITE, color::PURPLE)
                 .set_map_tier(17)
                 .set_effect(Effect::INTERESTING_DROP),
+            Self::new(
+                "Maps (synthesised)",
+                &[Class::MAPS],
+                Box::new([Item::new("Synthesised Maps")]),
+                Rarity::None,
+            )
+            .set_font_size(32)
+            .set_color(color::NORMAL_WHITE, color::PURPLE, color::NORMAL_WHITE)
+            .set_map_tier(map_tier)
+            .set_effect(Effect::INTERESTING_DROP)
+            .only_if(map_tier < 17),
             Self::new("Maps", &[Class::MAPS], Box::new([]), Rarity::None)
                 .set_font_size(32)
                 .set_color(color::NORMAL_WHITE, color::BLACK, color::TRANSPARENT)
