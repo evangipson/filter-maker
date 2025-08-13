@@ -284,6 +284,19 @@ impl Rule {
             .set_font_size(32)
             .set_strict(false),
             Self::new(
+                "Delirium Orb (base style)",
+                &[],
+                Box::new([Item::new("Delirium Orb")]),
+                Rarity::None,
+            )
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::FADED_CURRENCY_SALMON,
+                CustomColor::CURRENCY_SALMON,
+            )
+            .set_font_size(28)
+            .set_strict(false),
+            Self::new(
                 "Gems (base style)",
                 &[Class::SKILL_GEMS, Class::SUPPORT_GEMS],
                 Box::new([Item::new("Gem")]),
@@ -350,6 +363,45 @@ impl Rule {
     pub fn hide() -> Vec<Rule> {
         vec![
             Self::new(
+                "All scrolls",
+                &[],
+                Box::new([Item::new("Scroll of Wisdom"), Item::new("Portal Scroll")]),
+                Rarity::None,
+            )
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::FADED_MAGIC_BLUE,
+                CustomColor::DARK_MAGIC_BLUE,
+            )
+            .set_font_size(22)
+            .set_hide(true),
+            Self::new(
+                "All remaining divination cards",
+                &[Class::DIVINATION_CARDS],
+                Box::new([]),
+                Rarity::None,
+            )
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DARK_MAGIC_BLUE,
+                CustomColor::NORMAL_WHITE,
+            )
+            .set_font_size(22)
+            .set_hide(true),
+            Self::new(
+                "All remaining currency",
+                &[Class::CURRENCY],
+                Box::new([]),
+                Rarity::None,
+            )
+            .set_font_size(22)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::FADED_CURRENCY_SALMON,
+                CustomColor::CURRENCY_SALMON,
+            )
+            .set_hide(true),
+            Self::new(
                 "All normal items",
                 &Class::ALL_CLASSES,
                 Box::new([]),
@@ -373,7 +425,7 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::TRANSPARENT,
             )
-            .set_font_size(18)
+            .set_font_size(16)
             .set_hide(true),
             Self::new(
                 "All rare items",
@@ -386,7 +438,7 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::TRANSPARENT,
             )
-            .set_font_size(20)
+            .set_font_size(16)
             .set_hide(true),
             Self::new(
                 "All unique items",

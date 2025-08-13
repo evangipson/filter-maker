@@ -26,6 +26,9 @@ impl CustomColor {
     /// [`CustomColor::CURRENCY_SALMON`] is a medium shade of pink used to denote currency items.
     pub const CURRENCY_SALMON: CustomColor = CustomColor::new(254, 128, 128, 255);
 
+    /// [`CustomColor::CURRENCY_SALMON`] is a medium shade of translucent pink used to denote currency items.
+    pub const FADED_CURRENCY_SALMON: CustomColor = CustomColor::new(254, 128, 128, 115);
+
     /// [`CustomColor::DARK_PINK`] is a dark shade of pink.
     pub const DARK_PINK: CustomColor = CustomColor::new(211, 84, 25, 255);
 
@@ -37,6 +40,9 @@ impl CustomColor {
 
     /// [`CustomColor::DARK_MAGIC_BLUE`] is a dark shade of blue usually used to denote magic items.
     pub const DARK_MAGIC_BLUE: CustomColor = CustomColor::new(41, 128, 185, 255);
+
+    /// [`CustomColor::DARK_MAGIC_BLUE`] is a dark shade of translucent blue usually used to denote magic items.
+    pub const FADED_MAGIC_BLUE: CustomColor = CustomColor::new(41, 128, 185, 115);
 
     /// [`CustomColor::UNIQUE_ORANGE`] is a bright shade of orange usually used to denote unique items.
     pub const UNIQUE_ORANGE: CustomColor = CustomColor::new(175, 96, 37, 255);
