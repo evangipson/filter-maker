@@ -113,36 +113,6 @@ impl Rule {
                 )
                 .set_map_tier(17)
                 .set_effect(Effect::INTERESTING_DROP),
-            Self::new(
-                "Maps (whisper)",
-                &[Class::MAPS, Class::MEMORY],
-                Box::new([]),
-                Rarity::None,
-            )
-            .set_font_size(28)
-            .set_color(
-                CustomColor::NORMAL_WHITE,
-                CustomColor::DARK_PURPLE,
-                CustomColor::NORMAL_WHITE,
-            )
-            .set_map_tier(map_tier)
-            .set_effect(Effect::MID_DROP)
-            .only_if(map_tier < 17),
-            Self::new(
-                "Maps (synthesised)",
-                &[Class::MAPS],
-                Box::new([Item::new("Synthesised Map")]),
-                Rarity::None,
-            )
-            .set_font_size(32)
-            .set_color(
-                CustomColor::NORMAL_WHITE,
-                CustomColor::PURPLE,
-                CustomColor::NORMAL_WHITE,
-            )
-            .set_map_tier(map_tier)
-            .set_effect(Effect::INTERESTING_DROP)
-            .only_if(map_tier < 17),
             Self::new("Maps", &[Class::MAPS], Box::new([]), Rarity::None)
                 .set_font_size(32)
                 .set_color(
@@ -324,6 +294,33 @@ impl Rule {
                 CustomColor::GEM_TEAL,
             )
             .set_font_size(32)
+            .set_strict(false),
+            Self::new(
+                "Maps (synthesised)",
+                &[],
+                Box::new([Item::new("Synthesised Map")]),
+                Rarity::None,
+            )
+            .set_font_size(32)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::PURPLE,
+                CustomColor::NORMAL_WHITE,
+            )
+            .set_effect(Effect::INTERESTING_DROP),
+            Self::new(
+                "Maps (whisper)",
+                &[Class::MEMORY],
+                Box::new([Item::new("Map")]),
+                Rarity::None,
+            )
+            .set_font_size(28)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DARK_PURPLE,
+                CustomColor::NORMAL_WHITE,
+            )
+            .set_effect(Effect::MID_DROP)
             .set_strict(false),
             Self::new(
                 "Maps (base 'normal' style)",
