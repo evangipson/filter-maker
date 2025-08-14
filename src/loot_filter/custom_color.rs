@@ -35,6 +35,9 @@ impl CustomColor {
     /// [`CustomColor::PURPLE`] is a dark shade of purple.
     pub const PURPLE: CustomColor = CustomColor::new(142, 68, 173, 255);
 
+    /// [`CustomColor::DARK_PURPLE`] is a darker shade of purple.
+    pub const DARK_PURPLE: CustomColor = CustomColor::new(102, 28, 133, 255);
+
     /// [`CustomColor::MAGIC_BLUE`] is a bright shade of blue usually used to denote magic items.
     pub const MAGIC_BLUE: CustomColor = CustomColor::new(136, 136, 255, 255);
 

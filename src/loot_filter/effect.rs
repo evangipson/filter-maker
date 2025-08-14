@@ -49,6 +49,14 @@ impl Effect {
         AlertBeam::RED,
     );
 
+    /// [`Effect::MID_DROP`] will play a low whooshing sound, show a small white circle minimap icon and
+    /// a white beam when an item is dropped.
+    pub const MID_DROP: Effect = Effect::new(
+        AlertSound::LOW_WHOOSH,
+        AlertIcon::SMALL_WHITE_CIRCLE,
+        AlertBeam::WHITE,
+    );
+
     /// [`Effect::GOLD_PILE`] will play a quiet gong sound, show a yellow star minimap icon and yellow beam
     /// when an item is dropped.
     pub const GOLD_PILE: Effect = Effect::new(

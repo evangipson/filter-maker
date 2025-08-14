@@ -126,6 +126,9 @@ impl Class {
     /// [`Class::WARSTAVES`] is the item class for all two-handed quarterstaves.
     pub const WARSTAVES: Class = Class::new("Warstaves");
 
+    /// [`Class::MEMORY`] is the item class for all whisper-y items.
+    pub const MEMORY: Class = Class::new("Memory");
+
     /// [`Class::ALL_CLASSES`] is a collection of all item classes.
     pub const ALL_CLASSES: [Class; 39] = [
         Class::CURRENCY,

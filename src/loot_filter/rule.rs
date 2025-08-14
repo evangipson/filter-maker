@@ -114,6 +114,21 @@ impl Rule {
                 .set_map_tier(17)
                 .set_effect(Effect::INTERESTING_DROP),
             Self::new(
+                "Maps (whisper)",
+                &[Class::MAPS, Class::MEMORY],
+                Box::new([]),
+                Rarity::None,
+            )
+            .set_font_size(28)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DARK_PURPLE,
+                CustomColor::NORMAL_WHITE,
+            )
+            .set_map_tier(map_tier)
+            .set_effect(Effect::MID_DROP)
+            .only_if(map_tier < 17),
+            Self::new(
                 "Maps (synthesised)",
                 &[Class::MAPS],
                 Box::new([Item::new("Synthesised Map")]),
