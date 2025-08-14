@@ -88,6 +88,7 @@ impl Rule {
                 CustomColor::NORMAL_WHITE,
             )
             .set_effect(Effect::INTERESTING_DROP)
+            .set_strict(false)
     }
 
     pub fn hide_uniques(uniques: Box<[Item]>) -> Self {
@@ -115,7 +116,7 @@ impl Rule {
             Self::new(
                 "Maps (synthesised)",
                 &[Class::MAPS],
-                Box::new([Item::new("Synthesised Maps")]),
+                Box::new([Item::new("Synthesised Map")]),
                 Rarity::None,
             )
             .set_font_size(32)
