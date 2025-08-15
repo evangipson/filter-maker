@@ -113,6 +113,19 @@ impl Rule {
                 )
                 .set_map_tier(17)
                 .set_effect(Effect::INTERESTING_DROP),
+            Self::new(
+                "Maps (whisper)",
+                &[Class::MEMORY],
+                Box::new([]),
+                Rarity::None,
+            )
+            .set_font_size(28)
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DARK_PURPLE,
+                CustomColor::NORMAL_WHITE,
+            )
+            .set_effect(Effect::MID_DROP),
             Self::new("Maps", &[Class::MAPS], Box::new([]), Rarity::None)
                 .set_font_size(32)
                 .set_color(
@@ -257,6 +270,19 @@ impl Rule {
     pub fn base_styles() -> Vec<Rule> {
         vec![
             Self::new(
+                "Breach Splinters (base style)",
+                &[],
+                Box::new([Item::new("Splinter of")]),
+                Rarity::None,
+            )
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DIVINE_RED,
+                CustomColor::DARK_PURPLE,
+            )
+            .set_font_size(28)
+            .set_strict(false),
+            Self::new(
                 "Scarabs (base style)",
                 &[Class::BREACHSTONES, Class::MAP_FRAGMENTS],
                 Box::new([Item::new("Scarab")]),
@@ -308,20 +334,6 @@ impl Rule {
                 CustomColor::NORMAL_WHITE,
             )
             .set_effect(Effect::INTERESTING_DROP),
-            Self::new(
-                "Maps (whisper)",
-                &[Class::MEMORY],
-                Box::new([Item::new("Map")]),
-                Rarity::None,
-            )
-            .set_font_size(28)
-            .set_color(
-                CustomColor::NORMAL_WHITE,
-                CustomColor::DARK_PURPLE,
-                CustomColor::NORMAL_WHITE,
-            )
-            .set_effect(Effect::MID_DROP)
-            .set_strict(false),
             Self::new(
                 "Maps (base 'normal' style)",
                 &[Class::MAPS],
