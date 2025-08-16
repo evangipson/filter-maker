@@ -73,6 +73,14 @@ impl Effect {
         AlertBeam::NONE,
     );
 
+    /// [`Effect::SPECIAL_DROP`] will play a hollow drum sound and show a pink moon minimap icon when an
+    /// item is dropped.
+    pub const SPECIAL_DROP: Effect = Effect::new(
+        AlertSound::HOLLOW_DRUM,
+        AlertIcon::PINK_MOON,
+        AlertBeam::PINK,
+    );
+
     /// [`Effect::new`] will create a new [`Effect`].
     const fn new(alert_sound: AlertSound, alert_icon: AlertIcon, alert_beam: AlertBeam) -> Self {
         Self {

@@ -153,15 +153,15 @@ impl Rule {
     }
 
     pub fn synthesized(show_rule: bool) -> Self {
-        Self::new("Synthesized Bases", &[], Box::new([]), Rarity::None)
+        Self::new("Synthesized Bases", &[], Box::new([]), Rarity::All)
             .set_font_size(38)
             .set_color(
                 CustomColor::NORMAL_WHITE,
-                CustomColor::PURPLE,
+                CustomColor::SYNTHESIZED_PINK,
                 CustomColor::NORMAL_WHITE,
             )
             .set_synthesized(true)
-            .set_effect(Effect::INTERESTING_DROP)
+            .set_effect(Effect::SPECIAL_DROP)
             .only_if(show_rule)
     }
 

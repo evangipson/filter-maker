@@ -26,11 +26,11 @@ impl Filter {
                     Rule::ping("Pings (B-Tier)", &[], config.pings, Rarity::None),
                     Rule::schwing("Uniques (Tier 0)", &[], config.uniques, Rarity::Unique),
                     Rule::dust_uniques(config.dust_uniques),
-                    Rule::hide_uniques(config.hide_uniques),
                     Rule::fractured(config.show_fractured),
                     Rule::influenced(config.show_influenced),
                     Rule::synthesized(config.show_synthesized),
                     Rule::six_links(config.show_six_links),
+                    Rule::hide_uniques(config.hide_uniques),
                 ]
                 .into_iter()
                 .chain(Rule::maps(config.map_tier))

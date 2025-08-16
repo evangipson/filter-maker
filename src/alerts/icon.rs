@@ -40,6 +40,9 @@ impl AlertIcon {
     pub const SMALL_WHITE_CIRCLE: AlertIcon =
         AlertIcon::new(IconSize::Small, Color::White, IconType::Circle);
 
+    /// [`AlertIcon::PINK_MOON`] will show a medium-sized pink moon icon on the minimap.
+    pub const PINK_MOON: AlertIcon = AlertIcon::new(IconSize::Medium, Color::Pink, IconType::Moon);
+
     /// [`AlertIcon::new`] will create a new [`AlertIcon`].
     const fn new(size: IconSize, color: Color, icon: IconType) -> Self {
         Self { size, color, icon }

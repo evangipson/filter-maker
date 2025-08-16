@@ -29,6 +29,9 @@ impl CustomColor {
     /// [`CustomColor::CURRENCY_SALMON`] is a medium shade of translucent pink used to denote currency items.
     pub const FADED_CURRENCY_SALMON: CustomColor = CustomColor::new(254, 128, 128, 115);
 
+    /// [`CustomColor::SYNTHESIZED_PINK`] is a dark shade of pink used to denote synthesized items.
+    pub const SYNTHESIZED_PINK: CustomColor = CustomColor::new(153, 0, 76, 255);
+
     /// [`CustomColor::DARK_PINK`] is a dark shade of pink.
     pub const DARK_PINK: CustomColor = CustomColor::new(211, 84, 25, 255);
 
