@@ -280,7 +280,7 @@ impl Rule {
                 CustomColor::DIVINE_RED,
                 CustomColor::NORMAL_WHITE,
             )
-            .set_effect(Effect::BIG_DROP)
+            .set_effect(Effect::RARE_DROP)
             .set_font_size(38)
             .set_strict(false),
             Self::new(

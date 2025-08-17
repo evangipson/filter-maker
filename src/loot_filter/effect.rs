@@ -49,6 +49,14 @@ impl Effect {
         AlertBeam::RED,
     );
 
+    /// [`Effect::BIG_DROP`] will play a loud tonal pulse sound, show a big red star minimap icon and a red
+    /// beam when an item is dropped.
+    pub const RARE_DROP: Effect = Effect::new(
+        AlertSound::LOUD_PULSE,
+        AlertIcon::BIG_RED_STAR,
+        AlertBeam::RED,
+    );
+
     /// [`Effect::MID_DROP`] will play a low whooshing sound, show a small white circle minimap icon and
     /// a white beam when an item is dropped.
     pub const MID_DROP: Effect = Effect::new(

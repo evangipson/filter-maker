@@ -27,6 +27,9 @@ impl AlertSound {
     /// [`AlertSound::QUIET_DRUM`] will play a vocal drum alert sound quietly.
     pub const QUIET_DRUM: AlertSound = AlertSound::new(AlertName::VoiceDrum, AlertVolume::Quiet);
 
+    /// [`AlertSound::LOUD_PULSE`] will play a tonal pulse alert sound at a loud volume.
+    pub const LOUD_PULSE: AlertSound = AlertSound::new(AlertName::TonalPulse, AlertVolume::Loud);
+
     /// [`AlertSound::NONE`] will not play any alert sound.
     pub const NONE: AlertSound = AlertSound::new(AlertName::Silent, AlertVolume::Silent);
 
