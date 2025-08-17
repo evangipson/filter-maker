@@ -38,6 +38,9 @@ impl CustomColor {
     /// [`CustomColor::PURPLE`] is a dark shade of purple.
     pub const PURPLE: CustomColor = CustomColor::new(142, 68, 173, 255);
 
+    /// [`CustomColor::PURPLE`] is a dark shade of transcluent purple.
+    pub const FADED_PURPLE: CustomColor = CustomColor::new(142, 68, 173, 215);
+
     /// [`CustomColor::DARK_PURPLE`] is a darker shade of purple.
     pub const DARK_PURPLE: CustomColor = CustomColor::new(102, 28, 133, 255);
 

@@ -71,11 +71,11 @@ impl Rule {
         rarity: Rarity,
     ) -> Self {
         Self::new(name, classes, items, rarity)
-            .set_font_size(42)
+            .set_font_size(38)
             .set_color(
                 CustomColor::NORMAL_WHITE,
-                CustomColor::PURPLE,
-                CustomColor::NORMAL_WHITE,
+                CustomColor::FADED_PURPLE,
+                CustomColor::TRANSPARENT,
             )
     }
 
