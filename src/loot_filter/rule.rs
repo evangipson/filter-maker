@@ -270,6 +270,20 @@ impl Rule {
     pub fn base_styles() -> Vec<Rule> {
         vec![
             Self::new(
+                "Awakened Gems (base style)",
+                &[Class::SKILL_GEMS, Class::SUPPORT_GEMS],
+                Box::new([Item::new("Awakened")]),
+                Rarity::None,
+            )
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::DIVINE_RED,
+                CustomColor::NORMAL_WHITE,
+            )
+            .set_effect(Effect::BIG_DROP)
+            .set_font_size(38)
+            .set_strict(false),
+            Self::new(
                 "Breach Splinters (base style)",
                 &[],
                 Box::new([Item::new("Splinter of")]),
