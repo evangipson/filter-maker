@@ -22,6 +22,7 @@ pub struct Rule {
     pub bg_color: CustomColor,
     pub outline_color: CustomColor,
     pub font_size: u8,
+    pub quality: u8,
     pub effect: Effect,
     pub finalize: bool,
     pub strict: bool,
@@ -283,6 +284,14 @@ impl Rule {
             .set_effect(Effect::RARE_DROP)
             .set_font_size(38)
             .set_strict(false),
+            Self::new("Quality Items (base style)", &[], Box::new([]), Rarity::All)
+                .set_color(
+                    CustomColor::NORMAL_WHITE,
+                    CustomColor::FADED_PURPLE,
+                    CustomColor::PURPLE,
+                )
+                .set_font_size(36)
+                .set_quality(20),
             Self::new(
                 "Breach Splinters (base style)",
                 &[],
@@ -568,6 +577,10 @@ impl Rule {
     fn set_strict(self, strict: bool) -> Self {
         Self { strict, ..self }
     }
+
+    fn set_quality(self, quality: u8) -> Self {
+        Self { quality, ..self }
+    }
 }
 
 fn get_display<T: Default + Display + Conditional + PartialEq>(
@@ -629,6 +642,7 @@ impl Display for Rule {
                     get_display("Rarity", &self.rarity),
                     get_display("MapTier >=", &self.map_tier),
                     get_display("AreaLevel", &self.area_level),
+                    get_display("Quality >=", &self.quality).if_not_default(&self.quality),
                     Rule::FRACTURED.to_string().only_if(self.fractured),
                     Rule::INFLUENCED.to_string().only_if(self.influenced),
                     Rule::SYNTHESIZED.to_string().only_if(self.synthesized),
