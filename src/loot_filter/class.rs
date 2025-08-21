@@ -130,7 +130,7 @@ impl Class {
     pub const MEMORY: Class = Class::new("Memory");
 
     /// [`Class::ALL_CLASSES`] is a collection of all item classes.
-    pub const ALL_CLASSES: [Class; 39] = [
+    pub const ALL_CLASSES: [Class; 38] = [
         Class::CURRENCY,
         Class::MAPS,
         Class::LIFE_FLASKS,
