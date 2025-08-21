@@ -144,7 +144,6 @@ impl Class {
         Class::MAP_FRAGMENTS,
         Class::DIVINATION_CARDS,
         Class::TINCTURES,
-        Class::CONTRACTS,
         Class::AMULETS,
         Class::BELTS,
         Class::BODY_ARMORS,
