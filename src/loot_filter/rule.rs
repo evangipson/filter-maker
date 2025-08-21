@@ -319,6 +319,19 @@ impl Rule {
             .set_font_size(32)
             .set_strict(false),
             Self::new(
+                "Crests (base style)",
+                &[Class::MAP_FRAGMENTS],
+                Box::new([Item::new("Crest")]),
+                Rarity::All,
+            )
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::GEM_TEAL,
+                CustomColor::NORMAL_WHITE,
+            )
+            .set_font_size(38)
+            .set_strict(false),
+            Self::new(
                 "Delirium Orb (base style)",
                 &[],
                 Box::new([Item::new("Delirium Orb")]),
