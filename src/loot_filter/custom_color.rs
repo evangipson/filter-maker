@@ -59,11 +59,11 @@ impl CustomColor {
     /// [`CustomColor::KALGUUR_GOLD`] is a bright shade of gold usually used to denote gold.
     pub const KALGUUR_GOLD: CustomColor = CustomColor::new(187, 165, 61, 255);
 
+    /// [`CustomColor::DARK_KALGUUR_GOLD`] is a dark shade of gold usually used to denote over-quality items.
+    pub const DARK_KALGUUR_GOLD: CustomColor = CustomColor::new(147, 125, 21, 255);
+
     /// [`CustomColor::GEM_TEAL`] is a bright shade of teal usually used to denote skill and support gems.
     pub const GEM_TEAL: CustomColor = CustomColor::new(7, 122, 115, 255);
-
-    /// [`CustomColor::FADED_GEM_TEAL`] is a bright shade of translucent teal usually used to denote over-quality items.
-    pub const FADED_GEM_TEAL: CustomColor = CustomColor::new(7, 122, 115, 185);
 
     /// [`CustomColor::NORMAL_WHITE`] is a bright shade of white usually used for readable text.
     pub const NORMAL_WHITE: CustomColor = CustomColor::new(200, 200, 200, 255);

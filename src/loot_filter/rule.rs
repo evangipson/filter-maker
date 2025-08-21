@@ -287,8 +287,8 @@ impl Rule {
             Self::new("Quality Items (base style)", &[], Box::new([]), Rarity::All)
                 .set_color(
                     CustomColor::NORMAL_WHITE,
-                    CustomColor::FADED_GEM_TEAL,
-                    CustomColor::GEM_TEAL,
+                    CustomColor::DARK_KALGUUR_GOLD,
+                    CustomColor::NORMAL_WHITE,
                 )
                 .set_font_size(36)
                 .set_quality(20),
