@@ -447,7 +447,7 @@ impl Rule {
                 CustomColor::DARK_MAGIC_BLUE,
                 CustomColor::NORMAL_WHITE,
             )
-            .set_font_size(22)
+            .set_font_size(28)
             .set_hide(true),
             Self::new(
                 "All remaining currency",
