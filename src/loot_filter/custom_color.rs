@@ -56,6 +56,9 @@ impl CustomColor {
     /// [`CustomColor::UNIQUE_ORANGE`] is a bright shade of orange usually used to denote unique items.
     pub const UNIQUE_ORANGE: CustomColor = CustomColor::new(175, 96, 37, 255);
 
+    /// [`CustomColor::DARK_UNIQUE_ORANGE`] is a dark shade of orange usually used to denote unique items.
+    pub const DARK_UNIQUE_ORANGE: CustomColor = CustomColor::new(145, 66, 7, 255);
+
     /// [`CustomColor::KALGUUR_GOLD`] is a bright shade of gold usually used to denote gold.
     pub const KALGUUR_GOLD: CustomColor = CustomColor::new(187, 165, 61, 255);
 
@@ -67,6 +70,9 @@ impl CustomColor {
 
     /// [`CustomColor::NORMAL_WHITE`] is a bright shade of white usually used for readable text.
     pub const NORMAL_WHITE: CustomColor = CustomColor::new(200, 200, 200, 255);
+
+    /// [`CustomColor::NORMAL_WHITE`] is a bright shade of translucent white usually used for unobtrusive backgrounds.
+    pub const FADED_NORMAL_WHITE: CustomColor = CustomColor::new(200, 200, 200, 205);
 
     /// [`CustomColor::BLACK`] is a dark shade of black usually used as a background for readable text.
     pub const BLACK: CustomColor = CustomColor::new(42, 42, 42, 255);

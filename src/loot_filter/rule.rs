@@ -316,9 +316,9 @@ impl Rule {
                 Rarity::None,
             )
             .set_color(
-                CustomColor::UNIQUE_ORANGE,
-                CustomColor::NORMAL_WHITE,
-                CustomColor::UNIQUE_ORANGE,
+                CustomColor::DARK_UNIQUE_ORANGE,
+                CustomColor::FADED_NORMAL_WHITE,
+                CustomColor::DARK_UNIQUE_ORANGE,
             )
             .set_font_size(24)
             .set_strict(false),
