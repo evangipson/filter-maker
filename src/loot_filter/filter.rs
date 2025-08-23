@@ -35,7 +35,7 @@ impl Filter {
                 .into_iter()
                 .chain(Rule::maps(config.map_tier))
                 .chain(Rule::gold(config.show_gold, config.show_gold_icons))
-                .chain(Rule::base_styles())
+                .chain(Rule::base_styles(config.show_quality_over))
                 .chain(Rule::hide())
                 .collect::<Vec<Rule>>(),
             )

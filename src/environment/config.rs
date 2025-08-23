@@ -40,6 +40,8 @@ pub struct Config {
     pub show_six_links: bool,
     /// [`Config::show_gold_icons`] represents a setting to show minimap icons for all gold.
     pub show_gold_icons: bool,
+    /// [`Config::show_gold_icons`] represents a setting for the item quality required for the filter to display it.
+    pub show_quality_over: u8,
 }
 
 /// Implement [`Config`].
@@ -62,6 +64,7 @@ impl Config {
             show_synthesized: Self::get_boolean(env!("show_synthesized_bases")),
             show_six_links: Self::get_boolean(env!("show_six_link_bases")),
             show_gold_icons: Self::get_boolean(env!("show_gold_icons")),
+            show_quality_over: Self::get_number(env!("show_quality_over")),
         }
     }
 

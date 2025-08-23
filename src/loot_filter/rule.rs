@@ -272,7 +272,7 @@ impl Rule {
         ]
     }
 
-    pub fn base_styles() -> Vec<Rule> {
+    pub fn base_styles(quality_threshold: u8) -> Vec<Rule> {
         vec![
             Self::new(
                 "Awakened Gems (base style)",
@@ -295,7 +295,7 @@ impl Rule {
                     CustomColor::NORMAL_WHITE,
                 )
                 .set_font_size(36)
-                .set_quality(20),
+                .set_quality(quality_threshold),
             Self::new(
                 "Breach Splinters (base style)",
                 &[],
