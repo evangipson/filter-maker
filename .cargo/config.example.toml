@@ -450,3 +450,6 @@ show_synthesized_bases = "true"
 
 # When set to "true", all bases with six links will be shown by the filter
 show_six_link_bases = "false"
+
+# When set to "true", all gold will have minimap icons displayed by the filter
+show_gold_icons = "false"

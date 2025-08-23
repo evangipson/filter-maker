@@ -28,6 +28,10 @@ impl AlertIcon {
     pub const YELLOW_STAR: AlertIcon =
         AlertIcon::new(IconSize::Medium, Color::Yellow, IconType::Star);
 
+    /// [`AlertIcon::SMALL_YELLOW_STAR`] will show a small yellow star icon on the minimap.
+    pub const SMALL_YELLOW_STAR: AlertIcon =
+        AlertIcon::new(IconSize::Small, Color::Yellow, IconType::Star);
+
     /// [`AlertIcon::PURPLE_KITE`] will show a medium-sized purple kite icon on the minimap.
     pub const PURPLE_KITE: AlertIcon =
         AlertIcon::new(IconSize::Medium, Color::Purple, IconType::Kite);

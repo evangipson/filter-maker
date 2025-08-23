@@ -38,6 +38,8 @@ pub struct Config {
     pub show_synthesized: bool,
     /// [`Config::show_six_links`] represents a setting to show all six-linked items.
     pub show_six_links: bool,
+    /// [`Config::show_gold_icons`] represents a setting to show minimap icons for all gold.
+    pub show_gold_icons: bool,
 }
 
 /// Implement [`Config`].
@@ -59,6 +61,7 @@ impl Config {
             show_influenced: Self::get_boolean(env!("show_influenced_bases")),
             show_synthesized: Self::get_boolean(env!("show_synthesized_bases")),
             show_six_links: Self::get_boolean(env!("show_six_link_bases")),
+            show_gold_icons: Self::get_boolean(env!("show_gold_icons")),
         }
     }
 

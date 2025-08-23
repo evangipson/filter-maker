@@ -73,6 +73,13 @@ impl Effect {
         AlertBeam::YELLOW,
     );
 
+    /// [`Effect::SMALL_GOLD_ICON`] will show a small yellow star minimap icon when an item is dropped.
+    pub const SMALL_GOLD_ICON: Effect = Effect::new(
+        AlertSound::NONE,
+        AlertIcon::SMALL_YELLOW_STAR,
+        AlertBeam::NONE,
+    );
+
     /// [`Effect::SMALL_DROP`] will play a quiet drum sound and show a small white circle minimap icon when
     /// an item is dropped.
     pub const SMALL_DROP: Effect = Effect::new(

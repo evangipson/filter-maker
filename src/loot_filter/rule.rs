@@ -192,7 +192,7 @@ impl Rule {
             .only_if(show_rule)
     }
 
-    pub fn gold(show_rule: bool) -> Vec<Rule> {
+    pub fn gold(show_rule: bool, show_icons: bool) -> Vec<Rule> {
         if !show_rule {
             return vec![];
         }
@@ -225,7 +225,8 @@ impl Rule {
                 CustomColor::KALGUUR_GOLD,
                 CustomColor::FADED_BLACK,
                 CustomColor::KALGUUR_GOLD,
-            ),
+            )
+            .set_effect(Self::get_gold_icon(&show_icons)),
             Self::new(
                 "Gold (medium pile)",
                 &[Class::CURRENCY],
@@ -238,7 +239,8 @@ impl Rule {
                 CustomColor::KALGUUR_GOLD,
                 CustomColor::FADED_BLACK,
                 CustomColor::KALGUUR_GOLD,
-            ),
+            )
+            .set_effect(Self::get_gold_icon(&show_icons)),
             Self::new(
                 "Gold (small pile)",
                 &[Class::CURRENCY],
@@ -251,7 +253,8 @@ impl Rule {
                 CustomColor::KALGUUR_GOLD,
                 CustomColor::FADED_BLACK,
                 CustomColor::TRANSPARENT,
-            ),
+            )
+            .set_effect(Self::get_gold_icon(&show_icons)),
             Self::new(
                 "Gold (tiny piles)",
                 &[Class::CURRENCY],
@@ -264,7 +267,8 @@ impl Rule {
                 CustomColor::KALGUUR_GOLD,
                 CustomColor::FADED_BLACK,
                 CustomColor::TRANSPARENT,
-            ),
+            )
+            .set_effect(Self::get_gold_icon(&show_icons)),
         ]
     }
 
@@ -531,6 +535,14 @@ impl Rule {
             finalize: true,
             strict: true,
             ..Default::default()
+        }
+    }
+
+    fn get_gold_icon(show_icons: &bool) -> Effect {
+        if show_icons.to_owned() {
+            Effect::SMALL_GOLD_ICON
+        } else {
+            Effect::NONE
         }
     }
 
