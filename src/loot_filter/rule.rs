@@ -272,7 +272,7 @@ impl Rule {
         ]
     }
 
-    pub fn base_styles(quality_threshold: u8) -> Vec<Rule> {
+    pub fn base_styles(quality_threshold: u8, map_tier: u8) -> Vec<Rule> {
         vec![
             Self::new(
                 "Awakened Gems (base style)",
@@ -410,7 +410,8 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::NORMAL_WHITE,
             )
-            .set_font_size(32),
+            .set_font_size(32)
+            .set_map_tier(map_tier),
             Self::new(
                 "Maps (base 'magic' style)",
                 &[Class::MAPS],
@@ -422,7 +423,8 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::MAGIC_BLUE,
             )
-            .set_font_size(32),
+            .set_font_size(32)
+            .set_map_tier(map_tier),
             Self::new(
                 "Maps (base 'rare' style)",
                 &[Class::MAPS],
@@ -434,7 +436,8 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::RARE_YELLOW,
             )
-            .set_font_size(32),
+            .set_font_size(32)
+            .set_map_tier(map_tier),
             Self::new(
                 "Maps (base 'unique' style)",
                 &[Class::MAPS],
@@ -446,7 +449,8 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::UNIQUE_ORANGE,
             )
-            .set_font_size(32),
+            .set_font_size(32)
+            .set_map_tier(map_tier),
         ]
     }
 
@@ -490,19 +494,6 @@ impl Rule {
                 CustomColor::FADED_CURRENCY_SALMON,
                 CustomColor::CURRENCY_SALMON,
             )
-            .set_hide(true),
-            Self::new(
-                "All remaining maps",
-                &[Class::MAPS],
-                Box::new([]),
-                Rarity::None,
-            )
-            .set_color(
-                CustomColor::NORMAL_WHITE,
-                CustomColor::FADED_BLACK,
-                CustomColor::NORMAL_WHITE,
-            )
-            .set_font_size(24)
             .set_hide(true),
             Self::new(
                 "All normal items",
