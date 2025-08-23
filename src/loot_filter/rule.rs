@@ -310,6 +310,19 @@ impl Rule {
             .set_font_size(28)
             .set_strict(false),
             Self::new(
+                "Blight Oils (base style)",
+                &[Class::CURRENCY],
+                Box::new([Item::new("Oil")]),
+                Rarity::None,
+            )
+            .set_color(
+                CustomColor::UNIQUE_ORANGE,
+                CustomColor::NORMAL_WHITE,
+                CustomColor::UNIQUE_ORANGE,
+            )
+            .set_font_size(24)
+            .set_strict(false),
+            Self::new(
                 "Scarabs (base style)",
                 &[Class::BREACHSTONES, Class::MAP_FRAGMENTS],
                 Box::new([Item::new("Scarab")]),
