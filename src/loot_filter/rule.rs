@@ -492,6 +492,19 @@ impl Rule {
             )
             .set_hide(true),
             Self::new(
+                "All remaining maps",
+                &[Class::MAPS],
+                Box::new([]),
+                Rarity::None,
+            )
+            .set_color(
+                CustomColor::NORMAL_WHITE,
+                CustomColor::FADED_BLACK,
+                CustomColor::NORMAL_WHITE,
+            )
+            .set_font_size(24)
+            .set_hide(true),
+            Self::new(
                 "All normal items",
                 &Class::ALL_CLASSES,
                 Box::new([]),
