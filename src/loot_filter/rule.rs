@@ -342,11 +342,11 @@ impl Rule {
                 Rarity::All,
             )
             .set_color(
-                CustomColor::QUEST_GREEN,
+                CustomColor::DARK_MAGIC_BLUE,
                 CustomColor::NORMAL_WHITE,
-                CustomColor::BLACK,
+                CustomColor::TRANSPARENT,
             )
-            .set_font_size(34),
+            .set_font_size(30),
             Self::new(
                 "Delirium Orb (base style)",
                 &[],
