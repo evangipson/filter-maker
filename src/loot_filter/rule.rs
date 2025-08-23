@@ -201,7 +201,7 @@ impl Rule {
         vec![
             Self::new(
                 "Gold (giant pile with beam)",
-                &[Class::CURRENCY],
+                &[],
                 Box::new([gold_item]),
                 Rarity::None,
             )
@@ -215,7 +215,7 @@ impl Rule {
             .set_effect(Effect::GOLD_PILE),
             Self::new(
                 "Gold (large pile)",
-                &[Class::CURRENCY],
+                &[],
                 Box::new([gold_item]),
                 Rarity::None,
             )
@@ -226,10 +226,10 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::KALGUUR_GOLD,
             )
-            .set_effect(Self::get_gold_icon(&show_icons)),
+            .set_effect(get_gold_icon(&show_icons)),
             Self::new(
                 "Gold (medium pile)",
-                &[Class::CURRENCY],
+                &[],
                 Box::new([gold_item]),
                 Rarity::None,
             )
@@ -240,10 +240,10 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::KALGUUR_GOLD,
             )
-            .set_effect(Self::get_gold_icon(&show_icons)),
+            .set_effect(get_gold_icon(&show_icons)),
             Self::new(
                 "Gold (small pile)",
-                &[Class::CURRENCY],
+                &[],
                 Box::new([gold_item]),
                 Rarity::None,
             )
@@ -254,10 +254,10 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::TRANSPARENT,
             )
-            .set_effect(Self::get_gold_icon(&show_icons)),
+            .set_effect(get_gold_icon(&show_icons)),
             Self::new(
                 "Gold (tiny piles)",
-                &[Class::CURRENCY],
+                &[],
                 Box::new([gold_item]),
                 Rarity::None,
             )
@@ -268,7 +268,7 @@ impl Rule {
                 CustomColor::FADED_BLACK,
                 CustomColor::TRANSPARENT,
             )
-            .set_effect(Self::get_gold_icon(&show_icons)),
+            .set_effect(get_gold_icon(&show_icons)),
         ]
     }
 
@@ -550,14 +550,6 @@ impl Rule {
         }
     }
 
-    fn get_gold_icon(show_icons: &bool) -> Effect {
-        if show_icons.to_owned() {
-            Effect::SMALL_GOLD_ICON
-        } else {
-            Effect::NONE
-        }
-    }
-
     fn set_font_size(self, font_size: u8) -> Self {
         Self { font_size, ..self }
     }
@@ -617,6 +609,14 @@ impl Rule {
 
     fn set_quality(self, quality: u8) -> Self {
         Self { quality, ..self }
+    }
+}
+
+fn get_gold_icon(show_icons: &bool) -> Effect {
+    if show_icons.to_owned() {
+        Effect::SMALL_GOLD_ICON
+    } else {
+        Effect::NONE
     }
 }
 
