@@ -47,6 +47,7 @@ impl Rule {
             )
             .set_font_size(48)
             .set_effect(Effect::BIG_DROP)
+            .set_strict(false)
     }
 
     pub fn ding(
@@ -63,6 +64,7 @@ impl Rule {
             )
             .set_font_size(45)
             .set_effect(Effect::NORMAL_DROP)
+            .set_strict(false)
     }
 
     pub fn ping(
@@ -78,6 +80,7 @@ impl Rule {
                 CustomColor::FADED_PURPLE,
                 CustomColor::TRANSPARENT,
             )
+            .set_strict(false)
     }
 
     pub fn dust_uniques(uniques: Box<[Item]>) -> Self {
