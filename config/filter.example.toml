@@ -136,14 +136,8 @@ size = 38
 strict = false
 
 [[filters]]
-name = "Over-Qualitied Flasks"
-classes = [ "life flasks", "mana flasks", "utility flasks", "hybrid flasks" ]
-size = 36
-quality = 21
-
-[[filters]]
-name = "Over-Qualitied Gems"
-classes = [ "skill gems", "support gems" ]
+name = "Over-Qualitied Items"
+classes = [ "life flasks", "mana flasks", "utility flasks", "hybrid flasks", "skill gems", "support gems" ]
 size = 36
 quality = 21
 
