@@ -21,8 +21,8 @@ palette = [
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black" },
-    { name = "Gold (base style)", items = [ "gold" ], font = "gold", background = "faded_black", outline = "gold" },
-    { name = "Currency (base style)", classes = ["currency"], font = "white", background = "pink" },
+    { name = "Gold (base style)", items = [ "gold" ], font = "gold", background = "faded_black" },
+    { name = "Currency (base style)", classes = ["currency"], font = "white", background = "purple" },
     { name = "Maps (base style)", classes = [ "maps" ], font = "white", background = "black", outline = "white" },
     { name = "Gems (base style)", classes = [ "skill gems", "support gems" ], font = "teal", background = "white", outline = "teal" },
     { name = "Fragments (base style)", classes = [ "map fragments" ], font = "white", background = "red", outline = "white" },
@@ -55,9 +55,9 @@ strict = false
 
 [[filters]]
 name = "Valuable Items"
-items = [ "Potent Chaotic Resonator", "Powerful Chaotic Resonator", "Primitive Chaotic Resonator", "Aberrant Fossil", "Aetheric Fossil", "Bloodstained Fossil", "Bound Fossil", "Corroded Fossil", "Deft Fossil", "Dense Fossil", "Frigid Fossil", "Fundamental Fossil", "Gilded Fossil", "Jagged Fossil", "Lucent Fossil", "Metallic Fossil", "Opulent Fossil", "Prismatic Fossil", "Pristine Fossil", "Scorched Fossil", "Serrated Fossil", "Shuddering Fossil", "Tangled Fossil", "Remnant of Corruption", "Shrieking Essence of", "Screaming Essence of", "Astragali", "Burial Medallion", "Chaos Orb", "Exalted Shard", "Gemcutter's Prism", "Grand Eldritch Ichor", "Grand Eldritch Ember", "Greater Eldritch Ichor", "Greater Eldritch Ember", "Harbinger's Orb", "Imbued Catalyst", "Intrinsic Catalyst", "Noxious Catalyst", "Tainted Catalyst", "Turbulent Catalyst", "Unstable Catalyst", "Fertile Catalyst", "Abrasive Catalyst", "Accelerating Catalyst", "Orb of Annulment", "Primal Crystallised Lifeforce", "Ritual Splinter", "Scrap Metal", "Stacked Deck", "Tainted Armourer's Scrap", "Tainted Blacksmith's Whetstone", "Tainted Chromatic Orb", "Tainted Jeweller's Orb", "Tainted Chaos Orb", "Tainted Mythic Orb", "Tainted Orb of Fusing", "Veiled Scarab", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce", "Ancient Orb", "Exotic Coinage", "Ritual Vessel", "Ancient Shard", "Annulment Shard", "Bestiary Orb", "Cartographer's Chisel", "Enkindling Orb", "Facetor's Lens", "Glassblower's Bauble", "Orb of Horizons", "Orb of Regret", "Orb of Scouring", "Orb of Unmaking", "Orb of Alteration", "Orb of Chance", "Orb of Alchemy", "Blacksmith's Whetstone", "Armourer's Scrap", "Chromatic Orb", "Orb of Fusing", "Regal Orb", "Vaal Orb", "Misery in Darkness", "Rogue's Marker", "Maven's Chisel of Procurement", "Large Cluster Jewel", "Medium Cluster Jewel", "Small Cluster Jewel", "Simulacrum Splinter", "The Blessing of Moosh", "Rain of Chaos", "The Fletcher", "The Tireless Extractor", "Three Faces in the Dark", "The One With All", "A Mother's Parting Gift", "The Valkyrie", "Emperor's Luck", "The Shepherd's Sandals", "The Risk", "The Undaunted", "The Obscured", "The Deceiver", "The Wretched", "Parasitic Passengers", "The Mercenary", "The Ruthless Ceinture", "The Fox in the Brambles", "The Mind's Eyes", "The Forward Gaze", "Blessed Orb", "The Eye of the Dragon", "The Wrath", "Deathly Designs", "The Ruthless Ceinture", "The Rite of Elements", "The Aesthete", "The Doppelganger", "The Wolf", "Alone in the Darkness", "The Gemcutter", "Jack in the Box", "The Wolf's Shadow", "The Traitor", "Hope", "Sambodhi's Vow", "Glimmer of Hope", "Mitts", "Gift of the Gemling Queen", "Left to Fate", "Volatile Power", "Heterochromia", "The Pack Leader", "Lucky Connections", "The Hoarder", "Chaotic Disposition", "Orb of Augmentation", "Jeweller's Orb" ]
-theme = { font = "pink", background = "white", outline = "pink" }
-size = 38
+items = [ "Potent Chaotic Resonator", "Powerful Chaotic Resonator", "Primitive Chaotic Resonator", "Aberrant Fossil", "Aetheric Fossil", "Bloodstained Fossil", "Bound Fossil", "Corroded Fossil", "Deft Fossil", "Dense Fossil", "Frigid Fossil", "Fundamental Fossil", "Gilded Fossil", "Jagged Fossil", "Lucent Fossil", "Metallic Fossil", "Opulent Fossil", "Prismatic Fossil", "Pristine Fossil", "Scorched Fossil", "Serrated Fossil", "Shuddering Fossil", "Tangled Fossil", "Remnant of Corruption", "Shrieking Essence of", "Screaming Essence of", "Astragali", "Burial Medallion", "Chaos Orb", "Exalted Shard", "Gemcutter's Prism", "Grand Eldritch Ichor", "Grand Eldritch Ember", "Greater Eldritch Ichor", "Greater Eldritch Ember", "Harbinger's Orb", "Imbued Catalyst", "Intrinsic Catalyst", "Noxious Catalyst", "Tainted Catalyst", "Turbulent Catalyst", "Unstable Catalyst", "Fertile Catalyst", "Abrasive Catalyst", "Accelerating Catalyst", "Orb of Annulment", "Primal Crystallised Lifeforce", "Ritual Splinter", "Scrap Metal", "Stacked Deck", "Tainted Armourer's Scrap", "Tainted Blacksmith's Whetstone", "Tainted Chromatic Orb", "Tainted Jeweller's Orb", "Tainted Chaos Orb", "Tainted Mythic Orb", "Tainted Orb of Fusing", "Veiled Scarab", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce", "Ancient Orb", "Exotic Coinage", "Ritual Vessel", "Ancient Shard", "Annulment Shard", "Bestiary Orb", "Cartographer's Chisel", "Enkindling Orb", "Facetor's Lens", "Glassblower's Bauble", "Orb of Horizons", "Orb of Regret", "Orb of Scouring", "Orb of Unmaking", "Orb of Alteration", "Orb of Chance", "Orb of Alchemy", "Blacksmith's Whetstone", "Armourer's Scrap", "Chromatic Orb", "Orb of Fusing", "Regal Orb", "Vaal Orb", "Misery in Darkness", "Rogue's Marker", "Maven's Chisel of Procurement", "Large Cluster Jewel", "Medium Cluster Jewel", "Small Cluster Jewel", "Simulacrum Splinter", "The Blessing of Moosh", "Rain of Chaos", "The Fletcher", "The Tireless Extractor", "Three Faces in the Dark", "The One With All", "A Mother's Parting Gift", "The Valkyrie", "Emperor's Luck", "The Shepherd's Sandals", "The Risk", "The Undaunted", "The Obscured", "The Deceiver", "The Wretched", "Parasitic Passengers", "The Mercenary", "The Ruthless Ceinture", "The Fox in the Brambles", "The Mind's Eyes", "The Forward Gaze", "Blessed Orb", "The Eye of the Dragon", "The Wrath", "Deathly Designs", "The Ruthless Ceinture", "The Rite of Elements", "The Aesthete", "The Doppelganger", "The Wolf", "Alone in the Darkness", "The Gemcutter", "Jack in the Box", "The Wolf's Shadow", "The Traitor", "Hope", "Sambodhi's Vow", "Glimmer of Hope", "Gift of the Gemling Queen", "Left to Fate", "Volatile Power", "Heterochromia", "The Pack Leader", "Lucky Connections", "The Hoarder", "Chaotic Disposition", "Orb of Augmentation", "Jeweller's Orb" ]
+theme = { font = "white", background = "purple", outline = "white" }
+size = 34
 strict = false
 
 [[filters]]
@@ -74,27 +74,64 @@ beam = "red"
 name = "Dust Uniques"
 items = [ "Opal Ring", "Heavy Belt", "Leather Belt", "Midnight Blade", "Triumphant Lamellar", "Callous Mask", "Bone Helmet", "Lion Pelt", "Hubris Circlet", "Praetor Crown", "Astral Plate", "Deerskin Gloves", "Vanguard Belt", "Marble Amulet", "Jade Amulet", "Void Sceptre", "Nightmare Bascinet", "Varnished Coat" ]
 theme = { font = "white", background = "purple", outline = "white" }
+rarity = "unique"
 size = 38
 sound = { sound_type = "hollow_drum", volume = "normal" }
 icon = { icon_type = "kite", color = "purple", size = "medium" }
 beam = "purple"
 
 [[filters]]
+name = "Gold (large pile)"
+items = [ "gold" ]
+theme = { font = "gold", background = "faded_black", outline = "gold" }
+stack_size = 500
+size = 40
+icon = { icon_type = "star", color = "yellow", size = "medium" }
+beam = "yellow"
+
+[[filters]]
+name = "Gold (medium pile)"
+items = [ "gold" ]
+theme = { font = "gold", background = "faded_black", outline = "gold" }
+stack_size = 150
+size = 28
+icon = { icon_type = "star", color = "yellow", size = "small" }
+
+[[filters]]
+name = "Gold (small pile)"
+items = [ "gold" ]
+size = 24
+icon = { icon_type = "star", color = "yellow", size = "small" }
+
+[[filters]]
+name = "All Scarabs"
+items = [ "scarab" ]
+classes = [ "map fragments" ]
+size = 30
+strict = false
+
+[[filters]]
 name = "Tier 17 Maps"
 classes = [ "maps" ]
 theme = { font = "purple", background = "white", outline = "purple" }
-size = 32
+size = 42
 map_tier = 17
-sound = { sound_type = "vocal_drum", volume = "normal" }
+sound = { sound_type = "voice_whoosh", volume = "normal" }
 icon = { icon_type = "diamond", color = "purple", size = "medium" }
 beam = "purple"
 
 [[filters]]
 name = "Tier 16 Maps"
 classes = [ "maps" ]
-theme = { font = "white", background = "black", outline = "white" }
 size = 32
 map_tier = 16
+
+[[filters]]
+name = "Valuable Map Fragments"
+items = [ "fragment", "crest", "mortal" ]
+classes = [ "map fragments" ]
+size = 38
+strict = false
 
 [[filters]]
 name = "Over-Qualitied Items"
@@ -123,4 +160,5 @@ strict = false
 
 [[filters]]
 name = "Hide all"
+size = 18
 hide = true
