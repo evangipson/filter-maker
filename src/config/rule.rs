@@ -22,7 +22,7 @@ pub struct Rule {
     pub quality: Option<u8>,
     pub map_tier: Option<u8>,
     pub links: Option<u8>,
-    pub stack_size: Option<u8>,
+    pub stack_size: Option<u16>,
     pub strict: Option<bool>,
     pub hide: Option<bool>,
 }
