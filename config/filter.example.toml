@@ -27,6 +27,7 @@ styles = [
     { name = "Gems (base style)", classes = [ "skill gems", "support gems" ], font = "teal", background = "white", outline = "teal" },
     { name = "Fragments (base style)", classes = [ "map fragments" ], font = "white", background = "red", outline = "white" },
     { name = "Scarabs (base style)", items = [ "scarab" ], classes = [ "map fragments" ], font = "teal", background = "white", outline = "teal", strict = false },
+    { name = "Divination Cards (base style)", classes = [ "divination cards" ], font = "white", background = "blue", outline = "white" },
     { name = "Magic (base style)", rarity = "magic", font = "blue", background = "faded_black", outline = "blue" },
     { name = "Rare (base style)", rarity = "rare", font = "yellow", background = "faded_black", outline = "yellow" },
     { name = "Unique (base style)", rarity = "unique", font = "white", background = "orange" },
