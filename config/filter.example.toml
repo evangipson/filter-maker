@@ -10,7 +10,7 @@ palette = [
     { name = "pink", color = { r = 254, g = 128, b = 128, a = 255 }},
     { name = "orange", color = { r = 175, g = 96, b = 37, a = 255 }},
     { name = "gold", color = { r = 187, g = 165, b = 61, a = 255 }},
-    { name = "yellow", color = { r = 255, g = 255, b = 119, a = 255 }},
+    { name = "yellow", color = { r = 225, g = 225, b = 119, a = 255 }},
     { name = "green", color = { r = 27, g = 119, b = 65, a = 255 }},
     { name = "teal", color = { r = 7, g = 122, b = 115, a = 255 }},
     { name = "blue", color = { r = 41, g = 128, b = 185, a = 255 }},
