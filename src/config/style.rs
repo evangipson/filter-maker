@@ -30,7 +30,19 @@ impl Style {
                 common::get_name_display(self.name.clone(), self.strict),
                 common::get_class_display(self.classes.clone(), self.strict),
                 common::get_item_display(self.items.clone(), self.strict),
-                common::get_display("Rarity", &self.rarity),
+                format!(
+                    "Rarity >= {}",
+                    common::capitalize(&self.rarity.clone().unwrap_or("Normal".to_string()))
+                )
+                .only_if(
+                    &self
+                        .rarity
+                        .clone()
+                        .unwrap_or("Normal".to_string())
+                        .to_lowercase()
+                        != "none",
+                ),
+                //common::get_display("Rarity", &self.rarity),
                 FRACTURED
                     .to_string()
                     .only_if(self.is_fractured.unwrap_or_default()),
