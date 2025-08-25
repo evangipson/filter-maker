@@ -11,7 +11,7 @@ pub struct Icon {
 
 impl Icon {
     pub fn get_size_id(&self) -> u8 {
-        match self.size.as_str() {
+        match self.size.to_lowercase().as_str() {
             "large" => 0,
             "small" => 2,
             _ => 1,

@@ -1,4 +1,3 @@
 /target
-.cargo/config.toml
 config/filter.toml
 *.filter

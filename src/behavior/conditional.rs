@@ -3,9 +3,6 @@ pub trait Conditional {
     /// [`Conditional::only_if`] will return [`self`] if the [`bool`] condition is `true`, and [`Default::default`] otherwise.
     fn only_if(self, condition: bool) -> Self;
 
-    /// [`Conditional::only_if`] will return [`Default::default`] if the [`bool`] condition is `true`, and [`self`] otherwise.
-    fn except_if(self, condition: bool) -> Self;
-
     /// [`Conditional::if_not_default`] will return [`self`] if it is not [`Default::default`], and [`Default::default`] otherwise.
     fn if_not_default<N: Default + PartialEq>(self, n: &N) -> Self;
 
@@ -17,10 +14,6 @@ pub trait Conditional {
 impl<T: Default + PartialEq> Conditional for T {
     fn only_if(self, condition: bool) -> Self {
         if condition { self } else { Default::default() }
-    }
-
-    fn except_if(self, condition: bool) -> Self {
-        if !condition { self } else { Default::default() }
     }
 
     fn if_not_default<N: Default + PartialEq>(self, n: &N) -> Self {

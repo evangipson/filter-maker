@@ -8,7 +8,7 @@ use std::{fs, process::exit};
 #[derive(Default, Deserialize, PartialEq)]
 pub struct Filter {
     pub configs: BaseConfig,
-    pub rules: Vec<Rule>,
+    pub filters: Vec<Rule>,
 }
 
 impl Filter {
@@ -35,7 +35,7 @@ impl Filter {
                 .iter()
                 .map(|s| format!("{}\n", s.get_style(self.configs.palette.clone())))
                 .collect::<String>(),
-            self.rules
+            self.filters
                 .iter()
                 .map(|f| format!("{}\n", f.get_rule(self.configs.palette.clone())))
                 .collect::<String>()

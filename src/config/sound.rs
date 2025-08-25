@@ -10,7 +10,7 @@ pub struct Sound {
 
 impl Sound {
     pub fn get_sound_id(&self) -> u8 {
-        match self.sound_type.as_str() {
+        match self.sound_type.to_lowercase().as_str() {
             "gong" => 1,
             "hollow_drum" => 2,
             "voice_drum" => 3,
@@ -25,7 +25,7 @@ impl Sound {
     }
 
     pub fn get_volume_id(&self) -> u16 {
-        match self.volume.as_str() {
+        match self.volume.to_lowercase().as_str() {
             "quiet" => 100,
             "normal" => 200,
             "loud" => 300,
