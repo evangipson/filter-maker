@@ -27,10 +27,10 @@ function Update-Filter {
         exit 0
     }
 
-    # Create a config file if one does not exist
-    if ($false -eq (Test-Path -Path ".cargo/config.toml")) {
-        Write-Host "No config file detected; creating one from the example..." -ForegroundColor DarkGray
-        Copy-Item -Path ".cargo/config.example.toml" -Destination ".cargo/config.toml"
+    # Create a filter config file if one does not exist
+    if ($false -eq (Test-Path -Path "config/filter.toml")) {
+        Write-Host "No filter config file detected; creating one from the example..." -ForegroundColor DarkGray
+        Copy-Item -Path "config/filter.example.toml" -Destination "config/filter.toml"
     }
 
     # Get the latest code

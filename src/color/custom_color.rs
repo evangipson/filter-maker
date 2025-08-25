@@ -1,7 +1,8 @@
+use serde_derive::Deserialize;
 use std::fmt::Display;
 
 /// [`CustomColor`] represents a dynamic color with a red, green, blue, and alpha value.
-#[derive(Default, PartialEq)]
+#[derive(Clone, Debug, Default, PartialEq, Deserialize)]
 pub struct CustomColor {
     /// [`CustomColor::r`] is the red value of a color, from 0-255.
     pub r: u8,
