@@ -13,28 +13,32 @@ palette = [
     { name = "yellow", color = { r = 225, g = 225, b = 119, a = 255 }},
     { name = "green", color = { r = 27, g = 119, b = 65, a = 255 }},
     { name = "teal", color = { r = 7, g = 122, b = 115, a = 255 }},
-    { name = "blue", color = { r = 41, g = 128, b = 185, a = 255 }},
-    { name = "purple", color = { r = 142, g = 68, b = 173, a = 255 }},
+    { name = "blue", color = { r = 136, g = 136, b = 255, a = 255 }},
+    { name = "purple", color = { r = 192, g = 118, b = 223, a = 255 }},
     { name = "faded_white", color = { r = 200, g = 200, b = 200, a = 205 }},
-    { name = "faded_black", color = { r = 42, g = 42, b = 42, a = 150 }},
+    { name = "faded_black", color = { r = 42, g = 42, b = 42, a = 170 }},
+    { name = "faded_red", color = { r = 191, g = 0, b = 0, a = 125 }},
+    { name = "dark_blue", color = { r = 41, g = 128, b = 185, a = 255 }},
     { name = "dark_orange", color = { r = 145, g = 66, b = 7, a = 255 }},
+    { name = "dark_purple", color = { r = 142, g = 68, b = 173, a = 255 }},
 ]
 styles = [
-    { name = "Default (base style)", font = "white", background = "faded_black" },
-    { name = "Magic (base style)", rarity = "magic", font = "blue", background = "faded_black", outline = "blue" },
-    { name = "Rare (base style)", rarity = "rare", font = "yellow", background = "faded_black", outline = "yellow" },
-    { name = "Unique (base style)", rarity = "unique", font = "white", background = "orange" },
-    { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black" },
-    { name = "Currency (base style)", classes = ["currency"], rarity = "none", font = "white", background = "purple" },
-    { name = "Maps (base style)", classes = [ "maps" ], font = "white", background = "black", outline = "white" },
-    { name = "Gems (base style)", classes = [ "skill gems", "support gems" ], font = "teal", background = "white", outline = "teal" },
-    { name = "Fragments (base style)", classes = [ "map fragments" ], font = "white", background = "red", outline = "white" },
-    { name = "Scarabs (base style)", items = [ "scarab" ], rarity = "none", classes = [ "map fragments" ], font = "teal", background = "white", outline = "teal", strict = false },
-    { name = "Divination Cards (base style)", classes = [ "divination cards" ], rarity = "none", font = "white", background = "blue", outline = "white" },
-    { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_white", outline = "purple", strict = false },
-    { name = "Synthesised (base style)", is_synthesised = true, font = "white", background = "purple", outline = "white" },
-    { name = "Fractured (base style)", is_fractured = true, font = "white", background = "teal", outline = "white" },
-    { name = "Influenced (base style)", is_influenced = true, font = "white", background = "blue", outline = "white" },
+    { name = "Default (base style)", font = "white", background = "faded_black", size = 12 },
+    { name = "Magic (base style)", rarity = "magic", font = "blue", background = "faded_black", size = 12 },
+    { name = "Rare (base style)", rarity = "rare", font = "yellow", background = "faded_black", size = 12 },
+    { name = "Unique (base style)", rarity = "unique", font = "white", background = "orange", size = 24 },
+    { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 18 },
+    { name = "Currency (base style)", classes = ["currency"], rarity = "none", font = "white", background = "dark_purple", size = 24 },
+    { name = "Scrolls (base style)", items = ["scroll of"], classes = ["currency"], font = "white", background = "faded_red", size = 20, strict = false },
+    { name = "Maps (base style)", classes = [ "maps" ], font = "white", background = "black", outline = "white", size = 20 },
+    { name = "Gems (base style)", classes = [ "skill gems", "support gems" ], font = "teal", background = "white", outline = "teal", size = 20 },
+    { name = "Fragments (base style)", classes = [ "map fragments" ], font = "white", background = "red", outline = "white", size = 24 },
+    { name = "Scarabs (base style)", items = [ "scarab" ], rarity = "none", classes = [ "map fragments" ], font = "teal", background = "white", outline = "teal", size = 30, strict = false },
+    { name = "Divination Cards (base style)", classes = [ "divination cards" ], rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 24 },
+    { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 12 },
+    { name = "Synthesised (base style)", is_synthesised = true, font = "white", background = "dark_purple", outline = "white", size = 24 },
+    { name = "Fractured (base style)", is_fractured = true, font = "white", background = "teal", outline = "white", size = 24 },
+    { name = "Influenced (base style)", is_influenced = true, font = "white", background = "blue", outline = "white", size = 24 },
 ]
 
 [[filters]]
@@ -49,8 +53,8 @@ beam = "red"
 [[filters]]
 name = "Very Valuable Items"
 items = [ "Deafening Essence of", "Essence of Delirium", "Essence of Horror", "Essence of Hysteria", "Essence of Insanity", "Prime Chaotic Resonator", "Sanctified Fossil", "A Familiar Call", "A Fate Worse Than Death", "A Modest Request", "Alluring Bounty", "Ambitious Obsession", "Anarchy's Price", "Azyran's Reward", "Burning Blood", "Chasing Risk", "Deadly Joy", "Doryani's Epiphany", "Dying Light", "Fateful Meeting", "Friendship", "Further Invention", "Gemcutter's Mercy", "Home", "Judging Voices", "Monochrome", "Pride of the First Ones", "Silence and Frost", "Terrible Secret of Space", "The Academic", "The Aspirant", "The Astromancer", "The Bargain", "The Cartographer", "The Chosen", "The Deep Ones", "The Emptiness", "The Eternal War", "The Eye of Terror", "The Fishmonger", "The Fortunate", "The Garish Power", "The Last One Standing", "The Nurse", "The One That Got Away", "The Price of Loyalty", "The Queen", "The Rabbit's Foot", "The Scout", "The Wedding Gift", "Who Asked", "Crescent Splinter", "Eldritch Chaos Orb", "Eldritch Exalted Orb", "Eldritch Orb of Annulment", "Exalted Orb", "Maven's Chisel of Avarice", "Maven's Chisel of Divination", "Maven's Chisel of Proliferation", "Maven's Chisel of Scarabs", "Prismatic Catalyst", "Sacred Orb", "Tempering Catalyst", "Veiled Chaos Orb", "Allflame Ember of Kulemak", "Allflame Ember of Propagation", "Allflame Ember of Resplendence", "Blight Scarab of Blooming", "Blight Scarab of Invigoration", "Cartography Scarab of Risk", "Divination Scarab of Pilfering", "Domination Scarab of Terrors", "Essence Scarab of Calcification", "Harvest Scarab of Cornucopia", "Harvest Scarab of Doubling", "Horned Scarab of Bloodlines", "Horned Scarab of Pandemonium", "Incursion Scarab of Timelines", "Cosmic Fragment", "Decaying Fragment", "Awakening Fragment", "Synthesising Fragment", "Reality Fragment", "Devouring Fragment", "Blazing Fragment", "Silver Oil", "Echo of Loneliness", "Echo of Reverence", "Echo of Trauma", "Sacred Blossom", "Simulacrum", "Lachrymal Necrosis", "Arrogance of the Vaal", "Valdo's Puzzle Box", "Opalescent Oil", "Prime Chaotic Resonator" ]
-theme = { font = "blue", background = "white", outline = "blue" }
-size = 42
+theme = { font = "dark_orange", background = "white", outline = "dark_orange" }
+size = 38
 sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "circle", color = "blue", size = "small" }
 strict = false
@@ -58,8 +62,8 @@ strict = false
 [[filters]]
 name = "Valuable Items"
 items = [ "Potent Chaotic Resonator", "Powerful Chaotic Resonator", "Primitive Chaotic Resonator", "Aberrant Fossil", "Aetheric Fossil", "Bloodstained Fossil", "Bound Fossil", "Corroded Fossil", "Deft Fossil", "Dense Fossil", "Frigid Fossil", "Fundamental Fossil", "Gilded Fossil", "Jagged Fossil", "Lucent Fossil", "Metallic Fossil", "Opulent Fossil", "Prismatic Fossil", "Pristine Fossil", "Scorched Fossil", "Serrated Fossil", "Shuddering Fossil", "Tangled Fossil", "Remnant of Corruption", "Shrieking Essence of", "Screaming Essence of", "Astragali", "Burial Medallion", "Chaos Orb", "Exalted Shard", "Gemcutter's Prism", "Grand Eldritch Ichor", "Grand Eldritch Ember", "Greater Eldritch Ichor", "Greater Eldritch Ember", "Harbinger's Orb", "Imbued Catalyst", "Intrinsic Catalyst", "Noxious Catalyst", "Tainted Catalyst", "Turbulent Catalyst", "Unstable Catalyst", "Fertile Catalyst", "Abrasive Catalyst", "Accelerating Catalyst", "Orb of Annulment", "Primal Crystallised Lifeforce", "Ritual Splinter", "Scrap Metal", "Stacked Deck", "Tainted Armourer's Scrap", "Tainted Blacksmith's Whetstone", "Tainted Chromatic Orb", "Tainted Jeweller's Orb", "Tainted Chaos Orb", "Tainted Mythic Orb", "Tainted Orb of Fusing", "Veiled Scarab", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce", "Ancient Orb", "Exotic Coinage", "Ritual Vessel", "Ancient Shard", "Annulment Shard", "Bestiary Orb", "Cartographer's Chisel", "Enkindling Orb", "Facetor's Lens", "Glassblower's Bauble", "Orb of Horizons", "Orb of Regret", "Orb of Scouring", "Orb of Unmaking", "Orb of Alteration", "Orb of Chance", "Orb of Alchemy", "Blacksmith's Whetstone", "Armourer's Scrap", "Chromatic Orb", "Orb of Fusing", "Regal Orb", "Vaal Orb", "Misery in Darkness", "Rogue's Marker", "Maven's Chisel of Procurement", "Large Cluster Jewel", "Medium Cluster Jewel", "Small Cluster Jewel", "Simulacrum Splinter", "The Blessing of Moosh", "Rain of Chaos", "The Fletcher", "The Tireless Extractor", "Three Faces in the Dark", "The One With All", "A Mother's Parting Gift", "The Valkyrie", "Emperor's Luck", "The Shepherd's Sandals", "The Risk", "The Undaunted", "The Obscured", "The Deceiver", "The Wretched", "Parasitic Passengers", "The Mercenary", "The Ruthless Ceinture", "The Fox in the Brambles", "The Mind's Eyes", "The Forward Gaze", "Blessed Orb", "The Eye of the Dragon", "The Wrath", "Deathly Designs", "The Ruthless Ceinture", "The Rite of Elements", "The Aesthete", "The Doppelganger", "The Wolf", "Alone in the Darkness", "The Gemcutter", "Jack in the Box", "The Wolf's Shadow", "The Traitor", "Hope", "Sambodhi's Vow", "Glimmer of Hope", "Gift of the Gemling Queen", "Left to Fate", "Volatile Power", "Heterochromia", "The Pack Leader", "Lucky Connections", "The Hoarder", "Chaotic Disposition", "Orb of Augmentation", "Jeweller's Orb" ]
-theme = { font = "white", background = "purple", outline = "white" }
-size = 34
+theme = { font = "white", background = "dark_purple", outline = "white" }
+size = 32
 strict = false
 
 [[filters]]
@@ -75,7 +79,7 @@ beam = "red"
 [[filters]]
 name = "Dust Uniques"
 items = [ "Opal Ring", "Heavy Belt", "Leather Belt", "Midnight Blade", "Triumphant Lamellar", "Callous Mask", "Bone Helmet", "Lion Pelt", "Hubris Circlet", "Praetor Crown", "Astral Plate", "Deerskin Gloves", "Vanguard Belt", "Marble Amulet", "Jade Amulet", "Void Sceptre", "Nightmare Bascinet", "Varnished Coat" ]
-theme = { font = "white", background = "purple", outline = "white" }
+theme = { font = "white", background = "dark_purple", outline = "white" }
 rarity = "unique"
 size = 38
 sound = { sound_type = "hollow_drum", volume = "normal" }
@@ -109,13 +113,12 @@ icon = { icon_type = "star", color = "yellow", size = "small" }
 name = "All Scarabs"
 items = [ "scarab" ]
 classes = [ "map fragments" ]
-size = 30
 strict = false
 
 [[filters]]
 name = "Tier 17 Maps"
 classes = [ "maps" ]
-theme = { font = "purple", background = "white", outline = "purple" }
+theme = { font = "dark_purple", background = "white", outline = "dark_purple" }
 size = 42
 map_tier = 17
 sound = { sound_type = "voice_whoosh", volume = "normal" }
@@ -162,5 +165,4 @@ strict = false
 
 [[filters]]
 name = "Hide all"
-size = 18
 hide = true
