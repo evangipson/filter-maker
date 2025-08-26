@@ -14,6 +14,7 @@ pub struct Style {
     pub font: Option<String>,
     pub background: Option<String>,
     pub outline: Option<String>,
+    pub size: Option<u8>,
     pub is_synthesised: Option<bool>,
     pub is_fractured: Option<bool>,
     pub is_influenced: Option<bool>,
@@ -42,7 +43,6 @@ impl Style {
                         .to_lowercase()
                         != "none",
                 ),
-                //common::get_display("Rarity", &self.rarity),
                 FRACTURED
                     .to_string()
                     .only_if(self.is_fractured.unwrap_or_default()),
@@ -52,6 +52,7 @@ impl Style {
                 SYNTHESIZED
                     .to_string()
                     .only_if(self.is_synthesised.unwrap_or_default()),
+                common::get_display("SetFontSize", &self.size),
                 format!(
                     "SetTextColor {}",
                     common::get_color(&palette, &self.font.clone().unwrap_or_default())
