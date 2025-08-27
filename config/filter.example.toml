@@ -78,13 +78,13 @@ beam = "red"
 
 [[filters]]
 name = "Dust Uniques"
-items = [ "Opal Ring", "Heavy Belt", "Leather Belt", "Midnight Blade", "Triumphant Lamellar", "Callous Mask", "Bone Helmet", "Lion Pelt", "Hubris Circlet", "Praetor Crown", "Astral Plate", "Deerskin Gloves", "Vanguard Belt", "Marble Amulet", "Jade Amulet", "Void Sceptre", "Nightmare Bascinet", "Varnished Coat" ]
-theme = { font = "white", background = "dark_purple", outline = "white" }
+items = [ "Opal Ring", "Heavy Belt", "Leather Belt", "Midnight Blade", "Triumphant Lamellar", "Callous Mask", "Bone Helmet", "Lion Pelt", "Hubris Circlet", "Praetor Crown", "Astral Plate", "Deerskin Gloves", "Vanguard Belt", "Marble Amulet", "Jade Amulet", "Void Sceptre", "Nightmare Bascinet", "Varnished Coat", "Despot Axe" ]
+theme = { font = "white", background = "dark_orange", outline = "white" }
 rarity = "unique"
 size = 38
 sound = { sound_type = "hollow_drum", volume = "normal" }
-icon = { icon_type = "kite", color = "purple", size = "medium" }
-beam = "purple"
+icon = { icon_type = "kite", color = "orange", size = "medium" }
+beam = "orange"
 
 [[filters]]
 name = "Gold (large pile)"
