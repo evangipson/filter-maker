@@ -66,11 +66,11 @@ pub fn get_class_display(classes: Option<Vec<String>>, strict: Option<bool>) -> 
     }
 }
 
-pub fn get_color(palette: &[Color], name: &String) -> CustomColor {
+pub fn get_color(palette: &[Color], name: &str) -> CustomColor {
     if !name.is_empty() {
         palette
             .iter()
-            .find(|p| &p.name.clone().unwrap_or_default() == name)
+            .find(|p| p.name.clone().unwrap_or_default().to_lowercase() == name.to_lowercase())
             .cloned()
             .unwrap_or_default()
             .color
