@@ -84,7 +84,6 @@ items = [ "Amethyst Flask", "Heavy Belt", "Hellion's Paw", "Imperial Skean", "Le
 rarity = "unique"
 theme = { font = "neon_teal", background = "faded_dark_orange", outline = "white" }
 size = 28
-sound = { sound_type = "glitter", volume = "loud" }
 icon = { icon_type = "star", color = "red", size = "small" }
 beam = "cyan"
 
@@ -94,9 +93,14 @@ items = [ "Amethyst Ring", "Leather Belt", "Heavy Belt", "Paua Amulet", "Unset R
 rarity = "unique"
 theme = { font = "white", background = "faded_dark_orange", outline = "white" }
 size = 24
-sound = { sound_type = "hollow_drum", volume = "normal" }
 icon = { icon_type = "kite", color = "orange", size = "small" }
 beam = "orange"
+
+[[filters]]
+name = "Good Fractured Bases"
+is_fractured = true
+item_level = 83
+size = 26
 
 [[filters]]
 name = "Gold (large pile)"
