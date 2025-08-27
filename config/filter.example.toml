@@ -13,16 +13,18 @@ palette = [
     { name = "yellow", color = { r = 225, g = 225, b = 119, a = 255 }},
     { name = "green", color = { r = 27, g = 119, b = 65, a = 255 }},
     { name = "teal", color = { r = 7, g = 122, b = 115, a = 255 }},
-    { name = "neon_teal", color = { r = 0, g = 202, b = 177, a = 255 }},
+    { name = "neon_teal", color = { r = 0, g = 202, b = 177, a = 255 }},    
     { name = "blue", color = { r = 136, g = 136, b = 255, a = 255 }},
     { name = "purple", color = { r = 192, g = 118, b = 223, a = 255 }},
     { name = "faded_white", color = { r = 200, g = 200, b = 200, a = 205 }},
     { name = "faded_black", color = { r = 42, g = 42, b = 42, a = 170 }},
     { name = "faded_red", color = { r = 191, g = 0, b = 0, a = 105 }},
-    { name = "dark_blue", color = { r = 41, g = 128, b = 185, a = 255 }},
+    { name = "dark_blue", color = { r = 11, g = 98, b = 155, a = 255 }},
     { name = "faded_dark_orange", color = { r = 145, g = 66, b = 7, a = 190 }},
     { name = "dark_orange", color = { r = 145, g = 66, b = 7, a = 255 }},
     { name = "dark_purple", color = { r = 142, g = 68, b = 173, a = 255 }},
+    { name = "faded_beige", color = { r = 200, g = 200, b = 175, a = 190 }},
+    { name = "faded_dark_blue", color = { r = 41, g = 128, b = 185, a = 190 }},
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 12 },
@@ -31,7 +33,7 @@ styles = [
     { name = "Unique (base style)", rarity = "unique", font = "white", background = "orange", size = 24 },
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 18 },
     { name = "Currency (base style)", classes = ["currency"], rarity = "none", font = "white", background = "dark_purple", size = 24 },
-    { name = "Scrolls (base style)", items = ["scroll"], classes = ["currency"], font = "white", background = "faded_red", size = 20, strict = false },
+    { name = "Scrolls (base style)", items = ["scroll"], classes = ["currency"], font = "white", background = "faded_red", outline = "red", size = 20, strict = false },
     { name = "Maps (base style)", classes = [ "maps" ], font = "white", background = "black", outline = "white", size = 20 },
     { name = "Gems (base style)", classes = [ "skill gems", "support gems" ], font = "teal", background = "white", outline = "teal", size = 20 },
     { name = "Fragments (base style)", classes = [ "map fragments" ], font = "white", background = "red", outline = "white", size = 24 },
@@ -40,8 +42,8 @@ styles = [
     { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 12 },
     { name = "Synthesised (base style)", is_synthesised = true, font = "white", background = "dark_purple", outline = "white", size = 24 },
     { name = "Fractured (base style)", is_fractured = true, font = "white", background = "teal", outline = "white", size = 24 },
-    { name = "Influenced (base style)", is_influenced = true, font = "white", background = "blue", outline = "white", size = 24 },
-    { name = "Essences (base style)", items = ["essence of"], font = "white", background = "blue", outline = "white", size = 24, strict = false },
+    { name = "Influenced (base style)", is_influenced = true, font = "white", background = "dark_blue", outline = "white", size = 24 },
+    { name = "Essences (base style)", items = ["essence of"], font = "faded_dark_blue", background = "faded_beige", outline = "white", size = 20, strict = false},
 ]
 
 [[filters]]
@@ -98,15 +100,20 @@ icon = { icon_type = "kite", color = "orange", size = "small" }
 beam = "orange"
 
 [[filters]]
-name = "Good Fractured Bases"
+name = "Fractured Items"
 is_fractured = true
+item_level = 83
+size = 26
+
+[[filters]]
+name = "Influenced Items"
+is_influenced = true
 item_level = 83
 size = 26
 
 [[filters]]
 name = "Essences"
 items = ["essence of"]
-size = 26
 
 [[filters]]
 name = "Gold (large pile)"
