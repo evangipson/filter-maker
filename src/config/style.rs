@@ -18,6 +18,7 @@ pub struct Style {
     pub is_synthesised: Option<bool>,
     pub is_fractured: Option<bool>,
     pub is_influenced: Option<bool>,
+    pub item_level: Option<u8>,
     pub strict: Option<bool>,
 }
 
@@ -31,6 +32,8 @@ impl Style {
                 common::get_name_display(self.name.clone(), self.strict),
                 common::get_class_display(self.classes.clone(), self.strict),
                 common::get_item_display(self.items.clone(), self.strict),
+                format!("ItemLevel >= {}", self.item_level.unwrap_or_default())
+                    .only_if(!self.item_level.unwrap_or_default().is_default()),
                 format!(
                     "Rarity >= {}",
                     common::capitalize(&self.rarity.clone().unwrap_or("Normal".to_string()))

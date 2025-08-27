@@ -13,12 +13,14 @@ palette = [
     { name = "yellow", color = { r = 225, g = 225, b = 119, a = 255 }},
     { name = "green", color = { r = 27, g = 119, b = 65, a = 255 }},
     { name = "teal", color = { r = 7, g = 122, b = 115, a = 255 }},
+    { name = "neon_teal", color = { r = 0, g = 202, b = 177, a = 255 }},
     { name = "blue", color = { r = 136, g = 136, b = 255, a = 255 }},
     { name = "purple", color = { r = 192, g = 118, b = 223, a = 255 }},
     { name = "faded_white", color = { r = 200, g = 200, b = 200, a = 205 }},
     { name = "faded_black", color = { r = 42, g = 42, b = 42, a = 170 }},
-    { name = "faded_red", color = { r = 191, g = 0, b = 0, a = 125 }},
+    { name = "faded_red", color = { r = 191, g = 0, b = 0, a = 105 }},
     { name = "dark_blue", color = { r = 41, g = 128, b = 185, a = 255 }},
+    { name = "faded_dark_orange", color = { r = 145, g = 66, b = 7, a = 190 }},
     { name = "dark_orange", color = { r = 145, g = 66, b = 7, a = 255 }},
     { name = "dark_purple", color = { r = 142, g = 68, b = 173, a = 255 }},
 ]
@@ -29,7 +31,7 @@ styles = [
     { name = "Unique (base style)", rarity = "unique", font = "white", background = "orange", size = 24 },
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 18 },
     { name = "Currency (base style)", classes = ["currency"], rarity = "none", font = "white", background = "dark_purple", size = 24 },
-    { name = "Scrolls (base style)", items = ["scroll of"], classes = ["currency"], font = "white", background = "faded_red", size = 20, strict = false },
+    { name = "Scrolls (base style)", items = ["scroll"], classes = ["currency"], font = "white", background = "faded_red", size = 20, strict = false },
     { name = "Maps (base style)", classes = [ "maps" ], font = "white", background = "black", outline = "white", size = 20 },
     { name = "Gems (base style)", classes = [ "skill gems", "support gems" ], font = "teal", background = "white", outline = "teal", size = 20 },
     { name = "Fragments (base style)", classes = [ "map fragments" ], font = "white", background = "red", outline = "white", size = 24 },
@@ -77,13 +79,23 @@ icon = { icon_type = "star", color = "red", size = "large" }
 beam = "red"
 
 [[filters]]
-name = "Dust Uniques"
-items = [ "Opal Ring", "Heavy Belt", "Leather Belt", "Midnight Blade", "Triumphant Lamellar", "Callous Mask", "Bone Helmet", "Lion Pelt", "Hubris Circlet", "Praetor Crown", "Astral Plate", "Deerskin Gloves", "Vanguard Belt", "Marble Amulet", "Jade Amulet", "Void Sceptre", "Nightmare Bascinet", "Varnished Coat", "Despot Axe" ]
-theme = { font = "white", background = "dark_orange", outline = "white" }
+name = "Good Multi-Base Uniques"
+items = [ "Amethyst Flask", "Heavy Belt", "Hellion's Paw", "Imperial Skean", "Leather Belt", "Magistrate Crown", "Murder Boots", "Paua Amulet", "Small Cluster Jewel", "Spine Bow", "Vaal Blade", "Vaal Claw", "Vile Arrow Quiver", "Despot Axe" ]
 rarity = "unique"
-size = 38
+theme = { font = "neon_teal", background = "faded_dark_orange", outline = "white" }
+size = 28
+sound = { sound_type = "glitter", volume = "loud" }
+icon = { icon_type = "star", color = "red", size = "small" }
+beam = "cyan"
+
+[[filters]]
+name = "Dust Uniques"
+items = [ "Amethyst Ring", "Leather Belt", "Heavy Belt", "Paua Amulet", "Unset Ring", "Ring", "Unset Amulet", "Topaz Ring", "Onyx Amulet", "Chain Belt", "Agate Amulet", "Studded Belt", "Ruby Ring", "Moonstone Ring", "Turquoise Amulet", "Elegant Ringmail", "Steel Ring", "Opal Ring", "Sapphire Ring", "Blue Pearl Amulet", "Paua Ring", "Cloth Belt", "Crystal Belt", "Prismatic Ring", "Vanguard Belt", "Vermillion Ring", "Astrolabe Amulet", "Seaglass Amulet", "Fishing Rod", "Carnal Armour", "Elegant Round Shield", "Engraved Greatsword", "Infernal Sword", "Terror Maul", "Imperial Bow", "Imperial Skean", "Vaal Claw", "Despot Axe", "Siege Axe", "Spine Bow", "Vaal Axe", "Maelström Staff", "Hellion's Paw", "Legion Sword", "Ebony Tower Shield", "Slaughter Knife", "Karui Maul", "Foul Staff", "Ancient Gauntlets", "Carnal Mitts", "Lacewood Spirit Shield", "Triumphant Lamellar", "Void Axe", "Void Sceptre", "Murder Mitts", "Imperial Maul", "Blood Raiment", "Dragonscale Boots", "Prophet Crown", "Vaal Gauntlets", "Stealth Boots", "Assassin's Mitts", "Savant's Robe", "Fiend Dagger", "Highborn Staff", "Soldier Boots", "Ornate Quiver", "Great Mallet", "Wyrmscale Doublet", "Sage's Robe", "Riveted Boots", "Sorcerer Boots", "Bone Circlet", "Greatwolf Talisman", "Shadow Sceptre", "Sage Wand", "Prophecy Wand", "Two-Point Arrow Quiver", "Gladiator Plate", "Jingling Spirit Shield", "Rawhide Boots", "Champion Kite Shield", "Sacrificial Garb", "Pinnacle Tower Shield", "Hubris Circlet", "Slink Boots", "Glorious Plate", "Titanium Spirit Shield", "Archon Kite Shield", "Jewelled Foil", "Sadist Garb", "Imperial Claw", "Titan Greaves", "Vaal Regalia", "Praetor Crown", "Deicide Mask", "Saint's Hauberk", "Vaal Rapier", "Imperial Staff", "Zodiac Leather", "Royal Burgonet", "Widowsilk Robe", "Vaal Blade", "Ezomyte Tower Shield", "Vaal Sceptre", "Assassin's Boots", "Occultist's Vestment", "Assassin Bow", "Exquisite Leather", "Opal Wand", "Vaal Spirit Shield", "Varnished Coat", "Ezomyte Dagger", "Goathide Boots", "Gavel", "Ezomyte Burgonet", "Lacquered Buckler", "Crusader Plate", "Hydrascale Gauntlets", "Necromancer Silks", "Citadel Bow", "Magistrate Crown", "Fluted Bascinet", "Harlequin Mask", "Legion Gloves", "Karui Sceptre", "Carnal Boots", "Devout Chainmail", "Necromancer Circlet", "Sovereign Spiked Shield", "Golden Buckler", "Majestic Plate", "Lacquered Garb", "Simple Robe", "Ornate Mace", "Abyssal Axe", "Judgement Staff", "Martyr Gloves", "Pagan Wand", "Torturer Garb", "Waxed Garb", "Vile Arrow Quiver", "Lich's Circlet", "Pig-Faced Bascinet", "Goliath Greaves", "Goliath Gauntlets", "Girded Tower Shield" ]
+rarity = "unique"
+theme = { font = "white", background = "faded_dark_orange", outline = "white" }
+size = 24
 sound = { sound_type = "hollow_drum", volume = "normal" }
-icon = { icon_type = "kite", color = "orange", size = "medium" }
+icon = { icon_type = "kite", color = "orange", size = "small" }
 beam = "orange"
 
 [[filters]]
