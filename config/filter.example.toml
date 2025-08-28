@@ -124,6 +124,7 @@ size = 26
 [[filters]]
 name = "Essences"
 items = ["essence of"]
+strict = false
 
 [[filters]]
 name = "Gold (large pile)"
