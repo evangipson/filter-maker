@@ -16,13 +16,17 @@ palette = [
     { name = "neon_teal", color = { r = 0, g = 202, b = 177, a = 255 }},    
     { name = "blue", color = { r = 136, g = 136, b = 255, a = 255 }},
     { name = "purple", color = { r = 192, g = 118, b = 223, a = 255 }},
+    { name = "beige", color = { r = 200, g = 200, b = 175, a = 255 }},
+    { name = "salmon_red", color = { r = 255, g = 85, b = 85, a = 255 }},
+    { name = "vibrant_blue", color = { r = 45, g = 45, b = 215, a = 255 }},
+    { name = "dark_blue", color = { r = 41, g = 128, b = 185, a = 255 }},
+    { name = "dark_orange", color = { r = 145, g = 66, b = 7, a = 255 }},
+    { name = "dark_purple", color = { r = 142, g = 68, b = 173, a = 255 }},
+    { name = "faded_dark_purple", color = { r = 142, g = 68, b = 173, a = 150 }},
     { name = "faded_white", color = { r = 200, g = 200, b = 200, a = 205 }},
     { name = "faded_black", color = { r = 42, g = 42, b = 42, a = 170 }},
     { name = "faded_red", color = { r = 191, g = 0, b = 0, a = 105 }},
-    { name = "dark_blue", color = { r = 11, g = 98, b = 155, a = 255 }},
     { name = "faded_dark_orange", color = { r = 145, g = 66, b = 7, a = 190 }},
-    { name = "dark_orange", color = { r = 145, g = 66, b = 7, a = 255 }},
-    { name = "dark_purple", color = { r = 142, g = 68, b = 173, a = 255 }},
     { name = "faded_beige", color = { r = 200, g = 200, b = 175, a = 190 }},
     { name = "faded_dark_blue", color = { r = 41, g = 128, b = 185, a = 190 }},
 ]
@@ -44,6 +48,8 @@ styles = [
     { name = "Fractured (base style)", is_fractured = true, font = "white", background = "teal", outline = "white", size = 24 },
     { name = "Influenced (base style)", is_influenced = true, font = "white", background = "dark_blue", outline = "white", size = 24 },
     { name = "Essences (base style)", items = ["essence of"], font = "faded_dark_blue", background = "faded_beige", outline = "white", size = 20, strict = false},
+    { name = "Heist Contracts (base style)", classes = [ "blueprints" ], font = "vibrant_blue", background = "salmon_red", outline = "vibrant_blue", size = 26 },
+    { name = "Heist Blueprints (base style)", classes = [ "contracts" ], font = "salmon_red", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
 ]
 
 [[filters]]
@@ -66,7 +72,7 @@ strict = false
 
 [[filters]]
 name = "Valuable Items"
-items = [ "Omen of", "Potent Chaotic Resonator", "Powerful Chaotic Resonator", "Primitive Chaotic Resonator", "Aberrant Fossil", "Aetheric Fossil", "Bloodstained Fossil", "Bound Fossil", "Corroded Fossil", "Deft Fossil", "Dense Fossil", "Frigid Fossil", "Fundamental Fossil", "Gilded Fossil", "Jagged Fossil", "Lucent Fossil", "Metallic Fossil", "Opulent Fossil", "Prismatic Fossil", "Pristine Fossil", "Scorched Fossil", "Serrated Fossil", "Shuddering Fossil", "Tangled Fossil", "Remnant of Corruption", "Shrieking Essence of", "Screaming Essence of", "Astragali", "Burial Medallion", "Chaos Orb", "Exalted Shard", "Gemcutter's Prism", "Grand Eldritch Ichor", "Grand Eldritch Ember", "Greater Eldritch Ichor", "Greater Eldritch Ember", "Harbinger's Orb", "Imbued Catalyst", "Intrinsic Catalyst", "Noxious Catalyst", "Tainted Catalyst", "Turbulent Catalyst", "Unstable Catalyst", "Fertile Catalyst", "Abrasive Catalyst", "Accelerating Catalyst", "Orb of Annulment", "Primal Crystallised Lifeforce", "Ritual Splinter", "Scrap Metal", "Stacked Deck", "Tainted Armourer's Scrap", "Tainted Blacksmith's Whetstone", "Tainted Chromatic Orb", "Tainted Jeweller's Orb", "Tainted Chaos Orb", "Tainted Mythic Orb", "Tainted Orb of Fusing", "Veiled Scarab", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce", "Ancient Orb", "Exotic Coinage", "Ritual Vessel", "Ancient Shard", "Annulment Shard", "Bestiary Orb", "Cartographer's Chisel", "Enkindling Orb", "Facetor's Lens", "Glassblower's Bauble", "Orb of Horizons", "Orb of Regret", "Orb of Scouring", "Orb of Unmaking", "Orb of Alteration", "Orb of Chance", "Orb of Alchemy", "Blacksmith's Whetstone", "Armourer's Scrap", "Chromatic Orb", "Orb of Fusing", "Regal Orb", "Vaal Orb", "Misery in Darkness", "Rogue's Marker", "Maven's Chisel of Procurement", "Large Cluster Jewel", "Medium Cluster Jewel", "Small Cluster Jewel", "Simulacrum Splinter", "The Blessing of Moosh", "Rain of Chaos", "The Fletcher", "The Tireless Extractor", "Three Faces in the Dark", "The One With All", "A Mother's Parting Gift", "The Valkyrie", "Emperor's Luck", "The Shepherd's Sandals", "The Risk", "The Undaunted", "The Obscured", "The Deceiver", "The Wretched", "Parasitic Passengers", "The Mercenary", "The Ruthless Ceinture", "The Fox in the Brambles", "The Mind's Eyes", "The Forward Gaze", "Blessed Orb", "The Eye of the Dragon", "The Wrath", "Deathly Designs", "The Ruthless Ceinture", "The Rite of Elements", "The Aesthete", "The Doppelganger", "The Wolf", "Alone in the Darkness", "The Gemcutter", "Jack in the Box", "The Wolf's Shadow", "The Traitor", "Hope", "Sambodhi's Vow", "Glimmer of Hope", "Gift of the Gemling Queen", "Left to Fate", "Volatile Power", "Heterochromia", "The Pack Leader", "Lucky Connections", "The Hoarder", "Chaotic Disposition", "Orb of Augmentation", "Jeweller's Orb" ]
+items = [ "Omen of", "Potent Chaotic Resonator", "Powerful Chaotic Resonator", "Primitive Chaotic Resonator", "Aberrant Fossil", "Aetheric Fossil", "Bloodstained Fossil", "Bound Fossil", "Corroded Fossil", "Deft Fossil", "Dense Fossil", "Frigid Fossil", "Fundamental Fossil", "Gilded Fossil", "Jagged Fossil", "Lucent Fossil", "Metallic Fossil", "Opulent Fossil", "Prismatic Fossil", "Pristine Fossil", "Scorched Fossil", "Serrated Fossil", "Shuddering Fossil", "Tangled Fossil", "Remnant of Corruption", "Shrieking Essence of", "Screaming Essence of", "Astragali", "Burial Medallion", "Chaos Orb", "Exalted Shard", "Gemcutter's Prism", "Grand Eldritch Ichor", "Grand Eldritch Ember", "Greater Eldritch Ichor", "Greater Eldritch Ember", "Harbinger's Orb", "Imbued Catalyst", "Intrinsic Catalyst", "Noxious Catalyst", "Tainted Catalyst", "Turbulent Catalyst", "Unstable Catalyst", "Fertile Catalyst", "Abrasive Catalyst", "Accelerating Catalyst", "Orb of Annulment", "Primal Crystallised Lifeforce", "Ritual Splinter", "Scrap Metal", "Stacked Deck", "Tainted Armourer's Scrap", "Tainted Blacksmith's Whetstone", "Tainted Chromatic Orb", "Tainted Jeweller's Orb", "Tainted Chaos Orb", "Tainted Mythic Orb", "Tainted Orb of Fusing", "Veiled Scarab", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce", "Ancient Orb", "Exotic Coinage", "Ritual Vessel", "Ancient Shard", "Annulment Shard", "Bestiary Orb", "Cartographer's Chisel", "Enkindling Orb", "Facetor's Lens", "Glassblower's Bauble", "Orb of Horizons", "Orb of Regret", "Orb of Scouring", "Orb of Unmaking", "Orb of Alteration", "Orb of Chance", "Orb of Alchemy", "Blacksmith's Whetstone", "Armourer's Scrap", "Chromatic Orb", "Orb of Fusing", "Regal Orb", "Vaal Orb", "Misery in Darkness", "Rogue's Marker", "Maven's Chisel of Procurement", "Large Cluster Jewel", "Medium Cluster Jewel", "Small Cluster Jewel", "Simulacrum Splinter", "The Blessing of Moosh", "Rain of Chaos", "The Fletcher", "The Tireless Extractor", "Three Faces in the Dark", "The One With All", "A Mother's Parting Gift", "The Valkyrie", "Emperor's Luck", "The Shepherd's Sandals", "The Risk", "The Undaunted", "The Obscured", "The Deceiver", "The Wretched", "Parasitic Passengers", "The Mercenary", "The Ruthless Ceinture", "The Fox in the Brambles", "The Mind's Eyes", "The Forward Gaze", "Blessed Orb", "The Eye of the Dragon", "The Wrath", "Deathly Designs", "The Ruthless Ceinture", "The Rite of Elements", "The Aesthete", "The Doppelganger", "The Wolf", "Alone in the Darkness", "The Gemcutter", "Jack in the Box", "The Wolf's Shadow", "The Traitor", "Hope", "Sambodhi's Vow", "Glimmer of Hope", "Gift of the Gemling Queen", "Left to Fate", "Volatile Power", "Heterochromia", "The Pack Leader", "Lucky Connections", "The Hoarder", "Chaotic Disposition", "Orb of Augmentation", "Jeweller's Orb", "The Saint's Treasure", "The Void", "The Mercenary", "Brush, Paint and Palette", "Echoes of Love", "Abandoned Wealth", "Vile Power", "The Calling", "Pride Before the Fall", "More is Never Enough", "The Puzzle", "Society's Remorse", "Might is Right", "Blind Venture", "The Feast", "Rebirth and Renewal" ]
 theme = { font = "white", background = "dark_purple", outline = "white" }
 size = 32
 strict = false
@@ -98,6 +104,10 @@ theme = { font = "white", background = "faded_dark_orange", outline = "white" }
 size = 24
 icon = { icon_type = "kite", color = "orange", size = "small" }
 beam = "orange"
+
+[[filters]]
+name = "Heist items"
+classes = [ "blueprints", "contracts" ]
 
 [[filters]]
 name = "Fractured Items"
