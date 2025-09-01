@@ -4,7 +4,7 @@ pub const SYNTHESIZED: &str = "SynthesisedItem True";
 pub const ENCHANTED: &str = "AnyEnchantment True";
 pub const VEILED: &str = "\"Veil\"";
 pub const REPLICA: &str = "Replica True";
-pub const TIER_ONE_MODS: [&str; 97] = [
+pub const TIER_ONE_MODS: [&str; 96] = [
     "Abating",
     "Apparition's",
     "Archmage's",
@@ -75,7 +75,6 @@ pub const TIER_ONE_MODS: [&str; 97] = [
     "of the Tempest",
     "of the Underground",
     "of the Volcano",
-    "of the Walrus",
     "of the Wind",
     "of the Zealous",
     "of Tzteosh",
