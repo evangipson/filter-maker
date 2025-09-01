@@ -1,3 +1,7 @@
+param(
+    [switch] $Filter
+)
+
 function Test-RustInstallation {
     try {
         rustc --version
@@ -31,6 +35,14 @@ function Update-Filter {
     if ($false -eq (Test-Path -Path "config/filter.toml")) {
         Write-Host "No filter config file detected; creating one from the example..." -ForegroundColor DarkGray
         Copy-Item -Path "config/filter.example.toml" -Destination "config/filter.toml"
+    }
+
+    # Overwrite the filter if the "-Filter" flag was provided
+    if ($Filter) {
+        Write-Host "Overwriting old filter with example filter..." -ForegroundColor DarkGray
+        $oldDestination = (Get-Content -Path "config/filter.toml" -TotalCount 2)
+        $exampleFilterContent = (Get-Content -Path "config/filter.example.toml") | Select-Object -Skip 2
+        ($oldDestination + $exampleFilterContent) | Set-Content -Path "config/filter.toml"
     }
 
     # Get the latest code
