@@ -33,11 +33,17 @@ impl Filter {
             self.configs
                 .styles
                 .iter()
-                .map(|s| format!("{}\n", s.get_style(self.configs.palette.clone())))
+                .map(|s| format!(
+                    "{}\n",
+                    s.get_style(self.configs.palette.clone(), &self.configs.mods)
+                ))
                 .collect::<String>(),
             self.filters
                 .iter()
-                .map(|f| format!("{}\n", f.get_rule(self.configs.palette.clone())))
+                .map(|f| format!(
+                    "{}\n",
+                    f.get_rule(self.configs.palette.clone(), &self.configs.mods)
+                ))
                 .collect::<String>()
         )
     }

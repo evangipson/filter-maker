@@ -1,6 +1,6 @@
 use crate::{
     behavior::{conditional::Conditional, write_rules::WriteRules},
-    config::{color::Color, theme::Theme},
+    config::{color::Color, modifier::Modifier, theme::Theme},
     constants::rules::{ENCHANTED, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED},
 };
 use serde_derive::Deserialize;
@@ -21,14 +21,14 @@ pub struct Style {
     pub is_enchanted: Option<bool>,
     pub is_veiled: Option<bool>,
     pub is_replica: Option<bool>,
-    pub has_tier_1_mods: Option<u8>,
+    pub good_mods: Option<u8>,
     pub corrupted_mods: Option<u8>,
     pub item_level: Option<u8>,
     pub strict: Option<bool>,
 }
 
 impl Style {
-    pub fn get_style(&self, palette: Vec<Color>) -> String {
+    pub fn get_style(&self, palette: Vec<Color>, mods: &Option<Vec<Modifier>>) -> String {
         if self.is_default() {
             // if it's a default rule, don't write anything
             String::new()
@@ -38,7 +38,12 @@ impl Style {
                 self.write_rule_name(self.name.clone(), self.strict),
                 self.write_list_rule("Class", self.classes.clone(), self.strict),
                 self.write_list_rule("BaseType", self.items.clone(), self.strict),
-                self.write_explicit_mods_rule(&self.is_veiled, &self.has_tier_1_mods),
+                self.write_explicit_mods_rule(
+                    &self.is_veiled,
+                    &self.good_mods,
+                    &self.classes,
+                    mods,
+                ),
                 self.write_optional_rule("ItemLevel >=", &self.item_level),
                 self.write_rarity_rule(self.rarity.clone()),
                 self.write_rule(FRACTURED, self.is_fractured),

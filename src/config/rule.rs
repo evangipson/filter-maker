@@ -1,6 +1,6 @@
 use crate::{
     behavior::{common, conditional::Conditional, write_rules::WriteRules},
-    config::{color::Color, icon::Icon, sound::Sound, theme::Theme},
+    config::{color::Color, icon::Icon, modifier::Modifier, sound::Sound, theme::Theme},
     constants::rules::{ENCHANTED, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED},
 };
 use serde_derive::Deserialize;
@@ -22,7 +22,7 @@ pub struct Rule {
     pub is_enchanted: Option<bool>,
     pub is_veiled: Option<bool>,
     pub is_replica: Option<bool>,
-    pub has_tier_1_mods: Option<u8>,
+    pub good_mods: Option<u8>,
     pub corrupted_mods: Option<u8>,
     pub quality: Option<u8>,
     pub map_tier: Option<u8>,
@@ -33,7 +33,7 @@ pub struct Rule {
 }
 
 impl Rule {
-    pub fn get_rule(&self, palette: Vec<Color>) -> String {
+    pub fn get_rule(&self, palette: Vec<Color>, mods: &Option<Vec<Modifier>>) -> String {
         if self.is_default() {
             // if it's a default rule, don't write anything
             String::new()
@@ -42,10 +42,15 @@ impl Rule {
                 self.write_rule_name(self.name.clone(), self.hide),
                 self.write_list_rule("Class", self.classes.clone(), self.strict),
                 self.write_list_rule("BaseType", self.items.clone(), self.strict),
-                self.write_rarity_rule(self.rarity.clone()),
+                self.write_optional_rule("Rarity >=", &self.rarity),
                 self.write_optional_rule("MapTier >=", &self.map_tier),
                 self.write_optional_rule("Quality >=", &self.quality),
-                self.write_explicit_mods_rule(&self.is_veiled, &self.has_tier_1_mods),
+                self.write_explicit_mods_rule(
+                    &self.is_veiled,
+                    &self.good_mods,
+                    &self.classes,
+                    mods,
+                ),
                 self.write_rule(FRACTURED, self.is_fractured),
                 self.write_rule(INFLUENCED, self.is_influenced),
                 self.write_rule(SYNTHESIZED, self.is_synthesised),

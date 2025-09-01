@@ -12,6 +12,7 @@ pub mod config {
     pub mod color;
     pub mod filter;
     pub mod icon;
+    pub mod modifier;
     pub mod rule;
     pub mod sound;
     pub mod style;

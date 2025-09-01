@@ -1,7 +1,7 @@
 use crate::{
     behavior::{common, conditional::Conditional},
-    config::{color::Color, theme::Theme},
-    constants::rules::{CORRUPTED, TIER_ONE_MODS, VEILED},
+    config::{color::Color, modifier::Modifier, theme::Theme},
+    constants::rules::{CORRUPTED, VEILED_MOD},
 };
 use std::fmt::Display;
 
@@ -115,20 +115,22 @@ pub trait WriteRules {
     fn write_explicit_mods_rule(
         &self,
         is_veiled: &Option<bool>,
-        has_tier_1_mods: &Option<u8>,
+        good_mods: &Option<u8>,
+        classes: &Option<Vec<String>>,
+        mods: &Option<Vec<Modifier>>,
     ) -> String {
-        if is_veiled.is_default() && has_tier_1_mods.is_default() {
+        if is_veiled.is_default() && good_mods.is_default() {
             String::new()
-        } else if has_tier_1_mods.is_default() {
-            format!("HasExplicitMod {VEILED}")
+        } else if good_mods.is_default() {
+            format!("HasExplicitMod {VEILED_MOD}")
         } else {
             format!(
                 "HasExplicitMod >={} {}",
-                has_tier_1_mods.unwrap_or(1),
-                if !is_veiled.is_default() && !has_tier_1_mods.is_default() {
-                    TIER_ONE_MODS.map(|x| format!("\"{x}\"")).join(" ") + " " + VEILED
+                good_mods.unwrap_or(1),
+                if !is_veiled.is_default() && !good_mods.is_default() {
+                    get_mods_for_classes(mods, classes) + " " + VEILED_MOD
                 } else {
-                    TIER_ONE_MODS.map(|x| format!("\"{x}\"")).join(" ")
+                    get_mods_for_classes(mods, classes)
                 }
             )
         }
@@ -141,4 +143,45 @@ pub trait WriteRules {
             self.write_optional_rule("CorruptedMods >=", corrupted_mods)
         }
     }
+}
+
+fn get_valid_mods(modifiers: &Option<Vec<Modifier>>) -> Vec<&Modifier> {
+    if let Some(mods_value) = modifiers {
+        mods_value
+            .iter()
+            .filter(|modifier| modifier.good_mods.is_some())
+            .collect::<Vec<&Modifier>>()
+    } else {
+        vec![]
+    }
+}
+
+fn get_mods_for_classes(
+    modifiers: &Option<Vec<Modifier>>,
+    classes: &Option<Vec<String>>,
+) -> String {
+    get_valid_mods(modifiers)
+        .iter()
+        .filter(|modifier| {
+            if let Some(classes_value) = classes {
+                if let Some(modifier_classes) = &modifier.classes {
+                    modifier_classes.iter().any(|c| classes_value.contains(c))
+                } else {
+                    true
+                }
+            } else {
+                true
+            }
+        })
+        .flat_map(|modifier| {
+            modifier
+                .good_mods
+                .clone()
+                .unwrap()
+                .into_iter()
+                .map(|good_mod| format!("\"{good_mod}\" "))
+        })
+        .collect::<String>()
+        .trim_end()
+        .to_string()
 }

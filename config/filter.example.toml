@@ -40,29 +40,71 @@ palette = [
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 12 },
-    { name = "Magic (base style)", rarity = "magic", font = "blue", size = 12 },
-    { name = "Rare (base style)", rarity = "rare", font = "yellow", size = 12 },
-    { name = "Unique (base style)", rarity = "unique", font = "white", background = "orange", size = 24 },
-    { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "unique", font = "white", background = "orange_red", outline = "dark_red", size = 24 },
+    { name = "Magic (base style)", rarity = "Magic", font = "blue", size = 12 },
+    { name = "Rare (base style)", rarity = "Rare", font = "yellow", size = 12 },
+    { name = "Unique (base style)", rarity = "Unique", font = "white", background = "orange", size = 24 },
+    { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "Unique", font = "white", background = "orange_red", outline = "dark_red", size = 24 },
     { name = "Corrupted mods (base style)", corrupted_mods = 1, rarity = "none", background = "faded_dark_red", outline = "dark_red" },
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 18 },
-    { name = "Currency (base style)", classes = ["currency"], rarity = "none", font = "off_white", background = "dark_purple", size = 18 },
-    { name = "Portal Scrolls (base style)", items = ["portal scroll"], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 12 },
-    { name = "Scroll of Wisdom (base style)", items = ["scroll of wisdom"], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 12 },
-    { name = "Maps (base style)", classes = [ "maps" ], rarity = "none", background = "black", size = 20 },
-    { name = "Gems (base style)", classes = [ "skill gems", "support gems" ], font = "teal", background = "white", outline = "teal", size = 20 },
-    { name = "Fragments (base style)", classes = [ "map fragments" ], font = "white", background = "red", outline = "white", size = 24 },
-    { name = "Scarabs (base style)", items = [ "scarab" ], rarity = "none", classes = [ "map fragments" ], font = "teal", background = "white", outline = "teal", size = 30, strict = false },
-    { name = "Divination Cards (base style)", classes = [ "divination cards" ], rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 24 },
+    { name = "Currency (base style)", classes = [ "Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 18 },
+    { name = "Portal Scrolls (base style)", items = [ "portal scroll" ], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 12 },
+    { name = "Scroll of Wisdom (base style)", items = [ "scroll of wisdom" ], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 12 },
+    { name = "Maps (base style)", classes = [ "Maps" ], rarity = "none", background = "black", size = 20 },
+    { name = "Gems (base style)", classes = [ "Skill Gems", "Support Gems" ], font = "teal", background = "white", outline = "teal", size = 20 },
+    { name = "Fragments (base style)", classes = [ "Map Fragments" ], font = "white", background = "red", outline = "white", size = 24 },
+    { name = "Scarabs (base style)", classes = [ "Map Fragments" ], items = [ "scarab" ], rarity = "none", font = "teal", background = "white", outline = "teal", size = 30, strict = false },
+    { name = "Divination Cards (base style)", classes = [ "Divination Cards" ], rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 24 },
     { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 12 },
     { name = "Synthesised (base style)", is_synthesised = true, rarity = "none", font = "white", background = "dark_purple", outline = "white", size = 26 },
     { name = "Fractured (base style)", is_fractured = true, rarity = "none", font = "white", background = "teal", outline = "white", size = 26 },
     { name = "Influenced (base style)", is_influenced = true, rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 26 },
     { name = "Enchanted (base style)", is_enchanted = true, rarity = "none", font = "white", background = "vibrant_blue", outline = "white", size = 26 },
     { name = "Replica items (base style)", is_replica = true, rarity = "none", font = "white", background = "orange_red", outline = "white", size = 28 },
-    { name = "Essences (base style)", items = ["essence of"], font = "faded_dark_blue", background = "faded_beige", outline = "white", size = 20, strict = false},
-    { name = "Heist Contracts (base style)", classes = [ "blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
-    { name = "Heist Blueprints (base style)", classes = [ "contracts" ], font = "white", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
+    { name = "Essences (base style)", items = [ "essence of" ], font = "dark_blue", background = "off_white", size = 20, strict = false},
+    { name = "Heist Contracts (base style)", classes = [ "Blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
+    { name = "Heist Blueprints (base style)", classes = [ "Contracts" ], font = "white", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
+]
+mods = [
+    { good_mods = [ "of Many", "of Tacati", "of the Underground", "Subterranean", "Tacati's", "Tacati", "Topotante's", "Xopec's" ]},
+    { classes = [ "Bows", "Claws", "Daggers", "One Hand Axes", "One Hand Maces", "One Hand Swords", "Rune Daggers", "Thrusting One Hand Swords", "Two Hand Axes", "Two Hand Maces", "Two Hand Swords", "Wands", "Warstaves" ], good_mods = [ "Cruel", "Merciless", "Tyrannical" ]},
+    { classes = [ "Boots", "Bows", "Claws", "Daggers", "One Hand Swords", "Rune Daggers", "Sceptres", "Staves", "Wands" ], good_mods = [ "Matatl's" ]},
+    { classes = [ "Abyss Jewels", "Bows", "Claws", "Daggers", "Jewels", "One Hand Swords", "Rune Daggers", "Sceptres", "Wands" ], good_mods = [ "Blasting", "Cremating", "Discharging", "Electrocuting", "Entombing", "Polar" ]},
+    { classes = [ "Bows", "Claws", "Daggers", "One Hand Swords", "Rune Daggers", "Sceptres", "Wands" ], good_mods = [ "Carbonising", "Crystalising" ]},
+    { classes = [ "Bows", "Claws", "Daggers", "One Hand Swords", "Rune Daggers", "Wands" ], good_mods = [ "Vapourising" ]},
+    { classes = [ "Amulets", "Belts", "Boots", "Gloves", "Helmets", "Quivers", "Rings" ], good_mods = [ "Athlete's" ]},
+    { classes = [ "Abyss Jewels", "Amulets", "Body Armours", "Jewels", "Shields" ], good_mods = [ "Incandescent" ]},
+    { classes = [ "Abyss Jewels", "Amulets", "Body Armours", "Jewels", "Rings" ], good_mods = [ "Resplendent" ]},
+    { classes = [ "Amulets", "Gloves", "Helmets", "Rings", "Shields" ], good_mods = [ "of Bameth" ]},
+    { classes = [ "Body Armours", "Boots", "Gloves", "Helmets", "Shields" ], good_mods = [ "of Nullification" ]},
+    { classes = [ "Body Armours", "Boots", "Gloves", "Quivers", "Shields" ], good_mods = [ "Elevated " ]},
+    { classes = [ "Amulets", "Belts", "Body Armours", "Rings" ], good_mods = [ "Guatelitzi's" ]},
+    { classes = [ "Amulets", "Body Armours", "Gloves", "Helmets" ], good_mods = [ "Indomitable" ]},
+    { classes = [ "Amulets", "Gloves", "Rings", "Shields" ], good_mods = [ "of Puhuarte" ]},
+    { classes = [ "Amulets", "Gloves", "Helmets", "Shields" ], good_mods = [ "Virile" ]},
+    { classes = [ "Belts", "Helmets", "Shields", "Quivers" ], good_mods = [ "Fecund" ]},
+    { classes = [ "Rune Daggers", "Sceptres", "Shields", "Wands" ], good_mods = [ "Cryomancer's", "Crystalline", "Esh's", "Flame Shaper's", "Frost Singer's", "Glyphic", "Incanter's", "Ionising", "Lithomancer's", "Mad Lord's", "Magmatic", "Magister's", "Martinet's", "Pyroclastic", "Runic", "Smiting", "Thunderhand's", "Tul's", "Xoph's" ]},
+    { classes = [ "Abyss Jewels", "Jewels", "Shields" ], good_mods = [ "of Unmaking" ]},
+    { classes = [ "Amulets", "Belts", "Rings" ], good_mods = [ "Dazzling", "of Guatelitzi" ]},
+    { classes = [ "Amulets", "Bows", "Quivers" ], good_mods = [ "of Dissolution" ]},
+    { classes = [ "Gloves", "Helmets", "Shields" ], good_mods = [ "Blazing" ]},
+    { classes = [ "Rune Daggers", "Sceptres", "Wands" ], good_mods = [ "Citaqualotl's", "Empress's", "Glaciated", "Incinerating", "of Destiny", "of Infuriation", "of Provocation", "of the Monarch", "Queen's", "Shocking" ]},
+    { classes = [ "Abyss Jewels", "Jewels" ], good_mods = [ "Acuminate", "Beclouded", "Decrepifying", "Flaring", "Healthy", "Leadership", "Malicious", "Master's", "of Demolishing", "of Potency", "of Resilience", "of the Deadeye", "of the Elements", "of the Lightning Rod", "Sanguine", "Shimmering", "Stalwart", "Vile", "Vivid" ]},
+    { classes = [ "Amulets", "Quivers" ], good_mods = [ "of Destruction", "of Ferocity", "of Melting" ]},
+    { classes = [ "Amulets", "Rings" ], good_mods = [ "Rotund" ]},
+    { classes = [ "Amulets", "Shields" ], good_mods = [ "Essences", "of the Essence" ]},
+    { classes = [ "Body Armours", "Shields" ], good_mods = [ "Adaptable", "Apparition's", "Illusion's", "Illusory", "Impenetrable", "Impregnable", "Incorporeal", "Inspired", "Interpermeated", "Lissome", "Mirage's", "Saintly", "Unfaltering", "Unmoving", "Victor's", "Vigorous" ]},
+    { classes = [ "Gloves", "Helmets" ], good_mods = [ "of Abjuration", "Seething" ]},
+    { classes = [ "Gloves", "Quivers" ], good_mods = [ "of Grandmastery" ]},
+    { classes = [ "Amulets" ], good_mods = [ "Behemoth's", "Exalter's", "of Legerdemain", "of the Infinite", "of the Multiverse", "Provocateur's", "Rimedweller's", "Robust", "Stormbrewer's", "Vulcanist's" ]},
+    { classes = [ "Body Armours" ], good_mods = [ "Fugitive", "Girded", "Godly", "Hero's", "Impervious", "Interpolated", "Legend's", "Nightmare's", "Phantasm's", "Prime", "Rapturous", "Unreal", "Versatile" ]},
+    { classes = [ "Boots" ], good_mods = [ "Cheetah's", "Hellion's" ]},
+    { classes = [ "Bows" ], good_mods = [ "Paragon's", "Sharpshooter's" ]},
+    { classes = [ "Gloves" ], good_mods = [ "Pulsing" ]},
+    { classes = [ "Helmets" ], good_mods = [ "of Everlasting", "of Youth", "Overseer's" ]},
+    { classes = [ "Quivers" ], good_mods = [ "Devastating", "Impaling", "of Rending", "of Splintering" ]},
+    { classes = [ "Rings" ], good_mods = [ "Countess's", "Duchess's", "Marchioness's", "of Agitation", "of Coercion", "of Harmony", "of Incitation", "of Orchestration" ]},
+    { classes = [ "Shields" ], good_mods = [ "Abating", "Adroit", "Consecrated", "Eidolon's", "of Ruin", "Resilient", "Scintillating", "Sturdy", "Unyielding" ]},
+    { classes = [ "Staves" ], good_mods = [ "Lava Conjurer's", "Splintermind's", "Tecton's", "Tempest Master's", "Winter Beckoner's" ]},
 ]
 
 [[filters]]
@@ -92,7 +134,7 @@ strict = false
 [[filters]]
 name = "Tier 0 Uniques"
 items = [ "Astrolabe Amulet", "Cabalist Regalia", "Candlestick Relic", "Champion Kite Shield", "Crusader Boots", "Dusk Blade", "Engraved Greatsword", "Fluted Bascinet", "Foul Staff", "Ghastly Eye Jewel", "Girded Tower Shield", "Gold Flask", "Golden Buckler", "Greatwolf Talisman", "Imperial Maul", "Karui Maul", "Lacewood Spirit Shield", "Martyr Gloves", "Papyrus Relic", "Prismatic Jewel", "Processional Relic", "Raven Mask", "Ring", "Riveted Boots", "Ruby Flask", "Runic Crown", "Runic Helm", "Runic Sollerets", "Savant's Robe", "Siege Axe", "Siege Helmet", "Slaughter Knife", "Unset Amulet", "Vaal Rapier", "Vermillion Ring", "Void Axe" ]
-rarity = "unique"
+rarity = "Unique"
 theme = { font = "red", background = "white", outline = "red" }
 size = 48
 sound = { sound_type = "glitter", volume = "loud" }
@@ -102,8 +144,8 @@ beam = "red"
 [[filters]]
 name = "Good Multi-Base Uniques"
 items = [ "Amethyst Flask", "Heavy Belt", "Hellion's Paw", "Imperial Skean", "Leather Belt", "Magistrate Crown", "Murder Boots", "Paua Amulet", "Small Cluster Jewel", "Spine Bow", "Vaal Blade", "Vaal Claw", "Vile Arrow Quiver", "Despot Axe" ]
-rarity = "unique"
-theme = { font = "white", background = "faded_dark_orange", outline = "white" }
+rarity = "Unique"
+theme = { font = "white", background = "faded_dark_orange", outline = "neon_teal" }
 size = 32
 icon = { icon_type = "star", color = "orange", size = "small" }
 beam = "cyan"
@@ -111,7 +153,7 @@ beam = "cyan"
 [[filters]]
 name = "Dust Uniques"
 items = [ "Amethyst Ring", "Leather Belt", "Heavy Belt", "Paua Amulet", "Unset Ring", "Ring", "Unset Amulet", "Topaz Ring", "Onyx Amulet", "Chain Belt", "Agate Amulet", "Studded Belt", "Ruby Ring", "Moonstone Ring", "Turquoise Amulet", "Elegant Ringmail", "Steel Ring", "Opal Ring", "Sapphire Ring", "Blue Pearl Amulet", "Paua Ring", "Cloth Belt", "Crystal Belt", "Prismatic Ring", "Vanguard Belt", "Vermillion Ring", "Astrolabe Amulet", "Seaglass Amulet", "Fishing Rod", "Carnal Armour", "Elegant Round Shield", "Engraved Greatsword", "Infernal Sword", "Terror Maul", "Imperial Bow", "Imperial Skean", "Vaal Claw", "Despot Axe", "Siege Axe", "Spine Bow", "Vaal Axe", "Maelström Staff", "Hellion's Paw", "Legion Sword", "Ebony Tower Shield", "Slaughter Knife", "Karui Maul", "Foul Staff", "Ancient Gauntlets", "Carnal Mitts", "Lacewood Spirit Shield", "Triumphant Lamellar", "Void Axe", "Void Sceptre", "Murder Mitts", "Imperial Maul", "Blood Raiment", "Dragonscale Boots", "Prophet Crown", "Vaal Gauntlets", "Stealth Boots", "Assassin's Mitts", "Savant's Robe", "Fiend Dagger", "Highborn Staff", "Soldier Boots", "Ornate Quiver", "Great Mallet", "Wyrmscale Doublet", "Sage's Robe", "Riveted Boots", "Sorcerer Boots", "Bone Circlet", "Greatwolf Talisman", "Shadow Sceptre", "Sage Wand", "Prophecy Wand", "Two-Point Arrow Quiver", "Gladiator Plate", "Jingling Spirit Shield", "Rawhide Boots", "Champion Kite Shield", "Sacrificial Garb", "Pinnacle Tower Shield", "Hubris Circlet", "Slink Boots", "Glorious Plate", "Titanium Spirit Shield", "Archon Kite Shield", "Jewelled Foil", "Sadist Garb", "Imperial Claw", "Titan Greaves", "Vaal Regalia", "Praetor Crown", "Deicide Mask", "Saint's Hauberk", "Vaal Rapier", "Imperial Staff", "Zodiac Leather", "Royal Burgonet", "Widowsilk Robe", "Vaal Blade", "Ezomyte Tower Shield", "Vaal Sceptre", "Assassin's Boots", "Occultist's Vestment", "Assassin Bow", "Exquisite Leather", "Opal Wand", "Vaal Spirit Shield", "Varnished Coat", "Ezomyte Dagger", "Goathide Boots", "Gavel", "Ezomyte Burgonet", "Lacquered Buckler", "Crusader Plate", "Hydrascale Gauntlets", "Necromancer Silks", "Citadel Bow", "Magistrate Crown", "Fluted Bascinet", "Harlequin Mask", "Legion Gloves", "Karui Sceptre", "Carnal Boots", "Devout Chainmail", "Necromancer Circlet", "Sovereign Spiked Shield", "Golden Buckler", "Majestic Plate", "Lacquered Garb", "Simple Robe", "Ornate Mace", "Abyssal Axe", "Judgement Staff", "Martyr Gloves", "Pagan Wand", "Torturer Garb", "Waxed Garb", "Vile Arrow Quiver", "Lich's Circlet", "Pig-Faced Bascinet", "Goliath Greaves", "Goliath Gauntlets", "Girded Tower Shield", "Jade Amulet" ]
-rarity = "unique"
+rarity = "Unique"
 theme = { font = "white", background = "faded_dark_orange", outline = "white" }
 size = 24
 icon = { icon_type = "kite", color = "orange", size = "small" }
@@ -120,7 +162,7 @@ beam = "orange"
 [[filters]]
 name = "Best divination cards"
 items = [ "Assassin's Gift", "Auspicious Ambitions", "Beauty Through Death", "Broken Promises", "Brother's Gift", "Brother's Stash", "Choking Guilt", "Damnation", "Darker Half", "Desecrated Virtue", "Divine Beauty", "Divine Justice", "Duality", "Father's Love", "Fire Of Unknown Origin", "History", "House of Mirrors", "I See Brothers", "Imperfect Memories", "Last Stand", "Lonely Warrior", "Love Through Ice", "Luminous Trove", "Magnum Opus", "Matryoshka", "Remembrance", "Seven Years Bad Luck", "Squandered Prosperity", "Succor of the Sinless", "Temperance", "The Apothecary", "The Artist", "The Cheater", "The Damned", "The Demon", "The Destination", "The Doctor", "The Dragon's Heart", "The Endless Darkness", "The Enlightened", "The Fiend", "The Greatest Intentions", "The Gulf", "The Immortal", "The Insane Cat", "The Last Supper", "The Leviathan", "The Long Con", "The Mayor", "The Price of Devotion", "The Progeny of Lunaris", "The Sacrifice", "The Samurai's Eye", "The Sephirot", "The Shieldbearer", "The Soul", "The Vast", "The World Eater", "Tranquillity", "Unrequited Love", "Wealth and Power", "Winter's Embrace" ]
-classes = [ "divination cards" ]
+classes = [ "Divination Cards" ]
 theme = { font = "dark_blue", background = "white", outline = "dark_blue" }
 sound = { sound_type = "glitter", volume = "loud" }
 size = 48
@@ -129,7 +171,7 @@ beam = "blue"
 [[filters]]
 name = "Great divination cards"
 items = [  "A Familiar Call", "A Fate Worse Than Death", "A Modest Request", "Alluring Bounty", "Ambitious Obsession", "Anarchy's Price", "Azyran's Reward", "Burning Blood", "Chasing Risk", "Deadly Joy", "Doryani's Epiphany", "Dying Light", "Fateful Meeting", "Friendship", "Further Invention", "Gemcutter's Mercy", "Home", "Judging Voices", "Monochrome", "Pride of the First Ones", "Silence and Frost", "Terrible Secret of Space", "The Academic", "The Aspirant", "The Astromancer", "The Bargain", "The Cartographer", "The Chosen", "The Deep Ones", "The Emptiness", "The Eternal War", "The Eye of Terror", "The Fishmonger", "The Fortunate", "The Garish Power", "The Last One Standing", "The Nurse", "The One That Got Away", "The Price of Loyalty", "The Queen", "The Rabbit's Foot", "The Scout", "The Wedding Gift", "Who Asked", "Lachrymal Necrosis", "Arrogance of the Vaal", "Baited Expectations", "Avian Pursuit" ]
-classes = [ "divination cards" ]
+classes = [ "Divination Cards" ]
 theme = { font = "dark_blue", background = "white", outline = "dark_blue" }
 sound = { sound_type = "voice_whoosh", volume = "quiet" }
 size = 36
@@ -137,12 +179,77 @@ size = 36
 [[filters]]
 name = "Good divination cards"
 items = [ "Misery in Darkness", "The Blessing of Moosh", "The Fletcher", "The Tireless Extractor", "Three Faces in the Dark", "The One With All", "The Valkyrie", "Emperor's Luck", "The Shepherd's Sandals", "The Risk", "The Undaunted", "The Obscured", "The Deceiver", "The Wretched", "Parasitic Passengers", "The Mercenary", "The Fox in the Brambles", "The Mind's Eyes", "The Forward Gaze", "The Eye of the Dragon", "The Wrath", "Deathly Designs", "The Ruthless Ceinture", "The Rite of Elements", "The Aesthete", "The Doppelganger", "The Wolf", "Alone in the Darkness", "The Gemcutter", "Jack in the Box", "The Wolf's Shadow", "The Traitor", "Hope", "Sambodhi's Vow", "Glimmer of Hope", "Gift of the Gemling Queen", "Left to Fate", "Volatile Power", "Heterochromia", "The Pack Leader", "Lucky Connections", "The Hoarder", "Chaotic Disposition", "Orb of Augmentation", "Jeweller's Orb", "The Saint's Treasure", "The Void", "The Mercenary", "Brush, Paint and Palette", "Echoes of Love", "Abandoned Wealth", "Vile Power", "The Calling", "Pride Before the Fall", "More is Never Enough", "The Puzzle", "Society's Remorse", "Might is Right", "Blind Venture", "The Feast", "Rebirth and Renewal", "Bijoux", "Costly Curio", "Prejudice", "The Finishing Touch", "Hubris", "The Lich", "Time-Lost Relic", "Immortal Resolve", "The Union", "The Watcher", "The Unexpected Prize", "Forbidden Power", "Coveted Possession", "The Conduit", "The Wilted Rose", "Lysah's Respite", "The Heroic Shot", "The Hunger", "Dying Anguish", "No Traces", "The Poet", "Three Voices", "Atziri's Arsenal", "Dialla's Subjugation", "The Gentleman", "When Currents Blaze", "The Cache", "The Gambler", "The Master Artisan", "The Encroaching Darkness", "The Cataclysm", "A Sea of Blue", "The Prince of Darkness", "A Dusty Memory", "The Hook", "The Card Sharp", "The Breach", "The Escape", "The Admirer", "Acclimatisation" ]
-classes = [ "divination cards" ]
+classes = [ "Divination Cards" ]
 size = 28
 
 [[filters]]
 name = "Heist items"
-classes = [ "blueprints", "contracts" ]
+classes = [ "Blueprints", "Contracts" ]
+
+[[filters]]
+name = "Good physical weapons"
+classes = [ "Claws", "Daggers", "One Hand Axes", "One Hand Maces", "One Hand Swords", "Thrusting One Hand Swords", "Two Hand Axes", "Two Hand Maces", "Two Hand Swords", "Warstaves" ]
+good_mods = 2
+
+[[filters]]
+name = "Good caster weapons"
+classes = [ "Rune Daggers", "Wands" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Jewels"
+classes = [ "Abyss Jewels", "Jewels" ]
+good_mods = 3
+
+[[filters]]
+name = "Good Amulets"
+classes = [ "Amulets" ]
+good_mods = 3
+
+[[filters]]
+name = "Good Belts"
+classes = [ "Belts" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Body Armours"
+classes = [ "Body Armours" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Boots"
+classes = [ "Boots" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Bows"
+classes = [ "Bows" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Gloves"
+classes = [ "Gloves" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Helmets"
+classes = [ "Helmets" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Rings"
+classes = [ "Rings" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Sceptres"
+classes = [ "Sceptres" ]
+good_mods = 2
+
+[[filters]]
+name = "Good Staves"
+classes = [ "Staves" ]
+good_mods = 2
 
 [[filters]]
 name = "Replica items"
@@ -165,21 +272,16 @@ name = "Synthesised Items"
 is_synthesised = true
 
 [[filters]]
-name = "Tier 1 bases"
-has_tier_1_mods = 2
-size = 32
-
-[[filters]]
 name = "Veiled bases"
 is_veiled = true
 
 [[filters]]
-name = "Items with corrupted mods"
+name = "Items with two corrupted mods"
 corrupted_mods = 2
 
 [[filters]]
 name = "Essences"
-items = ["essence of"]
+items = [ "essence of" ]
 strict = false
 
 [[filters]]
@@ -208,12 +310,12 @@ icon = { icon_type = "star", color = "yellow", size = "small" }
 [[filters]]
 name = "All Scarabs"
 items = [ "scarab" ]
-classes = [ "map fragments" ]
+classes = [ "Map Fragments" ]
 strict = false
 
 [[filters]]
 name = "Tier 17 Maps"
-classes = [ "maps" ]
+classes = [ "Maps" ]
 theme = { font = "dark_purple", background = "white", outline = "dark_purple" }
 size = 42
 map_tier = 17
@@ -223,27 +325,26 @@ beam = "purple"
 
 [[filters]]
 name = "Tier 16 Maps"
-classes = [ "maps" ]
+classes = [ "Maps" ]
 size = 32
 map_tier = 16
 
 [[filters]]
 name = "Valuable Map Fragments"
 items = [ "fragment", "crest", "mortal" ]
-classes = [ "map fragments" ]
+classes = [ "Map Fragments" ]
 size = 38
 strict = false
 
 [[filters]]
 name = "Perfect Quality items"
-size = 38
+size = 34
 quality = 27
 beam = "white"
 
 [[filters]]
 name = "Over-Qualitied Items"
-classes = [ "life flasks", "mana flasks", "utility flasks", "hybrid flasks", "skill gems", "support gems" ]
-size = 32
+classes = [ "Life Flasks", "Mana Flasks", "Utility Flasks", "Hybrid Flasks", "Skill Gems", "Support Gems" ]
 quality = 21
 beam = "white"
 
