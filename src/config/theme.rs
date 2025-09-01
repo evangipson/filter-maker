@@ -2,8 +2,8 @@ use serde_derive::Deserialize;
 
 #[derive(Clone, Default, Deserialize, PartialEq)]
 pub struct Theme {
-    pub font: String,
-    pub background: String,
+    pub font: Option<String>,
+    pub background: Option<String>,
     pub outline: Option<String>,
 }
 
@@ -14,8 +14,8 @@ impl Theme {
         outline: &Option<String>,
     ) -> Option<Self> {
         Some(Self {
-            font: font.clone().unwrap_or_default(),
-            background: background.clone().unwrap_or_default(),
+            font: font.clone(),
+            background: background.clone(),
             outline: outline.clone(),
         })
     }

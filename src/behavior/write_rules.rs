@@ -71,12 +71,15 @@ pub trait WriteRules {
         [
             self.write_value_rule(
                 "SetTextColor",
-                &common::get_color(&palette, &theme_value.font.clone()),
+                &common::get_color(&palette, &theme_value.font.clone().unwrap_or_default()),
             )
             .only_if(!theme_value.font.is_default()),
             self.write_value_rule(
                 "SetBackgroundColor",
-                &common::get_color(&palette, &theme_value.background.clone()),
+                &common::get_color(
+                    &palette,
+                    &theme_value.background.clone().unwrap_or_default(),
+                ),
             )
             .only_if(!theme_value.background.is_default()),
             self.write_value_rule(
