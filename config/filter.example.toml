@@ -30,28 +30,35 @@ palette = [
     { name = "faded_beige", color = { r = 200, g = 200, b = 175, a = 190 }},
     { name = "faded_dark_blue", color = { r = 41, g = 128, b = 185, a = 190 }},
     { name = "orange_red", color = { r = 255, g = 112, b = 59, a = 255 }},
-    { name = "dark_red", color = { r = 101, g = 0, b = 0, a = 255 }},
+    { name = "dark_red", color = { r = 71, g = 0, b = 0, a = 255 }},
+    { name = "faded_dark_red", color = { r = 61, g = 0, b = 0, a = 155 }},
+    { name = "off_white", color = {r = 212, g = 210, b = 209, a = 255 }},
+    { name = "grey", color = {r = 162, g = 160, b = 159, a = 255 }},
+    { name = "washed_out_red", color = {r = 125, g = 50, b = 50, a = 255 }},
+    { name = "washed_out_blue", color = {r = 50, g = 50, b = 125, a = 255 }},
+    { name = "washed_out_purple", color = {r = 105, g = 30, b = 125, a = 255 }},
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 12 },
-    { name = "Magic (base style)", rarity = "magic", font = "blue", background = "faded_black", size = 12 },
-    { name = "Rare (base style)", rarity = "rare", font = "yellow", background = "faded_black", size = 12 },
-    { name = "Unique (base style)", rarity = "unique", font = "white", background = "orange", size = 24 },
+    { name = "Magic (base style)", rarity = "magic", font = "blue", size = 12 },
+    { name = "Rare (base style)", rarity = "rare", font = "yellow", size = 12 },
+    { name = "Unique (base style)", rarity = "unique", font = "orange", outline = "dark_orange", size = 28 },
+    { name = "Corrupted mods (base style)", corrupted_mods = 1, rarity = "none", background = "faded_dark_red", outline = "dark_red" },
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 18 },
-    { name = "Currency (base style)", classes = ["currency"], rarity = "none", font = "white", background = "dark_purple", size = 24 },
-    { name = "Scrolls (base style)", items = ["scroll"], classes = ["currency"], font = "white", background = "faded_red", outline = "red", size = 20, strict = false },
-    { name = "Maps (base style)", classes = [ "maps" ], font = "white", background = "black", outline = "white", size = 20 },
+    { name = "Currency (base style)", classes = ["currency"], rarity = "none", font = "off_white", background = "dark_purple", size = 18 },
+    { name = "Portal Scrolls (base style)", items = ["portal scroll"], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 12 },
+    { name = "Scroll of Wisdom (base style)", items = ["scroll of wisdom"], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 12 },
+    { name = "Maps (base style)", classes = [ "maps" ], rarity = "none", background = "black", size = 20 },
     { name = "Gems (base style)", classes = [ "skill gems", "support gems" ], font = "teal", background = "white", outline = "teal", size = 20 },
     { name = "Fragments (base style)", classes = [ "map fragments" ], font = "white", background = "red", outline = "white", size = 24 },
     { name = "Scarabs (base style)", items = [ "scarab" ], rarity = "none", classes = [ "map fragments" ], font = "teal", background = "white", outline = "teal", size = 30, strict = false },
     { name = "Divination Cards (base style)", classes = [ "divination cards" ], rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 24 },
     { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 12 },
-    { name = "Synthesised (base style)", is_synthesised = true, font = "white", background = "dark_purple", outline = "white", size = 26 },
-    { name = "Fractured (base style)", is_fractured = true, font = "white", background = "teal", outline = "white", size = 26 },
-    { name = "Influenced (base style)", is_influenced = true, font = "white", background = "dark_blue", outline = "white", size = 26 },
-    { name = "Enchanted (base style)", is_enchanted = true, font = "white", background = "vibrant_blue", outline = "white", size = 26 },
-    { name = "Replica items (base style)", is_replica = true, font = "white", background = "orange_red", outline = "white", size = 28 },
-    { name = "Corrupted mods (base style)", corrupted_mods = 1, font = "dark_red", background = "black", outline = "dark_red", size = 28 },
+    { name = "Synthesised (base style)", is_synthesised = true, rarity = "none", font = "white", background = "dark_purple", outline = "white", size = 26 },
+    { name = "Fractured (base style)", is_fractured = true, rarity = "none", font = "white", background = "teal", outline = "white", size = 26 },
+    { name = "Influenced (base style)", is_influenced = true, rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 26 },
+    { name = "Enchanted (base style)", is_enchanted = true, rarity = "none", font = "white", background = "vibrant_blue", outline = "white", size = 26 },
+    { name = "Replica items (base style)", is_replica = true, rarity = "none", font = "white", background = "orange_red", outline = "white", size = 28 },
     { name = "Essences (base style)", items = ["essence of"], font = "faded_dark_blue", background = "faded_beige", outline = "white", size = 20, strict = false},
     { name = "Heist Contracts (base style)", classes = [ "blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
     { name = "Heist Blueprints (base style)", classes = [ "contracts" ], font = "white", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
@@ -143,41 +150,31 @@ is_replica = true
 [[filters]]
 name = "Enchanted items"
 is_enchanted = true
-item_level = 83
-size = 28
 
 [[filters]]
 name = "Fractured Items"
 is_fractured = true
-item_level = 83
-size = 28
 
 [[filters]]
 name = "Influenced Items"
 is_influenced = true
-item_level = 83
-size = 28
 
 [[filters]]
 name = "Synthesised Items"
 is_synthesised = true
-item_level = 83
-size = 28
 
 [[filters]]
 name = "Tier 1 bases"
 has_tier_1_mods = 2
-size = 38
+size = 32
 
 [[filters]]
 name = "Veiled bases"
 is_veiled = true
-size = 28
 
 [[filters]]
 name = "Items with corrupted mods"
 corrupted_mods = 2
-size = 28
 
 [[filters]]
 name = "Essences"

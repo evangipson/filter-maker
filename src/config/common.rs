@@ -2,7 +2,7 @@ use crate::{
     behavior::conditional::Conditional,
     color::custom_color::CustomColor,
     config::color::Color,
-    constants::rules::{TIER_ONE_MODS, VEILED},
+    constants::rules::{CORRUPTED, TIER_ONE_MODS, VEILED},
 };
 use std::fmt::Display;
 
@@ -106,5 +106,13 @@ pub fn get_explicit_mods(is_veiled: &Option<bool>, has_tier_1_mods: &Option<u8>)
                 TIER_ONE_MODS.map(|x| format!("\"{x}\"")).join(" ")
             }
         )
+    }
+}
+
+pub fn get_corrupted(corrupted_mods: &Option<u8>) -> String {
+    if corrupted_mods.unwrap_or_default() == 1 {
+        CORRUPTED.to_string()
+    } else {
+        get_display("CorruptedMods >=", corrupted_mods)
     }
 }

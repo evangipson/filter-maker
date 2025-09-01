@@ -4,7 +4,8 @@ pub const SYNTHESIZED: &str = "SynthesisedItem True";
 pub const ENCHANTED: &str = "AnyEnchantment True";
 pub const VEILED: &str = "\"Veil\"";
 pub const REPLICA: &str = "Replica True";
-pub const TIER_ONE_MODS: [&str; 98] = [
+pub const CORRUPTED: &str = "Corrupted True";
+pub const TIER_ONE_MODS: [&str; 102] = [
     "Abating",
     "Apparition's",
     "Archmage's",
@@ -26,7 +27,9 @@ pub const TIER_ONE_MODS: [&str; 98] = [
     "Essences",
     "Exalter's",
     "Fawn's",
+    "Flaring",
     "Frost Singer's",
+    "Fugitive",
     "Ghost's",
     "Glyphic",
     "Guatelitzi's",
@@ -52,6 +55,7 @@ pub const TIER_ONE_MODS: [&str; 98] = [
     "of Grandmastery",
     "of Guatelitzi",
     "of Haast",
+    "of Incision",
     "of Lioneye",
     "of Prestidigitation",
     "of Puhuarte",
@@ -88,6 +92,7 @@ pub const TIER_ONE_MODS: [&str; 98] = [
     "Rimedweller's",
     "Rune",
     "Saintly",
+    "Seraphim's",
     "Spirit's",
     "Splintermind's",
     "Stormbrewer's",
