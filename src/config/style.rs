@@ -67,6 +67,7 @@ impl Style {
                 REPLICA
                     .to_string()
                     .only_if(self.is_replica.unwrap_or_default()),
+                common::get_display("CorruptedMods >=", &self.corrupted_mods),
                 common::get_display("SetFontSize", &self.size),
                 format!(
                     "SetTextColor {}",
