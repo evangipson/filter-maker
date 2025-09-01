@@ -29,6 +29,7 @@ palette = [
     { name = "faded_dark_orange", color = { r = 145, g = 66, b = 7, a = 190 }},
     { name = "faded_beige", color = { r = 200, g = 200, b = 175, a = 190 }},
     { name = "faded_dark_blue", color = { r = 41, g = 128, b = 185, a = 190 }},
+    { name = "orange_red", color = { r = 255, g = 112, b = 59, a = 255 }},
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 12 },
@@ -44,12 +45,14 @@ styles = [
     { name = "Scarabs (base style)", items = [ "scarab" ], rarity = "none", classes = [ "map fragments" ], font = "teal", background = "white", outline = "teal", size = 30, strict = false },
     { name = "Divination Cards (base style)", classes = [ "divination cards" ], rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 24 },
     { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 12 },
-    { name = "Synthesised (base style)", is_synthesised = true, font = "white", background = "dark_purple", outline = "white", size = 24 },
-    { name = "Fractured (base style)", is_fractured = true, font = "white", background = "teal", outline = "white", size = 24 },
-    { name = "Influenced (base style)", is_influenced = true, font = "white", background = "dark_blue", outline = "white", size = 24 },
+    { name = "Synthesised (base style)", is_synthesised = true, font = "white", background = "dark_purple", outline = "white", size = 26 },
+    { name = "Fractured (base style)", is_fractured = true, font = "white", background = "teal", outline = "white", size = 26 },
+    { name = "Influenced (base style)", is_influenced = true, font = "white", background = "dark_blue", outline = "white", size = 26 },
+    { name = "Enchanted (base style)", is_enchanted = true, font = "white", background = "vibrant_blue", outline = "white", size = 26 },
+    { name = "Replica items (base style)", is_replica = true, font = "white", background = "orange_red", outline = "white", size = 28 },
     { name = "Essences (base style)", items = ["essence of"], font = "faded_dark_blue", background = "faded_beige", outline = "white", size = 20, strict = false},
-    { name = "Heist Contracts (base style)", classes = [ "blueprints" ], font = "vibrant_blue", background = "salmon_red", outline = "vibrant_blue", size = 26 },
-    { name = "Heist Blueprints (base style)", classes = [ "contracts" ], font = "salmon_red", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
+    { name = "Heist Contracts (base style)", classes = [ "blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
+    { name = "Heist Blueprints (base style)", classes = [ "contracts" ], font = "white", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
 ]
 
 [[filters]]
@@ -73,7 +76,6 @@ strict = false
 [[filters]]
 name = "Valuable Items"
 items = [ "Omen of", "Potent Chaotic Resonator", "Powerful Chaotic Resonator", "Primitive Chaotic Resonator", "Aberrant Fossil", "Aetheric Fossil", "Bloodstained Fossil", "Bound Fossil", "Corroded Fossil", "Deft Fossil", "Dense Fossil", "Frigid Fossil", "Fundamental Fossil", "Gilded Fossil", "Jagged Fossil", "Lucent Fossil", "Metallic Fossil", "Opulent Fossil", "Prismatic Fossil", "Pristine Fossil", "Scorched Fossil", "Serrated Fossil", "Shuddering Fossil", "Tangled Fossil", "Remnant of Corruption", "Shrieking Essence of", "Screaming Essence of", "Astragali", "Burial Medallion", "Chaos Orb", "Exalted Shard", "Gemcutter's Prism", "Grand Eldritch Ichor", "Grand Eldritch Ember", "Greater Eldritch Ichor", "Greater Eldritch Ember", "Harbinger's Orb", "Imbued Catalyst", "Intrinsic Catalyst", "Noxious Catalyst", "Tainted Catalyst", "Turbulent Catalyst", "Unstable Catalyst", "Fertile Catalyst", "Abrasive Catalyst", "Accelerating Catalyst", "Orb of Annulment", "Primal Crystallised Lifeforce", "Ritual Splinter", "Scrap Metal", "Stacked Deck", "Tainted Armourer's Scrap", "Tainted Blacksmith's Whetstone", "Tainted Chromatic Orb", "Tainted Jeweller's Orb", "Tainted Chaos Orb", "Tainted Mythic Orb", "Tainted Orb of Fusing", "Veiled Scarab", "Vivid Crystallised Lifeforce", "Wild Crystallised Lifeforce", "Ancient Orb", "Exotic Coinage", "Ritual Vessel", "Ancient Shard", "Annulment Shard", "Bestiary Orb", "Cartographer's Chisel", "Enkindling Orb", "Facetor's Lens", "Glassblower's Bauble", "Orb of Horizons", "Orb of Regret", "Orb of Scouring", "Orb of Unmaking", "Orb of Alteration", "Orb of Chance", "Orb of Alchemy", "Blacksmith's Whetstone", "Armourer's Scrap", "Chromatic Orb", "Orb of Fusing", "Regal Orb", "Vaal Orb", "Rogue's Marker", "Maven's Chisel of Procurement", "Large Cluster Jewel", "Medium Cluster Jewel", "Small Cluster Jewel", "Simulacrum Splinter", "Blessed Orb", "Orb of Augmentation", "Jeweller's Orb", "Polaric Invitation", "Writhing Invitation" ]
-theme = { font = "white", background = "dark_purple", outline = "white" }
 size = 32
 strict = false
 
@@ -91,9 +93,9 @@ beam = "red"
 name = "Good Multi-Base Uniques"
 items = [ "Amethyst Flask", "Heavy Belt", "Hellion's Paw", "Imperial Skean", "Leather Belt", "Magistrate Crown", "Murder Boots", "Paua Amulet", "Small Cluster Jewel", "Spine Bow", "Vaal Blade", "Vaal Claw", "Vile Arrow Quiver", "Despot Axe" ]
 rarity = "unique"
-theme = { font = "neon_teal", background = "faded_dark_orange", outline = "white" }
-size = 28
-icon = { icon_type = "star", color = "red", size = "small" }
+theme = { font = "white", background = "faded_dark_orange", outline = "white" }
+size = 32
+icon = { icon_type = "star", color = "orange", size = "small" }
 beam = "cyan"
 
 [[filters]]
@@ -116,7 +118,7 @@ beam = "blue"
 
 [[filters]]
 name = "Great divination cards"
-items = [  "A Familiar Call", "A Fate Worse Than Death", "A Modest Request", "Alluring Bounty", "Ambitious Obsession", "Anarchy's Price", "Azyran's Reward", "Burning Blood", "Chasing Risk", "Deadly Joy", "Doryani's Epiphany", "Dying Light", "Fateful Meeting", "Friendship", "Further Invention", "Gemcutter's Mercy", "Home", "Judging Voices", "Monochrome", "Pride of the First Ones", "Silence and Frost", "Terrible Secret of Space", "The Academic", "The Aspirant", "The Astromancer", "The Bargain", "The Cartographer", "The Chosen", "The Deep Ones", "The Emptiness", "The Eternal War", "The Eye of Terror", "The Fishmonger", "The Fortunate", "The Garish Power", "The Last One Standing", "The Nurse", "The One That Got Away", "The Price of Loyalty", "The Queen", "The Rabbit's Foot", "The Scout", "The Wedding Gift", "Who Asked", "Lachrymal Necrosis", "Arrogance of the Vaal", "Baited Expectations", "Avian Pursuit", "A Stone Perfected" ]
+items = [  "A Familiar Call", "A Fate Worse Than Death", "A Modest Request", "Alluring Bounty", "Ambitious Obsession", "Anarchy's Price", "Azyran's Reward", "Burning Blood", "Chasing Risk", "Deadly Joy", "Doryani's Epiphany", "Dying Light", "Fateful Meeting", "Friendship", "Further Invention", "Gemcutter's Mercy", "Home", "Judging Voices", "Monochrome", "Pride of the First Ones", "Silence and Frost", "Terrible Secret of Space", "The Academic", "The Aspirant", "The Astromancer", "The Bargain", "The Cartographer", "The Chosen", "The Deep Ones", "The Emptiness", "The Eternal War", "The Eye of Terror", "The Fishmonger", "The Fortunate", "The Garish Power", "The Last One Standing", "The Nurse", "The One That Got Away", "The Price of Loyalty", "The Queen", "The Rabbit's Foot", "The Scout", "The Wedding Gift", "Who Asked", "Lachrymal Necrosis", "Arrogance of the Vaal", "Baited Expectations", "Avian Pursuit" ]
 classes = [ "divination cards" ]
 theme = { font = "dark_blue", background = "white", outline = "dark_blue" }
 sound = { sound_type = "voice_whoosh", volume = "quiet" }
@@ -133,16 +135,42 @@ name = "Heist items"
 classes = [ "blueprints", "contracts" ]
 
 [[filters]]
+name = "Replica items"
+is_replica = true
+
+[[filters]]
+name = "Enchanted items"
+is_enchanted = true
+item_level = 83
+size = 28
+
+[[filters]]
 name = "Fractured Items"
 is_fractured = true
 item_level = 83
-size = 26
+size = 28
 
 [[filters]]
 name = "Influenced Items"
 is_influenced = true
 item_level = 83
-size = 26
+size = 28
+
+[[filters]]
+name = "Synthesised Items"
+is_synthesised = true
+item_level = 83
+size = 28
+
+[[filters]]
+name = "Tier 1 bases"
+has_tier_1_mods = 2
+size = 38
+
+[[filters]]
+name = "Veiled bases"
+is_veiled = true
+size = 28
 
 [[filters]]
 name = "Essences"
@@ -202,10 +230,17 @@ size = 38
 strict = false
 
 [[filters]]
+name = "Perfect Quality items"
+size = 38
+quality = 27
+beam = "white"
+
+[[filters]]
 name = "Over-Qualitied Items"
 classes = [ "life flasks", "mana flasks", "utility flasks", "hybrid flasks", "skill gems", "support gems" ]
-size = 36
+size = 32
 quality = 21
+beam = "white"
 
 [[filters]]
 name = "Awakened Gems"

@@ -1,5 +1,8 @@
 use crate::{
-    behavior::conditional::Conditional, color::custom_color::CustomColor, config::color::Color,
+    behavior::conditional::Conditional,
+    color::custom_color::CustomColor,
+    config::color::Color,
+    constants::rules::{TIER_ONE_MODS, VEILED},
 };
 use std::fmt::Display;
 
@@ -85,5 +88,23 @@ pub fn capitalize(s: &str) -> String {
         s[0..1].to_uppercase() + &s[1..]
     } else {
         s.to_uppercase()
+    }
+}
+
+pub fn get_explicit_mods(is_veiled: &Option<bool>, has_tier_1_mods: &Option<u8>) -> String {
+    if is_veiled.is_default() && has_tier_1_mods.is_default() {
+        String::new()
+    } else if has_tier_1_mods.is_default() {
+        format!("HasExplicitMod {VEILED}")
+    } else {
+        format!(
+            "HasExplicitMod >={} {}",
+            has_tier_1_mods.unwrap_or(1),
+            if !is_veiled.is_default() && !has_tier_1_mods.is_default() {
+                TIER_ONE_MODS.map(|x| format!("\"{x}\"")).join(" ") + " " + VEILED
+            } else {
+                TIER_ONE_MODS.map(|x| format!("\"{x}\"")).join(" ")
+            }
+        )
     }
 }

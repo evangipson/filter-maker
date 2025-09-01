@@ -1,7 +1,7 @@
 use crate::{
     behavior::conditional::Conditional,
     config::{color::Color, common, icon::Icon, sound::Sound, theme::Theme},
-    constants::rules::{FRACTURED, INFLUENCED, SYNTHESIZED},
+    constants::rules::{ENCHANTED, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED},
 };
 use serde_derive::Deserialize;
 
@@ -19,6 +19,11 @@ pub struct Rule {
     pub is_synthesised: Option<bool>,
     pub is_fractured: Option<bool>,
     pub is_influenced: Option<bool>,
+    pub is_enchanted: Option<bool>,
+    pub is_veiled: Option<bool>,
+    pub is_replica: Option<bool>,
+    pub has_tier_1_mods: Option<u8>,
+    pub corrupted_mods: Option<u8>,
     pub quality: Option<u8>,
     pub map_tier: Option<u8>,
     pub links: Option<u8>,
@@ -40,7 +45,8 @@ impl Rule {
                 common::get_item_display(self.items.clone(), self.strict),
                 common::get_display("Rarity", &self.rarity),
                 common::get_display("MapTier >=", &self.map_tier),
-                common::get_display("Quality >=", &self.quality).if_not_default(&self.quality),
+                common::get_display("Quality >=", &self.quality),
+                common::get_explicit_mods(&self.is_veiled, &self.has_tier_1_mods),
                 FRACTURED
                     .to_string()
                     .only_if(self.is_fractured.unwrap_or_default()),
@@ -50,6 +56,13 @@ impl Rule {
                 SYNTHESIZED
                     .to_string()
                     .only_if(self.is_synthesised.unwrap_or_default()),
+                ENCHANTED
+                    .to_string()
+                    .only_if(self.is_enchanted.unwrap_or_default()),
+                REPLICA
+                    .to_string()
+                    .only_if(self.is_replica.unwrap_or_default()),
+                common::get_display("CorruptedMods >=", &self.corrupted_mods),
                 common::get_display("LinkedSockets", &self.links),
                 common::get_display("StackSize >=", &self.stack_size),
                 common::get_display("SetFontSize", &self.size),
