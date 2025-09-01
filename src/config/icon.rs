@@ -1,4 +1,4 @@
-use crate::{behavior::conditional::Conditional, config::common};
+use crate::behavior::{common, conditional::Conditional};
 use serde_derive::Deserialize;
 use std::fmt::Display;
 

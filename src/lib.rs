@@ -10,7 +10,6 @@
 pub mod config {
     pub mod base_config;
     pub mod color;
-    pub mod common;
     pub mod filter;
     pub mod icon;
     pub mod rule;
@@ -21,6 +20,7 @@ pub mod config {
 
 /// [`behavior`] is a collection of functionality to define behaviors.
 pub mod behavior {
+    pub mod common;
     /// [`conditional`] is a trait for conditionally returning default values.
     pub mod conditional;
     /// [`write_rules`] is a trait for writing out rules to the filter.

@@ -1,6 +1,6 @@
 use crate::{
-    behavior::conditional::Conditional,
-    config::{color::Color, common, theme::Theme},
+    behavior::{common, conditional::Conditional},
+    config::{color::Color, theme::Theme},
     constants::rules::{CORRUPTED, TIER_ONE_MODS, VEILED},
 };
 use std::fmt::Display;

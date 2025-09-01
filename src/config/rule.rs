@@ -1,6 +1,6 @@
 use crate::{
-    behavior::{conditional::Conditional, write_rules::WriteRules},
-    config::{color::Color, common, icon::Icon, sound::Sound, theme::Theme},
+    behavior::{common, conditional::Conditional, write_rules::WriteRules},
+    config::{color::Color, icon::Icon, sound::Sound, theme::Theme},
     constants::rules::{ENCHANTED, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED},
 };
 use serde_derive::Deserialize;
