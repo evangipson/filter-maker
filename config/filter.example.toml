@@ -30,6 +30,7 @@ palette = [
     { name = "faded_beige", color = { r = 200, g = 200, b = 175, a = 190 }},
     { name = "faded_dark_blue", color = { r = 41, g = 128, b = 185, a = 190 }},
     { name = "orange_red", color = { r = 255, g = 112, b = 59, a = 255 }},
+    { name = "dark_red", color = { r = 101, g = 0, b = 0, a = 255 }},
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 12 },
@@ -50,6 +51,7 @@ styles = [
     { name = "Influenced (base style)", is_influenced = true, font = "white", background = "dark_blue", outline = "white", size = 26 },
     { name = "Enchanted (base style)", is_enchanted = true, font = "white", background = "vibrant_blue", outline = "white", size = 26 },
     { name = "Replica items (base style)", is_replica = true, font = "white", background = "orange_red", outline = "white", size = 28 },
+    { name = "Corrupted mods (base style)", corrupted_mods = 1, font = "dark_red", background = "black", outline = "dark_red", size = 28 },
     { name = "Essences (base style)", items = ["essence of"], font = "faded_dark_blue", background = "faded_beige", outline = "white", size = 20, strict = false},
     { name = "Heist Contracts (base style)", classes = [ "blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
     { name = "Heist Blueprints (base style)", classes = [ "contracts" ], font = "white", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
@@ -170,6 +172,11 @@ size = 38
 [[filters]]
 name = "Veiled bases"
 is_veiled = true
+size = 28
+
+[[filters]]
+name = "Items with corrupted mods"
+corrupted_mods = 2
 size = 28
 
 [[filters]]
