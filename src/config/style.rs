@@ -1,6 +1,6 @@
 use crate::{
-    behavior::conditional::Conditional,
-    config::{color::Color, common},
+    behavior::{conditional::Conditional, write_rules::WriteRules},
+    config::{color::Color, theme::Theme},
     constants::rules::{ENCHANTED, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED},
 };
 use serde_derive::Deserialize;
@@ -33,64 +33,30 @@ impl Style {
             // if it's a default rule, don't write anything
             String::new()
         } else {
+            let theme = Theme::new(&self.font, &self.background, &self.outline);
             [
-                common::get_name_display(self.name.clone(), self.strict),
-                common::get_class_display(self.classes.clone(), self.strict),
-                common::get_item_display(self.items.clone(), self.strict),
-                common::get_explicit_mods(&self.is_veiled, &self.has_tier_1_mods),
-                format!("ItemLevel >= {}", self.item_level.unwrap_or_default())
-                    .only_if(!self.item_level.unwrap_or_default().is_default()),
-                format!(
-                    "Rarity >= {}",
-                    common::capitalize(&self.rarity.clone().unwrap_or("Normal".to_string()))
-                )
-                .only_if(
-                    &self
-                        .rarity
-                        .clone()
-                        .unwrap_or("Normal".to_string())
-                        .to_lowercase()
-                        != "none",
-                ),
-                FRACTURED
-                    .to_string()
-                    .only_if(self.is_fractured.unwrap_or_default()),
-                INFLUENCED
-                    .to_string()
-                    .only_if(self.is_influenced.unwrap_or_default()),
-                SYNTHESIZED
-                    .to_string()
-                    .only_if(self.is_synthesised.unwrap_or_default()),
-                ENCHANTED
-                    .to_string()
-                    .only_if(self.is_enchanted.unwrap_or_default()),
-                REPLICA
-                    .to_string()
-                    .only_if(self.is_replica.unwrap_or_default()),
-                common::get_corrupted(&self.corrupted_mods),
-                common::get_display("SetFontSize", &self.size),
-                format!(
-                    "SetTextColor {}",
-                    common::get_color(&palette, &self.font.clone().unwrap_or_default())
-                )
-                .only_if(!&self.font.clone().unwrap_or_default().is_default()),
-                format!(
-                    "SetBackgroundColor {}",
-                    common::get_color(&palette, &self.background.clone().unwrap_or_default())
-                )
-                .only_if(!&self.background.clone().unwrap_or_default().is_default()),
-                format!(
-                    "SetBorderColor {}",
-                    common::get_color(&palette, &self.outline.clone().unwrap_or_default())
-                )
-                .only_if(!&self.outline.clone().unwrap_or_default().is_default()),
+                self.write_rule_name(self.name.clone(), self.strict),
+                self.write_list_rule("Class", self.classes.clone(), self.strict),
+                self.write_list_rule("BaseType", self.items.clone(), self.strict),
+                self.write_explicit_mods_rule(&self.is_veiled, &self.has_tier_1_mods),
+                self.write_optional_rule("ItemLevel >=", &self.item_level),
+                self.write_rarity_rule(self.rarity.clone()),
+                self.write_rule(FRACTURED, self.is_fractured),
+                self.write_rule(INFLUENCED, self.is_influenced),
+                self.write_rule(SYNTHESIZED, self.is_synthesised),
+                self.write_rule(ENCHANTED, self.is_enchanted),
+                self.write_rule(REPLICA, self.is_replica),
+                self.write_corrupted_mods_rule(&self.corrupted_mods),
+                self.write_optional_rule("SetFontSize", &self.size),
+                self.write_color_rules(palette, &theme),
                 "Continue".to_string(),
             ]
             .into_iter()
             .filter(|line| !line.is_empty())
-            .map(|line| line + "\n")
+            .map(|line| format!("{line}\n"))
             .collect::<String>()
-            .to_string()
         }
     }
 }
+
+impl WriteRules for Style {}

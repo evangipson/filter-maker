@@ -23,6 +23,8 @@ pub mod config {
 pub mod behavior {
     /// [`conditional`] is a trait for conditionally returning default values.
     pub mod conditional;
+    /// [`write_rules`] is a trait for writing out rules to the filter.
+    pub mod write_rules;
 }
 
 /// [`color`] is a collection of functionality to define colors.
