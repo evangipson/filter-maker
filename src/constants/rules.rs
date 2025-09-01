@@ -4,7 +4,7 @@ pub const SYNTHESIZED: &str = "SynthesisedItem True";
 pub const ENCHANTED: &str = "AnyEnchantment True";
 pub const VEILED: &str = "\"Veil\"";
 pub const REPLICA: &str = "Replica True";
-pub const TIER_ONE_MODS: [&str; 96] = [
+pub const TIER_ONE_MODS: [&str; 98] = [
     "Abating",
     "Apparition's",
     "Archmage's",
@@ -33,6 +33,7 @@ pub const TIER_ONE_MODS: [&str; 96] = [
     "Hellion's",
     "Hero's",
     "Impenetrable",
+    "Impervious",
     "Incandescent",
     "Lich's",
     "Mad Lord's",
@@ -83,6 +84,7 @@ pub const TIER_ONE_MODS: [&str; 96] = [
     "Provocateur's",
     "Queen's",
     "Ram's",
+    "Resplendent",
     "Rimedweller's",
     "Rune",
     "Saintly",
