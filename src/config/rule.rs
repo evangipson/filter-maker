@@ -27,6 +27,7 @@ pub struct Rule {
     pub quality: Option<u8>,
     pub map_tier: Option<u8>,
     pub links: Option<u8>,
+    pub item_level: Option<u8>,
     pub stack_size: Option<u16>,
     pub strict: Option<bool>,
     pub hide: Option<bool>,
@@ -44,6 +45,7 @@ impl Rule {
                 self.write_list_rule("BaseType", self.items.clone(), self.strict),
                 self.write_optional_rule("Rarity >=", &self.rarity),
                 self.write_optional_rule("MapTier >=", &self.map_tier),
+                self.write_optional_rule("ItemLevel >=", &self.item_level),
                 self.write_optional_rule("Quality >=", &self.quality),
                 self.write_explicit_mods_rule(
                     &self.is_veiled,
