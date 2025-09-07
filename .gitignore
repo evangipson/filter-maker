@@ -1,3 +1,5 @@
 /target
-config/filter.toml
 *.filter
+config/filter.toml
+config/*.poe1.toml
+config/*.poe2.toml

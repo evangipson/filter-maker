@@ -1,0 +1,162 @@
+[configs]
+destination = "./FilterMaker.filter"
+sounds = [ "gong", "hollow_drum", "voice_drum", "voice_whoosh", "low_whoosh", "glitter", "tonal_pulse", "mechanical_pulse", "slow_pulse" ]
+icons = [ "circle", "diamond", "hexagon", "square", "star", "triangle", "cross", "moon", "raindrop", "kite", "pentagon", "upsidedown_house" ]
+palette = [
+    { name = "none", color = { r = 0, g = 0, b = 0, a = 0 }},
+    { name = "white", color = { r = 200, g = 200, b = 200, a = 255 }},
+    { name = "black", color = { r = 42, g = 42, b = 42, a = 255 }},
+    { name = "red", color = { r = 191, g = 0, b = 0, a = 255 }},
+    { name = "pink", color = { r = 254, g = 128, b = 128, a = 255 }},
+    { name = "orange", color = { r = 175, g = 96, b = 37, a = 255 }},
+    { name = "gold", color = { r = 187, g = 165, b = 61, a = 255 }},
+    { name = "yellow", color = { r = 225, g = 225, b = 119, a = 255 }},
+    { name = "green", color = { r = 27, g = 119, b = 65, a = 255 }},
+    { name = "teal", color = { r = 7, g = 122, b = 115, a = 255 }},
+    { name = "neon_teal", color = { r = 0, g = 202, b = 177, a = 255 }},    
+    { name = "blue", color = { r = 136, g = 136, b = 255, a = 255 }},
+    { name = "purple", color = { r = 192, g = 118, b = 223, a = 255 }},
+    { name = "beige", color = { r = 200, g = 200, b = 175, a = 255 }},
+    { name = "salmon_red", color = { r = 255, g = 85, b = 85, a = 255 }},
+    { name = "vibrant_blue", color = { r = 45, g = 45, b = 215, a = 255 }},
+    { name = "dark_blue", color = { r = 41, g = 128, b = 185, a = 255 }},
+    { name = "dark_orange", color = { r = 145, g = 66, b = 7, a = 255 }},
+    { name = "dark_purple", color = { r = 142, g = 68, b = 173, a = 255 }},
+    { name = "faded_dark_purple", color = { r = 142, g = 68, b = 173, a = 150 }},
+    { name = "faded_white", color = { r = 200, g = 200, b = 200, a = 205 }},
+    { name = "faded_black", color = { r = 42, g = 42, b = 42, a = 170 }},
+    { name = "faded_red", color = { r = 191, g = 0, b = 0, a = 105 }},
+    { name = "faded_dark_orange", color = { r = 145, g = 66, b = 7, a = 190 }},
+    { name = "faded_beige", color = { r = 200, g = 200, b = 175, a = 190 }},
+    { name = "faded_dark_blue", color = { r = 41, g = 128, b = 185, a = 190 }},
+    { name = "orange_red", color = { r = 255, g = 112, b = 59, a = 255 }},
+    { name = "dark_red", color = { r = 71, g = 0, b = 0, a = 255 }},
+    { name = "faded_dark_red", color = { r = 61, g = 0, b = 0, a = 155 }},
+    { name = "off_white", color = {r = 212, g = 210, b = 209, a = 255 }},
+    { name = "grey", color = {r = 162, g = 160, b = 159, a = 255 }},
+    { name = "washed_out_red", color = {r = 125, g = 50, b = 50, a = 255 }},
+    { name = "washed_out_blue", color = {r = 50, g = 50, b = 125, a = 255 }},
+    { name = "washed_out_purple", color = {r = 105, g = 30, b = 125, a = 255 }},
+]
+styles = [
+    { name = "Default (base style)", font = "white", background = "faded_black", size = 22 },
+    { name = "Magic (base style)", rarity = "Magic", font = "blue", size = 28 },
+    { name = "Rare (base style)", rarity = "Rare", font = "yellow", size = 28 },
+    { name = "Unique (base style)", rarity = "Unique", font = "white", background = "orange", size = 28 },
+    { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "Unique", font = "white", background = "orange_red", outline = "dark_red", size = 28 },
+    { name = "Corrupted mods (base style)", corrupted_mods = 1, rarity = "none", background = "faded_dark_red", outline = "dark_red" },
+    { name = "Currency (base style)", classes = [ "Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 20 },
+    { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 20 },
+    { name = "Portal Scrolls (base style)", items = [ "portal scroll" ], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 20 },
+    { name = "Scroll of Wisdom (base style)", items = [ "scroll of wisdom" ], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 20 },
+    { name = "Waystones (base style)", classes = [ "Waystones" ], rarity = "none", background = "black", size = 20 },
+    { name = "Uncut Gems (base style)", classes = [ "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems" ], font = "teal", background = "white", outline = "teal", size = 28, strict = false },
+    { name = "Fragments (base style)", classes = [ "Map Fragments" ], font = "white", background = "red", outline = "white", size = 24 },
+    { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 20 },
+    { name = "Fractured (base style)", is_fractured = true, rarity = "none", font = "white", background = "teal", outline = "white", size = 26 },
+    { name = "Essences (base style)", items = [ "essence of" ], font = "dark_blue", background = "off_white", size = 20, strict = false},
+]
+
+[[filters]]
+name = "Ultra Valuable Items"
+items = [ "Albino Rhoa Feather", "Ancient Collarbone", "Ancient Jawbone", "Ancient Rib", "Divine Orb", "Hinekora's Lock", "Mirror of Kalandra", "Perfect Chaos Orb", "Perfect Exalted Orb", "Perfect Jeweller's Orb", "Amanamu's Gaze", "Countess Seske's Rune of Archery", "Farrul's Rune of the Chase", "Fox Talisman", "Hedgewitch Assandra's Rune of Wisdom", "Rabbit Talisman", "Saqawal's Rune of the Sky", "Soul Core of Jiquani", "Talisman of Ralakesh", "Talisman of Sirrius", "Thane Leld's Rune of Spring", "Arjun's Medal", "Atalui's Bloodletting", "Dialla's Desire", "Esh's Radiance", "Rakiata's Flow", "Ratha's Assault", "Rigwald's Ferocity", "Uhtred's Augury", "Uhtred's Omen", "Uul-Netol's Embrace" ]
+theme = { font = "red", background = "white", outline = "red" }
+size = 48
+sound = { sound_type = "glitter", volume = "loud" }
+icon = { icon_type = "star", color = "red", size = "large" }
+beam = "red"
+
+[[filters]]
+name = "Very Valuable Items"
+items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Kalisa's Crescendo", "Romira's Requital", "Tul's Stillness", "Uhtred's Exodus" ]
+theme = { font = "dark_orange", background = "white", outline = "dark_orange" }
+size = 38
+sound = { sound_type = "low_whoosh", volume = "normal" }
+icon = { icon_type = "circle", color = "blue", size = "small" }
+
+[[filters]]
+name = "Valuable Items"
+items = [ "Chaos Orb", "Exotic Coinage", "Greater Chaos Orb", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Talisman", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Talisman of Egrin", "Talisman of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Ahn's Citadel", "Ailith's Chimes", "Arakaali's Lust", "Atziri's Allure", "Daresso's Passion", "Doedre's Undoing", "Einhar's Beastrite", "Kaom's Madness", "Kulemak's Dominion", "Kurgal's Leash", "Paquate's Pact", "Piety's Mercy", "Sione's Temper", "Tacati's Ire", "Tawhoa's Tending", "Tecrod's Revenge", "Uruk's Smelting", "Varashta's Blessing", "Vilenta's Propulsion", "Xoph's Pyre", "Zarokh's Refrain" ]
+size = 32
+
+[[filters]]
+name = "Currency"
+items = [ "Exalted Orb", "Gemcutter's Prism", "Gnawed Collarbone", "Greater Jeweller's Orb", "Perfect Orb of Augmentation", "Perfect Orb of Transmutation", "Preserved Rib", "Preserved Vertebrae", "Armourer's Scrap", "Artificer's Orb", "Chance Shard", "Glassblower's Bauble", "Gnawed Jawbone", "Gnawed Rib", "Greater Orb of Augmentation", "Greater Orb of Transmutation", "Orb of Alchemy", "Preserved Jawbone", "Regal Orb", "Vaal Orb", "Arcanist's Etcher", "Blacksmith's Whetstone", "Lesser Jeweller's Orb", "Alchemy Shard", "Artificer's Shard", "Orb of Augmentation", "Orb of Transmutation", "Regal Shard", "Black Scythe Artifact", "Broken Circle Artifact", "Order Artifact", "Sun Artifact" ]
+size = 28
+
+[[filters]]
+name = "Tier 0 Uniques"
+items = [ "Armoured Cap", "Artillery Bow", "Blacksteel Tower Shield", "Conqueror Plate", "Desolate Crossbow", "Embroidered Gloves", "Emerald", "Fine Bracers", "Golden Charm", "Incense Relic", "Intricate Crest Shield", "Lattice Sandals", "Ornate Gauntlets", "Primed Quiver", "Ring", "Sacred Focus", "Sapphire", "Silver Charm", "Thawing Charm", "Ultimate Life Flask", "Utility Wraps" ]
+rarity = "Unique"
+theme = { font = "red", background = "white", outline = "red" }
+size = 48
+sound = { sound_type = "glitter", volume = "loud" }
+icon = { icon_type = "star", color = "red", size = "large" }
+beam = "red"
+
+[[filters]]
+name = "Good Uniques"
+items = [ "Breach Precursor Tablet", "Chain Tiara", "Delirium Precursor Tablet", "Diamond", "Expedition Precursor Tablet", "Heroic Armour", "Moulded Mitts", "Overseer Precursor Tablet", "Precursor Tablet", "Ritual Precursor Tablet", "Ruby", "Spiral Wraps", "Stone Charm", "Time-Lost Diamond", "Timeless Jewel", "Unset Ring", "Vase Relic", "Viper Cap", "Abyssal Signet", "Grand Regalia", "Heavy Belt", "Jade Amulet", "Pearl Ring", "Ravenous Staff", "Shrine Sceptre", "Amethyst Ring", "Bloodstone Amulet", "Crude Bow", "Lazuli Ring", "Stellar Amulet" ]
+rarity = "Unique"
+size = 42
+sound = { sound_type = "voice_drum", volume = "normal" }
+icon = { icon_type = "star", color = "orange", size = "medium" }
+beam = "orange"
+
+[[filters]]
+name = "Items with two corrupted mods"
+corrupted_mods = 2
+
+[[filters]]
+name = "Gold (large pile)"
+items = [ "gold" ]
+theme = { font = "gold", background = "faded_black", outline = "gold" }
+stack_size = 500
+size = 40
+icon = { icon_type = "star", color = "yellow", size = "medium" }
+beam = "yellow"
+
+[[filters]]
+name = "Gold (medium pile)"
+items = [ "gold" ]
+theme = { font = "gold", background = "faded_black", outline = "gold" }
+stack_size = 150
+size = 28
+icon = { icon_type = "star", color = "yellow", size = "small" }
+
+[[filters]]
+name = "Gold (small pile)"
+items = [ "gold" ]
+size = 24
+icon = { icon_type = "star", color = "yellow", size = "small" }
+
+[[filters]]
+name = "Perfect Quality items"
+theme = { outline = "off_white" }
+size = 38
+quality = 27
+beam = "white"
+
+[[filters]]
+name = "Over-Qualitied Items"
+theme = { outline = "off_white" }
+size = 34
+quality = 20
+beam = "white"
+
+[[filters]]
+name = "High Quality items"
+theme = { outline = "off_white" }
+size = 32
+quality = 10
+beam = "white"
+
+[[filters]]
+name = "Quality items"
+theme = { outline = "off_white" }
+size = 30
+quality = 1
+
+[[filters]]
+name = "Hide all"
+hide = true
