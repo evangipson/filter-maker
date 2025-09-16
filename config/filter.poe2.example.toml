@@ -43,18 +43,22 @@ styles = [
     { name = "Magic (base style)", rarity = "Magic", font = "blue", size = 28 },
     { name = "Rare (base style)", rarity = "Rare", font = "yellow", size = 28 },
     { name = "Unique (base style)", rarity = "Unique", font = "white", background = "orange", size = 28 },
-    { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "Unique", font = "white", background = "orange_red", outline = "dark_red", size = 28 },
+    { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "Unique", font = "orange", background = "orange_red", outline = "dark_red", size = 28 },
     { name = "Corrupted mods (base style)", corrupted_mods = 1, rarity = "none", background = "faded_dark_red", outline = "dark_red" },
     { name = "Currency (base style)", classes = [ "Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 20 },
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 20 },
     { name = "Portal Scrolls (base style)", items = [ "portal scroll" ], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 20 },
     { name = "Scroll of Wisdom (base style)", items = [ "scroll of wisdom" ], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 20 },
-    { name = "Waystones (base style)", classes = [ "Waystones" ], rarity = "none", background = "black", size = 20 },
+    { name = "Waystones (base style)", classes = [ "Waystone" ], rarity = "none", background = "black", size = 20 },
     { name = "Uncut Gems (base style)", classes = [ "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems" ], font = "teal", background = "white", outline = "teal", size = 28, strict = false },
     { name = "Fragments (base style)", classes = [ "Map Fragments" ], font = "white", background = "red", outline = "white", size = 24 },
     { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 20 },
     { name = "Fractured (base style)", is_fractured = true, rarity = "none", font = "white", background = "teal", outline = "white", size = 26 },
     { name = "Essences (base style)", items = [ "essence of" ], font = "dark_blue", background = "off_white", size = 20, strict = false},
+    { name = "Runes (base style)", classes = [ "Socketable" ], font = "purple", background = "white", outline = "purple", size = 28 },
+    { name = "Omens (base style)", classes = [ "Omen" ], font = "neon_teal", background = "faded_black", outline = "white", size = 32 },
+    { name = "Tablets (base style)", classes = [ "Tablet" ], font = "white", background = "faded_dark_blue", outline = "white", size = 28 },
+    { name = "Trials (base style)", classes = [ "Inscribed Ultimatum", "Trial Coins" ], font = "black", background = "off_white", outline = "black", size = 28 }
 ]
 
 [[filters]]
@@ -83,6 +87,15 @@ size = 32
 name = "Currency"
 items = [ "Exalted Orb", "Gemcutter's Prism", "Gnawed Collarbone", "Greater Jeweller's Orb", "Perfect Orb of Augmentation", "Perfect Orb of Transmutation", "Preserved Rib", "Preserved Vertebrae", "Armourer's Scrap", "Artificer's Orb", "Chance Shard", "Glassblower's Bauble", "Gnawed Jawbone", "Gnawed Rib", "Greater Orb of Augmentation", "Greater Orb of Transmutation", "Orb of Alchemy", "Preserved Jawbone", "Regal Orb", "Vaal Orb", "Arcanist's Etcher", "Blacksmith's Whetstone", "Lesser Jeweller's Orb", "Alchemy Shard", "Artificer's Shard", "Orb of Augmentation", "Orb of Transmutation", "Regal Shard", "Black Scythe Artifact", "Broken Circle Artifact", "Order Artifact", "Sun Artifact" ]
 size = 28
+
+[[filters]]
+name = "Reliquary Keys"
+items = [ "Reliquary Key" ]
+theme = { font = "white", background = "dark_blue", outline = "white" }
+size = 38
+sound = { sound_type = "mechanical_pulse", volume = "normal" }
+icon = { icon_type = "raindrop", color = "blue", size = "medium" }
+strict = false
 
 [[filters]]
 name = "Tier 0 Uniques"
@@ -157,6 +170,6 @@ theme = { outline = "off_white" }
 size = 30
 quality = 1
 
-[[filters]]
-name = "Hide all"
-hide = true
+# [[filters]]
+# name = "Hide all"
+# hide = true
