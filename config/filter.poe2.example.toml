@@ -58,7 +58,8 @@ styles = [
     { name = "Runes (base style)", classes = [ "Socketable" ], font = "purple", background = "white", outline = "purple", size = 28 },
     { name = "Omens (base style)", classes = [ "Omen" ], font = "neon_teal", background = "faded_black", outline = "white", size = 32 },
     { name = "Tablets (base style)", classes = [ "Tablet" ], font = "white", background = "faded_dark_blue", outline = "white", size = 28 },
-    { name = "Trials (base style)", classes = [ "Inscribed Ultimatum", "Trial Coins" ], font = "black", background = "off_white", outline = "black", size = 28 }
+    { name = "Trials (base style)", classes = [ "Inscribed Ultimatum", "Trial Coins" ], font = "black", background = "off_white", outline = "black", size = 28 },
+    { name = "Logbooks (base style)", classes = [ "Expedition Logbooks" ], font = "dark_blue", background = "off_white", outline = "dark_blue", size = 34 },
 ]
 
 [[filters]]
