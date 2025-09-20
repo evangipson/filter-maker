@@ -175,14 +175,14 @@ quality = 1
 name = "Good warrior bases"
 size = 38
 item_level = 74
-items = [ "Warlord Cuirass", "Tasalian Greaves", "Massive Mitts", "Imperial Greathelm" ]
+items = [ "Warlord Cuirass", "Tasalian Greaves", "Massive Mitts", "Imperial Greathelm", "Massive Greathammer", "Tawhoan Greatclub", "Tawhoan Tower Shield" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
 
 [[filter]]
 name = "Good ranger bases"
 size = 38
 item_level = 74
-items = [ "Ancestral Tiara", "Quickslip Boots", "Daggerfoot Boots", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver" ]
+items = [ "Ancestral Tiara", "Quickslip Boots", "Daggerfoot Boots", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
 
 [[filters]]
