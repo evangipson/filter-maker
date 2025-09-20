@@ -177,13 +177,15 @@ size = 38
 item_level = 74
 items = [ "Warlord Cuirass", "Tasalian Greaves", "Massive Mitts", "Imperial Greathelm", "Massive Greathammer", "Tawhoan Greatclub", "Tawhoan Tower Shield" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
+beam = "white"
 
 [[filters]]
 name = "Ranger bases"
 size = 38
 item_level = 74
-items = [ "Ancestral Tiara", "Quickslip Boots", "Daggerfoot Boots", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow" ]
+items = [ "Ancestral Tiara", "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
+beam = "white"
 
 [[filters]]
 name = "Valuable bases"
@@ -192,6 +194,7 @@ item_level = 81
 items = [ "Attuned Wand", "Solar Amulet" ]
 sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "raindrop", color = "yellow", size = "medium" }
+beam = "yellow"
 
 [[filters]]
 name = "Gamble bases"
@@ -201,6 +204,7 @@ size = 42
 items = [ "Heavy Belt", "Silver Charm", "Stellar Amulet", "Sacred Focus" ]
 sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "diamond", color = "yellow", size = "large" }
+beam = "yellow"
 
 # [[filters]]
 # name = "Hide all"
