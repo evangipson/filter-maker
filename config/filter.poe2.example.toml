@@ -188,6 +188,14 @@ icon = { icon_type = "raindrop", color = "white", size = "medium" }
 beam = "white"
 
 [[filters]]
+name = "Energy Shield bases"
+size = 38
+item_level = 74
+items = [ "Vile Robe", "Sekhema Sandals", "Sirenscale Gloves", "Ancestral Tiara" ]
+icon = { icon_type = "raindrop", color = "white", size = "medium" }
+beam = "white"
+
+[[filters]]
 name = "Valuable bases"
 size = 42
 item_level = 81
