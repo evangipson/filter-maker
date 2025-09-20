@@ -44,7 +44,7 @@ impl Rule {
                 self.write_rule_name(self.name.clone(), self.hide),
                 self.write_list_rule("Class", self.classes.clone(), self.strict),
                 self.write_list_rule("BaseType", self.items.clone(), self.strict),
-                self.write_optional_rule("Rarity >=", &self.rarity),
+                self.write_optional_rule("Rarity", &self.rarity),
                 self.write_optional_rule("MapTier >=", &self.map_tier),
                 self.write_optional_rule("ItemLevel >=", &self.item_level),
                 self.write_optional_rule("UnidentifiedItemTier >=", &self.item_tier),

@@ -77,17 +77,15 @@ items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Preserved 
 theme = { font = "dark_orange", background = "white", outline = "dark_orange" }
 size = 38
 sound = { sound_type = "low_whoosh", volume = "normal" }
-icon = { icon_type = "circle", color = "blue", size = "small" }
+icon = { icon_type = "circle", color = "orange", size = "medium" }
+beam = "orange"
 
 [[filters]]
 name = "Valuable Items"
 items = [ "Chaos Orb", "Exotic Coinage", "Greater Chaos Orb", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Talisman", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Talisman of Egrin", "Talisman of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Ahn's Citadel", "Ailith's Chimes", "Arakaali's Lust", "Atziri's Allure", "Daresso's Passion", "Doedre's Undoing", "Einhar's Beastrite", "Kaom's Madness", "Kulemak's Dominion", "Kurgal's Leash", "Paquate's Pact", "Piety's Mercy", "Sione's Temper", "Tacati's Ire", "Tawhoa's Tending", "Tecrod's Revenge", "Uruk's Smelting", "Varashta's Blessing", "Vilenta's Propulsion", "Xoph's Pyre", "Zarokh's Refrain" ]
 size = 32
-
-[[filters]]
-name = "Currency"
-items = [ "Exalted Orb", "Gemcutter's Prism", "Gnawed Collarbone", "Greater Jeweller's Orb", "Perfect Orb of Augmentation", "Perfect Orb of Transmutation", "Preserved Rib", "Preserved Vertebrae", "Armourer's Scrap", "Artificer's Orb", "Chance Shard", "Glassblower's Bauble", "Gnawed Jawbone", "Gnawed Rib", "Greater Orb of Augmentation", "Greater Orb of Transmutation", "Orb of Alchemy", "Preserved Jawbone", "Regal Orb", "Vaal Orb", "Arcanist's Etcher", "Blacksmith's Whetstone", "Lesser Jeweller's Orb", "Alchemy Shard", "Artificer's Shard", "Orb of Augmentation", "Orb of Transmutation", "Regal Shard", "Black Scythe Artifact", "Broken Circle Artifact", "Order Artifact", "Sun Artifact" ]
-size = 28
+sound = { sound_type = "hollow_drum", volume = "normal" }
+icon = { icon_type = "circle", color = "purple", size = "small" }
 
 [[filters]]
 name = "Reliquary Keys"
@@ -235,6 +233,11 @@ beam = "blue"
 name = "Tier 4 Items"
 size = 34
 item_tier = 4
+
+[[filters]]
+name = "All other currencies"
+classes = [ "Currency" ]
+size = 28
 
 [[filters]]
 name = "Hide all"
