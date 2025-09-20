@@ -206,6 +206,28 @@ sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "diamond", color = "yellow", size = "large" }
 beam = "yellow"
 
-# [[filters]]
-# name = "Hide all"
-# hide = true
+[[filters]]
+name = "Tier 5 Rares"
+rarity = "Rare"
+size = 42
+item_tier = 5
+sound = { sound_type = "voice_drum", volume = "normal" }
+icon = { icon_type = "circle", color = "yellow", size = "medium" }
+beam = "yellow"
+
+[[filters]]
+name = "Tier 5 Items"
+size = 38
+item_tier = 5
+sound = { sound_type = "hollow_drum", volume = "normal" }
+icon = { icon_type = "circle", color = "blue", size = "small" }
+beam = "blue"
+
+[[filters]]
+name = "Tier 4 Items"
+size = 34
+item_tier = 4
+
+[[filters]]
+name = "Hide all"
+hide = true
