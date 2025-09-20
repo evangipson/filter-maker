@@ -171,6 +171,36 @@ theme = { outline = "off_white" }
 size = 30
 quality = 1
 
+[[filters]]
+name = "Good warrior bases"
+size = 38
+item_level = 74
+items = [ "Warlord Cuirass", "Tasalian Greaves", "Massive Mitts", "Imperial Greathelm" ]
+icon = { icon_type = "raindrop", color = "white", size = "medium" }
+
+[[filter]]
+name = "Good ranger bases"
+size = 38
+item_level = 74
+items = [ "Ancestral Tiara", "Quickslip Boots", "Daggerfoot Boots", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver" ]
+icon = { icon_type = "raindrop", color = "white", size = "medium" }
+
+[[filters]]
+name = "Valuable bases"
+size = 42
+item_level = 81
+items = [ "Attuned Wand", "Solar Amulet" ]
+sound = { sound_type = "low_whoosh", volume = "normal" }
+icon = { icon_type = "raindrop", color = "yellow", size = "medium" }
+
+[[filters]]
+name = "Gamble bases"
+theme = { font = "black", background = "gold", outline = "black" }
+size = 42
+items = [ "Heavy Belt", "Silver Charm", "Stellar Amulet", "Sacred Focus" ]
+sound = { sound_type = "low_whoosh", volume = "normal" }
+icon = { icon_type = "diamond", color = "yellow", size = "large" }
+
 # [[filters]]
 # name = "Hide all"
 # hide = true
