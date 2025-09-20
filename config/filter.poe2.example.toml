@@ -37,6 +37,7 @@ palette = [
     { name = "washed_out_red", color = {r = 125, g = 50, b = 50, a = 255 }},
     { name = "washed_out_blue", color = {r = 50, g = 50, b = 125, a = 255 }},
     { name = "washed_out_purple", color = {r = 105, g = 30, b = 125, a = 255 }},
+    { name = "abyssal_green", color = {r = 76, g = 187, b = 23, a = 255 }},
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 22 },
@@ -60,6 +61,7 @@ styles = [
     { name = "Tablets (base style)", classes = [ "Tablet" ], font = "white", background = "faded_dark_blue", outline = "white", size = 28 },
     { name = "Trials (base style)", classes = [ "Inscribed Ultimatum", "Trial Coins" ], font = "black", background = "off_white", outline = "black", size = 28 },
     { name = "Logbooks (base style)", classes = [ "Expedition Logbooks" ], font = "dark_blue", background = "off_white", outline = "dark_blue", size = 34 },
+    { name = "Abyssal (base style)", classes = [ "Stackable Currency", "Omen" ], items = [  "Preserved", "Ancient", "Gnawed", "Abyssal Echoes", "Sovereign", "Liege", "Blackblooded", "Putrefaction", "Light", "Sinistral Necromancy", "Dextral Necromancy" ], rarity = "none", font = "abyssal_green", background = "black", outline = "abyssal_green", size = 32, strict = false }
 ]
 
 [[filters]]
@@ -116,8 +118,8 @@ icon = { icon_type = "star", color = "orange", size = "medium" }
 beam = "orange"
 
 [[filters]]
-name = "Items with two corrupted mods"
-corrupted_mods = 2
+name = "Corrupted items"
+corrupted_mods = 1
 
 [[filters]]
 name = "Gold (large pile)"
@@ -164,18 +166,12 @@ quality = 10
 beam = "white"
 
 [[filters]]
-name = "Quality items"
-theme = { outline = "off_white" }
-size = 30
-quality = 1
-
-[[filters]]
 name = "Warrior bases"
 size = 38
 item_level = 74
 items = [ "Warlord Cuirass", "Tasalian Greaves", "Massive Mitts", "Imperial Greathelm", "Massive Greathammer", "Tawhoan Greatclub", "Tawhoan Tower Shield" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
-beam = "white"
+beam = "green"
 
 [[filters]]
 name = "Ranger bases"
@@ -183,7 +179,7 @@ size = 38
 item_level = 74
 items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
-beam = "white"
+beam = "green"
 
 [[filters]]
 name = "Energy Shield bases"
@@ -191,16 +187,17 @@ size = 38
 item_level = 74
 items = [ "Vile Robe", "Sekhema Sandals", "Sirenscale Gloves", "Ancestral Tiara" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
-beam = "white"
+beam = "green"
 
 [[filters]]
 name = "Valuable bases"
 size = 42
 item_level = 81
+theme = { font = "white", background = "green", outline = "white" }
 items = [ "Attuned Wand", "Solar Amulet" ]
 sound = { sound_type = "low_whoosh", volume = "normal" }
-icon = { icon_type = "raindrop", color = "yellow", size = "medium" }
-beam = "yellow"
+icon = { icon_type = "raindrop", color = "green", size = "medium" }
+beam = "green"
 
 [[filters]]
 name = "Gamble bases"
@@ -223,7 +220,6 @@ beam = "yellow"
 
 [[filters]]
 name = "Tier 5 Items"
-size = 38
 item_tier = 5
 sound = { sound_type = "hollow_drum", volume = "normal" }
 icon = { icon_type = "circle", color = "blue", size = "small" }
@@ -231,20 +227,23 @@ beam = "blue"
 
 [[filters]]
 name = "Tier 4 Items"
-size = 34
 item_tier = 4
 
 [[filters]]
-name = "All other currencies"
-classes = [ "Currency" ]
+name = "Fractured Items"
+is_fractured = true
 
 [[filters]]
-name = "All other omens"
-classes = [ "Omen" ]
+name = "Unique Items"
+rarity = "Unique"
 
 [[filters]]
-name = "All other socketables"
-classes = [ "Socketable" ]
+name = "Rare Items"
+rarity = "Rare"
+
+[[filters]]
+name = "All other shown classes"
+classes = [ "Currency", "Omen", "Socketable", "Waystone", "Tablet", "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems", "Map Fragments", "Expedition Logbooks", "Inscribed Ultimatum", "Trial Coins" ]
 
 [[filters]]
 name = "Hide all"
