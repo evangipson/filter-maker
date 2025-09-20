@@ -243,5 +243,9 @@ name = "All other omens"
 classes = [ "Omen" ]
 
 [[filters]]
+name = "All other socketables"
+classes = [ "Socketable" ]
+
+[[filters]]
 name = "Hide all"
 hide = true
