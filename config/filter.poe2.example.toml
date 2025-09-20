@@ -237,7 +237,6 @@ item_tier = 4
 [[filters]]
 name = "All other currencies"
 classes = [ "Currency" ]
-size = 28
 
 [[filters]]
 name = "Hide all"
