@@ -239,5 +239,9 @@ name = "All other currencies"
 classes = [ "Currency" ]
 
 [[filters]]
+name = "All other omens"
+classes = [ "Omen" ]
+
+[[filters]]
 name = "Hide all"
 hide = true
