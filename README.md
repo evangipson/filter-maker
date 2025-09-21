@@ -62,7 +62,7 @@ corrupted_mods = 1
 |`name`|The name of the base style, which will show up as a comment in the base style.|
 |`items`|The specific items to include in the base style.|
 |`classes`|The specific item classes to include in the base style.|
-|`rarity`|The minimum rarity to include in the base style.|
+|`rarity`|The rarity to include in the base style.|
 |`font`|The color of the text.|
 |`background`|The color of the background.|
 |`outline`|The color of the outline.|
@@ -75,7 +75,8 @@ corrupted_mods = 1
 |`is_replica`|When set to `true`, indicates a base style is for a replica item, defaults to `false`.|
 |`good_mods`|How many good mods an item needs to be included in a base style, defaults to `0`.|
 |`corrupted_mods`|How many corrupted mods and item needs to be included in a base style, defaults to `0`.|
-|`item_level`|The minimum item level needed for an item to be included in a base style, defaults to `0`.|
+|`item_level`|The minimum item level needed for an item to be included in a base style.|
+|`item_tier`|The minimum unintendified tier needed for an item to be included in a base style, defaults to `0`.|
 |`strict`|When set to `false`, any `items` or `classes` do not need to be an exact match, defaults to `true`.|
 
 ### Filter
@@ -84,7 +85,7 @@ corrupted_mods = 1
 |`name`|The name of the filter, which will show up as a comment in the filter rule.|
 |`items`|The specific items to include in the filter.|
 |`classes`|The specific item classes to include in the filter.|
-|`rarity`|The minimum rarity to include in the filter.|
+|`rarity`|The rarity to include in the filter.|
 |`theme`|The `font`, `background`, and `outline` of the filter.|
 |`size`|The size of the text.|
 |`sound`|The `sound_type` and `volume` of the filter.|
@@ -102,6 +103,7 @@ corrupted_mods = 1
 |`map_tier`|The minimum map tier for a map to be included in a filter.|
 |`links`|The minimum number of linked sockets for an item to be included in a filter, defaults to `0`.|
 |`item_level`|The minimum item level needed for an item to be included in a filter, defaults to `0`.|
+|`item_tier`|The minimum unintendified tier needed for an item to be included in a base style.|
 |`stack_size`|The minimum amount of an item in one stack for an item to be included in a filter.|
 |`strict`|When set to `false`, any `items` or `classes` do not need to be an exact match, defaults to `true`.|
 |`hide`|When set to `true`, will produce a filter rule to hide instead of show, defaults to `false`.|

@@ -64,9 +64,10 @@ styles = [
     { name = "Abyssal (base style)", classes = [ "Stackable Currency", "Omen" ], items = [  "Preserved", "Ancient", "Gnawed", "Abyssal Echoes", "Sovereign", "Liege", "Blackblooded", "Putrefaction", "Light", "Sinistral Necromancy", "Dextral Necromancy" ], rarity = "none", font = "abyssal_green", background = "black", outline = "abyssal_green", size = 32, strict = false }
 ]
 
+
 [[filters]]
 name = "Ultra Valuable Items"
-items = [ "Albino Rhoa Feather", "Ancient Collarbone", "Ancient Jawbone", "Ancient Rib", "Divine Orb", "Hinekora's Lock", "Mirror of Kalandra", "Perfect Chaos Orb", "Perfect Exalted Orb", "Perfect Jeweller's Orb", "Amanamu's Gaze", "Countess Seske's Rune of Archery", "Farrul's Rune of the Chase", "Fox Talisman", "Hedgewitch Assandra's Rune of Wisdom", "Rabbit Talisman", "Saqawal's Rune of the Sky", "Soul Core of Jiquani", "Talisman of Ralakesh", "Talisman of Sirrius", "Thane Leld's Rune of Spring", "Arjun's Medal", "Atalui's Bloodletting", "Dialla's Desire", "Esh's Radiance", "Rakiata's Flow", "Ratha's Assault", "Rigwald's Ferocity", "Uhtred's Augury", "Uhtred's Omen", "Uul-Netol's Embrace" ]
+items = [ "Albino Rhoa Feather", "Ancient Collarbone", "Ancient Jawbone", "Ancient Rib", "Divine Orb", "Hinekora's Lock", "Mirror of Kalandra", "Perfect Chaos Orb", "Perfect Exalted Orb", "Perfect Jeweller's Orb", "Amanamu's Gaze", "Countess Seske's Rune of Archery", "Farrul's Rune of the Chase", "Fox Talisman", "Hedgewitch Assandra's Rune of Wisdom", "Rabbit Talisman", "Saqawal's Rune of the Sky", "Soul Core of Jiquani", "Talisman of Ralakesh", "Talisman of Sirrius", "Thane Leld's Rune of Spring", "Arjun's Medal", "Atalui's Bloodletting", "Dialla's Desire", "Esh's Radiance", "Rakiata's Flow", "Ratha's Assault", "Uhtred's Augury", "Uhtred's Omen", "Uul-Netol's Embrace" ]
 theme = { font = "red", background = "white", outline = "red" }
 size = 48
 sound = { sound_type = "glitter", volume = "loud" }
@@ -75,7 +76,7 @@ beam = "red"
 
 [[filters]]
 name = "Very Valuable Items"
-items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Kalisa's Crescendo", "Romira's Requital", "Tul's Stillness", "Uhtred's Exodus" ]
+items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Kalisa's Crescendo", "Romira's Requital", "Tul's Stillness", "Uhtred's Exodus", "Rigwald's Ferocity" ]
 theme = { font = "dark_orange", background = "white", outline = "dark_orange" }
 size = 38
 sound = { sound_type = "low_whoosh", volume = "normal" }
