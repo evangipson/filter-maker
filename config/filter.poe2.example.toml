@@ -100,7 +100,7 @@ strict = false
 
 [[filters]]
 name = "Tier 0 Uniques"
-items = [ "Armoured Cap", "Artillery Bow", "Blacksteel Tower Shield", "Conqueror Plate", "Desolate Crossbow", "Embroidered Gloves", "Emerald", "Fine Bracers", "Golden Charm", "Incense Relic", "Intricate Crest Shield", "Lattice Sandals", "Ornate Gauntlets", "Primed Quiver", "Ring", "Sacred Focus", "Sapphire", "Silver Charm", "Thawing Charm", "Ultimate Life Flask", "Utility Wraps" ]
+items = [ "Armoured Cap", "Blacksteel Tower Shield", "Conqueror Plate", "Desolate Crossbow", "Embroidered Gloves", "Emerald", "Fine Bracers", "Golden Charm", "Incense Relic", "Intricate Crest Shield", "Lattice Sandals", "Ornate Gauntlets", "Primed Quiver", "Ring", "Sacred Focus", "Sapphire", "Silver Charm", "Thawing Charm", "Ultimate Life Flask", "Utility Wraps" ]
 rarity = "Unique"
 theme = { font = "red", background = "white", outline = "red" }
 size = 48
