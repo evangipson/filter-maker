@@ -3,6 +3,7 @@ destination = "./FilterMaker.filter"
 sounds = [ "gong", "hollow_drum", "voice_drum", "voice_whoosh", "low_whoosh", "glitter", "tonal_pulse", "mechanical_pulse", "slow_pulse" ]
 icons = [ "circle", "diamond", "hexagon", "square", "star", "triangle", "cross", "moon", "raindrop", "kite", "pentagon", "upsidedown_house" ]
 palette = [
+    # regular
     { name = "none", color = { r = 0, g = 0, b = 0, a = 0 }},
     { name = "white", color = { r = 200, g = 200, b = 200, a = 255 }},
     { name = "black", color = { r = 42, g = 42, b = 42, a = 255 }},
@@ -18,26 +19,28 @@ palette = [
     { name = "purple", color = { r = 192, g = 118, b = 223, a = 255 }},
     { name = "beige", color = { r = 200, g = 200, b = 175, a = 255 }},
     { name = "salmon_red", color = { r = 255, g = 85, b = 85, a = 255 }},
+    { name = "grey", color = {r = 162, g = 160, b = 159, a = 255 }},
     { name = "vibrant_blue", color = { r = 45, g = 45, b = 215, a = 255 }},
+    { name = "orange_red", color = { r = 255, g = 112, b = 59, a = 255 }},
+    { name = "off_white", color = {r = 212, g = 210, b = 209, a = 255 }},
+    { name = "abyssal_green", color = {r = 76, g = 187, b = 23, a = 255 }},
+    { name = "washed_out_red", color = {r = 125, g = 50, b = 50, a = 255 }},
+    { name = "washed_out_blue", color = {r = 50, g = 50, b = 125, a = 255 }},
+    { name = "washed_out_purple", color = {r = 105, g = 30, b = 125, a = 255 }},
+    # darks
     { name = "dark_blue", color = { r = 41, g = 128, b = 185, a = 255 }},
     { name = "dark_orange", color = { r = 145, g = 66, b = 7, a = 255 }},
     { name = "dark_purple", color = { r = 142, g = 68, b = 173, a = 255 }},
-    { name = "faded_dark_purple", color = { r = 142, g = 68, b = 173, a = 150 }},
+    { name = "dark_red", color = { r = 71, g = 0, b = 0, a = 255 }},
+    # faded
     { name = "faded_white", color = { r = 200, g = 200, b = 200, a = 205 }},
     { name = "faded_black", color = { r = 42, g = 42, b = 42, a = 170 }},
     { name = "faded_red", color = { r = 191, g = 0, b = 0, a = 105 }},
     { name = "faded_dark_orange", color = { r = 145, g = 66, b = 7, a = 190 }},
     { name = "faded_beige", color = { r = 200, g = 200, b = 175, a = 190 }},
     { name = "faded_dark_blue", color = { r = 41, g = 128, b = 185, a = 190 }},
-    { name = "orange_red", color = { r = 255, g = 112, b = 59, a = 255 }},
-    { name = "dark_red", color = { r = 71, g = 0, b = 0, a = 255 }},
+    { name = "faded_dark_purple", color = {r = 105, g = 30, b = 125, a = 120 }},
     { name = "faded_dark_red", color = { r = 61, g = 0, b = 0, a = 155 }},
-    { name = "off_white", color = {r = 212, g = 210, b = 209, a = 255 }},
-    { name = "grey", color = {r = 162, g = 160, b = 159, a = 255 }},
-    { name = "washed_out_red", color = {r = 125, g = 50, b = 50, a = 255 }},
-    { name = "washed_out_blue", color = {r = 50, g = 50, b = 125, a = 255 }},
-    { name = "washed_out_purple", color = {r = 105, g = 30, b = 125, a = 255 }},
-    { name = "abyssal_green", color = {r = 76, g = 187, b = 23, a = 255 }},
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 22 },
@@ -61,6 +64,7 @@ styles = [
     { name = "Tablets (base style)", classes = [ "Tablet" ], font = "white", background = "faded_dark_blue", outline = "white", size = 28 },
     { name = "Trials (base style)", classes = [ "Inscribed Ultimatum", "Trial Coins" ], font = "black", background = "off_white", outline = "black", size = 28 },
     { name = "Logbooks (base style)", classes = [ "Expedition Logbooks" ], font = "dark_blue", background = "off_white", outline = "dark_blue", size = 34 },
+    { name = "Jewels", classes = [ "Jewels" ], background = "faded_purple", outline = "purple", size = 26 },
     { name = "Abyssal (base style)", classes = [ "Stackable Currency", "Omen" ], items = [  "Preserved", "Ancient", "Gnawed", "Abyssal Echoes", "Sovereign", "Liege", "Blackblooded", "Putrefaction", "Light", "Sinistral Necromancy", "Dextral Necromancy" ], rarity = "none", font = "abyssal_green", background = "black", outline = "abyssal_green", size = 32, strict = false }
 ]
 
@@ -178,7 +182,7 @@ beam = "green"
 name = "Ranger bases"
 size = 38
 item_level = 74
-items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow" ]
+items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow", "Warmonger Bow" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
 beam = "green"
 
@@ -244,7 +248,7 @@ rarity = "Rare"
 
 [[filters]]
 name = "All other shown classes"
-classes = [ "Currency", "Omen", "Socketable", "Waystone", "Tablet", "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems", "Map Fragments", "Expedition Logbooks", "Inscribed Ultimatum", "Trial Coins" ]
+classes = [ "Currency", "Omen", "Socketable", "Waystone", "Tablet", "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems", "Map Fragments", "Expedition Logbooks", "Inscribed Ultimatum", "Trial Coins", "Jewels" ]
 
 [[filters]]
 name = "Hide all"
