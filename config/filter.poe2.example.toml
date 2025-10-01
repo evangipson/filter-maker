@@ -49,7 +49,7 @@ styles = [
     { name = "Unique (base style)", rarity = "Unique", font = "white", background = "orange", size = 28 },
     { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "Unique", font = "orange", background = "orange_red", outline = "dark_red", size = 28 },
     { name = "Corrupted mods (base style)", corrupted_mods = 1, rarity = "none", background = "faded_dark_red", outline = "dark_red" },
-    { name = "Currency (base style)", classes = [ "Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 20 },
+    { name = "Currency (base style)", classes = [ "Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 28 },
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 20 },
     { name = "Portal Scrolls (base style)", items = [ "portal scroll" ], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 20 },
     { name = "Scroll of Wisdom (base style)", items = [ "scroll of wisdom" ], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 20 },
@@ -65,7 +65,8 @@ styles = [
     { name = "Trials (base style)", classes = [ "Inscribed Ultimatum", "Trial Coins" ], font = "black", background = "off_white", outline = "black", size = 28 },
     { name = "Logbooks (base style)", classes = [ "Expedition Logbooks" ], font = "dark_blue", background = "off_white", outline = "dark_blue", size = 34 },
     { name = "Jewels", classes = [ "Jewels" ], background = "faded_purple", outline = "purple", size = 26 },
-    { name = "Abyssal (base style)", classes = [ "Stackable Currency", "Omen" ], items = [  "Preserved", "Ancient", "Gnawed", "Abyssal Echoes", "Sovereign", "Liege", "Blackblooded", "Putrefaction", "Light", "Sinistral Necromancy", "Dextral Necromancy" ], rarity = "none", font = "abyssal_green", background = "black", outline = "abyssal_green", size = 32, strict = false }
+    { name = "Abyssal (base style)", classes = [ "Stackable Currency", "Omen" ], items = [  "Preserved", "Ancient", "Gnawed", "Abyssal Echoes", "Sovereign", "Liege", "Blackblooded", "Putrefaction", "Light", "Sinistral Necromancy", "Dextral Necromancy" ], rarity = "none", font = "abyssal_green", background = "black", outline = "abyssal_green", size = 32, strict = false },
+    { name = "Frags (base style)", classes = [ "Pinnacle Keys" ], font = "dark_purple", background = "off_white", outline = "dark_purple", size = 38 },
 ]
 
 
@@ -89,7 +90,7 @@ beam = "orange"
 
 [[filters]]
 name = "Valuable Items"
-items = [ "Chaos Orb", "Exotic Coinage", "Greater Chaos Orb", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Talisman", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Talisman of Egrin", "Talisman of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Ahn's Citadel", "Ailith's Chimes", "Arakaali's Lust", "Atziri's Allure", "Daresso's Passion", "Doedre's Undoing", "Einhar's Beastrite", "Kaom's Madness", "Kulemak's Dominion", "Kurgal's Leash", "Paquate's Pact", "Piety's Mercy", "Sione's Temper", "Tacati's Ire", "Tawhoa's Tending", "Tecrod's Revenge", "Uruk's Smelting", "Varashta's Blessing", "Vilenta's Propulsion", "Xoph's Pyre", "Zarokh's Refrain" ]
+items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Chaos Orb", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Talisman", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Talisman of Egrin", "Talisman of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Ahn's Citadel", "Ailith's Chimes", "Arakaali's Lust", "Atziri's Allure", "Daresso's Passion", "Doedre's Undoing", "Einhar's Beastrite", "Kaom's Madness", "Kulemak's Dominion", "Kurgal's Leash", "Paquate's Pact", "Piety's Mercy", "Sione's Temper", "Tacati's Ire", "Tawhoa's Tending", "Tecrod's Revenge", "Uruk's Smelting", "Varashta's Blessing", "Vilenta's Propulsion", "Xoph's Pyre", "Zarokh's Refrain" ]
 size = 32
 sound = { sound_type = "hollow_drum", volume = "normal" }
 icon = { icon_type = "circle", color = "purple", size = "small" }
@@ -245,6 +246,12 @@ rarity = "Unique"
 [[filters]]
 name = "Rare Items"
 rarity = "Rare"
+
+[[filters]]
+name = "Boss Frags"
+classes = [ "Pinnacle Keys" ]
+sound = { sound_type = "low_whoosh", volume = "normal" }
+icon = { icon_type = "star", color = "purple", size = "medium" }
 
 [[filters]]
 name = "All other shown classes"
