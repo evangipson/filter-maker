@@ -245,10 +245,6 @@ name = "Unique Items"
 rarity = "Unique"
 
 [[filters]]
-name = "Rare Items"
-rarity = "Rare"
-
-[[filters]]
 name = "Boss Frags"
 classes = [ "Pinnacle Keys" ]
 sound = { sound_type = "low_whoosh", volume = "normal" }
