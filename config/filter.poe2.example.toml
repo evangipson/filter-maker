@@ -245,6 +245,10 @@ name = "Unique Items"
 rarity = "Unique"
 
 [[filters]]
+name = "jewellery"
+classes = [ "Rings", "Amulets", "Belts" ]
+
+[[filters]]
 name = "Boss Frags"
 classes = [ "Pinnacle Keys" ]
 sound = { sound_type = "low_whoosh", volume = "normal" }
