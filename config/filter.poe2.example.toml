@@ -255,6 +255,11 @@ sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "star", color = "purple", size = "medium" }
 
 [[filters]]
+name = "Hidden Currency"
+items = [ "Lesser Jeweller's Orb" ]
+hide = true
+
+[[filters]]
 name = "All other shown classes"
 classes = [ "Currency", "Omen", "Socketable", "Waystone", "Tablet", "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems", "Map Fragments", "Expedition Logbooks", "Inscribed Ultimatum", "Trial Coins", "Jewels" ]
 
