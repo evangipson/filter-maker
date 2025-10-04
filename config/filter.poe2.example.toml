@@ -201,7 +201,7 @@ name = "Valuable bases"
 size = 42
 item_level = 81
 theme = { font = "white", background = "green", outline = "white" }
-items = [ "Attuned Wand", "Solar Amulet", "siphoning wand", "galvanic wand" ]
+items = [ "Attuned Wand", "Solar Amulet", "siphoning wand", "galvanic wand", "dueling wand" ]
 sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "raindrop", color = "green", size = "medium" }
 beam = "green"
