@@ -184,7 +184,7 @@ beam = "green"
 name = "Ranger bases"
 size = 38
 item_level = 74
-items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow", "Warmonger Bow", "slipstrike vest" ]
+items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow", "Warmonger Bow", "slipstrike" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
 beam = "green"
 
@@ -201,7 +201,7 @@ name = "Valuable bases"
 size = 42
 item_level = 81
 theme = { font = "white", background = "green", outline = "white" }
-items = [ "Attuned Wand", "Solar Amulet" ]
+items = [ "Attuned Wand", "Solar Amulet", "siphoning wand", "galvanic wand" ]
 sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "raindrop", color = "green", size = "medium" }
 beam = "green"
