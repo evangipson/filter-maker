@@ -255,6 +255,16 @@ sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "star", color = "purple", size = "medium" }
 
 [[filters]]
+name = "Exceptional Bases"
+items = [ "Exceptional" ]
+theme = { font = "salmon_red", background = "off_white", outline = "salmon_red" }
+size = 38
+sound = { sound_type = "tonal_pulse", volume = "loud" }
+icon = { icon_type = "diamond", color = "red", size = "medium" }
+beam = "red"
+strict = false
+
+[[filters]]
 name = "Hidden Currency"
 items = [ "Lesser Jeweller's Orb" ]
 hide = true
