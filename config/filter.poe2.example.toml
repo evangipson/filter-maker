@@ -184,7 +184,7 @@ beam = "green"
 name = "Ranger bases"
 size = 38
 item_level = 74
-items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow", "Warmonger Bow" ]
+items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow", "Warmonger Bow", "slipstrike vest" ]
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
 beam = "green"
 
