@@ -24,6 +24,7 @@ pub struct Style {
     pub good_mods: Option<u8>,
     pub corrupted_mods: Option<u8>,
     pub item_level: Option<u8>,
+    pub gem_level: Option<u8>,
     pub item_tier: Option<u8>,
     pub strict: Option<bool>,
 }
@@ -46,6 +47,7 @@ impl Style {
                     mods,
                 ),
                 self.write_optional_rule("ItemLevel >=", &self.item_level),
+                self.write_optional_rule("GemLevel >=", &self.gem_level),
                 self.write_optional_rule("UnidentifiedItemTier >=", &self.item_tier),
                 self.write_rarity_rule(self.rarity.clone()),
                 self.write_rule(FRACTURED, self.is_fractured),
