@@ -270,8 +270,13 @@ items = [ "Lesser Jeweller's Orb" ]
 hide = true
 
 [[filters]]
+name = "Uncut Gems"
+classes = [ "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems" ]
+gem_level = 19
+
+[[filters]]
 name = "All other shown classes"
-classes = [ "Currency", "Omen", "Socketable", "Waystone", "Tablet", "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems", "Map Fragments", "Expedition Logbooks", "Inscribed Ultimatum", "Trial Coins", "Jewels" ]
+classes = [ "Currency", "Omen", "Socketable", "Waystone", "Tablet", "Map Fragments", "Expedition Logbooks", "Inscribed Ultimatum", "Trial Coins", "Jewels" ]
 
 [[filters]]
 name = "Hide all"

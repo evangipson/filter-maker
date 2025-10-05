@@ -25,6 +25,7 @@ pub struct Rule {
     pub good_mods: Option<u8>,
     pub corrupted_mods: Option<u8>,
     pub quality: Option<u8>,
+    pub gem_level: Option<u8>,
     pub map_tier: Option<u8>,
     pub links: Option<u8>,
     pub item_level: Option<u8>,
@@ -49,6 +50,7 @@ impl Rule {
                 self.write_optional_rule("ItemLevel >=", &self.item_level),
                 self.write_optional_rule("UnidentifiedItemTier >=", &self.item_tier),
                 self.write_optional_rule("Quality >=", &self.quality),
+                self.write_optional_rule("GemLevel >=", &self.gem_level),
                 self.write_explicit_mods_rule(
                     &self.is_veiled,
                     &self.good_mods,
