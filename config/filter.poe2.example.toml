@@ -270,6 +270,13 @@ items = [ "Lesser Jeweller's Orb" ]
 hide = true
 
 [[filters]]
+name = "Uncut Gems lvl 20"
+classes = [ "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems" ]
+size = 38
+sound = { sound_type = "low_whoosh", volume = "normal" }
+gem_level = 20
+
+[[filters]]
 name = "Uncut Gems"
 classes = [ "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems" ]
 gem_level = 19
