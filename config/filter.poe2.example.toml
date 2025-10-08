@@ -70,7 +70,9 @@ styles = [
     { name = "Frags (base style)", classes = [ "Pinnacle Keys" ], font = "dark_purple", background = "off_white", outline = "dark_purple", size = 38 },
 ]
 
-
+# =============== #
+# General loot    #
+# =============== #
 [[filters]]
 name = "Ultra Valuable Items"
 items = [ "Albino Rhoa Feather", "Ancient Collarbone", "Ancient Jawbone", "Ancient Rib", "Divine Orb", "Hinekora's Lock", "Mirror of Kalandra", "Perfect Chaos Orb", "Perfect Exalted Orb", "Amanamu's Gaze", "Countess Seske's Rune of Archery", "Farrul's Rune of the Chase", "Fox Talisman", "Hedgewitch Assandra's Rune of Wisdom", "Rabbit Talisman", "Saqawal's Rune of the Sky", "Soul Core of Jiquani", "Talisman of Ralakesh", "Talisman of Sirrius", "Thane Leld's Rune of Spring", "Arjun's Medal", "Atalui's Bloodletting", "Dialla's Desire", "Esh's Radiance", "Rakiata's Flow", "Ratha's Assault", "Uhtred's Augury", "Uhtred's Omen", "Uul-Netol's Embrace", "essence of Horror", "essence of hysteria" ]
@@ -106,6 +108,27 @@ icon = { icon_type = "raindrop", color = "blue", size = "medium" }
 strict = false
 
 [[filters]]
+name = "Boss Frags"
+classes = [ "Pinnacle Keys" ]
+sound = { sound_type = "low_whoosh", volume = "normal" }
+icon = { icon_type = "star", color = "purple", size = "medium" }
+
+[[filters]]
+name = "Level 20 Skill/Spirit Gems"
+classes = [ "Uncut Skill Gems", "Uncut Spirit Gems" ]
+size = 38
+sound = { sound_type = "low_whoosh", volume = "normal" }
+gem_level = 20
+
+[[filters]]
+name = "Level 19 Skill/Spirit Gems"
+classes = [ "Uncut Skill Gems", "Uncut Spirit Gems" ]
+gem_level = 19
+
+# =============== #
+# Uniques         #
+# =============== #
+[[filters]]
 name = "Tier 0 Uniques"
 items = [ "Armoured Cap", "Blacksteel Tower Shield", "Conqueror Plate", "Desolate Crossbow", "Embroidered Gloves", "Emerald", "Fine Bracers", "Golden Charm", "Incense Relic", "Intricate Crest Shield", "Lattice Sandals", "Ornate Gauntlets", "Primed Quiver", "Ring", "Sacred Focus", "Sapphire", "Silver Charm", "Thawing Charm", "Ultimate Life Flask", "Utility Wraps" ]
 rarity = "Unique"
@@ -124,10 +147,9 @@ sound = { sound_type = "voice_drum", volume = "normal" }
 icon = { icon_type = "star", color = "orange", size = "medium" }
 beam = "orange"
 
-[[filters]]
-name = "Corrupted items"
-corrupted_mods = 1
-
+# =============== #
+# Gold            #
+# =============== #
 [[filters]]
 name = "Gold (large pile)"
 items = [ "gold" ]
@@ -151,19 +173,18 @@ items = [ "gold" ]
 size = 24
 icon = { icon_type = "star", color = "yellow", size = "small" }
 
+# =============== #
+# Bases           #
+# =============== #
 [[filters]]
-name = "Perfect Quality items"
-theme = { outline = "off_white" }
+name = "Exceptional Bases"
+items = [ "Exceptional" ]
+theme = { font = "salmon_red", background = "off_white", outline = "salmon_red" }
 size = 38
-quality = 27
-beam = "white"
-
-[[filters]]
-name = "Over-Qualitied Items"
-theme = { outline = "off_white" }
-size = 34
-quality = 20
-beam = "white"
+sound = { sound_type = "tonal_pulse", volume = "loud" }
+icon = { icon_type = "diamond", color = "red", size = "medium" }
+beam = "red"
+strict = false
 
 [[filters]]
 name = "High Quality items"
@@ -174,44 +195,34 @@ beam = "white"
 
 [[filters]]
 name = "Warrior bases"
-size = 38
-item_level = 74
 items = [ "Warlord Cuirass", "Tasalian Greaves", "Massive Mitts", "Imperial Greathelm", "Massive Greathammer", "Tawhoan Greatclub", "Tawhoan Tower Shield" ]
+size = 36
+item_level = 74
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
 beam = "green"
 
 [[filters]]
 name = "Ranger bases"
-size = 38
-item_level = 74
 items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow", "Warmonger Bow", "slipstrike vest" ]
+size = 36
+item_level = 74
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
 beam = "green"
 
 [[filters]]
 name = "Energy Shield bases"
-size = 38
-item_level = 74
 items = [ "Vile Robe", "Sekhema Sandals", "Sirenscale Gloves", "Ancestral Tiara" ]
+size = 36
+item_level = 74
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
 beam = "green"
 
 [[filters]]
-name = "Valuable bases"
-size = 42
-item_level = 81
-theme = { font = "white", background = "green", outline = "white" }
-items = [ "Attuned Wand", "Solar Amulet", "siphoning wand", "galvanic wand", "dueling wand" ]
-sound = { sound_type = "low_whoosh", volume = "normal" }
-icon = { icon_type = "raindrop", color = "green", size = "medium" }
-beam = "green"
-
-[[filters]]
 name = "Gamble bases"
+items = [ "Heavy Belt", "Silver Charm", "Stellar Amulet", "Sacred Focus" ]
 theme = { font = "black", background = "gold", outline = "black" }
 rarity = "Normal"
-size = 42
-items = [ "Heavy Belt", "Silver Charm", "Stellar Amulet", "Sacred Focus" ]
+size = 38
 sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "diamond", color = "yellow", size = "large" }
 beam = "yellow"
@@ -245,41 +256,40 @@ name = "Unique Items"
 rarity = "Unique"
 
 [[filters]]
-name = "jewellery"
+name = "Sceptres"
+classes = [ "Sceptres" ]
+size = 36
+icon = { icon_type = "hexagon", color = "yellow", size = "medium" }
+item_level = 79
+beam = "yellow"
+
+[[filters]]
+name = "Wands"
+items = [ "Attuned Wand", "Siphoning Wand", "Galvanic Wand", "Dueling Wand" ]
+size = 38
+item_level = 79
+sound = { sound_type = "low_whoosh", volume = "normal" }
+icon = { icon_type = "raindrop", color = "green", size = "medium" }
+beam = "green"
+
+[[filters]]
+name = "Valuable Jewellery"
+items = [ "Solar Amulet" ]
+size = 36
+icon = { icon_type = "diamond", color = "green", size = "medium" }
+beam = "green"
+
+[[filters]]
+name = "Jewellery"
 classes = [ "Rings", "Amulets", "Belts" ]
 
-[[filters]]
-name = "Boss Frags"
-classes = [ "Pinnacle Keys" ]
-sound = { sound_type = "low_whoosh", volume = "normal" }
-icon = { icon_type = "star", color = "purple", size = "medium" }
-
-[[filters]]
-name = "Exceptional Bases"
-items = [ "Exceptional" ]
-theme = { font = "salmon_red", background = "off_white", outline = "salmon_red" }
-size = 38
-sound = { sound_type = "tonal_pulse", volume = "loud" }
-icon = { icon_type = "diamond", color = "red", size = "medium" }
-beam = "red"
-strict = false
-
+# =============== #
+# Hide            #
+# =============== #
 [[filters]]
 name = "Hidden Currency"
 items = [ "Lesser Jeweller's Orb" ]
 hide = true
-
-[[filters]]
-name = "Uncut Gems lvl 20"
-classes = [ "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems" ]
-size = 38
-sound = { sound_type = "low_whoosh", volume = "normal" }
-gem_level = 20
-
-[[filters]]
-name = "Uncut Gems"
-classes = [ "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems" ]
-gem_level = 19
 
 [[filters]]
 name = "All other shown classes"
