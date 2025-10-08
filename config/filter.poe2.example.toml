@@ -268,7 +268,6 @@ name = "Wands"
 items = [ "Attuned Wand", "Siphoning Wand", "Galvanic Wand", "Dueling Wand" ]
 size = 38
 item_level = 79
-sound = { sound_type = "low_whoosh", volume = "normal" }
 icon = { icon_type = "raindrop", color = "green", size = "medium" }
 beam = "green"
 
