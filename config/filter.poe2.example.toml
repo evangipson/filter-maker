@@ -84,7 +84,7 @@ beam = "red"
 
 [[filters]]
 name = "Very Valuable Items"
-items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Perfect Jeweller's Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Kalisa's Crescendo", "Tul's Stillness", "Uhtred's Exodus", "Rigwald's Ferocity" ]
+items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Perfect Jeweller's Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Tul's Stillness", "Uhtred's Exodus", "Rigwald's Ferocity" ]
 theme = { font = "dark_orange", background = "white", outline = "dark_orange" }
 size = 38
 sound = { sound_type = "low_whoosh", volume = "normal" }
@@ -93,7 +93,7 @@ beam = "orange"
 
 [[filters]]
 name = "Valuable Items"
-items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Chaos Orb", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Talisman", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Talisman of Egrin", "Talisman of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Ahn's Citadel", "Ailith's Chimes", "Arakaali's Lust", "Atziri's Allure", "Daresso's Passion", "Doedre's Undoing", "Einhar's Beastrite", "Kaom's Madness", "Kulemak's Dominion", "Kurgal's Leash", "Paquate's Pact", "Piety's Mercy", "Sione's Temper", "Tacati's Ire", "Tawhoa's Tending", "Tecrod's Revenge", "Uruk's Smelting", "Varashta's Blessing", "Vilenta's Propulsion", "Xoph's Pyre", "Zarokh's Refrain" ]
+items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Chaos Orb", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Talisman", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Talisman of Egrin", "Talisman of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Ahn's Citadel", "Ailith's Chimes", "Arakaali's Lust", "Atziri's Allure", "Daresso's Passion", "Doedre's Undoing", "Einhar's Beastrite", "Kaom's Madness", "Kulemak's Dominion", "Kalisa's Crescendo", "Kurgal's Leash", "Paquate's Pact", "Piety's Mercy", "Sione's Temper", "Tacati's Ire", "Tawhoa's Tending", "Tecrod's Revenge", "Uruk's Smelting", "Varashta's Blessing", "Vilenta's Propulsion", "Xoph's Pyre", "Zarokh's Refrain" ]
 size = 32
 sound = { sound_type = "hollow_drum", volume = "normal" }
 icon = { icon_type = "circle", color = "purple", size = "small" }
