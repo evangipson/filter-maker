@@ -1,7 +1,7 @@
 use crate::{
     behavior::{common, conditional::Conditional, write_rules::WriteRules},
     config::{color::Color, icon::Icon, modifier::Modifier, sound::Sound, theme::Theme},
-    constants::rules::{ENCHANTED, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED},
+    constants::rules::{ENCHANTED, FOULBORN, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED},
 };
 use serde_derive::Deserialize;
 
@@ -22,6 +22,7 @@ pub struct Rule {
     pub is_enchanted: Option<bool>,
     pub is_veiled: Option<bool>,
     pub is_replica: Option<bool>,
+    pub is_foulborn: Option<bool>,
     pub good_mods: Option<u8>,
     pub corrupted_mods: Option<u8>,
     pub quality: Option<u8>,
@@ -62,6 +63,7 @@ impl Rule {
                 self.write_rule(SYNTHESIZED, self.is_synthesised),
                 self.write_rule(ENCHANTED, self.is_enchanted),
                 self.write_rule(REPLICA, self.is_replica),
+                self.write_rule(FOULBORN, self.is_foulborn),
                 self.write_corrupted_mods_rule(&self.corrupted_mods),
                 self.write_optional_rule("LinkedSockets", &self.links),
                 self.write_optional_rule("StackSize >=", &self.stack_size),

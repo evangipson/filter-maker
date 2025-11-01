@@ -46,7 +46,7 @@ styles = [
     { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "Unique", font = "white", background = "orange_red", outline = "dark_red", size = 24 },
     { name = "Corrupted mods (base style)", corrupted_mods = 1, rarity = "none", background = "faded_dark_red", outline = "dark_red" },
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 18 },
-    { name = "Currency (base style)", classes = [ "Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 18 },
+    { name = "Currency (base style)", classes = [ "Currency", "Stackable Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 18 },
     { name = "Portal Scrolls (base style)", items = [ "portal scroll" ], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 12 },
     { name = "Scroll of Wisdom (base style)", items = [ "scroll of wisdom" ], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 12 },
     { name = "Maps (base style)", classes = [ "Maps" ], rarity = "none", background = "black", size = 20 },
@@ -60,9 +60,11 @@ styles = [
     { name = "Influenced (base style)", is_influenced = true, rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 26 },
     { name = "Enchanted (base style)", is_enchanted = true, rarity = "none", font = "white", background = "vibrant_blue", outline = "white", size = 26 },
     { name = "Replica items (base style)", is_replica = true, rarity = "none", font = "white", background = "orange_red", outline = "white", size = 28 },
-    { name = "Essences (base style)", items = [ "essence of" ], font = "dark_blue", background = "off_white", size = 20, strict = false},
+    { name = "Essences (base style)", items = [ "essence of" ], font = "dark_blue", background = "off_white", size = 20, strict = false },
     { name = "Heist Contracts (base style)", classes = [ "Blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
     { name = "Heist Blueprints (base style)", classes = [ "Contracts" ], font = "white", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
+    { name = "Grafts (base style)", classes = [ "Grafts" ], font = "faded_dark_purple", background = "black", outline = "off_white", size = 26 },
+    { name = "Wombgifts (base style)", classes = [ "Wombgifts" ], font = "faded_dark_purple", background = "faded_white", outline = "off_white", size = 26 },
 ]
 mods = [
     { good_mods = [ "of Many", "of Tacati", "of the Gods", "of the Underground", "of the Wind", "Subterranean", "Tacati's", "Tacati", "Topotante's", "Xopec's" ]},

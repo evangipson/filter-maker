@@ -5,3 +5,4 @@ pub const ENCHANTED: &str = "AnyEnchantment True";
 pub const VEILED_MOD: &str = "\"Veil\"";
 pub const REPLICA: &str = "Replica True";
 pub const CORRUPTED: &str = "Corrupted True";
+pub const FOULBORN: &str = "Foulborn True";
