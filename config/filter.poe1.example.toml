@@ -380,5 +380,9 @@ name = "Grafts and Wombgifts"
 classes = [ "Grafts", "Wombgifts" ]
 
 [[filters]]
+name = "Maps"
+classes = [ "Maps" ]
+
+[[filters]]
 name = "Hide all"
 hide = true
