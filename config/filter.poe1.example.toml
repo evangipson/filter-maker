@@ -337,7 +337,7 @@ map_tier = 16
 
 [[filters]]
 name = "Valuable Map Fragments"
-items = [ "fragment", "crest", "mortal" ]
+items = [ "fragment", "crest", "mortal", "hivebrain gland" ]
 classes = [ "Map Fragments" ]
 size = 38
 strict = false
