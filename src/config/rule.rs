@@ -32,6 +32,7 @@ pub struct Rule {
     pub gem_level: Option<u8>,
     pub item_tier: Option<u8>,
     pub stack_size: Option<u16>,
+    pub area_level: Option<u8>,
     pub strict: Option<bool>,
     pub hide: Option<bool>,
 }
@@ -47,6 +48,7 @@ impl Rule {
                 self.write_list_rule("Class", self.classes.clone(), self.strict),
                 self.write_list_rule("BaseType", self.items.clone(), self.strict),
                 self.write_optional_rule("Rarity", &self.rarity),
+                self.write_optional_rule("AreaLevel >=", &self.area_level),
                 self.write_optional_rule("MapTier >=", &self.map_tier),
                 self.write_optional_rule("ItemLevel >=", &self.item_level),
                 self.write_optional_rule("GemLevel >=", &self.gem_level),

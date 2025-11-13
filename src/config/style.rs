@@ -28,6 +28,7 @@ pub struct Style {
     pub gem_level: Option<u8>,
     pub item_tier: Option<u8>,
     pub strict: Option<bool>,
+    pub area_level: Option<u8>,
 }
 
 impl Style {
@@ -47,6 +48,7 @@ impl Style {
                     &self.classes,
                     mods,
                 ),
+                self.write_optional_rule("AreaLevel >=", &self.area_level),
                 self.write_optional_rule("ItemLevel >=", &self.item_level),
                 self.write_optional_rule("GemLevel >=", &self.gem_level),
                 self.write_optional_rule("UnidentifiedItemTier >=", &self.item_tier),

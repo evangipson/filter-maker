@@ -376,13 +376,10 @@ size = 32
 strict = false
 
 [[filters]]
-name = "Grafts and Wombgifts"
-classes = [ "Grafts", "Wombgifts" ]
+name = "Explicitly shown classes of items"
+classes = [ "Currency", "Stackable Currency", "Grafts", "Wombgifts", "Maps" ]
 
 [[filters]]
-name = "Maps"
-classes = [ "Maps" ]
-
-[[filters]]
-name = "Hide all"
+name = "Hide everything not explicitly shown in tier 8+ maps"
 hide = true
+area_level = 75
