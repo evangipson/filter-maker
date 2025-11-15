@@ -3,8 +3,8 @@
 //!
 //! ## Getting Started
 //! 1. Use `cargo run` or run the `update.ps1` script to generate your filter
-//! 1. Edit `config/filter.toml` however you see fit
-//! 1. Use `cargo run` or run the `update.ps1` script to regenerate your filter
+//! 1. Edit your filter configuration TOML file however you see fit
+//! 1. Use `cargo run -- [PATH_TO_FILTER]` or run the `update.ps1` script to regenerate your filter
 
 /// [`config`] is a collection of functionality to allow filter configuration.
 pub mod config {
@@ -36,6 +36,5 @@ pub mod color {
 
 /// [`constants`] is a collection of constant values used in various places.
 pub mod constants {
-    pub mod filter_config;
     pub mod rules;
 }

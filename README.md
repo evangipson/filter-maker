@@ -2,10 +2,10 @@
 An item filter generator for Path of Exile 1 & Path of Exile 2.
 
 ## Getting started
-- Run `./update.ps1` to generate a filter for Path of Exile 1 (saved as `config/filter.poe1.toml`)
-- Run `./update.ps1 -Poe2` to generate a filter for Path of Exile 2 (saved as `config/filter.poe2.toml`)
-- Run `./update.ps1 -Latest` to replace your local filter with the latest example (this will **not** replace your `configs.destination`)
-- Run `./update.ps1 -Poe2 -Latest` to replace your local Path of Exile 2 filter with the latest example
+- Run `./update.ps1 -Filter [PATH_TO_FILTER]` to generate a filter
+    - `./update.ps1 -Filter filter.poe1.toml` will generate a filter for Path of Exile 1
+    - `./update.ps1 -Filter filter.poe2.toml` will generate a filter for Path of Exile 2
+- (Optionally) Create your own filter TOML configuration file to generate a custom filter
 
 ## Customizing the filter
 ### Adding a color
@@ -73,9 +73,11 @@ corrupted_mods = 1
 |`is_enchanted`|When set to `true`, indicates a base style is for an item that is enchanted, defaults to `false`.|
 |`is_veiled`|When set to `true`, indicates a base style is for an item that has at least one veiled mod, defaults to `false`.|
 |`is_replica`|When set to `true`, indicates a base style is for a replica item, defaults to `false`.|
+|`is_foulborn`|When set to `true`, indicates a base style is for a foulborn item, defaults to `false`.|
 |`good_mods`|How many good mods an item needs to be included in a base style, defaults to `0`.|
 |`corrupted_mods`|How many corrupted mods and item needs to be included in a base style, defaults to `0`.|
 |`item_level`|The minimum item level needed for an item to be included in a base style.|
+|`area_level`|The minimum area level needed for an item to be included in a base style.|
 |`item_tier`|The minimum unintendified tier needed for an item to be included in a base style, defaults to `0`.|
 |`strict`|When set to `false`, any `items` or `classes` do not need to be an exact match, defaults to `true`.|
 
@@ -97,12 +99,14 @@ corrupted_mods = 1
 |`is_enchanted`|When set to `true`, indicates a filter is for an item that is enchanted, defaults to `false`.|
 |`is_veiled`|When set to `true`, indicates a filter is for an item that has at least one veiled mod, defaults to `false`.|
 |`is_replica`|When set to `true`, indicates a filter is for a replica item, defaults to `false`.|
+|`is_foulborn`|When set to `true`, indicates a filter is for a foulborn item, defaults to `false`.|
 |`good_mods`|How many good mods an item needs to be included in a filter, defaults to `0`.|
 |`corrupted_mods`|How many corrupted mods and item needs to be included in a filter, defaults to `0`.|
 |`quality`|The minimum item quality for an item to be included in a filter.|
 |`map_tier`|The minimum map tier for a map to be included in a filter.|
 |`links`|The minimum number of linked sockets for an item to be included in a filter, defaults to `0`.|
 |`item_level`|The minimum item level needed for an item to be included in a filter, defaults to `0`.|
+|`area_level`|The minimum area level needed for an item to be included in a filter, defaults to `0`.|
 |`item_tier`|The minimum unintendified tier needed for an item to be included in a base style.|
 |`stack_size`|The minimum amount of an item in one stack for an item to be included in a filter.|
 |`strict`|When set to `false`, any `items` or `classes` do not need to be an exact match, defaults to `true`.|

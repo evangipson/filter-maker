@@ -1,6 +1,25 @@
+<#
+    .SYNOPSIS
+        Creates an item filter for Path of Exile.
+    
+    .DESCRIPTION
+        Runs the underlying filter-maker rust program, which uses a TOML configuration file
+        to write a new item filter for Path of Exile 1 or 2. A;so makes sure rust is installed
+        before attempting to run the filter-maker program.
+    
+    .PARAMETER Filter
+        A relative path to the TOML configuration file.
+
+    .EXAMPLE
+        PS> ./update.ps1 -Filter ./config/filter.toml
+
+        Looks for a TOML configuration file named "filter.toml" in the config/ directory, and
+        uses it to create a new item filter.
+#>
+
 param(
-    [switch] $Latest,
-    [switch] $Poe2
+    [Parameter(Mandatory=$true)]
+    [string] $Filter
 )
 
 function Test-RustInstallation {
@@ -19,39 +38,18 @@ function Get-LatestCode {
     return $LASTEXITCODE -eq 0
 }
 
-function Write-NewFilter {
+function Write-NewFilter([string] $FilterPath) {
     Write-Host "Generating new filter..." -ForegroundColor DarkGray
-    cargo run
+    cargo run -- $FilterPath
     return $LASTEXITCODE -eq 0
 }
 
-function Update-Filter {
+function Update-Filter([string] $FilterPath) {
     # Make sure rust is installed
     if ($false -eq (Test-RustInstallation)) {
         Write-Host "Please install rust to generate your filter by visiting https://www.rust-lang.org/tools/install." -ForegroundColor White
         exit 0
     }
-
-    # Determine which filter base to listen to
-    $filterExamplePath = $Poe2 ? "config/filter.poe2.example.toml" : "config/filter.poe1.example.toml"
-    $filterPath = $Poe2 ? "config/filter.poe2.toml" : "config/filter.poe1.toml"
-
-    # Create a filter config file if one does not exist
-    if ($false -eq (Test-Path -Path $filterPath)) {
-        Write-Host "No filter config file detected; creating one from the example..." -ForegroundColor DarkGray
-        Copy-Item -Path $filterExamplePath -Destination $filterPath
-    }
-
-    # Overwrite the filter if the "-Latest" flag was provided
-    if ($Latest) {
-        Write-Host "Overwriting old filter with example filter..." -ForegroundColor DarkGray
-        $oldDestination = (Get-Content -Path $filterPath -TotalCount 2)
-        $exampleFilterContent = (Get-Content -Path $filterExamplePath) | Select-Object -Skip 2
-        ($oldDestination + $exampleFilterContent) | Set-Content -Path $filterPath
-    }
-
-    # Copy target game filter to base filter.toml
-    Copy-Item -Path $filterPath -Destination "config/filter.toml"
 
     # Get the latest code
     if ($false -eq (Get-LatestCode)) {
@@ -60,7 +58,7 @@ function Update-Filter {
     }
 
     # Generate the filter
-    if ($false -eq (Write-NewFilter)) {
+    if ($false -eq (Write-NewFilter -FilterPath $FilterPath)) {
         Write-Host "There was an issue generating the new filter." -ForegroundColor DarkRed
         exit 0
     }
@@ -68,4 +66,4 @@ function Update-Filter {
     Write-Host "✓ All done!"
 }
 
-Update-Filter
+Update-Filter -FilterPath $Filter

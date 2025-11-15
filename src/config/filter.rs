@@ -1,7 +1,4 @@
-use crate::{
-    config::{base_config::BaseConfig, rule::Rule},
-    constants::filter_config::FILTER_CONFIG_FILE,
-};
+use crate::config::{base_config::BaseConfig, rule::Rule};
 use serde_derive::Deserialize;
 use std::{fs, process::exit};
 
@@ -12,11 +9,11 @@ pub struct Filter {
 }
 
 impl Filter {
-    pub fn load_config() -> Self {
-        let contents = match fs::read_to_string(FILTER_CONFIG_FILE) {
+    pub fn load_config(filter_path: &str) -> Self {
+        let contents = match fs::read_to_string(filter_path) {
             Ok(c) => c,
             Err(_) => {
-                eprintln!("Could not read theme configuration file `{FILTER_CONFIG_FILE}`");
+                eprintln!("Could not read theme configuration file `{filter_path}`");
                 exit(1)
             }
         };
