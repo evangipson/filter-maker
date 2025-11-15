@@ -61,6 +61,7 @@ styles = [
     { name = "Enchanted (base style)", is_enchanted = true, rarity = "none", font = "white", background = "vibrant_blue", outline = "white", size = 26 },
     { name = "Replica items (base style)", is_replica = true, rarity = "none", font = "white", background = "orange_red", outline = "white", size = 28 },
     { name = "Essences (base style)", items = [ "essence of" ], font = "dark_blue", background = "off_white", size = 20, strict = false },
+    { name = "Incubator", classes = [ "Incubator" ], font = "off_white", background = "dark_blue", size = 20, strict = false },
     { name = "Heist Contracts (base style)", classes = [ "Blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
     { name = "Heist Blueprints (base style)", classes = [ "Contracts" ], font = "white", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
     { name = "Grafts (base style)", classes = [ "Grafts" ], font = "faded_dark_purple", background = "black", outline = "faded_dark_purple", size = 26 },
@@ -377,7 +378,7 @@ strict = false
 
 [[filters]]
 name = "Explicitly shown classes of items"
-classes = [ "Currency", "Stackable Currency", "Grafts", "Wombgifts", "Maps" ]
+classes = [ "Currency", "Stackable Currency", "Grafts", "Wombgifts", "Maps", "Incubator"]
 
 [[filters]]
 name = "Hide everything not explicitly shown in tier 8+ maps"
