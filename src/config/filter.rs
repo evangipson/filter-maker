@@ -20,10 +20,6 @@ impl Filter {
         toml::from_str(&contents).unwrap()
     }
 
-    pub fn get_destination(&self) -> String {
-        self.configs.destination.clone()
-    }
-
     pub fn get_filter(&self) -> String {
         format!(
             "{}{}",

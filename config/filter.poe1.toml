@@ -1,5 +1,4 @@
 [configs]
-destination = "C:/Users/evang/OneDrive/Documents/My Games/Path of Exile/FilterMaker.filter"
 sounds = [ "gong", "hollow_drum", "voice_drum", "voice_whoosh", "low_whoosh", "glitter", "tonal_pulse", "mechanical_pulse", "slow_pulse" ]
 icons = [ "circle", "diamond", "hexagon", "square", "star", "triangle", "cross", "moon", "raindrop", "kite", "pentagon", "upsidedown_house" ]
 palette = [

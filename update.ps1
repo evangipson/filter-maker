@@ -10,16 +10,27 @@
     .PARAMETER Filter
         A relative path to the TOML configuration file.
 
+    .PARAMETER Destination
+        An optional absolute path for the destination of the generated filter. If it is not
+        provided, the filter-maker application will do it's best to find where Path of Exile
+        is installed and copy the filter there for you.
+
     .EXAMPLE
         PS> ./update.ps1 -Filter ./config/filter.toml
 
         Looks for a TOML configuration file named "filter.toml" in the config/ directory, and
-        uses it to create a new item filter.
+        copies the new item filter to the default Path of Exile installation directory.
+
+        PS> ./update.ps1 -Filter ./config/filter.poe1.toml -Destination "C:/Path of Exile"
+
+        Looks for a TOML configuration file named "filter.poe1.toml" in the config/ directory,
+        and copies the new item filter to the "C:/Path of Exile" directory.
 #>
 
 param(
     [Parameter(Mandatory=$true)]
-    [string] $Filter
+    [string] $Filter,
+    [string] $Destination
 )
 
 function Test-RustInstallation {
@@ -38,13 +49,17 @@ function Get-LatestCode {
     return $LASTEXITCODE -eq 0
 }
 
-function Write-NewFilter([string] $FilterPath) {
+function Write-NewFilter([string] $FilterPath, [string] $DestinationPath) {
     Write-Host "Generating new filter..." -ForegroundColor DarkGray
-    cargo run -- $FilterPath
+    if ([string]::IsNullOrWhiteSpace($DestinationPath)) {
+        cargo run -- $FilterPath
+    } else {
+        cargo run -- $FilterPath $DestinationPath
+    }
     return $LASTEXITCODE -eq 0
 }
 
-function Update-Filter([string] $FilterPath) {
+function Update-Filter([string] $FilterPath, [string] $DestinationPath) {
     # Make sure rust is installed
     if ($false -eq (Test-RustInstallation)) {
         Write-Host "Please install rust to generate your filter by visiting https://www.rust-lang.org/tools/install." -ForegroundColor White
@@ -58,7 +73,7 @@ function Update-Filter([string] $FilterPath) {
     }
 
     # Generate the filter
-    if ($false -eq (Write-NewFilter -FilterPath $FilterPath)) {
+    if ($false -eq (Write-NewFilter -FilterPath $FilterPath -DestinationPath $DestinationPath)) {
         Write-Host "There was an issue generating the new filter." -ForegroundColor DarkRed
         exit 0
     }
@@ -66,4 +81,4 @@ function Update-Filter([string] $FilterPath) {
     Write-Host "✓ All done!"
 }
 
-Update-Filter -FilterPath $Filter
+Update-Filter -FilterPath $Filter -DestinationPath $Destination

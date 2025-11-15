@@ -36,5 +36,14 @@ pub mod color {
 
 /// [`constants`] is a collection of constant values used in various places.
 pub mod constants {
+    /// [`rules`] is a collection of constant values used for rules.
     pub mod rules;
+}
+
+/// [`os`] is a collection of functionality for operation systems.
+pub mod os {
+    /// [`copy_file`] holds all functionality related to copying files.
+    pub mod copy_file;
+    /// [`find_directory`] holds all functionality related to finding directories.
+    pub mod find_directory;
 }
