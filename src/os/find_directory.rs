@@ -6,6 +6,17 @@ use std::{
 
 /// [`find_folder_in_directory`] finds a folder that matches `target_folder_name` in `directory`,
 /// and returns either a [`PathBuf`], or an [`Error`] if it isn't found.
+/// # Example
+/// [`find_folder_in_directory`] can be used to find a folder by name in a directory:
+/// ```rust
+/// use filter_maker::os::find_directory;
+/// use std::{io::Error, path::{Path, PathBuf}};
+///
+/// fn find_temp_folder() -> Result<PathBuf, Error> {
+///     let directory = Path::new("C:/");
+///     find_directory::find_folder_in_directory(&directory, "Temp")
+/// }
+/// ```
 pub fn find_folder_in_directory(
     directory: &Path,
     target_folder_name: &str,
@@ -32,6 +43,16 @@ pub fn find_folder_in_directory(
 
 /// [`find_filter_destination`] will do it's best to find the installation directory for Path of Exile,
 /// and returns either a [`PathBuf`], or an [`Error`] if it isn't found.
+/// # Example
+/// [`find_filter_destination`] can be used to find the most appropriate filter destination:
+/// ```rust
+/// use filter_maker::os::find_directory;
+/// use std::{io::Error, path::{Path, PathBuf}};
+///
+/// fn find_poe_installation_folder() -> Result<PathBuf, Error> {
+///     find_directory::find_filter_destination()
+/// }
+/// ```
 pub fn find_filter_destination() -> Result<PathBuf, Error> {
     // get the home directory
     let home_dir = std::env::home_dir().unwrap();

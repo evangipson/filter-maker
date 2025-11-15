@@ -1,5 +1,6 @@
 use filter_maker::{
     config::filter::Filter,
+    constants::filter,
     os::{copy_file, find_directory},
 };
 use std::env;
@@ -20,7 +21,7 @@ fn main() -> Result<(), Error> {
     let config = Filter::load_config(filter_path);
 
     // write the filter
-    let _ = fs::write("FilterMaker.filter", config.get_filter().trim_end());
+    let _ = fs::write(filter::FILTER_NAME, config.get_filter().trim_end());
 
     // find the best place to copy the filter, then copy it
     if !destination_path.is_empty() {

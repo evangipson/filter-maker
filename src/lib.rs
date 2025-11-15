@@ -36,6 +36,8 @@ pub mod color {
 
 /// [`constants`] is a collection of constant values used in various places.
 pub mod constants {
+    /// [`filter`] is a collection of constant values used for the item filter.
+    pub mod filter;
     /// [`rules`] is a collection of constant values used for rules.
     pub mod rules;
 }
