@@ -110,6 +110,9 @@ mods = [
     { classes = [ "Staves" ], good_mods = [ "Lava Conjurer's", "Splintermind's", "Tecton's", "Tempest Master's", "Winter Beckoner's" ]},
 ]
 
+# =============== #
+# General loot    #
+# =============== #
 [[filters]]
 name = "Ultra Valuable Items"
 items = [ "Albino Rhoa Feather", "Awakener's Orb", "Blessing of Chayula", "Blessing of Esh", "Blessing of Tul", "Blessing of Uul-Netol", "Blessing of Xoph", "Crusader's Exalted Orb", "Divine Orb", "Elder's Exalted Orb", "Eternal Orb", "Exceptional Eldritch Ember", "Exceptional Eldritch Ichor", "Fracturing Orb", "Fracturing Shard", "Hinekora's Lock", "Hunter's Exalted Orb", "Mirror of Kalandra", "Mirror Shard", "Orb of Conflict", "Orb of Dominance", "Orb of Intention", "Orb of Remembrance", "Orb of Unravelling", "Redeemer's Exalted Orb", "Reflecting Mist", "Sacred Crystallised Lifeforce", "Shaper's Exalted Orb", "Tailoring Orb", "Tainted Divine Teardrop", "Tainted Exalted Orb", "Tempering Orb", "Veiled Exalted Orb", "Warlord's Exalted Orb", "Faceted Fossil", "Fractured Fossil", "Glyphic Fossil", "Hollow Fossil", "Runegraft of Gemcraft", "Runegraft of the Angler", "Allflame Ember of the Ethereal", "Allflame Ember of the Gilded", "Ambush Scarab of Containment", "Horned Scarab of Awakening", "Horned Scarab of Preservation", "Ultimatum Scarab of Catalysing", "Archive Reliquary Key", "Cosmic Reliquary Key", "Decaying Reliquary Key", "Forgotten Reliquary Key", "Oubliette Reliquary Key", "Shiny Reliquary Key", "Visceral Reliquary Key", "Voidborn Reliquary Key", "Golden Oil", "Prismatic Oil", "Tainted Oil", "Reflective Oil", "Fishing Rod", "Enlighten Support", "Empower Support", "Enhance Support" ]
@@ -134,6 +137,73 @@ items = [ "Omen of", "Potent Chaotic Resonator", "Powerful Chaotic Resonator", "
 size = 32
 strict = false
 
+[[filters]]
+name = "Best divination cards"
+items = [ "Assassin's Gift", "Auspicious Ambitions", "Beauty Through Death", "Broken Promises", "Brother's Gift", "Brother's Stash", "Choking Guilt", "Damnation", "Darker Half", "Desecrated Virtue", "Divine Beauty", "Divine Justice", "Duality", "Father's Love", "Fire Of Unknown Origin", "History", "House of Mirrors", "I See Brothers", "Imperfect Memories", "Last Stand", "Lonely Warrior", "Love Through Ice", "Luminous Trove", "Magnum Opus", "Matryoshka", "Remembrance", "Seven Years Bad Luck", "Squandered Prosperity", "Succor of the Sinless", "Temperance", "The Apothecary", "The Artist", "The Cheater", "The Damned", "The Demon", "The Destination", "The Doctor", "The Dragon's Heart", "The Endless Darkness", "The Enlightened", "The Fiend", "The Greatest Intentions", "The Gulf", "The Immortal", "The Insane Cat", "The Last Supper", "The Leviathan", "The Long Con", "The Mayor", "The Price of Devotion", "The Progeny of Lunaris", "The Sacrifice", "The Samurai's Eye", "The Sephirot", "The Shieldbearer", "The Soul", "The Vast", "The World Eater", "Tranquillity", "Unrequited Love", "Wealth and Power", "Winter's Embrace" ]
+classes = [ "Divination Cards" ]
+theme = { font = "dark_blue", background = "white", outline = "dark_blue" }
+sound = { sound_type = "glitter", volume = "loud" }
+size = 48
+beam = "blue"
+
+[[filters]]
+name = "Great divination cards"
+items = [  "A Familiar Call", "A Fate Worse Than Death", "A Modest Request", "Alluring Bounty", "Ambitious Obsession", "Anarchy's Price", "Azyran's Reward", "Burning Blood", "Chasing Risk", "Deadly Joy", "Doryani's Epiphany", "Dying Light", "Fateful Meeting", "Friendship", "Further Invention", "Gemcutter's Mercy", "Home", "Judging Voices", "Monochrome", "Pride of the First Ones", "Silence and Frost", "Terrible Secret of Space", "The Academic", "The Aspirant", "The Astromancer", "The Bargain", "The Cartographer", "The Chosen", "The Deep Ones", "The Emptiness", "The Eternal War", "The Eye of Terror", "The Fishmonger", "The Fortunate", "The Garish Power", "The Last One Standing", "The Nurse", "The One That Got Away", "The Price of Loyalty", "The Queen", "The Rabbit's Foot", "The Scout", "The Wedding Gift", "Who Asked", "Lachrymal Necrosis", "Arrogance of the Vaal", "Baited Expectations", "Avian Pursuit" ]
+classes = [ "Divination Cards" ]
+theme = { font = "dark_blue", background = "white", outline = "dark_blue" }
+sound = { sound_type = "voice_whoosh", volume = "quiet" }
+size = 36
+
+[[filters]]
+name = "Good divination cards"
+items = [ "Misery in Darkness", "The Blessing of Moosh", "The Fletcher", "The Tireless Extractor", "Three Faces in the Dark", "The One With All", "The Valkyrie", "Emperor's Luck", "The Shepherd's Sandals", "The Risk", "The Undaunted", "The Obscured", "The Deceiver", "The Wretched", "Parasitic Passengers", "The Mercenary", "The Fox in the Brambles", "The Mind's Eyes", "The Forward Gaze", "The Eye of the Dragon", "The Wrath", "Deathly Designs", "The Ruthless Ceinture", "The Rite of Elements", "The Aesthete", "The Doppelganger", "The Wolf", "Alone in the Darkness", "The Gemcutter", "Jack in the Box", "The Wolf's Shadow", "The Traitor", "Hope", "Sambodhi's Vow", "Glimmer of Hope", "Gift of the Gemling Queen", "Left to Fate", "Volatile Power", "Heterochromia", "The Pack Leader", "Lucky Connections", "The Hoarder", "Chaotic Disposition", "Orb of Augmentation", "Jeweller's Orb", "The Saint's Treasure", "The Void", "The Mercenary", "Brush, Paint and Palette", "Echoes of Love", "Abandoned Wealth", "Vile Power", "The Calling", "Pride Before the Fall", "More is Never Enough", "The Puzzle", "Society's Remorse", "Might is Right", "Blind Venture", "The Feast", "Rebirth and Renewal", "Bijoux", "Costly Curio", "Prejudice", "The Finishing Touch", "Hubris", "The Lich", "Time-Lost Relic", "Immortal Resolve", "The Union", "The Watcher", "The Unexpected Prize", "Forbidden Power", "Coveted Possession", "The Conduit", "The Wilted Rose", "Lysah's Respite", "The Heroic Shot", "The Hunger", "Dying Anguish", "No Traces", "The Poet", "Three Voices", "Atziri's Arsenal", "Dialla's Subjugation", "The Gentleman", "When Currents Blaze", "The Cache", "The Gambler", "The Master Artisan", "The Encroaching Darkness", "The Cataclysm", "A Sea of Blue", "The Prince of Darkness", "A Dusty Memory", "The Hook", "The Card Sharp", "The Breach", "The Escape", "The Admirer", "Acclimatisation" ]
+classes = [ "Divination Cards" ]
+size = 28
+
+[[filters]]
+name = "Essences"
+items = [ "essence of" ]
+strict = false
+
+[[filters]]
+name = "Heist items"
+classes = [ "Blueprints", "Contracts" ]
+
+[[filters]]
+name = "All Scarabs"
+items = [ "scarab" ]
+classes = [ "Map Fragments" ]
+strict = false
+
+# =============== #
+# Maps            #
+# =============== #
+[[filters]]
+name = "Tier 17 Maps"
+classes = [ "Maps" ]
+theme = { font = "dark_purple", background = "white", outline = "dark_purple" }
+size = 42
+map_tier = 17
+sound = { sound_type = "voice_whoosh", volume = "normal" }
+icon = { icon_type = "diamond", color = "purple", size = "medium" }
+beam = "purple"
+
+[[filters]]
+name = "Tier 16 Maps"
+classes = [ "Maps" ]
+size = 32
+map_tier = 16
+
+[[filters]]
+name = "Valuable Map Fragments"
+items = [ "fragment", "crest", "mortal", "hivebrain gland" ]
+classes = [ "Map Fragments" ]
+size = 38
+strict = false
+
+# =============== #
+# Uniques         #
+# =============== #
 [[filters]]
 name = "Tier 0 Uniques"
 items = [ "Astrolabe Amulet", "Cabalist Regalia", "Candlestick Relic", "Champion Kite Shield", "Crusader Boots", "Dusk Blade", "Engraved Greatsword", "Fluted Bascinet", "Foul Staff", "Ghastly Eye Jewel", "Girded Tower Shield", "Gold Flask", "Golden Buckler", "Greatwolf Talisman", "Imperial Maul", "Karui Maul", "Lacewood Spirit Shield", "Martyr Gloves", "Papyrus Relic", "Prismatic Jewel", "Processional Relic", "Raven Mask", "Ring", "Riveted Boots", "Ruby Flask", "Runic Crown", "Runic Helm", "Runic Sollerets", "Savant's Robe", "Siege Axe", "Siege Helmet", "Slaughter Knife", "Unset Amulet", "Vaal Rapier", "Vermillion Ring", "Void Axe" ]
@@ -163,134 +233,38 @@ icon = { icon_type = "kite", color = "orange", size = "small" }
 beam = "orange"
 
 [[filters]]
-name = "Best divination cards"
-items = [ "Assassin's Gift", "Auspicious Ambitions", "Beauty Through Death", "Broken Promises", "Brother's Gift", "Brother's Stash", "Choking Guilt", "Damnation", "Darker Half", "Desecrated Virtue", "Divine Beauty", "Divine Justice", "Duality", "Father's Love", "Fire Of Unknown Origin", "History", "House of Mirrors", "I See Brothers", "Imperfect Memories", "Last Stand", "Lonely Warrior", "Love Through Ice", "Luminous Trove", "Magnum Opus", "Matryoshka", "Remembrance", "Seven Years Bad Luck", "Squandered Prosperity", "Succor of the Sinless", "Temperance", "The Apothecary", "The Artist", "The Cheater", "The Damned", "The Demon", "The Destination", "The Doctor", "The Dragon's Heart", "The Endless Darkness", "The Enlightened", "The Fiend", "The Greatest Intentions", "The Gulf", "The Immortal", "The Insane Cat", "The Last Supper", "The Leviathan", "The Long Con", "The Mayor", "The Price of Devotion", "The Progeny of Lunaris", "The Sacrifice", "The Samurai's Eye", "The Sephirot", "The Shieldbearer", "The Soul", "The Vast", "The World Eater", "Tranquillity", "Unrequited Love", "Wealth and Power", "Winter's Embrace" ]
-classes = [ "Divination Cards" ]
-theme = { font = "dark_blue", background = "white", outline = "dark_blue" }
-sound = { sound_type = "glitter", volume = "loud" }
+name = "Awakened Gems"
+items = [ "awakened" ]
+classes = [ "skill gems", "support gems" ]
+theme = { font = "white", background = "red", color = "white" }
 size = 48
-beam = "blue"
-
-[[filters]]
-name = "Great divination cards"
-items = [  "A Familiar Call", "A Fate Worse Than Death", "A Modest Request", "Alluring Bounty", "Ambitious Obsession", "Anarchy's Price", "Azyran's Reward", "Burning Blood", "Chasing Risk", "Deadly Joy", "Doryani's Epiphany", "Dying Light", "Fateful Meeting", "Friendship", "Further Invention", "Gemcutter's Mercy", "Home", "Judging Voices", "Monochrome", "Pride of the First Ones", "Silence and Frost", "Terrible Secret of Space", "The Academic", "The Aspirant", "The Astromancer", "The Bargain", "The Cartographer", "The Chosen", "The Deep Ones", "The Emptiness", "The Eternal War", "The Eye of Terror", "The Fishmonger", "The Fortunate", "The Garish Power", "The Last One Standing", "The Nurse", "The One That Got Away", "The Price of Loyalty", "The Queen", "The Rabbit's Foot", "The Scout", "The Wedding Gift", "Who Asked", "Lachrymal Necrosis", "Arrogance of the Vaal", "Baited Expectations", "Avian Pursuit" ]
-classes = [ "Divination Cards" ]
-theme = { font = "dark_blue", background = "white", outline = "dark_blue" }
-sound = { sound_type = "voice_whoosh", volume = "quiet" }
-size = 36
-
-[[filters]]
-name = "Good divination cards"
-items = [ "Misery in Darkness", "The Blessing of Moosh", "The Fletcher", "The Tireless Extractor", "Three Faces in the Dark", "The One With All", "The Valkyrie", "Emperor's Luck", "The Shepherd's Sandals", "The Risk", "The Undaunted", "The Obscured", "The Deceiver", "The Wretched", "Parasitic Passengers", "The Mercenary", "The Fox in the Brambles", "The Mind's Eyes", "The Forward Gaze", "The Eye of the Dragon", "The Wrath", "Deathly Designs", "The Ruthless Ceinture", "The Rite of Elements", "The Aesthete", "The Doppelganger", "The Wolf", "Alone in the Darkness", "The Gemcutter", "Jack in the Box", "The Wolf's Shadow", "The Traitor", "Hope", "Sambodhi's Vow", "Glimmer of Hope", "Gift of the Gemling Queen", "Left to Fate", "Volatile Power", "Heterochromia", "The Pack Leader", "Lucky Connections", "The Hoarder", "Chaotic Disposition", "Orb of Augmentation", "Jeweller's Orb", "The Saint's Treasure", "The Void", "The Mercenary", "Brush, Paint and Palette", "Echoes of Love", "Abandoned Wealth", "Vile Power", "The Calling", "Pride Before the Fall", "More is Never Enough", "The Puzzle", "Society's Remorse", "Might is Right", "Blind Venture", "The Feast", "Rebirth and Renewal", "Bijoux", "Costly Curio", "Prejudice", "The Finishing Touch", "Hubris", "The Lich", "Time-Lost Relic", "Immortal Resolve", "The Union", "The Watcher", "The Unexpected Prize", "Forbidden Power", "Coveted Possession", "The Conduit", "The Wilted Rose", "Lysah's Respite", "The Heroic Shot", "The Hunger", "Dying Anguish", "No Traces", "The Poet", "Three Voices", "Atziri's Arsenal", "Dialla's Subjugation", "The Gentleman", "When Currents Blaze", "The Cache", "The Gambler", "The Master Artisan", "The Encroaching Darkness", "The Cataclysm", "A Sea of Blue", "The Prince of Darkness", "A Dusty Memory", "The Hook", "The Card Sharp", "The Breach", "The Escape", "The Admirer", "Acclimatisation" ]
-classes = [ "Divination Cards" ]
-size = 28
-
-[[filters]]
-name = "Heist items"
-classes = [ "Blueprints", "Contracts" ]
-
-[[filters]]
-name = "Good physical weapons"
-classes = [ "Claws", "Daggers", "One Hand Axes", "One Hand Maces", "One Hand Swords", "Thrusting One Hand Swords", "Two Hand Axes", "Two Hand Maces", "Two Hand Swords", "Warstaves" ]
-good_mods = 2
-
-[[filters]]
-name = "Good caster weapons"
-classes = [ "Rune Daggers", "Wands" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Jewels"
-classes = [ "Abyss Jewels", "Jewels" ]
-good_mods = 3
-
-[[filters]]
-name = "Good Amulets"
-classes = [ "Amulets" ]
-good_mods = 3
-
-[[filters]]
-name = "Good Belts"
-classes = [ "Belts" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Body Armours"
-classes = [ "Body Armours" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Boots"
-classes = [ "Boots" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Bows"
-classes = [ "Bows" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Gloves"
-classes = [ "Gloves" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Helmets"
-classes = [ "Helmets" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Rings"
-classes = [ "Rings" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Sceptres"
-classes = [ "Sceptres" ]
-good_mods = 2
-
-[[filters]]
-name = "Good Staves"
-classes = [ "Staves" ]
-good_mods = 2
-
-[[filters]]
-name = "Replica items"
-is_replica = true
-
-[[filters]]
-name = "Enchanted items"
-is_enchanted = true
-
-[[filters]]
-name = "Fractured Items"
-is_fractured = true
-
-[[filters]]
-name = "Influenced Items"
-is_influenced = true
-
-[[filters]]
-name = "Synthesised Items"
-is_synthesised = true
-
-[[filters]]
-name = "Foulborn Items"
-is_foulborn = true
-
-[[filters]]
-name = "Veiled bases"
-is_veiled = true
-
-[[filters]]
-name = "Items with two corrupted mods"
-corrupted_mods = 2
-
-[[filters]]
-name = "Essences"
-items = [ "essence of" ]
+sound = { sound_type = "tonal_pulse", volume = "loud" }
+icon = { icon_type = "moon", color = "red", size = "large" }
+beam = "red"
 strict = false
 
+[[filters]]
+name = "Blight Oils"
+items = [ "oil" ]
+classes = [ "currency" ]
+strict = false
+
+# =============== #
+# Good mod items  #
+# =============== #
+[[filters]]
+name = "Good 2-mod bases "
+classes = [ "Claws", "Daggers", "One Hand Axes", "One Hand Maces", "One Hand Swords", "Thrusting One Hand Swords", "Two Hand Axes", "Two Hand Maces", "Two Hand Swords", "Warstaves", "Rune Daggers", "Wands", "Belts", "Body Armours", "Bows", "Gloves", "Helmets", "Rings", "Sceptres", "Staves" ]
+good_mods = 2
+
+[[filters]]
+name = "Good 3-mod bases"
+classes = [ "Abyss Jewels", "Jewels", "Amulets" ]
+good_mods = 3
+
+# =============== #
+# Gold            #
+# =============== #
 [[filters]]
 name = "Gold (large pile)"
 items = [ "gold" ]
@@ -314,66 +288,58 @@ items = [ "gold" ]
 size = 24
 icon = { icon_type = "star", color = "yellow", size = "small" }
 
+# =============== #
+# Bases           #
+# =============== #
 [[filters]]
-name = "All Scarabs"
-items = [ "scarab" ]
-classes = [ "Map Fragments" ]
-strict = false
+name = "Replica Bases"
+is_replica = true
 
 [[filters]]
-name = "Tier 17 Maps"
-classes = [ "Maps" ]
-theme = { font = "dark_purple", background = "white", outline = "dark_purple" }
-size = 42
-map_tier = 17
-sound = { sound_type = "voice_whoosh", volume = "normal" }
-icon = { icon_type = "diamond", color = "purple", size = "medium" }
-beam = "purple"
+name = "Enchanted Bases"
+is_enchanted = true
 
 [[filters]]
-name = "Tier 16 Maps"
-classes = [ "Maps" ]
-size = 32
-map_tier = 16
+name = "Fractured Bases"
+is_fractured = true
 
 [[filters]]
-name = "Valuable Map Fragments"
-items = [ "fragment", "crest", "mortal", "hivebrain gland" ]
-classes = [ "Map Fragments" ]
-size = 38
-strict = false
+name = "Influenced Bases"
+is_influenced = true
 
 [[filters]]
-name = "Perfect Quality items"
+name = "Synthesised Bases"
+is_synthesised = true
+
+[[filters]]
+name = "Foulborn Bases"
+is_foulborn = true
+
+[[filters]]
+name = "Veiled Bases"
+is_veiled = true
+
+[[filters]]
+name = "Bases with two corrupted mods"
+corrupted_mods = 2
+
+[[filters]]
+name = "Perfect Quality Bases"
 theme = { outline = "off_white" }
 size = 34
 quality = 27
 beam = "white"
 
 [[filters]]
-name = "Over-Qualitied Items"
+name = "Over-Qualitied Bases"
 classes = [ "Life Flasks", "Mana Flasks", "Utility Flasks", "Hybrid Flasks", "Skill Gems", "Support Gems" ]
 theme = { outline = "off_white" }
 quality = 21
 beam = "white"
 
-[[filters]]
-name = "Awakened Gems"
-items = [ "awakened" ]
-classes = [ "skill gems", "support gems" ]
-theme = { font = "white", background = "red", color = "white" }
-size = 48
-sound = { sound_type = "tonal_pulse", volume = "loud" }
-icon = { icon_type = "moon", color = "red", size = "large" }
-beam = "red"
-strict = false
-
-[[filters]]
-name = "Blight Oils"
-items = [ "oil" ]
-classes = [ "currency" ]
-strict = false
-
+# =============== #
+# Hide            #
+# =============== #
 [[filters]]
 name = "Explicitly shown classes of items"
 classes = [ "Currency", "Stackable Currency", "Grafts", "Wombgifts", "Maps", "Incubator" ]
