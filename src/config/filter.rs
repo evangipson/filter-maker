@@ -7,7 +7,6 @@ use std::{fs, process::exit};
 pub struct Filter {
     /// [`Filter::configs`] is the top-level `[configs]` portion of the TOML config file.
     pub configs: BaseConfig,
-
     /// [`Filter::filters`] is a collection of all the `[[filters]]` in the TOML config file.
     pub filters: Vec<Rule>,
 }

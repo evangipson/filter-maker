@@ -1,5 +1,19 @@
 use crate::{color::custom_color::CustomColor, config::color::Color};
 
+/// [`get_color`] will get a color based on a `palette` and `name`.
+/// # Example
+/// [`get_color`] can be used to get a color `palette` based on a `name`:
+/// ```rust
+/// use filter_maker::{
+///     color::custom_color::CustomColor,
+///     config::color::Color,
+///     behavior::common
+/// };
+///
+/// fn get_red_color(palette: &[Color]) -> CustomColor {
+///     common::get_color(palette, "red")
+/// }
+/// ```
 pub fn get_color(palette: &[Color], name: &str) -> CustomColor {
     if !name.is_empty() {
         palette
@@ -14,10 +28,20 @@ pub fn get_color(palette: &[Color], name: &str) -> CustomColor {
     }
 }
 
-pub fn capitalize(s: &str) -> String {
-    if s.len() > 1 {
-        s[0..1].to_uppercase() + &s[1..]
+/// [`capitalize`] will capitlize `string_to_capitalize`.
+/// # Example
+/// [`capitalize`] can be used to capitlize any [`str`]:
+/// ```rust
+/// use filter_maker::behavior::common;
+///
+/// fn capitalize_string(string: &str) -> String {
+///     common::capitalize(string)
+/// }
+/// ```
+pub fn capitalize(string_to_capitlize: &str) -> String {
+    if string_to_capitlize.len() > 1 {
+        string_to_capitlize[0..1].to_uppercase() + &string_to_capitlize[1..]
     } else {
-        s.to_uppercase()
+        string_to_capitlize.to_uppercase()
     }
 }

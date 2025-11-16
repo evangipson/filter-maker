@@ -1,12 +1,24 @@
 /// [`Conditional`] represents a collection of functions to do things conditionally.
 pub trait Conditional {
-    /// [`Conditional::only_if`] will return [`self`] if the [`bool`] condition is `true`, and [`Default::default`] otherwise.
+    /// [`Conditional::only_if`] will return [`self`] if the [`bool`] condition is `true`,
+    /// and [`Default::default`] otherwise.
+    /// # Example
+    /// [`Conditional::only_if`] can be used to return [`self`] only if a condition is `true`:
+    /// ```rust
+    /// use filter_maker::behavior::conditional::Conditional;
+    ///
+    /// fn say_short_hello(greeting: &str) -> String {
+    ///     greeting.to_string().only_if(greeting.len() < 10)
+    /// }
+    /// ```
     fn only_if(self, condition: bool) -> Self;
 
-    /// [`Conditional::if_not_default`] will return [`self`] if it is not [`Default::default`], and [`Default::default`] otherwise.
+    /// [`Conditional::if_not_default`] will return [`self`] if it is not [`Default::default`],
+    /// and [`Default::default`] otherwise.
     fn if_not_default<N: Default + PartialEq>(self, n: &N) -> Self;
 
-    /// [`Conditional::is_default`] will return `true` if [`self`] is [`Default::default`], and `false` otherwise.
+    /// [`Conditional::is_default`] will return `true` if [`self`] is [`Default::default`],
+    /// and `false` otherwise.
     fn is_default(&self) -> bool;
 }
 

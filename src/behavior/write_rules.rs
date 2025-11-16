@@ -5,15 +5,20 @@ use crate::{
 };
 use std::fmt::Display;
 
+/// [`WriteRules`] represents a collection of functions to write out item filter rules.
 pub trait WriteRules {
+    /// [`WriteRules::write_rule`] will write `rule` as an item filter rule based on `condition`.
     fn write_rule(&self, rule: &str, condition: Option<bool>) -> String {
         rule.to_string().only_if(condition.unwrap_or_default())
     }
 
+    /// [`WriteRules::write_value_rule`] will write `rule` as an item filter rule using `value`.
     fn write_value_rule<T: Default + Display + PartialEq>(&self, rule: &str, value: &T) -> String {
         format!("{rule} {value}").if_not_default(value)
     }
 
+    /// [`WriteRules::write_optional_rule`] will write `rule` as an item filter rule using `value`,
+    /// if `value` has a value. Otherwise, will just return an empty [`String`].
     fn write_optional_rule<T: Default + Display + PartialEq>(
         &self,
         rule: &str,
@@ -26,6 +31,9 @@ pub trait WriteRules {
         }
     }
 
+    /// [`WriteRules::write_list_rule`] will write `rule` as an item filter rule using `list`, with
+    /// the option to define the comparator using the `strict_equals` flag. If `list` is [`None`],
+    /// returns an empty [`String`].
     fn write_list_rule(
         &self,
         rule: &str,
@@ -52,6 +60,8 @@ pub trait WriteRules {
         }
     }
 
+    /// [`WriteRules::write_rarity_rule`] will write a rarity item filter rule using `rarity`, if
+    /// `rarity` has a value. Otherwise, it will just return an empty [`String`].
     fn write_rarity_rule(&self, rarity: Option<String>) -> String {
         format!(
             "Rarity >= {}",
@@ -66,6 +76,8 @@ pub trait WriteRules {
         )
     }
 
+    /// [`WriteRules::write_color_rules`] will write `theme` as an item filter rule using `palette`.
+    /// If `theme` is [`None`], returns an empty [`String`].
     fn write_color_rules(&self, palette: Vec<Color>, theme: &Option<Theme>) -> String {
         let theme_value = theme.clone().unwrap_or_default();
         [
@@ -97,6 +109,8 @@ pub trait WriteRules {
         .to_string()
     }
 
+    /// [`WriteRules::write_rule_name`] will write `name` as a "Show" or "Hide" item filter rule name.
+    /// If `name` is [`None`], returns an empty [`String`].
     fn write_rule_name(&self, name: Option<String>, hide: Option<bool>) -> String {
         format!(
             "{} # {}",
@@ -115,6 +129,8 @@ pub trait WriteRules {
         .only_if(!name.unwrap_or_default().is_empty())
     }
 
+    /// [`WriteRules::write_explicit_mods_rule`] will write `classes` as a modifier-based item filter rule.
+    /// If `good_mods` and `is_veiled` are [`None`], returns an empty [`String`].
     fn write_explicit_mods_rule(
         &self,
         is_veiled: &Option<bool>,
@@ -139,6 +155,8 @@ pub trait WriteRules {
         }
     }
 
+    /// [`WriteRules::write_corrupted_mods_rule`] will write `corrupted_mods` as an item filter rule.
+    /// If `corrupted_mods` is [`None`], returns [`CORRUPTED`].
     fn write_corrupted_mods_rule(&self, corrupted_mods: &Option<u8>) -> String {
         if corrupted_mods.unwrap_or_default() == 1 {
             CORRUPTED.to_string()
@@ -148,6 +166,8 @@ pub trait WriteRules {
     }
 }
 
+/// [`get_valid_mods`] will search `modifiers` for all "good" valid [`Modifiers`](`Modifier`).
+/// If `modifiers` is [`None`], returns an empty [`Vec`].
 fn get_valid_mods(modifiers: &Option<Vec<Modifier>>) -> Vec<&Modifier> {
     if let Some(mods_value) = modifiers {
         mods_value
@@ -159,6 +179,7 @@ fn get_valid_mods(modifiers: &Option<Vec<Modifier>>) -> Vec<&Modifier> {
     }
 }
 
+/// [`get_mods_for_classes`] will write `modifiers` as an item filter rule for all `classes`.
 fn get_mods_for_classes(
     modifiers: &Option<Vec<Modifier>>,
     classes: &Option<Vec<String>>,
