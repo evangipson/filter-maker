@@ -19,6 +19,15 @@ impl CustomColor {
     pub const TRANSPARENT: CustomColor = CustomColor::new(0, 0, 0, 0);
 
     /// [`CustomColor::new`] will create a new [`CustomColor`].
+    /// # Example
+    /// [`CustomColor::new`] can be used to create a new [`CustomColor`]:
+    /// ```rust
+    /// use filter_maker::color::custom_color::CustomColor;
+    ///
+    /// fn create_red_color() -> CustomColor {
+    ///     CustomColor::new(255, 0, 0, 255)
+    /// }
+    /// ```
     pub const fn new(r: u8, g: u8, b: u8, a: u8) -> Self {
         Self { r, g, b, a }
     }

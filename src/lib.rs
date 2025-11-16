@@ -1,26 +1,47 @@
 //! # Filter Maker
-//! [`filter-maker`](crate) is an item filter generator for Path of Exile.
+//! [`filter_maker`](crate) is an item filter generator for Path of Exile.
 //!
 //! ## Getting Started
 //! 1. Use `cargo run` or run the `update.ps1` script to generate your filter
 //! 1. Edit your filter configuration TOML file however you see fit
-//! 1. Use `cargo run -- [PATH_TO_FILTER]` or run the `update.ps1` script to regenerate your filter
+//! 1. Use `cargo run -- [PATH_TO_FILTER]` or run the `update.ps1` script to
+//!    regenerate your filter
 
 /// [`config`] is a collection of functionality to allow filter configuration.
 pub mod config {
+    /// [`base_config`] is a rust representation of the `[configs]` section of
+    /// the TOML filter configuration file.
     pub mod base_config;
+    /// [`color`] is a rust representation of a color defined in the TOML
+    /// filter configuration file.
     pub mod color;
+    /// [`filter`] is a rust representation of the whole TOML filter
+    /// configuration file.
     pub mod filter;
+    /// [`icon`] is a rust representation of an icon defined in the TOML
+    /// configuration file.
     pub mod icon;
+    /// [`modifier`] is a rust representation of an item modifier defined in
+    /// the TOML configuration file.
     pub mod modifier;
+    /// [`rule`] is a rust representation of a filter rule defined in the TOML
+    /// configuration file.
     pub mod rule;
+    /// [`sound`] is a rust representation of a sound defined in the TOML
+    /// configuration file.
     pub mod sound;
+    /// [`style`] is a rust representation of a base style filter rule defined
+    /// in the TOML configuration file.
     pub mod style;
+    /// [`theme`] is a rust representation of a visual theme defined in the
+    /// TOML configuration file.
     pub mod theme;
 }
 
 /// [`behavior`] is a collection of functionality to define behaviors.
 pub mod behavior {
+    /// [`common`] is a collection of commonly used functions throughout
+    /// [`filter_maker`](crate).
     pub mod common;
     /// [`conditional`] is a trait for conditionally returning default values.
     pub mod conditional;
