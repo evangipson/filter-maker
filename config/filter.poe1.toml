@@ -63,8 +63,8 @@ styles = [
     { name = "Essences (base style)", items = [ "essence of" ], font = "dark_blue", background = "off_white", size = 20, strict = false },
     { name = "Incubator", classes = [ "Incubator" ], font = "off_white", background = "dark_blue", size = 20, strict = false },
     { name = "Heist Contracts (base style)", classes = [ "Blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
-    { name = "Heist Blueprints (base style)", classes = [ "Contracts" ], font = "white", background = "faded_dark_purple", outline = "salmon_red", size = 26 },
-    { name = "Grafts (base style)", classes = [ "Grafts" ], font = "black", background = "faded_dark_purple", outline = "black", size = 26 },
+    { name = "Heist Blueprints (base style)", classes = [ "Contracts" ], font = "white", background = "dark_purple", outline = "salmon_red", size = 26 },
+    { name = "Grafts (base style)", classes = [ "Grafts" ], font = "black", background = "dark_purple", outline = "black", size = 26 },
     { name = "Wombgifts (base style)", classes = [ "Wombgifts" ], font = "dark_purple", background = "black", outline = "dark_purple", size = 26 },
 ]
 mods = [
