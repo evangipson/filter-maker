@@ -35,6 +35,7 @@ param(
 )
 
 function Test-RustInstallation {
+    
     try {
         rustc --version
         return $true
@@ -52,12 +53,6 @@ function Get-LatestCode {
 
 function Write-NewFilter([string] $FilterPath, [string] $DestinationPath) {
     Write-Host "Generating new filter..." -ForegroundColor DarkGray
-    # if ($FilterPath -eq "poe2") {
-    #     $FilterPath = "config/filter.poe2.toml"
-    #     $DestinationPath = (Get-ChildItem -Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::MyDocuments)) -Directory -Recurse -Filter "Path of Exile 2" -ErrorAction SilentlyContinue).FullName
-    # } elseif ([string]::IsNullOrWhiteSpace($Filterpath)) {
-    #     $FilterPath = "config/filter.poe1.toml"
-    #     $DestinationPath = (Get-ChildItem -Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::MyDocuments)) -Directory -Recurse -Filter "Path of Exile" -ErrorAction SilentlyContinue).FullName
     if (-not $poe2) {
         $FilterPath = "config/filter.poe1.toml"
         $DestinationPath = (Get-ChildItem -Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::MyDocuments)) -Directory -Recurse -Filter "Path of Exile" -ErrorAction SilentlyContinue).FullName        
@@ -66,7 +61,6 @@ function Write-NewFilter([string] $FilterPath, [string] $DestinationPath) {
         $FilterPath = "config/filter.poe2.toml"
         $DestinationPath = (Get-ChildItem -Path ([Environment]::GetFolderPath([Environment+SpecialFolder]::MyDocuments)) -Directory -Recurse -Filter "Path of Exile 2" -ErrorAction SilentlyContinue).FullName     
     }
-    
     if ([string]::IsNullOrWhiteSpace($DestinationPath)) {
         cargo run -- $FilterPath
     }else{
