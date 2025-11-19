@@ -1,8 +1,4 @@
-use filter_maker::{
-    config::filter::Filter,
-    constants::filter,
-    os::{copy_file},
-};
+use filter_maker::{config::filter::Filter, constants::filter, os::copy_file};
 use std::env;
 use std::fs;
 use std::io::Error;
@@ -29,9 +25,6 @@ fn main() -> Result<(), Error> {
     if !destination_path.is_empty() {
         copy_file::copy_filter(destination_path);
         Ok(())
-    // } else if let Ok(filter_destination) = find_directory::find_filter_destination() {
-    //     copy_file::copy_filter(filter_destination.as_path().to_str().unwrap());
-    //     Ok(())
     } else {
         Err(Error::new(
             std::io::ErrorKind::NotFound,
