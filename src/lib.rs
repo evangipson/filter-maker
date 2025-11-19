@@ -2,10 +2,10 @@
 //! [`filter_maker`](crate) is an item filter generator for Path of Exile.
 //!
 //! ## Getting Started
-//! 1. Use `cargo run` or run the `update.ps1` script to generate your filter
-//! 1. Edit your filter configuration TOML file however you see fit
-//! 1. Use `cargo run -- [PATH_TO_FILTER]` or run the `update.ps1` script to
-//!    regenerate your filter
+//! 1. Use `cargo run -- [PATH_TO_FILTER] [PATH_TO_DESTINATION]` to regenerate
+//!    your filter
+//! 1. Optionally edit the filter.poe1.toml configuration file to customize
+//!    the filter
 
 /// [`config`] is a collection of functionality to allow filter configuration.
 pub mod config {
@@ -67,6 +67,4 @@ pub mod constants {
 pub mod os {
     /// [`copy_file`] holds all functionality related to copying files.
     pub mod copy_file;
-    /// [`find_directory`] holds all functionality related to finding directories.
-    pub mod find_directory;
 }

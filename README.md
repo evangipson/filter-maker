@@ -1,11 +1,10 @@
 # Filter Maker
 An item filter generator for Path of Exile 1 & Path of Exile 2.
 
-## Getting started
-- Run `./update.ps1 -Filter [PATH_TO_FILTER]` to generate a filter
-    - `./update.ps1 -Filter filter.poe1.toml` will generate a filter for Path of Exile 1
-    - `./update.ps1 -Filter filter.poe2.toml` will generate a filter for Path of Exile 2
-- (Optionally) Create your own filter TOML configuration file to generate a custom filter
+## Examples
+- Run `./update.ps1` to generate a filter for Path of Exile 1 using [`config/filter.poe1.toml`](config/filter.poe1.toml)
+- Run `./update.ps1 -Poe2` will generate a filter for Path of Exile 2 using [`config/filter.poe2.toml`](config/filter.poe2.toml)
+- Run `./update.ps1 -Filter C:/temp/filter.custom.toml` will generate a filter for Path of Exile 1 using a custom filter in `C:/temp` called `filter.custom.toml`
 
 ## Customizing the filter
 ### Adding a color
