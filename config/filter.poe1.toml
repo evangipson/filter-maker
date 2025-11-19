@@ -51,6 +51,7 @@ styles = [
     { name = "Maps (base style)", classes = [ "Maps" ], rarity = "none", background = "black", size = 20 },
     { name = "Gems (base style)", classes = [ "Skill Gems", "Support Gems" ], font = "teal", background = "white", outline = "teal", size = 20 },
     { name = "Fragments (base style)", classes = [ "Map Fragments" ], font = "white", background = "red", outline = "white", size = 24 },
+    { name = "Incursion", classes = [ "Incursion Items" ], font = "white", background = "red", outline = "white", size = 24 },
     { name = "Scarabs (base style)", classes = [ "Map Fragments" ], items = [ "scarab" ], rarity = "none", font = "teal", background = "white", outline = "teal", size = 30, strict = false },
     { name = "Divination Cards (base style)", classes = [ "Divination Cards" ], rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 24 },
     { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 12 },

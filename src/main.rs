@@ -1,7 +1,7 @@
 use filter_maker::{
     config::filter::Filter,
     constants::filter,
-    os::{copy_file, find_directory},
+    os::{copy_file},
 };
 use std::env;
 use std::fs;
@@ -15,7 +15,9 @@ fn main() -> Result<(), Error> {
         .expect("Must provide TOML configuration file path.");
 
     // get the destination path command line argument, if it was provided
-    let destination_path = &env::args().nth(2).unwrap_or_default();
+    let destination_path = &env::args()
+        .nth(2)
+        .expect("Must provide filter destination path.");
 
     // load the config using the filter path
     let config = Filter::load_config(filter_path);
@@ -27,9 +29,9 @@ fn main() -> Result<(), Error> {
     if !destination_path.is_empty() {
         copy_file::copy_filter(destination_path);
         Ok(())
-    } else if let Ok(filter_destination) = find_directory::find_filter_destination() {
-        copy_file::copy_filter(filter_destination.as_path().to_str().unwrap());
-        Ok(())
+    // } else if let Ok(filter_destination) = find_directory::find_filter_destination() {
+    //     copy_file::copy_filter(filter_destination.as_path().to_str().unwrap());
+    //     Ok(())
     } else {
         Err(Error::new(
             std::io::ErrorKind::NotFound,
