@@ -40,7 +40,7 @@ palette = [
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 12 },
     { name = "Magic (base style)", rarity = "Magic", font = "blue", size = 12 },
-    { name = "Rare (base style)", rarity = "Rare", font = "yellow", size = 12 },
+    { name = "Rare (base style)", rarity = "Rare", font = "yellow", size = 24 },
     { name = "Unique (base style)", rarity = "Unique", font = "white", background = "orange", size = 24 },
     { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "Unique", font = "white", background = "orange_red", outline = "dark_red", size = 24 },
     { name = "Corrupted mods (base style)", corrupted_mods = 1, rarity = "none", background = "faded_dark_red", outline = "dark_red" },
@@ -65,7 +65,6 @@ styles = [
     { name = "Incubator", classes = [ "Incubator" ], font = "off_white", background = "dark_blue", size = 20, strict = false },
     { name = "Heist Contracts (base style)", classes = [ "Blueprints" ], font = "white", background = "salmon_red", outline = "vibrant_blue", size = 26 },
     { name = "Heist Blueprints (base style)", classes = [ "Contracts" ], font = "white", background = "dark_purple", outline = "salmon_red", size = 26 },
-    { name = "Grafts (base style)", classes = [ "Grafts" ], font = "black", background = "dark_purple", outline = "black", size = 26 },
     { name = "Wombgifts (base style)", classes = [ "Wombgifts" ], font = "dark_purple", background = "black", outline = "dark_purple", size = 26 },
 ]
 mods = [
@@ -341,11 +340,11 @@ beam = "white"
 # =============== #
 # Hide            #
 # =============== #
-[[filters]]
-name = "Explicitly shown classes of items"
-classes = [ "Currency", "Stackable Currency", "Grafts", "Wombgifts", "Maps", "Incubator" ]
+# [[filters]]
+# name = "Explicitly shown classes of items"
+# classes = [ "Currency", "Stackable Currency", "Wombgifts", "Maps", "Incubator" ]
 
-[[filters]]
-name = "Hide everything not explicitly shown in tier 8+ maps"
-hide = true
-area_level = 75
+# [[filters]]
+# name = "Hide everything not explicitly shown in tier 8+ maps"
+# hide = true
+# area_level = 75
