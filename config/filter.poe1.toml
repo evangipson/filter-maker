@@ -343,7 +343,7 @@ beam = "white"
 
 [[filters]]
 name = "Armour Warrior-Type"
-classes = []
+classes = ["Two hand axes"]
 items = [ "Sundering Axe", "Royal Plate", "Giantslayer Helmet", "Leviathan Gauntlets", "Leviathan Greaves", "Rustic Sash" ]
 size = 35
 beam = "white"
