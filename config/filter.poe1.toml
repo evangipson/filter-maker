@@ -342,11 +342,14 @@ beam = "white"
 # ===============#
 
 [[filters]]
-name = "Armour Warrior-Type"
-classes = ["Two hand axes"]
-items = [ "Sundering Axe", "Royal Plate", "Giantslayer Helmet", "Leviathan Gauntlets", "Leviathan Greaves", "Rustic Sash" ]
-size = 35
-beam = "white"
+name = "Weapons Warrior"
+classes = [ "two hand axes" ]
+size = 30
+
+[[filters]]
+name = "Armour Warrior"
+items = ["Royal Plate", "Giantslayer Helmet", "Leviathan Gauntlets", "Leviathan Greaves", "Rustic Sash" ]
+size = 30
 
 [[filters]]
 name = "Shiny Things"
