@@ -41,20 +41,20 @@ styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 12 },
     { name = "Magic (base style)", rarity = "Magic", font = "blue", size = 12 },
     { name = "Rare (base style)", rarity = "Rare", font = "yellow", size = 24 },
-    { name = "Unique (base style)", rarity = "Unique", font = "white", background = "orange", size = 24 },
+    { name = "Unique (base style)", rarity = "Unique", font = "white", background = "orange", size = 30 },
     { name = "Unique Corrupted (base style)", corrupted_mods = 1, rarity = "Unique", font = "white", background = "orange_red", outline = "dark_red", size = 24 },
     { name = "Corrupted mods (base style)", corrupted_mods = 1, rarity = "none", background = "faded_dark_red", outline = "dark_red" },
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 18 },
-    { name = "Currency (base style)", classes = [ "Currency", "Stackable Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 18 },
+    { name = "Currency (base style)", classes = [ "Currency", "Stackable Currency" ], rarity = "none", font = "off_white", background = "dark_purple", size = 30 },
     { name = "Portal Scrolls (base style)", items = [ "portal scroll" ], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 12 },
     { name = "Scroll of Wisdom (base style)", items = [ "scroll of wisdom" ], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 12 },
-    { name = "Maps (base style)", classes = [ "Maps" ], rarity = "none", background = "black", size = 20 },
+    { name = "Maps (base style)", classes = [ "Maps" ], rarity = "none", background = "black", size = 30 },
     { name = "Gems (base style)", classes = [ "Skill Gems", "Support Gems" ], font = "teal", background = "white", outline = "teal", size = 24 },
     { name = "Fragments (base style)", classes = [ "Map Fragments" ], font = "white", background = "red", outline = "white", size = 32 },
     { name = "Incursion", classes = [ "Incursion Items" ], font = "white", background = "green", outline = "white", size = 32 },
     { name = "Scarabs (base style)", classes = [ "Map Fragments" ], items = [ "scarab" ], rarity = "none", font = "teal", background = "white", outline = "teal", size = 30, strict = false },
     { name = "Divination Cards (base style)", classes = [ "Divination Cards" ], rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 24 },
-    { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 12 },
+    { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 30 },
     { name = "Synthesised (base style)", is_synthesised = true, rarity = "none", font = "white", background = "dark_purple", outline = "white", size = 26 },
     { name = "Fractured (base style)", is_fractured = true, rarity = "none", font = "white", background = "teal", outline = "white", size = 26 },
     { name = "Influenced (base style)", is_influenced = true, rarity = "none", font = "white", background = "dark_blue", outline = "white", size = 26 },
@@ -338,13 +338,45 @@ quality = 21
 beam = "white"
 
 # =============== #
+# Class Specific Bases
+# ===============#
+
+[[filters]]
+name = "Armour Warrior-Type"
+classes = []
+items = [ "Sundering Axe", "Royal Plate", "Giantslayer Helmet", "Leviathan Gauntlets", "Leviathan Greaves", "Rustic Sash" ]
+size = 35
+beam = "white"
+
+[[filters]]
+name = "Shiny Things"
+classes = []
+items = [ "Gold ring","gold amulet", "Amethyst ring","Vermillion ring"]
+size = 23
+beam = "white"
+
+# =============== #
+# Early-Mid Game
+# Filters can be commented out as you start needing them less going into end game
+# ===============#
+
+[[filters]]
+name = "Early-mid quality converters"
+classes = [ "Life Flasks", "Mana Flasks", "Utility Flasks", "Hybrid Flasks", "Skill Gems", "Support Gems" ]
+theme = { outline = "off_white" }
+quality = 1
+beam = "white"
+
+
+
+# =============== #
 # Hide            #
 # =============== #
-# [[filters]]
-# name = "Explicitly shown classes of items"
-# classes = [ "Currency", "Stackable Currency", "Wombgifts", "Maps", "Incubator" ]
+[[filters]]
+name = "Explicitly shown classes of items"
+classes = [ "Currency", "Stackable Currency", "Wombgifts", "Maps", "Incubator" ]
 
-# [[filters]]
-# name = "Hide everything not explicitly shown in tier 8+ maps"
-# hide = true
-# area_level = 75
+[[filters]]
+name = "Hide everything not explicitly shown in tier 8+ maps"
+hide = true
+area_level = 75
