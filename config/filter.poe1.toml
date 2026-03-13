@@ -353,7 +353,6 @@ size = 30
 
 [[filters]]
 name = "Shiny Things"
-classes = []
 items = [ "Gold ring","gold amulet", "Amethyst ring","Vermillion ring"]
 size = 23
 beam = "white"
@@ -365,7 +364,7 @@ beam = "white"
 
 [[filters]]
 name = "Early-mid quality converters"
-classes = [ "Life Flasks", "Mana Flasks", "Utility Flasks", "Hybrid Flasks", "Skill Gems", "Support Gems" ]
+classes = [ "Life Flasks", "Mana Flasks", "Utility Flasks", "Hybrid Flasks", "Skill Gems", "Support Gems"]
 theme = { outline = "off_white" }
 quality = 1
 beam = "white"
@@ -377,7 +376,7 @@ beam = "white"
 # =============== #
 [[filters]]
 name = "Explicitly shown classes of items"
-classes = [ "Currency", "Stackable Currency", "Wombgifts", "Maps", "Incubator" ]
+classes = [ "Currency", "Stackable Currency", "Wombgifts", "Maps", "Incubator", "jewels" ]
 
 [[filters]]
 name = "Hide everything not explicitly shown in tier 8+ maps"
