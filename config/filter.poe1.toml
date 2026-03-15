@@ -348,12 +348,12 @@ size = 30
 
 [[filters]]
 name = "Armour Warrior"
-items = ["Royal Plate", "Giantslayer Helmet", "Leviathan Gauntlets", "Leviathan Greaves", "Rustic Sash" ]
+items = ["Royal Plate", "Giantslayer Helmet", "Leviathan Gauntlets", "Leviathan Greaves" ]
 size = 30
 
 [[filters]]
 name = "Shiny Things"
-items = [ "Gold ring","gold amulet", "Amethyst ring","Vermillion ring"]
+items = [ "Gold ring","gold amulet", "Amethyst ring","Vermillion ring","treasure key", "The Black Barya"]
 size = 23
 beam = "white"
 
