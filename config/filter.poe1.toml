@@ -148,7 +148,7 @@ beam = "blue"
 
 [[filters]]
 name = "Great divination cards"
-items = [  "A Familiar Call", "A Fate Worse Than Death", "A Modest Request", "Alluring Bounty", "Ambitious Obsession", "Anarchy's Price", "Azyran's Reward", "Burning Blood", "Chasing Risk", "Deadly Joy", "Doryani's Epiphany", "Dying Light", "Fateful Meeting", "Friendship", "Further Invention", "Gemcutter's Mercy", "Home", "Judging Voices", "Monochrome", "Pride of the First Ones", "Silence and Frost", "Terrible Secret of Space", "The Academic", "The Aspirant", "The Astromancer", "The Bargain", "The Cartographer", "The Chosen", "The Deep Ones", "The Emptiness", "The Eternal War", "The Eye of Terror", "The Fishmonger", "The Fortunate", "The Garish Power", "The Last One Standing", "The Nurse", "The One That Got Away", "The Price of Loyalty", "The Queen", "The Rabbit's Foot", "The Scout", "The Wedding Gift", "Who Asked", "Lachrymal Necrosis", "Arrogance of the Vaal", "Baited Expectations", "Avian Pursuit" ]
+items = [  "A Familiar Call", "A Fate Worse Than Death", "A Modest Request", "Alluring Bounty", "Ambitious Obsession", "Anarchy's Price", "Azyran's Reward", "Burning Blood", "Chasing Risk", "Deadly Joy", "Doryani's Epiphany", "Dying Light", "Fateful Meeting", "Friendship", "Further Invention", "Gemcutter's Mercy", "Home", "Judging Voices", "Monochrome", "Pride of the First Ones", "Silence and Frost", "Terrible Secret of Space", "The Academic", "The Aspirant", "The Astromancer", "The Bargain", "The Cartographer", "The Chosen", "The Deep Ones", "The Emptiness", "The Eternal War", "The Eye of Terror", "The Fishmonger", "The Fortunate", "The Garish Power", "The Last One Standing", "The Nurse", "The One That Got Away", "The Price of Loyalty", "The Queen", "The Rabbit's Foot", "The Scout", "The Wedding Gift", "Who Asked", "Lachrymal Necrosis", "Arrogance of the Vaal", "Baited Expectations", "Avian Pursuit", "The Silly Boy" ]
 classes = [ "Divination Cards" ]
 theme = { font = "dark_blue", background = "white", outline = "dark_blue" }
 sound = { sound_type = "voice_whoosh", volume = "quiet" }
@@ -353,7 +353,7 @@ size = 30
 
 [[filters]]
 name = "Shiny Things"
-items = [ "Gold ring","gold amulet", "Amethyst ring","Vermillion ring","treasure key", "The Black Barya"]
+items = [ "Vermillion ring","treasure key", "The Black Barya"]
 size = 23
 beam = "white"
 
@@ -366,7 +366,7 @@ beam = "white"
 name = "Early-mid quality converters"
 classes = [ "Life Flasks", "Mana Flasks", "Utility Flasks", "Hybrid Flasks", "Skill Gems", "Support Gems"]
 theme = { outline = "off_white" }
-quality = 1
+quality = 12
 beam = "white"
 
 
