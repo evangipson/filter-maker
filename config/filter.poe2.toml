@@ -208,7 +208,7 @@ beam = "green"
 
 [[filters]]
 name = "Gamble bases"
-items = [ "Heavy Belt", "Silver Charm", "Stellar Amulet", "Sacred Focus" ]
+items = [ "Heavy Belt", "Silver Charm", "Stellar Amulet", "Sacred Focus", "Utility Belt" ]
 theme = { font = "black", background = "gold", outline = "black" }
 rarity = "Normal"
 size = 38
