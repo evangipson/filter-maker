@@ -67,7 +67,7 @@ styles = [
     { name = "Jewels", classes = [ "Jewels" ], background = "faded_purple", outline = "purple", size = 26 },
     { name = "Abyssal (base style)", classes = [ "Stackable Currency", "Omen" ], items = [  "Preserved", "Ancient", "Gnawed", "Abyssal Echoes", "Sovereign", "Liege", "Blackblooded", "Putrefaction", "Light", "Sinistral Necromancy", "Dextral Necromancy" ], rarity = "none", font = "abyssal_green", background = "black", outline = "abyssal_green", size = 32, strict = false },
     { name = "Frags (base style)", classes = [ "Pinnacle Keys" ], font = "dark_purple", background = "off_white", outline = "dark_purple", size = 38 },
-    { name = "Wombgifts (base style)", clasases = [ "Wombgifts" ], font = "black", background = "purple", outline = "dark_purple", size = 32 },
+    { name = "Wombgifts (base style)", classes = [ "Wombgifts" ], font = "black", background = "purple", outline = "dark_purple", size = 32 },
 ]
 
 # =============== #
