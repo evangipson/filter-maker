@@ -75,7 +75,7 @@ styles = [
 # =============== #
 [[filters]]
 name = "Ultra Valuable Items"
-items = [ "Albino Rhoa Feather", "Ancient Collarbone", "Ancient Jawbone", "Ancient Rib", "Divine Orb", "Hinekora's Lock", "Mirror of Kalandra", "Perfect Chaos Orb", "Perfect Exalted Orb", "Amanamu's Gaze", "Countess Seske's Rune of Archery", "Farrul's Rune of the Chase", "Fox Idol", "Hedgewitch Assandra's Rune of Wisdom", "Rabbit Idol", "Saqawal's Rune of the Sky", "Soul Core of Jiquani", "Idol of Sirrius", "Thane Leld's Rune of Spring", "Arjun's Medal", "Atalui's Bloodletting", "Dialla's Desire", "Esh's Radiance", "Rakiata's Flow", "Ratha's Assault", "Uhtred's Augury", "Uhtred's Omen", "Uul-Netol's Embrace", "essence of Horror", "essence of hysteria" ]
+items = [ "Albino Rhoa Feather", "Ancient Collarbone", "Ancient Jawbone", "Ancient Rib", "Divine Orb", "Hinekora's Lock", "Mirror of Kalandra", "Perfect Chaos Orb", "Perfect Exalted Orb", "Amanamu's Gaze", "Countess Seske's Rune of Archery", "Farrul's Rune of the Chase", "Fox Idol", "Hedgewitch Assandra's Rune of Wisdom", "Rabbit Idol", "Saqawal's Rune of the Sky", "Soul Core of Jiquani", "Idol of Sirrius", "Atalui's Bloodletting", "Sione's Temper", "Ixchel's Torment", "Dialla's Desire", "Xoph's Pyre", "Esh's Radiance", "Tul's Stillness", "Uul-Netol's Embrace", "Rakiata's Flow", "Rigwald's Ferocity", "Uhtred's Exodus", "Uhtred's Omen", "Uhtred's Augury", "Atziri's Allure", "Garukhan's Resolve", "Amanamu's Tithe", "Arbiter's Ignition", "Khatal's Rejuvenation", "Catha's Brilliance", "Mórrigan's Insight", "Seraph's Heart", "Esh's Prowess", "Breachlord's Amalgam", "Medved's Felling", "Vorana's Siege", "Olroth's Conviction", "Her Declaration", "Atziri's Communion", "Breachlord's Rift", "essence of Horror", "essence of hysteria", "Celestial Alloy" ]
 theme = { font = "red", background = "white", outline = "red" }
 size = 48
 sound = { sound_type = "glitter", volume = "loud" }
@@ -84,7 +84,7 @@ beam = "red"
 
 [[filters]]
 name = "Very Valuable Items"
-items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Perfect Jeweller's Orb", "Greater Chaos Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Tul's Stillness", "Uhtred's Exodus", "Rigwald's Ferocity" ]
+items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Perfect Jeweller's Orb", "Greater Chaos Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Tul's Stillness", "Uhtred's Exodus", "Rigwald's Ferocity", "Raven-Touched Shard", "Emergent Vigour", "Emergent Possibility", "Emergent Instinct", "Carved Cunning", "Carved Majesty", "Carved Tenacity", "Hedgewitch Assandra's Rune of Wisdom", "Saqawal's Rune of the Sky", "Farrul's Rune of the Chase", "Craiceann's Rune of Warding", "The Greatwolf's Rune of Willpower" ]
 theme = { font = "dark_orange", background = "white", outline = "dark_orange" }
 size = 38
 sound = { sound_type = "low_whoosh", volume = "normal" }
