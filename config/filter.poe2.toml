@@ -84,7 +84,7 @@ beam = "red"
 
 [[filters]]
 name = "Very Valuable Items"
-items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Perfect Jeweller's Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Tul's Stillness", "Uhtred's Exodus", "Rigwald's Ferocity" ]
+items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Perfect Jeweller's Orb", "Greater Chaos Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Tul's Stillness", "Uhtred's Exodus", "Rigwald's Ferocity" ]
 theme = { font = "dark_orange", background = "white", outline = "dark_orange" }
 size = 38
 sound = { sound_type = "low_whoosh", volume = "normal" }
@@ -93,7 +93,7 @@ beam = "orange"
 
 [[filters]]
 name = "Valuable Items"
-items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Chaos Orb", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Idol", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Idol of Egrin", "Idol of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power" ]
+items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Idol", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Idol of Egrin", "Idol of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power" ]
 size = 32
 sound = { sound_type = "hollow_drum", volume = "normal" }
 icon = { icon_type = "circle", color = "purple", size = "small" }
@@ -139,6 +139,22 @@ icon = { icon_type = "star", color = "red", size = "large" }
 beam = "red"
 
 [[filters]]
+name = "Vaal Uniques"
+is_vaal_unique = true
+theme = { font = "washed_out_red", background = "white", outline = "washed_out_red" }
+sound = { sound_type = "mechanical_pulse", volume = "normal" }
+icon = { icon_type = "star", color = "red", size = "medium" }
+beam = "orange"
+
+[[filters]]
+name = "Unique Vaal Mods"
+has_vaal_unique_mod = true
+theme = { font = "washed_out_red", background = "white", outline = "washed_out_red" }
+sound = { sound_type = "mechanical_pulse", volume = "normal" }
+icon = { icon_type = "star", color = "red", size = "medium" }
+beam = "orange"
+
+[[filters]]
 name = "Good Uniques"
 items = [ "Breach Tablet", "Chain Tiara", "Delirium Tablet", "Diamond", "Expedition Tablet", "Heroic Armour", "Moulded Mitts", "Overseer Tablet", "Ritual Tablet", "Ruby", "Spiral Wraps", "Stone Charm", "Time-Lost Diamond", "Timeless Jewel", "Unset Ring", "Vase Relic", "Viper Cap", "Abyssal Signet", "Grand Regalia", "Heavy Belt", "Jade Amulet", "Pearl Ring", "Ravenous Staff", "Shrine Sceptre", "Amethyst Ring", "Bloodstone Amulet", "Crude Bow", "Lazuli Ring", "Stellar Amulet" ]
 rarity = "Unique"
@@ -182,6 +198,37 @@ theme = { outline = "off_white" }
 size = 32
 quality = 10
 beam = "white"
+
+[[filters]]
+name = "Exceptional quality bases"
+rarity = "Normal"
+quality = 28
+theme = { font = "green", background = "white", outline = "green" }
+size = 36
+icon = { icon_type = "star", color = "green", size = "medium" }
+beam = "green"
+sound = { sound_type = "low_whoosh", volume = "normal" }
+
+[[filters]]
+name = "Exceptional 3-socket bases"
+rarity = "Normal"
+sockets = 3
+theme = { font = "green", background = "white", outline = "green" }
+size = 36
+icon = { icon_type = "star", color = "green", size = "medium" }
+beam = "green"
+sound = { sound_type = "low_whoosh", volume = "normal" }
+
+[[filters]]
+name = "Exceptional 2-socket bases"
+classes = [ "Foci", "One Hand Maces", "Sceptres", "Spears", "Wands", "Helmets", "Gloves", "Boots", "Shields", "Bucklers" ]
+rarity = "Normal"
+sockets = 2
+theme = { font = "green", background = "white", outline = "green" }
+size = 36
+icon = { icon_type = "star", color = "green", size = "medium" }
+beam = "green"
+sound = { sound_type = "low_whoosh", volume = "normal" }
 
 # [[filters]]
 # name = "Warrior bases"

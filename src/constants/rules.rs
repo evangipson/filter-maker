@@ -21,3 +21,9 @@ pub const CORRUPTED: &str = "Corrupted True";
 
 /// [`FOULBORN`] will be added to a filter rule when foulborn items should be shown.
 pub const FOULBORN: &str = "Foulborn True";
+
+/// [`VAAL_UNIQUE`] will be added to a filter rule when vaal unique items should be shown.
+pub const VAAL_UNIQUE: &str = "IsVaalUnique True";
+
+/// [`VAAL_UNIQUE_MOD`] will be added to a filter rule when items with a vaal unique mod should be shown.
+pub const VAAL_UNIQUE_MOD: &str = "HasVaalUniqueMod True";

@@ -1,7 +1,10 @@
 use crate::{
     behavior::{common, conditional::Conditional, write_rules::WriteRules},
     config::{color::Color, icon::Icon, modifier::Modifier, sound::Sound, theme::Theme},
-    constants::rules::{ENCHANTED, FOULBORN, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED},
+    constants::rules::{
+        ENCHANTED, FOULBORN, FRACTURED, INFLUENCED, REPLICA, SYNTHESIZED, VAAL_UNIQUE,
+        VAAL_UNIQUE_MOD,
+    },
 };
 use serde_derive::Deserialize;
 
@@ -23,9 +26,12 @@ pub struct Rule {
     pub is_veiled: Option<bool>,
     pub is_replica: Option<bool>,
     pub is_foulborn: Option<bool>,
+    pub is_vaal_unique: Option<bool>,
+    pub has_vaal_unique_mod: Option<bool>,
     pub good_mods: Option<u8>,
     pub corrupted_mods: Option<u8>,
     pub quality: Option<u8>,
+    pub sockets: Option<u8>,
     pub map_tier: Option<u8>,
     pub links: Option<u8>,
     pub item_level: Option<u8>,
@@ -54,6 +60,7 @@ impl Rule {
                 self.write_optional_rule("GemLevel >=", &self.gem_level),
                 self.write_optional_rule("UnidentifiedItemTier >=", &self.item_tier),
                 self.write_optional_rule("Quality >=", &self.quality),
+                self.write_optional_rule("Sockets >=", &self.sockets),
                 self.write_explicit_mods_rule(
                     &self.is_veiled,
                     &self.good_mods,
@@ -66,6 +73,8 @@ impl Rule {
                 self.write_rule(ENCHANTED, self.is_enchanted),
                 self.write_rule(REPLICA, self.is_replica),
                 self.write_rule(FOULBORN, self.is_foulborn),
+                self.write_rule(VAAL_UNIQUE, self.is_vaal_unique),
+                self.write_rule(VAAL_UNIQUE_MOD, self.has_vaal_unique_mod),
                 self.write_corrupted_mods_rule(&self.corrupted_mods),
                 self.write_optional_rule("LinkedSockets", &self.links),
                 self.write_optional_rule("StackSize >=", &self.stack_size),
