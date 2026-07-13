@@ -104,10 +104,8 @@ beam = "orange"
 
 [[filters]]
 name = "Valuable Items"
-items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Opiloti's Soul Core of Assault", "Primate Idol", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Idol of Egrin", "Idol of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Tecrod's Gaze", "Ancient Jawbone", "Ancient Rib", "Altered Collarbone", "Potent Liquid Ferocity", "Ancient Potent Liquid Contempt", "essence of Horror", "Atalui's Bloodletting", "Atziri's Allure", "Catha's Brilliance", "Esh's Prowess", "Amanamu's Tithe", "Mórrigan's Insight", "Medved's Felling", "Masterwork Rune", "Cadigan's Epiphany", "Kolr's Hunt", "Citaqualotl's Thesis" ]
-size = 32
-sound = { sound_type = "hollow_drum", volume = "normal" }
-icon = { icon_type = "circle", color = "purple", size = "small" }
+items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Courtesan Mannan's Rune of Cruelty", "Opiloti's Soul Core of Assault", "Primate Idol", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Idol of Egrin", "Idol of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Tecrod's Gaze", "Ancient Jawbone", "Ancient Rib", "Altered Collarbone", "Potent Liquid Ferocity", "Ancient Potent Liquid Contempt", "essence of Horror", "Atalui's Bloodletting", "Atziri's Allure", "Catha's Brilliance", "Esh's Prowess", "Amanamu's Tithe", "Mórrigan's Insight", "Medved's Felling", "Masterwork Rune", "Cadigan's Epiphany", "Kolr's Hunt", "Citaqualotl's Thesis" ]
+size = 30
 
 [[filters]]
 name = "Reliquary Keys"
@@ -311,12 +309,12 @@ beam = "white"
 # item_level = 74
 # icon = { icon_type = "raindrop", color = "white", size = "medium" }
 
-[[filters]]
-name = "Energy Shield bases"
-items = [ "Vile Robe", "Sekhema Sandals", "Sirenscale Gloves", "Ancestral Tiara" ]
-size = 32
-item_level = 74
-icon = { icon_type = "raindrop", color = "white", size = "medium" }
+# [[filters]]
+# name = "Energy Shield bases"
+# items = [ "Vile Robe", "Sekhema Sandals", "Sirenscale Gloves", "Ancestral Tiara" ]
+# size = 32
+# item_level = 74
+# icon = { icon_type = "raindrop", color = "white", size = "medium" }
 
 [[filters]]
 name = "Gamble bases"
@@ -392,9 +390,9 @@ size = 32
 icon = { icon_type = "diamond", color = "green", size = "medium" }
 beam = "green"
 
-[[filters]]
-name = "Jewellery"
-classes = [ "Rings", "Amulets", "Belts" ]
+# [[filters]]
+# name = "Jewellery"
+# classes = [ "Rings", "Amulets", "Belts" ]
 
 # =============== #
 # Hide            #
