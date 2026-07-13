@@ -31,6 +31,8 @@ palette = [
     { name = "dark_orange", color = { r = 145, g = 66, b = 7, a = 255 }},
     { name = "dark_purple", color = { r = 142, g = 68, b = 173, a = 255 }},
     { name = "dark_red", color = { r = 71, g = 0, b = 0, a = 255 }},
+    { name = "dark_grey", color = {r = 62, g = 60, b = 59, a = 255 }},
+    { name = "dark_gold", color = { r = 127, g = 105, b = 1, a = 255 }},
     # faded
     { name = "faded_white", color = { r = 200, g = 200, b = 200, a = 205 }},
     { name = "faded_black", color = { r = 42, g = 42, b = 42, a = 170 }},
@@ -43,6 +45,7 @@ palette = [
 ]
 styles = [
     { name = "Default (base style)", font = "white", background = "faded_black", size = 22 },
+    { name = "Quest (base style)", classes = [ "Quest Items", "Instance Local Items" ], font = "green", background = "faded_white", outline = "faded_white", size = 32 },
     { name = "Magic (base style)", rarity = "Magic", font = "blue", size = 28 },
     { name = "Rare (base style)", rarity = "Rare", font = "yellow", size = 28 },
     { name = "Unique (base style)", rarity = "Unique", font = "white", background = "orange", size = 28 },
@@ -52,9 +55,13 @@ styles = [
     { name = "Gold (base style)", items = [ "gold" ], rarity = "none", font = "gold", background = "faded_black", size = 20 },
     { name = "Portal Scrolls (base style)", items = [ "portal scroll" ], font = "washed_out_blue", background = "grey", outline = "washed_out_blue", size = 20 },
     { name = "Scroll of Wisdom (base style)", items = [ "scroll of wisdom" ], font = "washed_out_red", background = "grey", outline = "washed_out_red", size = 20 },
+    { name = "Relics (base style)", classes = [ "Relics" ], font = "gold", background = "washed_out_blue", outline = "gold", size = 32 },
+    { name = "Bronze Key (base style)", items = [ "bronze key" ], font = "dark_gold", background = "faded_white", outline = "dark_gold", size = 28 },
+    { name = "Silver Key (base style)", items = [ "silver key" ], font = "grey", background = "faded_white", outline = "grey", size = 36 },
+    { name = "Gold Key (base style)", items = [ "gold key" ], font = "gold", background = "white", outline = "gold", size = 38 },
     { name = "Waystones (base style)", classes = [ "Waystone" ], rarity = "none", background = "black", size = 20 },
     { name = "Uncut Gems (base style)", classes = [ "Uncut Skill Gems", "Uncut Spirit Gems", "Uncut Support Gems" ], font = "teal", background = "white", outline = "teal", size = 28, strict = false },
-    { name = "Fragments (base style)", classes = [ "Map Fragments" ], font = "white", background = "red", outline = "white", size = 24 },
+    { name = "Fragments (base style)", classes = [ "Map Fragments" ], font = "white", background = "red", outline = "white", size = 32 },
     { name = "Flasks (base style)", items = [ "flask" ], font = "purple", background = "faded_black", strict = false, size = 20 },
     { name = "Fractured (base style)", is_fractured = true, rarity = "none", font = "white", background = "teal", outline = "white", size = 26 },
     { name = "Perfect Essences (base style)", items = [ "perfect essence of" ], font = "dark_blue", background = "off_white", size = 34, strict = false},
@@ -63,11 +70,15 @@ styles = [
     { name = "Omens (base style)", classes = [ "Omen" ], font = "neon_teal", background = "faded_black", outline = "white", size = 32 },
     { name = "Tablets (base style)", classes = [ "Tablet" ], font = "white", background = "faded_dark_blue", outline = "white", size = 28 },
     { name = "Trials (base style)", classes = [ "Inscribed Ultimatum", "Trial Coins" ], font = "black", background = "off_white", outline = "black", size = 28 },
-    { name = "Logbooks (base style)", classes = [ "Expedition Logbooks" ], font = "dark_blue", background = "off_white", outline = "dark_blue", size = 34 },
-    { name = "Jewels", classes = [ "Jewels" ], background = "faded_purple", outline = "purple", size = 26 },
-    { name = "Abyssal (base style)", classes = [ "Stackable Currency", "Omen" ], items = [  "Preserved", "Ancient", "Gnawed", "Abyssal Echoes", "Sovereign", "Liege", "Blackblooded", "Putrefaction", "Light", "Sinistral Necromancy", "Dextral Necromancy" ], rarity = "none", font = "abyssal_green", background = "black", outline = "abyssal_green", size = 32, strict = false },
-    { name = "Frags (base style)", classes = [ "Pinnacle Keys" ], font = "dark_purple", background = "off_white", outline = "dark_purple", size = 38 },
+    { name = "Logbooks (base style)", classes = [ "Expedition Logbook" ], font = "dark_blue", background = "off_white", outline = "dark_blue", size = 34 },
+    { name = "Jewels", classes = [ "Jewels" ], background = "faded_purple", outline = "purple", size = 28 },
+    { name = "Abyssal (base style)", classes = [ "Stackable Currency", "Omen" ], items = [ "Preserved", "Ancient", "Gnawed", "Abyssal Echoes", "Sovereign", "Liege", "Blackblooded", "Putrefaction", "Light", "Sinistral Necromancy", "Dextral Necromancy" ], rarity = "none", font = "abyssal_green", background = "black", outline = "abyssal_green", size = 32, strict = false },
+    { name = "Reliquary Keys (base style)", classes = [ "Pinnacle Keys" ], font = "dark_purple", background = "off_white", outline = "dark_purple", size = 38 },
     { name = "Wombgifts (base style)", classes = [ "Wombgifts" ], font = "black", background = "purple", outline = "dark_purple", size = 32 },
+    { name = "Breachstones (base style)", classes = [ "Breachstones" ], font = "black", background = "purple", outline = "dark_purple", size = 32},
+    { name = "Breachlord Sac (base style)", items = [ "Breachlord Sac" ], font = "black", background = "purple", outline = "dark_purple", size = 48 },
+    { name = "Delirium Jewellry (base style)", items = ["Lament Amulet", "Portent Amulet", "Absent Amulet", "Corona Amulet", "Distorted Amulet", "Twisted Amulet"], font = "dark_grey", background = "black", outline = "dark_grey", size = 32},
+    { name = "Delirium Liquids (base style)", items = [ "liquid" ], font = "dark_grey", background = "black", outline = "dark_grey", size = 32, strict = false},
 ]
 
 # =============== #
@@ -75,7 +86,7 @@ styles = [
 # =============== #
 [[filters]]
 name = "Ultra Valuable Items"
-items = [ "Albino Rhoa Feather", "Ancient Collarbone", "Ancient Jawbone", "Ancient Rib", "Divine Orb", "Hinekora's Lock", "Mirror of Kalandra", "Perfect Chaos Orb", "Perfect Exalted Orb", "Amanamu's Gaze", "Countess Seske's Rune of Archery", "Farrul's Rune of the Chase", "Fox Idol", "Hedgewitch Assandra's Rune of Wisdom", "Rabbit Idol", "Saqawal's Rune of the Sky", "Soul Core of Jiquani", "Idol of Sirrius", "Atalui's Bloodletting", "Sione's Temper", "Ixchel's Torment", "Dialla's Desire", "Xoph's Pyre", "Esh's Radiance", "Tul's Stillness", "Uul-Netol's Embrace", "Rakiata's Flow", "Rigwald's Ferocity", "Uhtred's Exodus", "Uhtred's Omen", "Uhtred's Augury", "Atziri's Allure", "Garukhan's Resolve", "Amanamu's Tithe", "Arbiter's Ignition", "Khatal's Rejuvenation", "Catha's Brilliance", "Mórrigan's Insight", "Seraph's Heart", "Esh's Prowess", "Breachlord's Amalgam", "Medved's Felling", "Vorana's Siege", "Olroth's Conviction", "Her Declaration", "Atziri's Communion", "Breachlord's Rift", "essence of Horror", "essence of hysteria", "Celestial Alloy" ]
+items = [ "Albino Rhoa Feather", "Ancient Collarbone", "Divine Orb", "Hinekora's Lock", "Mirror of Kalandra", "Perfect Chaos Orb", "Perfect Exalted Orb", "Countess Seske's Rune of Archery", "Farrul's Rune of the Chase", "Fox Idol", "Hedgewitch Assandra's Rune of Wisdom", "Rabbit Idol", "Saqawal's Rune of the Sky", "Soul Core of Jiquani", "Idol of Sirrius", "Dialla's Desire", "Xoph's Pyre", "Esh's Radiance", "Tul's Stillness", "Uul-Netol's Embrace", "Rakiata's Flow", "Rigwald's Ferocity", "Uhtred's Exodus", "Uhtred's Omen", "Uhtred's Augury", "Garukhan's Resolve", "Seraph's Heart", "Vorana's Siege", "Olroth's Conviction", "Her Declaration", "Atziri's Communion", "Breachlord's Rift", "Omen of Light", "Fracturing Orb", "Architect's Orb", "Core Destabiliser", "Vaal Catalysing Infuser", "Crystallised Corruption", "Vaal Cultivation Orb", "Kurgal's Gaze", "Raven-Touched Shard", "Emergent Possibility", "Carved Majesty", "Perfect Flux", "Rigwald's Ferocity", "Aldur's Legacy", "Aldur's Saga", "Guatelitzi's Thesis", "Jiquani's Thesis" ]
 theme = { font = "red", background = "white", outline = "red" }
 size = 48
 sound = { sound_type = "glitter", volume = "loud" }
@@ -84,7 +95,7 @@ beam = "red"
 
 [[filters]]
 name = "Very Valuable Items"
-items = [ "Fracturing Orb", "Orb of Annulment", "Perfect Regal Orb", "Perfect Jeweller's Orb", "Greater Chaos Orb", "Preserved Collarbone", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Tecrod's Gaze", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Amanamu's Tithe", "Arbiter's Ignition", "Brutus' Brain", "Garukhan's Resolve", "Ixchel's Torment", "Tul's Stillness", "Uhtred's Exodus", "Rigwald's Ferocity", "Raven-Touched Shard", "Emergent Vigour", "Emergent Possibility", "Emergent Instinct", "Carved Cunning", "Carved Majesty", "Carved Tenacity", "Hedgewitch Assandra's Rune of Wisdom", "Saqawal's Rune of the Sky", "Farrul's Rune of the Chase", "Craiceann's Rune of Warding", "The Greatwolf's Rune of Willpower", "Absent Amulet" ]
+items = [ "Orb of Annulment", "Perfect Regal Orb", "Perfect Jeweller's Orb", "Greater Chaos Orb", "Preserved Collarbone", "Preserved Cranium", "Atmohua's Soul Core of Retreat", "Saqawal's Rune of Memory", "Soul Core of Azcapa", "Soul Core of Tacati", "Thane Girt's Rune of Wildness", "The Greatwolf's Rune of Claws", "The Greatwolf's Rune of Willpower", "Arbiter's Ignition", "Ixchel's Torment", "Uhtred's Exodus", "Raven-Touched Shard", "Emergent Vigour", "Emergent Possibility", "Emergent Instinct", "Carved Cunning", "Carved Majesty", "Carved Tenacity", "Hedgewitch Assandra's Rune of Wisdom", "Saqawal's Rune of the Sky", "Farrul's Rune of the Chase", "Craiceann's Rune of Warding", "The Greatwolf's Rune of Willpower", "Absent Amulet", "Celestial Alloy", "Amanamu's Gaze", "Emergent Vigour", "Carved Cunning", "essence of hysteria", "Khatal's Rejuvenation", "Breachlord's Amalgam", "Serle's Triumph", "Astrid's Creativity", "Quipolatl's Thesis" ]
 theme = { font = "dark_orange", background = "white", outline = "dark_orange" }
 size = 38
 sound = { sound_type = "low_whoosh", volume = "normal" }
@@ -93,7 +104,7 @@ beam = "orange"
 
 [[filters]]
 name = "Valuable Items"
-items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Kurgal's Gaze", "Opiloti's Soul Core of Assault", "Primate Idol", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Idol of Egrin", "Idol of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Breachstone" ]
+items = [ "Chaos Orb", "Exalted Orb", "Exotic Coinage", "Greater Exalted Orb", "Greater Regal Orb", "Orb of Chance", "Preserved Cranium", "Courtesan Mannan's Rune of Cruelty", "Opiloti's Soul Core of Assault", "Primate Idol", "Soul Core of Citaqualotl", "Soul Core of Quipolatl", "Idol of Egrin", "Idol of Grold", "Thane Grannell's Rune of Mastery", "Thane Myrk's Rune of Summer", "Ulaman's Gaze", "Xopec's Soul Core of Power", "Tecrod's Gaze", "Ancient Jawbone", "Ancient Rib", "Altered Collarbone", "Potent Liquid Ferocity", "Ancient Potent Liquid Contempt", "essence of Horror", "Atalui's Bloodletting", "Atziri's Allure", "Catha's Brilliance", "Esh's Prowess", "Amanamu's Tithe", "Mórrigan's Insight", "Medved's Felling", "Masterwork Rune", "Cadigan's Epiphany", "Kolr's Hunt", "Citaqualotl's Thesis" ]
 size = 32
 sound = { sound_type = "hollow_drum", volume = "normal" }
 icon = { icon_type = "circle", color = "purple", size = "small" }
@@ -125,18 +136,40 @@ name = "Level 19 Skill/Spirit Gems"
 classes = [ "Uncut Skill Gems", "Uncut Spirit Gems" ]
 gem_level = 19
 
+[[filters]]
+name = "Lineage Supports"
+items = [ "Ahn's Citadel", "Ailith's Chimes", "Doedre's Undoing", "Sione's Temper", "Dreamer's Knell", "Atziri's Call", "Hayoxi's Fulmination", "Zarokh's Revolt", "Zerphi's Infamy", "Helbrym's Hide", "Eonyr's Thunder", "Arbiter's Reach", "Tul's Avalanche", "Uhtred's Rite", "Uhtred's Constellation", "Styrn's Ferocity", "Einhar's Beastrite", "Brutus' Brain", "Tecrod's Revenge", "Paquate's Pact", "Kaom's Madness", "Dominus' Grasp", "Kalisa's Crescendo", "Zarokh's Refrain", "Kurgal's Leash", "Kulemak's Dominion", "Xibaqua's Rending", "Oisín's Oath", "Morgana's Tempest", "Atziri's Impatience", "Trickster's Shard", "Styrn's Mountain", "Olroth's Hubris", "Prototype Seventeen", "Vilenta's Propulsion", "Uruk's Smelting", "Ratha's Assault", "Arjun's Medal", "Romira's Requital", "Tawhoa's Tending", "Daresso's Passion", "Tacati's Ire", "Varashta's Blessing", "Arakaali's Lust", "Tasalio's Rhythm", "Guatelitzi's Ablation", "Bhatair's Vengeance", "Cirel's Cultivation", "Tangmazu's Thurible", "Vruun's Aftermath", "Vruun's Inevitability" ]
+size = 32
+theme = { font = "white", background = "faded_dark_purple", outline = "faded_dark_purple" }
+
+[[filters]]
+name = "Perfect Augments"
+classes = [ "Augment" ]
+items = [ "perfect" ]
+strict = false
+
 # =============== #
 # Uniques         #
 # =============== #
 [[filters]]
 name = "Tier 0 Uniques"
-items = [ "Armoured Cap", "Blacksteel Tower Shield", "Conqueror Plate", "Desolate Crossbow", "Embroidered Gloves", "Emerald", "Fine Bracers", "Golden Charm", "Incense Relic", "Intricate Crest Shield", "Lattice Sandals", "Ornate Gauntlets", "Primed Quiver", "Ring", "Sacred Focus", "Sapphire", "Silver Charm", "Thawing Charm", "Ultimate Life Flask", "Utility Wraps" ]
+items = [ "Armoured Cap", "Blacksteel Tower Shield", "Conqueror Plate", "Desolate Crossbow", "Embroidered Gloves", "Emerald", "Fine Bracers", "Golden Charm", "Incense Relic", "Intricate Crest Shield", "Lattice Sandals", "Ornate Gauntlets", "Ring", "Sacred Focus", "Silver Charm", "Thawing Charm", "Ultimate Life Flask", "Utility Wraps", "Shortsword", "Runic Fork", "Scimitar", "Glass Shank", "Shrine Sceptre", "Time-Lost Diamond", "Unset Ring", "Grand Spear", "Vase Relic", "Grand Regalia" ]
 rarity = "Unique"
 theme = { font = "red", background = "white", outline = "red" }
 size = 48
 sound = { sound_type = "glitter", volume = "loud" }
 icon = { icon_type = "star", color = "red", size = "large" }
 beam = "red"
+
+[[filters]]
+name = "Tier 1 Uniques"
+items = [ "Ruby", "Garment", "Sapphire", "Sacrificial Regalia", "Chain Tiara", "Timeless Jewel", "Crucible Tower Shield", "Abyss Tablet", "Siphoning Wand", "Tribal Mask", "Primed Quiver", "Stoic Sceptre" ]
+rarity = "Unique"
+theme = { font = "orange", background = "white", outline = "orange" }
+size = 38
+sound = { sound_type = "glitter", volume = "normal" }
+icon = { icon_type = "star", color = "orange", size = "medium" }
+beam = "orange"
 
 [[filters]]
 name = "Vaal Uniques"
@@ -162,6 +195,71 @@ size = 42
 sound = { sound_type = "voice_drum", volume = "normal" }
 icon = { icon_type = "star", color = "orange", size = "medium" }
 beam = "orange"
+
+# =============== #
+# Exceptionals    #
+# =============== #
+[[filters]]
+name = "Exceptional quality uniques"
+rarity = "Normal"
+quality = 28
+theme = { font = "faded_dark_orange", background = "white", outline = "faded_dark_orange" }
+size = 36
+icon = { icon_type = "star", color = "orange", size = "medium" }
+beam = "orange"
+sound = { sound_type = "low_whoosh", volume = "normal" }
+
+[[filters]]
+name = "Exceptional 3-socket uniques"
+sockets = 3
+rarity = "Unique"
+theme = { font = "faded_dark_orange", background = "white", outline = "faded_dark_orange" }
+size = 36
+icon = { icon_type = "star", color = "orange", size = "medium" }
+beam = "orange"
+sound = { sound_type = "low_whoosh", volume = "normal" }
+
+[[filters]]
+name = "Exceptional 2-socket uniques"
+sockets = 2
+classes = [ "Foci", "One Hand Maces", "Sceptres", "Spears", "Wands", "Helmets", "Gloves", "Boots", "Shields", "Bucklers" ]
+rarity = "Unique"
+theme = { font = "faded_dark_orange", background = "white", outline = "faded_dark_orange" }
+size = 36
+icon = { icon_type = "star", color = "orange", size = "medium" }
+beam = "orange"
+sound = { sound_type = "low_whoosh", volume = "normal" }
+
+[[filters]]
+name = "Exceptional quality bases"
+rarity = "Normal"
+quality = 28
+theme = { font = "green", background = "white", outline = "green" }
+size = 36
+icon = { icon_type = "star", color = "green", size = "medium" }
+beam = "green"
+sound = { sound_type = "low_whoosh", volume = "normal" }
+
+[[filters]]
+name = "Exceptional 3-socket bases"
+rarity = "Normal"
+sockets = 3
+theme = { font = "green", background = "white", outline = "green" }
+size = 36
+icon = { icon_type = "star", color = "green", size = "medium" }
+beam = "green"
+sound = { sound_type = "low_whoosh", volume = "normal" }
+
+[[filters]]
+name = "Exceptional 2-socket bases"
+classes = [ "Foci", "One Hand Maces", "Sceptres", "Spears", "Wands", "Helmets", "Gloves", "Boots", "Shields", "Bucklers" ]
+rarity = "Normal"
+sockets = 2
+theme = { font = "green", background = "white", outline = "green" }
+size = 36
+icon = { icon_type = "star", color = "green", size = "medium" }
+beam = "green"
+sound = { sound_type = "low_whoosh", volume = "normal" }
 
 # =============== #
 # Gold            #
@@ -199,68 +297,33 @@ size = 32
 quality = 10
 beam = "white"
 
-[[filters]]
-name = "Exceptional quality bases"
-rarity = "Normal"
-quality = 28
-theme = { font = "green", background = "white", outline = "green" }
-size = 36
-icon = { icon_type = "star", color = "green", size = "medium" }
-beam = "green"
-sound = { sound_type = "low_whoosh", volume = "normal" }
-
-[[filters]]
-name = "Exceptional 3-socket bases"
-rarity = "Normal"
-sockets = 3
-theme = { font = "green", background = "white", outline = "green" }
-size = 36
-icon = { icon_type = "star", color = "green", size = "medium" }
-beam = "green"
-sound = { sound_type = "low_whoosh", volume = "normal" }
-
-[[filters]]
-name = "Exceptional 2-socket bases"
-classes = [ "Foci", "One Hand Maces", "Sceptres", "Spears", "Wands", "Helmets", "Gloves", "Boots", "Shields", "Bucklers" ]
-rarity = "Normal"
-sockets = 2
-theme = { font = "green", background = "white", outline = "green" }
-size = 36
-icon = { icon_type = "star", color = "green", size = "medium" }
-beam = "green"
-sound = { sound_type = "low_whoosh", volume = "normal" }
-
 # [[filters]]
 # name = "Warrior bases"
 # items = [ "Warlord Cuirass", "Tasalian Greaves", "Massive Mitts", "Imperial Greathelm", "Massive Greathammer", "Tawhoan Greatclub", "Tawhoan Tower Shield" ]
-# size = 36
+# size = 32
 # item_level = 74
 # icon = { icon_type = "raindrop", color = "white", size = "medium" }
-# beam = "green"
 
 # [[filters]]
 # name = "Ranger bases"
 # items = [ "Quickslip Shoes", "Daggerfoot Shoes", "Secured Wraps", "Grinning Mask", "Visceral Quiver", "Primed Quiver", "Gemini Bow", "Obliterator Bow", "Warmonger Bow", "slipstrike vest" ]
-# size = 36
+# size = 32
 # item_level = 74
 # icon = { icon_type = "raindrop", color = "white", size = "medium" }
-# beam = "green"
 
 [[filters]]
 name = "Energy Shield bases"
 items = [ "Vile Robe", "Sekhema Sandals", "Sirenscale Gloves", "Ancestral Tiara" ]
-size = 36
-item_level = 78
+size = 32
+item_level = 74
 icon = { icon_type = "raindrop", color = "white", size = "medium" }
-beam = "green"
 
 [[filters]]
 name = "Gamble bases"
 items = [ "Heavy Belt", "Silver Charm", "Stellar Amulet", "Utility Belt" ]
 theme = { font = "black", background = "gold", outline = "black" }
 rarity = "Normal"
-size = 38
-sound = { sound_type = "low_whoosh", volume = "normal" }
+size = 32
 icon = { icon_type = "diamond", color = "yellow", size = "large" }
 beam = "yellow"
 
@@ -292,26 +355,40 @@ is_fractured = true
 name = "Unique Items"
 rarity = "Unique"
 
-[[filters]]
-name = "Sceptres"
-classes = [ "Sceptres" ]
-size = 36
-icon = { icon_type = "hexagon", color = "yellow", size = "medium" }
-item_level = 79
-beam = "yellow"
+# [[filters]]
+# name = "Sceptres"
+# classes = [ "Sceptres" ]
+# size = 36
+# icon = { icon_type = "hexagon", color = "yellow", size = "medium" }
+# item_level = 79
+
+# [[filters]]
+# name = "Wands"
+# items = [ "Attuned Wand", "Siphoning Wand", "Galvanic Wand", "Dueling Wand" ]
+# size = 38
+# item_level = 79
+# icon = { icon_type = "raindrop", color = "green", size = "medium" }
+# beam = "green"
 
 [[filters]]
-name = "Wands"
-items = [ "Attuned Wand", "Siphoning Wand", "Galvanic Wand", "Dueling Wand" ]
-size = 38
-item_level = 79
+name = "Rollable Bases"
+items = [ "Dueling Wand" ]
+size = 32
+item_level = 81
 icon = { icon_type = "raindrop", color = "green", size = "medium" }
-beam = "green"
+
+[[filters]]
+name = "Very Valuable Jewellry"
+items = [ "Lament Amulet", "Portent Amulet", "Absent Amulet", "Corona Amulet", "Distorted Amulet", "Twisted Amulet" ]
+size = 38
+icon = { icon_type = "diamond", color = "white", size = "large" }
+sound = { sound_type = "voice_drum", volume = "normal" }
+beam = "white"
 
 [[filters]]
 name = "Valuable Jewellery"
-items = [ "Solar Amulet" ]
-size = 36
+items = [ "Solar Amulet", "Stalking Belt", "Invoking Belt", "Sinew Belt", "Forking Belt" ]
+size = 32
 icon = { icon_type = "diamond", color = "green", size = "medium" }
 beam = "green"
 
@@ -324,12 +401,16 @@ classes = [ "Rings", "Amulets", "Belts" ]
 # =============== #
 [[filters]]
 name = "Hidden Currency"
-items = [ "Lesser Jeweller's Orb" ]
+items = [ "Lesser Jeweller's Orb", "Regal Shard" ]
 hide = true
 
 [[filters]]
+name = "All specifically shown items"
+items = [ "breachlord sac", "bronze key", "silver key", "gold key" ]
+
+[[filters]]
 name = "All other shown classes"
-classes = [ "Currency", "Omen", "Augment", "Waystone", "Tablet", "Map Fragments", "Expedition Logbooks", "Inscribed Ultimatum", "Trial Coins", "Jewels", "Wombgifts" ]
+classes = [ "Currency", "Quest Items", "Instance Local Items", "Relics", "Omen", "Augment", "Waystone", "Tablet", "Map Fragments", "Expedition Logbook", "Inscribed Ultimatum", "Trial Coins", "Jewels", "Wombgifts", "Breachstones", "Augment" ]
 
 [[filters]]
 name = "Hide all"
